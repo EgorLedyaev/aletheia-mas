@@ -1,0 +1,30 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C[N+](C)(C)c1ncnc2cc3[nH]ncc3cc12"
+ },
+ "params_hash": "2b62a1a6f4d6f6be",
+ "cached_at": "2026-11-11T22:40:26+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "quaternary_nitrogen_2"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 1,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

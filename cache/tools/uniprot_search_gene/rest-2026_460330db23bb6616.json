@@ -1,0 +1,17 @@
+{
+ "tool": "uniprot.search_gene",
+ "version": "rest-2026",
+ "params": {
+  "gene": "A0A0A0A0A0",
+  "organism_id": 9606
+ },
+ "params_hash": "460330db23bb6616",
+ "cached_at": "2026-11-11T18:27:52+00:00",
+ "data": {
+  "query": "gene:A0A0A0A0A0 AND organism_id:9606 AND reviewed:true",
+  "hits": [],
+  "n_hits": 0,
+  "retrieved_at": "2026-11-11T18:27:52+00:00",
+  "source_url": "https://rest.uniprot.org/uniprotkb/search?query=gene:A0A0A0A0A0 AND organism_id:9606 AND reviewed:true"
+ }
+}

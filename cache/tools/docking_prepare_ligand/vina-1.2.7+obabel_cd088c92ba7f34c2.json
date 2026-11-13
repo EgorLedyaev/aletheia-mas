@@ -1,0 +1,22 @@
+{
+ "tool": "docking.prepare_ligand",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "smiles": "COC1=CC=CC=C1C(=O)N2C(=NC(=N2)C3=CC=CO3)SC",
+  "out_pdbqt": "cache/docking/bench_lig_0ba6e3d30cf9.pdbqt",
+  "seed": 42
+ },
+ "params_hash": "cd088c92ba7f34c2",
+ "cached_at": "2026-11-12T15:46:11+00:00",
+ "data": {
+  "path": "cache/docking/bench_lig_0ba6e3d30cf9.pdbqt",
+  "sdf_path": "cache/docking/bench_lig_0ba6e3d30cf9.sdf",
+  "smiles": "COC1=CC=CC=C1C(=O)N2C(=NC(=N2)C3=CC=CO3)SC",
+  "n_confs": 1,
+  "forcefield": "MMFF94",
+  "mmff_energy": 101.686,
+  "n_heavy_atoms": 22,
+  "seed": 42,
+  "n_rotatable": 4
+ }
+}

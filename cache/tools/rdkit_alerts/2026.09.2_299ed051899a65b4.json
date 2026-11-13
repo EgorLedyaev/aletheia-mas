@@ -1,0 +1,35 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C=CC(C=CN=CN=CNC1C#CC=CC=C1)CCOC=COCCOC"
+ },
+ "params_hash": "299ed051899a65b4",
+ "cached_at": "2026-11-11T18:27:20+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "acyclic_C=C-O",
+    "imine_1",
+    "imine_2",
+    "isolated_alkene",
+    "triple_bond"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 6,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

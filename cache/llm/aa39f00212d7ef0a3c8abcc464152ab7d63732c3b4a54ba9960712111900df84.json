@@ -1,0 +1,38 @@
+{
+ "key": "aa39f00212d7ef0a3c8abcc464152ab7d63732c3b4a54ba9960712111900df84",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- gene_to_accession = P00533 (RETRIEVED)\n- uniprot_protein_name = Epidermal growth factor receptor (RETRIEVED)\n- sequence_length = 1210 (RETRIEVED)\n- n_pdb_structures = 388 (RETRIEVED)\n- structure_source = CID 176870 (RETRIEVED)\n- chembl_target_id = CHEMBL203 (RETRIEVED)\n- sequence_gravy = -0.316 (COMPUTED)\n- net_charge_ph7 = -12 (COMPUTED)\n- inchikey = AAKJLRGGTJKAMG-UHFFFAOYSA-N (COMPUTED)\n- MolWt = 393.443 (COMPUTED)\n- cLogP = 3.405 (COMPUTED)\n- TPSA = 74.73 (COMPUTED)\n- HBD = 1 (COMPUTED)\n- HBA = 7 (COMPUTED)\n- RotB = 10 (COMPUTED)\n- RingCount = 3 (COMPUTED)\n- AromaticRings = 3 (COMPUTED)\n- HeavyAtoms = 29 (COMPUTED)\n- FractionCSP3 = 0.273 (COMPUTED)\n- FormalCharge = 0 (COMPUTED)\n- MolMR = 111.94 (COMPUTED)\n- NumStereocentres = 0 (COMPUTED)\n- QED = 0.418 (COMPUTED)\n- SAscore = 2.478 (COMPUTED)\n- lipinski_violations = 0 (COMPUTED)\n- n_structural_alerts = 2 (COMPUTED)\n- esol_logS = -4.173 (PREDICTED)\n- cns_mpo_like = 5.188 (PREDICTED)\n- n_developability_panels_passed = 4 (COMPUTED)\n- pdb_resolution = 2.6 (RETRIEVED)\n\nUser request: Which PDB entry holds the EGFR kinase domain with erlotinib bound, and what is the chemical component id of that ligand?\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "The available data support that the target of interest is an EGFR-family receptor with characterized structural and physicochemical profiles, and that a small-molecule ligand with drug-like properties has been computed against standard medicinal-chemistry filters, showing no Lipinski violations but a small number of structural alerts. However, the findings provided do not identify a specific PDB entry, do not confirm that the bound ligand is erlotinib, and do not report a chemical component identifier for any ligand in a structure \u2014 so the specific question asked cannot be answered from this data alone. These descriptors speak only to general compound character and target tractability; they do not establish identity of the crystal structure in question, nor do they support any claim of efficacy, safety, or clinical relevance. A direct structural database lookup would be needed to resolve the specific entry and ligand code being asked about.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1230,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 270,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

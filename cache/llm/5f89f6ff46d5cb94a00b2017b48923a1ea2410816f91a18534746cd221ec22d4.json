@@ -1,0 +1,123 @@
+{
+ "key": "5f89f6ff46d5cb94a00b2017b48923a1ea2410816f91a18534746cd221ec22d4",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "User request:\n\"\"\"What is the UniProt accession of human ABL1?\"\"\"\n\nClassify it."
+   }
+  ],
+  "system": "You are the routing component of a drug-discovery multi-agent system. Classify the request into intents and extract entities. Do not answer the chemistry question itself, do not invent targets or molecules that the user did not mention, and do not guess identifiers. If the user names a gene symbol, return it verbatim.",
+  "tools": [
+   {
+    "name": "route_request",
+    "description": "Classify a drug-discovery request into intents and entities.",
+    "input_schema": {
+     "type": "object",
+     "properties": {
+      "intents": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "target_brief",
+         "ligand_lookup",
+         "property_profile",
+         "generate_analogs",
+         "docking",
+         "qsar",
+         "rank_candidates",
+         "protein_analysis",
+         "full_campaign"
+        ]
+       },
+       "description": "Ordered list of what the user is asking for."
+      },
+      "modality": {
+       "type": "string",
+       "enum": [
+        "small_molecule",
+        "protein",
+        "nucleic_acid",
+        "mixed",
+        "unknown"
+       ]
+      },
+      "targets": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Protein targets exactly as named by the user: gene symbol, UniProt accession or PDB id. Empty if none."
+      },
+      "molecules": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Molecules as named by the user: SMILES or compound name."
+      },
+      "objectives": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Optimisation objectives mentioned, e.g. 'improve solubility'."
+      },
+      "reasoning": {
+       "type": "string",
+       "description": "One sentence on why these intents."
+      }
+     },
+     "required": [
+      "intents",
+      "modality",
+      "targets",
+      "molecules"
+     ]
+    }
+   }
+  ],
+  "tool_choice": {
+   "type": "tool",
+   "name": "route_request"
+  },
+  "max_tokens": 900,
+  "model": null,
+  "purpose": "routing"
+ },
+ "response": {
+  "text": "",
+  "tool_use": {
+   "name": "route_request",
+   "input": {
+    "intents": [
+     "target_brief"
+    ],
+    "modality": "protein",
+    "targets": [
+     "ABL1"
+    ],
+    "molecules": [],
+    "reasoning": "User is asking for identifying information (UniProt accession) about a named gene/protein target, which is a target lookup/brief request."
+   }
+  },
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 678,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5618,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 176,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

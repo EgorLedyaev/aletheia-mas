@@ -1,0 +1,27 @@
+{
+ "tool": "uniprot.search_gene",
+ "version": "rest-2026",
+ "params": {
+  "gene": "ABL1",
+  "organism_id": 9606
+ },
+ "params_hash": "b42e8b976f675b9e",
+ "cached_at": "2026-11-12T15:48:08+00:00",
+ "data": {
+  "query": "gene:ABL1 AND organism_id:9606 AND reviewed:true",
+  "hits": [
+   {
+    "accession": "P00519",
+    "uniprot_id": "ABL1_HUMAN",
+    "protein_name": "Tyrosine-protein kinase ABL1",
+    "length": 1130,
+    "genes": [
+     "ABL1"
+    ]
+   }
+  ],
+  "n_hits": 1,
+  "retrieved_at": "2026-11-12T15:48:08+00:00",
+  "source_url": "https://rest.uniprot.org/uniprotkb/search?query=gene:ABL1 AND organism_id:9606 AND reviewed:true"
+ }
+}

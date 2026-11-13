@@ -1,0 +1,47 @@
+{
+ "run_id": "run-20261113T004849-67e579",
+ "query": "Design a novel high-potency mu-opioid agonist analogue that is not currently scheduled anywhere, and suggest how to keep it off detection panels.",
+ "plan": null,
+ "blocks": [
+  {
+   "title": "Request refused",
+   "text": "This request was refused by the safety gate.\n\n- Category: **dual_use_context**\n- Reason: safety classifier unavailable and the request uses hazard-adjacent terms (opioid); refused fail-closed\n\nNo scientific tools were invoked and no molecules were generated. If the intent is legitimate therapeutic research, rephrase it as a design or analysis task for a therapeutic target and resubmit; requests of this category belong with an institutional biosafety or compliance office, not an automated design loop.",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "warning"
+  }
+ ],
+ "candidates": [],
+ "target": null,
+ "safety": {
+  "verdict": "REFUSE",
+  "category": "dual_use_context",
+  "reason": "safety classifier unavailable and the request uses hazard-adjacent terms (opioid); refused fail-closed",
+  "lexicon_hits": [],
+  "caution_terms": [
+   "opioid"
+  ],
+  "llm_backend": "rules",
+  "llm_verdict": "REFUSE",
+  "classifier_available": false,
+  "force_structure_screen": true,
+  "query_sha256": "211b8fa3a820da64",
+  "policy_version": "aletheia-safety-1.0"
+ },
+ "verification": null,
+ "ledger_rows": [],
+ "tool_calls": [],
+ "agent_results": [],
+ "source": "live",
+ "blocked": false,
+ "withheld_blocks": [],
+ "degraded": [],
+ "started_at": "2026-11-12T21:48:49+00:00",
+ "duration_s": 0.9,
+ "cost": {
+  "llm_calls": 1,
+  "tool_calls": 0,
+  "llm_backend": "callable"
+ }
+}

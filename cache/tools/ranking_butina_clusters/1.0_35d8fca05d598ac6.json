@@ -1,0 +1,29 @@
+{
+ "tool": "ranking.butina_clusters",
+ "version": "1.0",
+ "params": {
+  "smiles_list": [
+   "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC"
+  ],
+  "cutoff": 0.35
+ },
+ "params_hash": "35d8fca05d598ac6",
+ "cached_at": "2026-11-12T21:58:58+00:00",
+ "data": {
+  "n_clusters": 1,
+  "cutoff_tanimoto_distance": 0.35,
+  "cluster_sizes": [
+   1
+  ],
+  "clusters": [
+   [
+    "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC"
+   ]
+  ],
+  "labels": {
+   "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC": 0
+  },
+  "n_molecules": 1,
+  "method": "Taylor-Butina on Morgan r=2 2048-bit fingerprints"
+ }
+}

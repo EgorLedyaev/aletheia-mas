@@ -1,0 +1,141 @@
+{
+ "run_id": "run-20261112T014029-7e5323",
+ "rows": [
+  {
+   "id": "C069",
+   "origin": "G3_selfies_mutate",
+   "smiles": "CC=Cc1ncnc(Nc2cccc(Br)c2)c1C#COC",
+   "reaction": "SNAr on an activated heteroarene",
+   "blocks": "chloro-heteroarene + aniline",
+   "alternatives": [
+    "Buchwald-Hartwig / SNAr C-N",
+    "Williamson ether / alkylation"
+   ],
+   "sa": 3.155,
+   "light": "yellow",
+   "why": "ynol ether (alkoxy alkyne)",
+   "hard": [
+    "ynol ether (alkoxy alkyne)"
+   ]
+  },
+  {
+   "id": "C063",
+   "origin": "G3_selfies_mutate",
+   "smiles": "COC1=Cc2c(Nc3cccc(Br)c3)ncnc21",
+   "reaction": "SNAr on an activated heteroarene",
+   "blocks": "chloro-heteroarene + aniline",
+   "alternatives": [
+    "Buchwald-Hartwig / SNAr C-N",
+    "Williamson ether / alkylation"
+   ],
+   "sa": 2.661,
+   "light": "yellow",
+   "why": "strained or unusual ring; enol ether (acid-labile)",
+   "hard": [
+    "strained or unusual ring",
+    "enol ether (acid-labile)"
+   ]
+  },
+  {
+   "id": "C051",
+   "origin": "G3_selfies_mutate",
+   "smiles": "COC1=Cc2c(ncnc2Nc2cccc(Br)c2)C=COC1",
+   "reaction": "SNAr on an activated heteroarene",
+   "blocks": "chloro-heteroarene + aniline",
+   "alternatives": [
+    "Buchwald-Hartwig / SNAr C-N",
+    "Williamson ether / alkylation"
+   ],
+   "sa": 3.224,
+   "light": "yellow",
+   "why": "macrocycle or large ring; enol ether (acid-labile)",
+   "hard": [
+    "macrocycle or large ring",
+    "enol ether (acid-labile)"
+   ]
+  },
+  {
+   "id": "C079",
+   "origin": "G4_llm_edits",
+   "smiles": "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+   "reaction": "SNAr on an activated heteroarene",
+   "blocks": "chloro-heteroarene + aniline",
+   "alternatives": [
+    "Buchwald-Hartwig / SNAr C-N",
+    "Williamson ether / alkylation"
+   ],
+   "sa": 1.935,
+   "light": "green",
+   "why": "routine disconnection available",
+   "hard": []
+  },
+  {
+   "id": "C061",
+   "origin": "G3_selfies_mutate",
+   "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1C",
+   "reaction": "SNAr on an activated heteroarene",
+   "blocks": "chloro-heteroarene + aniline",
+   "alternatives": [
+    "Buchwald-Hartwig / SNAr C-N",
+    "Williamson ether / alkylation"
+   ],
+   "sa": 2.054,
+   "light": "green",
+   "why": "routine disconnection available",
+   "hard": []
+  },
+  {
+   "id": "C059",
+   "origin": "G3_selfies_mutate",
+   "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2nc1OC",
+   "reaction": "SNAr on an activated heteroarene",
+   "blocks": "chloro-heteroarene + aniline",
+   "alternatives": [
+    "Buchwald-Hartwig / SNAr C-N",
+    "Williamson ether / alkylation"
+   ],
+   "sa": 2.345,
+   "light": "green",
+   "why": "routine disconnection available",
+   "hard": []
+  },
+  {
+   "id": "C024",
+   "origin": "G1_rule_decorate",
+   "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(S(N)(=O)=O)c1OC",
+   "reaction": "sulfonamide formation",
+   "blocks": "sulfonyl chloride + amine",
+   "alternatives": [
+    "SNAr on an activated heteroarene",
+    "Buchwald-Hartwig / SNAr C-N"
+   ],
+   "sa": 2.54,
+   "light": "green",
+   "why": "routine disconnection available",
+   "hard": []
+  },
+  {
+   "id": "C075",
+   "origin": "G3_selfies_mutate",
+   "smiles": "COC=C=Cc1c(C=COC)ncnc1Nc1cccc(Br)c1",
+   "reaction": "SNAr on an activated heteroarene",
+   "blocks": "chloro-heteroarene + aniline",
+   "alternatives": [
+    "Buchwald-Hartwig / SNAr C-N",
+    "Williamson ether / alkylation"
+   ],
+   "sa": 3.484,
+   "light": "red",
+   "why": "allene / cumulated diene; enol ether (acid-labile)",
+   "hard": [
+    "allene / cumulated diene",
+    "enol ether (acid-labile)"
+   ]
+  }
+ ],
+ "counts": {
+  "green": 4,
+  "yellow": 3,
+  "red": 1
+ }
+}

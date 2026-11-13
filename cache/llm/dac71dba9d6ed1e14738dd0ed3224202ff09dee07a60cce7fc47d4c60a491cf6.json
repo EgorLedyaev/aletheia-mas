@@ -1,0 +1,38 @@
+{
+ "key": "dac71dba9d6ed1e14738dd0ed3224202ff09dee07a60cce7fc47d4c60a491cf6",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- structure_source = CID 5291 (RETRIEVED)\n- inchikey = KTUFNOKKBVMGRW-UHFFFAOYSA-N (COMPUTED)\n- MolWt = 493.615 (COMPUTED)\n- cLogP = 4.59 (COMPUTED)\n- TPSA = 86.28 (COMPUTED)\n- HBD = 2 (COMPUTED)\n- HBA = 7 (COMPUTED)\n- RotB = 7 (COMPUTED)\n- RingCount = 5 (COMPUTED)\n- AromaticRings = 4 (COMPUTED)\n- HeavyAtoms = 37 (COMPUTED)\n- FractionCSP3 = 0.241 (COMPUTED)\n- FormalCharge = 0 (COMPUTED)\n- MolMR = 146.894 (COMPUTED)\n- NumStereocentres = 0 (COMPUTED)\n- QED = 0.389 (COMPUTED)\n- SAscore = 2.332 (COMPUTED)\n- lipinski_violations = 0 (COMPUTED)\n- n_structural_alerts = 0 (COMPUTED)\n- esol_logS = -5.81 (PREDICTED)\n- cns_mpo_like = 2.956 (PREDICTED)\n- n_developability_panels_passed = 3 (COMPUTED)\n- critic_claims_recomputed = 8 (COMPUTED)\n- critic_recomputation_mismatches = 0 (COMPUTED)\n- predicted_claims_total = 2 (COMPUTED)\n- predicted_claims_out_of_domain = 0 (COMPUTED)\n- ledger_claims_total = 26 (COMPUTED)\n\nUser request: What is the molecular weight of imatinib?\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "The molecular weight falls within the conventional small-molecule drug range and is consistent with the compound's drug-likeness profile, which shows no Lipinski violations and no structural alerts. The lipophilicity and polar surface area values, along with the quantitative estimate of drug-likeness, suggest a molecule with reasonable physicochemical balance, though the rotatable bond count and ring count indicate moderate structural complexity. These descriptors characterize the compound's intrinsic physicochemical properties only; they do not establish or support any claim about biological activity, target engagement, efficacy, or clinical suitability. Independent experimental validation would be required before drawing any conclusions beyond these computed and predicted molecular properties.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1125,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 235,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

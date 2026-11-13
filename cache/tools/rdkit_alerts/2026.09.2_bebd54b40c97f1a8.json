@@ -1,0 +1,31 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "CO[N+]c1cc2c(NC3=CC=C[C-](Br)C3)ncnc2cc1OC"
+ },
+ "params_hash": "bebd54b40c97f1a8",
+ "cached_at": "2026-11-11T22:40:35+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Carbo_cation/anion",
+    "Oxygen-nitrogen_single_bond"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 2,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

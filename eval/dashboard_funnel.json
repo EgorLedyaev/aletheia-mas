@@ -1,0 +1,34 @@
+{
+ "S07": {
+  "run_id": "run-20261113T013352-84470c",
+  "raw_proposals": 86,
+  "unique_after_dedup": 86,
+  "hazard_blocked": 0,
+  "after_hazard_gate": 86,
+  "gate1_passed": 5,
+  "gate1_rejected": 81,
+  "pareto_front": 2,
+  "chemotype_clusters": 3,
+  "portfolio": 5
+ },
+ "S08": {
+  "run_id": "run-20261113T013401-4077d6",
+  "raw_proposals": 126,
+  "unique_after_dedup": 126,
+  "hazard_blocked": 0,
+  "after_hazard_gate": 126,
+  "gate1_passed": 104,
+  "gate1_rejected": 22,
+  "oracle_scored": 104,
+  "oracle_out_of_domain": 11,
+  "docked": 8,
+  "pareto_front": 8,
+  "chemotype_clusters": 38,
+  "portfolio": 8
+ },
+ "_provenance": {
+  "generated_by": "scripts/funnel_report.py",
+  "derived_from": "eval/funnel_table.json",
+  "warning": "generated file -- edit the run ledgers, not this"
+ }
+}

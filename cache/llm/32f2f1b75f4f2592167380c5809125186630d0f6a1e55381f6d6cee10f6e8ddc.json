@@ -1,0 +1,38 @@
+{
+ "key": "32f2f1b75f4f2592167380c5809125186630d0f6a1e55381f6d6cee10f6e8ddc",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- uniprot_protein_name = Tyrosine-protein kinase ABL1 (RETRIEVED)\n- sequence_length = 1130 (RETRIEVED)\n- n_pdb_structures = 85 (RETRIEVED)\n- sequence_gravy = -0.597 (COMPUTED)\n- net_charge_ph7 = 14 (COMPUTED)\n- alphafold_mean_plddt = 63.37 (COMPUTED)\n- top_pocket_volume = 2484 (COMPUTED)\n- n_pockets_detected = 5 (COMPUTED)\n- critic_claims_recomputed = 0 (COMPUTED)\n- critic_recomputation_mismatches = 0 (COMPUTED)\n- predicted_claims_total = 0 (COMPUTED)\n- predicted_claims_out_of_domain = 0 (COMPUTED)\n- ledger_claims_total = 12 (COMPUTED)\n- identity_checks_passed = 1 (COMPUTED)\n- identity_checks_total = 2 (COMPUTED)\n\nUser request: Analyse ABL1 kinase (P00519) using PDB structure 1M17 and dock imatinib into it.\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "The structural model shows a moderate average confidence level, with a pocket-detection step identifying several candidate cavities and a top-ranked pocket of modest size that plausibly corresponds to a kinase ligand-binding site. Overall physicochemical character of the protein (hydropathy and net charge) is consistent with a soluble, folded kinase domain rather than suggesting any issue with the construct. However, identity verification did not fully pass, and no docking or binding-affinity claims were actually recomputed or validated in this run, so no statement can be made about imatinib binding, pose quality, or docking score in this pocket. These results therefore support only that a plausible ligand-binding cavity was located on a kinase structure of appropriate overall character; they do not support any conclusion about binding strength, selectivity, or pharmacological relevance, and the unresolved identity check means the structure-to-sequence correspondence should be confirmed before drawing further conclusions.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 922,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 307,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

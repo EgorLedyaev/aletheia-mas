@@ -1,0 +1,17 @@
+{
+ "tool": "docking.prepare_receptor",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "pdb_path": "cache/docking/diag_rec.pdb",
+  "out_pdbqt": "cache/docking/diag_rec.pdbqt"
+ },
+ "params_hash": "1e3d38d03283dbd5",
+ "cached_at": "2026-11-12T20:49:53+00:00",
+ "data": {
+  "path": "cache/docking/diag_rec.pdbqt",
+  "n_atoms": 3020,
+  "ph": 7.4,
+  "sha256": "7406dbbd951c7a7eefa3058348bbdb25d2cacd0acc5c1b8c517303a27d44d781",
+  "obabel_stderr": "==============================\n*** Open Babel Warning  in OpenBabel::OBMol::PerceiveBondOrders\n  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is cache/docking/diag_rec.pdb)\n\n1"
+ }
+}

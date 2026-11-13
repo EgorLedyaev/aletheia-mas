@@ -1,0 +1,63 @@
+{
+ "tool": "pdb.ligands",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/1OYT.pdb"
+ },
+ "params_hash": "feccd13dd73db9ef",
+ "cached_at": "2026-11-12T10:40:36+00:00",
+ "data": {
+  "pdb_path": "cache/structures/1OYT.pdb",
+  "n_ligands": 2,
+  "ligands": [
+   {
+    "resname": "FSN",
+    "chain": "H",
+    "resseq": "501",
+    "n_heavy_atoms": 30,
+    "centroid": [
+     16.793,
+     -12.378,
+     21.829
+    ],
+    "extent_A": [
+     11.7,
+     4.65,
+     9.75
+    ]
+   },
+   {
+    "resname": "SIN",
+    "chain": "I",
+    "resseq": "1",
+    "n_heavy_atoms": 7,
+    "centroid": [
+     5.274,
+     -10.89,
+     2.42
+    ],
+    "extent_A": [
+     2.08,
+     2.67,
+     3.23
+    ]
+   }
+  ],
+  "largest": {
+   "resname": "FSN",
+   "chain": "H",
+   "resseq": "501",
+   "n_heavy_atoms": 30,
+   "centroid": [
+    16.793,
+    -12.378,
+    21.829
+   ],
+   "extent_A": [
+    11.7,
+    4.65,
+    9.75
+   ]
+  }
+ }
+}

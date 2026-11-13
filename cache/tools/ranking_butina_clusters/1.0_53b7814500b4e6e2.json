@@ -1,0 +1,47 @@
+{
+ "tool": "ranking.butina_clusters",
+ "version": "1.0",
+ "params": {
+  "smiles_list": [
+   "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+   "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+   "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+   "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1"
+  ],
+  "cutoff": 0.35
+ },
+ "params_hash": "53b7814500b4e6e2",
+ "cached_at": "2026-11-11T18:27:25+00:00",
+ "data": {
+  "n_clusters": 3,
+  "cutoff_tanimoto_distance": 0.35,
+  "cluster_sizes": [
+   3,
+   1,
+   1
+  ],
+  "clusters": [
+   [
+    "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+    "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC"
+   ],
+   [
+    "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1"
+   ],
+   [
+    "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1"
+   ]
+  ],
+  "labels": {
+   "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC": 0,
+   "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC": 0,
+   "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC": 0,
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1": 1,
+   "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1": 2
+  },
+  "n_molecules": 5,
+  "method": "Taylor-Butina on Morgan r=2 2048-bit fingerprints"
+ }
+}

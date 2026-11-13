@@ -1,0 +1,120 @@
+{
+ "tool": "generators.validate_proposals",
+ "version": "1.0",
+ "params": {
+  "proposals": [
+   {
+    "smiles": "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+    "rationale": "Moved Br from meta to para on anilino ring to probe steric/electronic tolerance of EGFR hydrophobic pocket."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+    "rationale": "Bromine to chlorine bioisosteric halogen swap, reducing molecular weight/lipophilicity while retaining halogen bonding."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+    "rationale": "Replaced Br with nitrile to maintain similar electronic character while adding H-bond acceptor capability, common EGFR anilinoquinazoline modification."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCOC",
+    "rationale": "Extended one methoxy to a methoxyethoxy chain (erlotinib-like side chain) to improve solubility and mimic known EGFR inhibitor SAR."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN1CCOCC1",
+    "rationale": "Introduced morpholine-ethoxy side chain at one methoxy position to boost aqueous solubility and modulate selectivity via extended solvent-exposed substituent."
+   },
+   {
+    "smiles": "Nc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+    "rationale": "Replaced one methoxy with amino group to probe altered H-bonding/electronics at the 6-position while keeping core scaffold."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1F",
+    "rationale": "Swapped one methoxy for fluorine, a smaller bioisostere, to reduce steric bulk and modulate electron density on the quinazoline ring."
+   },
+   {
+    "smiles": "COc1cc2c(cc1OC)c(Nc1cccc(Br)c1)nc(N)n2",
+    "rationale": "Replaced quinazoline CH at position 2 with an amino-substituted pyrimidine-like nitrogen pattern to probe hinge-binding H-bond donor addition."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)F",
+    "rationale": "Replaced one methoxy with a difluoromethoxy group to modulate electronics and metabolic stability while keeping similar steric profile."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)nc2cc1OC",
+    "rationale": "Introduced an additional ring nitrogen (pyridopyrimidine-type core) to probe altered hinge-binding geometry and selectivity."
+   }
+  ],
+  "seed_smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+ },
+ "params_hash": "f0a2d6d4c42dc8c1",
+ "cached_at": "2026-11-12T12:23:13+00:00",
+ "data": {
+  "generator": "G4_llm_edits",
+  "n_proposed": 10,
+  "n_generated": 9,
+  "n_rejected": 1,
+  "molecules": [
+   {
+    "smiles": "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+    "transform": "Moved Br from meta to para on anilino ring to probe steric/electronic tolerance of EGFR hydrophobic pocket.",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+    "transform": "Bromine to chlorine bioisosteric halogen swap, reducing molecular weight/lipophilicity while retaining halogen bonding.",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+    "transform": "Replaced Br with nitrile to maintain similar electronic character while adding H-bond acceptor capability, common EGFR a",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COCCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+    "transform": "Extended one methoxy to a methoxyethoxy chain (erlotinib-like side chain) to improve solubility and mimic known EGFR inh",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN1CCOCC1",
+    "transform": "Introduced morpholine-ethoxy side chain at one methoxy position to boost aqueous solubility and modulate selectivity via",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1N",
+    "transform": "Replaced one methoxy with amino group to probe altered H-bonding/electronics at the 6-position while keeping core scaffo",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1F",
+    "transform": "Swapped one methoxy for fluorine, a smaller bioisostere, to reduce steric bulk and modulate electron density on the quin",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(N)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "Replaced quinazoline CH at position 2 with an amino-substituted pyrimidine-like nitrogen pattern to probe hinge-binding ",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)F",
+    "transform": "Replaced one methoxy with a difluoromethoxy group to modulate electronics and metabolic stability while keeping similar ",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   }
+  ],
+  "rejected": [
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)nc2cc1OC",
+    "reason": "unparseable SMILES"
+   }
+  ],
+  "validity": 0.9
+ }
+}

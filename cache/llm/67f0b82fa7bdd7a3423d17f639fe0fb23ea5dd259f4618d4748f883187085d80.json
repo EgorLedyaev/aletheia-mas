@@ -1,0 +1,38 @@
+{
+ "key": "67f0b82fa7bdd7a3423d17f639fe0fb23ea5dd259f4618d4748f883187085d80",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is the UniProt accession of human EGFR?"
+   }
+  ],
+  "system": "You are a computational chemistry assistant. Answer the request directly and concretely, with specific identifiers and numbers where relevant.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1200,
+  "model": null,
+  "purpose": "baseline_plain_llm"
+ },
+ "response": {
+  "text": "The UniProt accession for human EGFR (Epidermal Growth Factor Receptor) is **P00533**.\n\nKey details:\n- **Entry name:** EGFR_HUMAN\n- **Accession:** P00533\n- **Gene:** EGFR (also known as ERBB1, HER1)\n- **Protein:** Epidermal growth factor receptor, a receptor tyrosine kinase\n- **Organism:** *Homo sapiens*\n- **Length:** 1210 amino acids (full-length precursor)\n- **Function:** Binds EGF, TGF-\u03b1, and related ligands; activates downstream signaling (RAS/MAPK, PI3K/AKT) controlling cell proliferation and survival. Frequently mutated/amplified in non-small cell lung cancer, glioblastoma, and other cancers, and is the target of drugs like gefitinib, erlotinib, and osimertinib.\n\nIf you need related isoform or domain information (e.g., the kinase domain boundaries, PDB structures, or specific pathogenic mutations like L858R or exon 19 deletions), let me know and I can pull those details too.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 415,
+   "cache_creation_input_tokens": 4888,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 4888
+   },
+   "output_tokens": 374,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

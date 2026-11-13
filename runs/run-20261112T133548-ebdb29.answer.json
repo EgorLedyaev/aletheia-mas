@@ -1,0 +1,651 @@
+{
+ "run_id": "run-20261112T133548-ebdb29",
+ "query": "Analyse the structure of EGFR (P00533): pick a structure, find the binding site and tell me how confident the pocket detection is.",
+ "plan": {
+  "query": "Analyse the structure of EGFR (P00533): pick a structure, find the binding site and tell me how confident the pocket detection is.",
+  "intents": [
+   "protein_analysis"
+  ],
+  "modality": "protein",
+  "targets": [
+   "EGFR",
+   "P00533"
+  ],
+  "molecules": [],
+  "steps": [
+   {
+    "step_id": "S1",
+    "agent": "target_analyst",
+    "action": "resolve_target",
+    "inputs": {
+     "targets": [
+      "EGFR",
+      "P00533"
+     ],
+     "need_structure": true
+    },
+    "depends_on": [],
+    "rationale": "every downstream claim needs a verified target identity",
+    "optional": false
+   },
+   {
+    "step_id": "S2",
+    "agent": "structure_analyst",
+    "action": "analyse_structure",
+    "inputs": {},
+    "depends_on": [
+     "S1"
+    ],
+    "rationale": "binding-site detection on the selected structure",
+    "optional": false
+   },
+   {
+    "step_id": "S3",
+    "agent": "critic",
+    "action": "cross_check",
+    "inputs": {},
+    "depends_on": [
+     "S1",
+     "S2"
+    ],
+    "rationale": "independent recomputation and applicability-domain audit",
+    "optional": false
+   }
+  ],
+  "planner": "callable+cache",
+  "notes": [
+   "The user asks to analyze an EGFR structure, select a structure, identify its binding pocket, and report confidence in pocket detection \u2014 all protein structural analysis tasks, with no ligand design or molecule provided."
+  ]
+ },
+ "blocks": [
+  {
+   "title": "What the system did",
+   "text": "Planner `callable+cache` routed this request to the intents protein_analysis.\n\n- `S1` **target_analyst** -> resolve_target \u2014 every downstream claim needs a verified target identity\n- `S2` **structure_analyst** -> analyse_structure \u2014 binding-site detection on the selected structure\n- `S3` **critic** -> cross_check \u2014 independent recomputation and applicability-domain audit\n\nTools actually invoked: `pdb.chain_sequences`, `pdb.download`, `pdb.entry`, `pdb.ligands`, `pocket.detect`, `uniprot.entry`, `uniprot.sequence_features`.",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "2",
+    "3",
+    "S1",
+    "S2",
+    "S3",
+    "chain_sequences",
+    "download",
+    "entry",
+    "ligands",
+    "detect",
+    "entry",
+    "sequence_features"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Target",
+   "text": "**EGFR** \u2014 Epidermal growth factor receptor (Homo sapiens), UniProt `P00533`.\n- Sequence length: 1210 residues [E-0002] \u2014 RETRIEVED | P00533 @ 2026-11-11\n- Experimental structures cross-referenced: 388 [E-0003] \u2014 RETRIEVED | P00533 @ 2026-11-11\n- Structure selected: `8A27` at 1.07 A resolution [E-0006]\n- Target identity checks passed: 2 of 2 [E-0017] \u2014 uniprot_length_matches_sequence; structure_sequence_matches_uniprot",
+   "claim_ids": [
+    "E-0001",
+    "E-0002",
+    "E-0003",
+    "E-0006",
+    "E-0006",
+    "E-0017",
+    "E-0018"
+   ],
+   "structures": [
+    "P00533",
+    "8A27"
+   ],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Binding site",
+   "text": "- top pocket volume: 445 A^3 [E-0009] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- n pockets detected: 3  [E-0010] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- pocket to cocrystal distance: 0.44 A [E-0011] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- localisation check: the detected cavity nearest the crystallographic ligand centroid is pocket rank 1, within 5 A of it",
+   "claim_ids": [
+    "E-0009",
+    "E-0010",
+    "E-0011"
+   ],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "5"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Independent cross-check",
+   "text": "- critic claims recomputed: 0 [E-0012] \u2014 COMPUTED | aletheia.critic 1.0\n- critic recomputation mismatches: 0 [E-0013] \u2014 COMPUTED | aletheia.critic 1.0\n- predicted claims total: 0 [E-0014] \u2014 COMPUTED | aletheia.critic 1.0\n- predicted claims out of domain: 0 [E-0015] \u2014 COMPUTED | aletheia.critic 1.0\n- ledger claims total: 15 [E-0016] \u2014 COMPUTED | aletheia.critic 1.0\n- fewer than two oracles scored the candidates; no consensus check possible",
+   "claim_ids": [
+    "E-0012",
+    "E-0013",
+    "E-0014",
+    "E-0015",
+    "E-0016"
+   ],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "note"
+  },
+  {
+   "title": "Interpretation (LLM reasoning)",
+   "text": "The selected crystal structure shows very high sequence identity to the target protein and was solved at high resolution, supporting its use as a reliable structural model for this analysis. Pocket detection identified a small number of candidate cavities, with the top-ranked pocket closely co-located with the bound co-crystallized ligand, indicating the detection method correctly recovered the known binding site rather than flagging a spurious surface cavity. Identity and recomputation checks were consistent and showed no mismatches, which supports the internal reliability of the pipeline's reported values but does not by itself establish that the pocket is druggable or biologically relevant beyond this structure. These results support confidence in the location of the binding site within this particular crystal form; they do not support any conclusion about ligand binding affinity, selectivity, or therapeutic potential.\n\n*This paragraph is LLM reasoning over the findings above. It is tagged HYPOTHESIS: it contains no numbers of its own and was itself checked against the claims ledger before publication.*",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "note"
+  }
+ ],
+ "candidates": [],
+ "target": null,
+ "safety": {
+  "verdict": "ALLOW",
+  "category": "ordinary_research",
+  "reason": "Routine structural biology task analyzing a well-characterized oncology drug target (EGFR) and predicting its binding pocket, with no weaponization or harm potential.",
+  "lexicon_hits": [],
+  "caution_terms": [],
+  "llm_backend": "callable",
+  "llm_verdict": "ALLOW",
+  "classifier_available": true,
+  "force_structure_screen": false,
+  "query_sha256": "7dbddb4d3137b84e",
+  "policy_version": "aletheia-safety-1.0"
+ },
+ "verification": {
+  "ok": true,
+  "summary": "ledger coverage 100.0% (22/22 numeric tokens), 14/18 claims cited, 0 violation(s)",
+  "numeric_coverage": 1.0,
+  "n_numeric_tokens": 22,
+  "n_resolved_tokens": 22,
+  "n_claims_total": 18,
+  "n_claims_used": 14,
+  "violations": []
+ },
+ "ledger_rows": [
+  {
+   "claim_id": "E-0001",
+   "tag": "RETRIEVED",
+   "key": "uniprot_protein_name",
+   "value": "Epidermal growth factor receptor",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-c99c8e61",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0002",
+   "tag": "RETRIEVED",
+   "key": "sequence_length",
+   "value": "1210",
+   "units": "residues",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-c99c8e61",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0003",
+   "tag": "RETRIEVED",
+   "key": "n_pdb_structures",
+   "value": "388",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-c99c8e61",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0004",
+   "tag": "COMPUTED",
+   "key": "sequence_gravy",
+   "value": "-0.316",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "6d10467507380985",
+   "call_id": "C-f7abefba",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Kyte-Doolittle mean hydropathy"
+  },
+  {
+   "claim_id": "E-0005",
+   "tag": "COMPUTED",
+   "key": "net_charge_ph7",
+   "value": "-12",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "6d10467507380985",
+   "call_id": "C-f7abefba",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "K+R-D-E count, no pKa model"
+  },
+  {
+   "claim_id": "E-0006",
+   "tag": "RETRIEVED",
+   "key": "pdb_resolution",
+   "value": "1.07",
+   "units": "A",
+   "subject": "8A27",
+   "tool": "pdb.entry",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "8A27",
+   "params_hash": "0371a3240ca17144",
+   "call_id": "C-21d39f45",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0007",
+   "tag": "COMPUTED",
+   "key": "structure_sequence_identity",
+   "value": "0.991",
+   "units": "",
+   "subject": "8A27:A",
+   "tool": "pdb.chain_sequences",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "",
+   "params_hash": "dbdb1c3ebe853ef9",
+   "call_id": "C-97e7ebcd",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "ungapped best-offset identity to the UniProt sequence"
+  },
+  {
+   "claim_id": "E-0008",
+   "tag": "COMPUTED",
+   "key": "cocrystal_ligand",
+   "value": "KY9",
+   "units": "",
+   "subject": "8A27",
+   "tool": "pdb.ligands",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "",
+   "params_hash": "754c7c333d71e0b1",
+   "call_id": "C-b04e7166",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "48 heavy atoms, chain A"
+  },
+  {
+   "claim_id": "E-0009",
+   "tag": "COMPUTED",
+   "key": "top_pocket_volume",
+   "value": "445",
+   "units": "A^3",
+   "subject": "8A27",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "7801197efebc5bad",
+   "call_id": "C-70dbe24e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "reference_point": [
+     23.815,
+     -10.622,
+     -11.554
+    ],
+    "top_pocket_centroid_distance_A": 7.35,
+    "top_pocket_nearest_point_distance_A": 0.44,
+    "best_pocket_rank": 1,
+    "best_pocket_nearest_point_distance_A": 0.44,
+    "hit_within_5A": true,
+    "criterion": "distance from the crystallographic ligand centroid to the nearest grid point of the detected cavity"
+   },
+   "note": "LIGSITE-style protein-solvent-protein buriedness grid (re-implementation; see aletheia/tools/pocket.py)"
+  },
+  {
+   "claim_id": "E-0010",
+   "tag": "COMPUTED",
+   "key": "n_pockets_detected",
+   "value": "3",
+   "units": "",
+   "subject": "8A27",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "7801197efebc5bad",
+   "call_id": "C-70dbe24e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0011",
+   "tag": "COMPUTED",
+   "key": "pocket_to_cocrystal_distance",
+   "value": "0.44",
+   "units": "A",
+   "subject": "8A27",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "7801197efebc5bad",
+   "call_id": "C-70dbe24e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "distance from the nearest detected pocket centre to the crystallographic ligand centroid (localisation check)"
+  },
+  {
+   "claim_id": "E-0012",
+   "tag": "COMPUTED",
+   "key": "critic_claims_recomputed",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "seed=20261111",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "random sample of 0 recomputable descriptor claims, tool cache bypassed"
+  },
+  {
+   "claim_id": "E-0013",
+   "tag": "COMPUTED",
+   "key": "critic_recomputation_mismatches",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "seed=20261111",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "none"
+  },
+  {
+   "claim_id": "E-0014",
+   "tag": "COMPUTED",
+   "key": "predicted_claims_total",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "ad-audit",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0015",
+   "tag": "COMPUTED",
+   "key": "predicted_claims_out_of_domain",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "ad-audit",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "applicability domain verdicts on model predictions"
+  },
+  {
+   "claim_id": "E-0016",
+   "tag": "COMPUTED",
+   "key": "ledger_claims_total",
+   "value": "15",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "hygiene",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "COMPUTED=11; PREDICTED=0; RETRIEVED=4; HYPOTHESIS=0"
+  },
+  {
+   "claim_id": "E-0017",
+   "tag": "COMPUTED",
+   "key": "identity_checks_passed",
+   "value": "2",
+   "units": "",
+   "subject": "P00533",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00533",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uniprot_length_matches_sequence=True; structure_sequence_matches_uniprot=True"
+  },
+  {
+   "claim_id": "E-0018",
+   "tag": "COMPUTED",
+   "key": "identity_checks_total",
+   "value": "2",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00533",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  }
+ ],
+ "tool_calls": [
+  {
+   "call_id": "C-c99c8e61",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "params": {
+    "accession": "P00533"
+   },
+   "params_hash": "a08313d5b3ed5b5a",
+   "started_at": "2026-11-12T10:35:48+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-f7abefba",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "params": {
+    "sequence": "MRPSGTAGAALLALLAALCPASRALEEKKVCQGTSNKLTQLGTFEDHFLSLQRMFNNCEVVLGNLEITYVQRNYDLSFLKTIQEVAGYVLIALNTVERIPLENLQIIRGNMYYENSYALAVLSNYDANKTGLKELPMRNLQEILHGAVRFSNNPALCNVESIQWRDIVSSDFLSNMSMDFQNHLGSCQKCDPSCPNGSCW..."
+   },
+   "params_hash": "6d10467507380985",
+   "started_at": "2026-11-12T10:35:48+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-2d90628c",
+   "tool": "pdb.download",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "entry_id": "8A27"
+   },
+   "params_hash": "cf22a568b66f653b",
+   "started_at": "2026-11-12T10:35:48+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-b04e7166",
+   "tool": "pdb.ligands",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/8A27.pdb"
+   },
+   "params_hash": "754c7c333d71e0b1",
+   "started_at": "2026-11-12T10:35:48+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-21d39f45",
+   "tool": "pdb.entry",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "entry_id": "8A27"
+   },
+   "params_hash": "0371a3240ca17144",
+   "started_at": "2026-11-12T10:35:48+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-97e7ebcd",
+   "tool": "pdb.chain_sequences",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/8A27.pdb"
+   },
+   "params_hash": "dbdb1c3ebe853ef9",
+   "started_at": "2026-11-12T10:35:48+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-70dbe24e",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "params": {
+    "pdb_path": "cache/structures/8A27.pdb",
+    "spacing": 1.0,
+    "probe": 3.2,
+    "psp_min": 5,
+    "reference_point": "[23.815, -10.622, -11.554]"
+   },
+   "params_hash": "7801197efebc5bad",
+   "started_at": "2026-11-12T10:35:48+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "structure_analyst"
+  }
+ ],
+ "agent_results": [
+  {
+   "agent": "target_analyst",
+   "step_id": "S1",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.031,
+   "error": null,
+   "messages": [
+    "EGFR: Epidermal growth factor receptor",
+    "identity checks passed: 2/2"
+   ]
+  },
+  {
+   "agent": "structure_analyst",
+   "step_id": "S2",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.012,
+   "error": null,
+   "messages": [
+    "3 buried cavities detected"
+   ]
+  },
+  {
+   "agent": "critic",
+   "step_id": "S3",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.001,
+   "error": null,
+   "messages": [
+    "fewer than two oracles scored the candidates; no consensus check possible"
+   ]
+  }
+ ],
+ "source": "cached",
+ "blocked": false,
+ "withheld_blocks": [],
+ "degraded": [],
+ "started_at": "2026-11-12T10:35:48+00:00",
+ "duration_s": 0.07,
+ "cost": {
+  "llm_calls": 3,
+  "llm_backend": "replay/rules (offline)",
+  "tool_calls": 7,
+  "cached_tool_calls": 7
+ }
+}

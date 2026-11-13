@@ -1,0 +1,217 @@
+{
+ "generated_by": "scripts/docking_report.py",
+ "criterion": "docs/preregistration.md W3",
+ "n_receptors": 3,
+ "usable_for_ranking": [
+  "1M17/vinardo"
+ ],
+ "vinardo_adopted_on": [
+  "1M17"
+ ],
+ "receptors": [
+  {
+   "pdb": "8A27",
+   "label": "EGFR kinase domain (8A27, 1.07 A)",
+   "family": "kinase",
+   "target": "CHEMBL203",
+   "accession": "P00533",
+   "chain": "A",
+   "box": {
+    "center": [
+     23.815,
+     -10.622,
+     -11.554
+    ],
+    "size": [
+     28.22,
+     18.05,
+     23.97
+    ]
+   },
+   "cocrystal_ligand": "KY9",
+   "n_actives": 28,
+   "n_decoys": 33,
+   "n_failed_pairs": 9,
+   "decoy_class": "measured inactive (pChEMBL <= 5)",
+   "ligand_source": "ChEMBL via this system's local tool cache (1726 records in 4 cached responses); the ChEMBL web API was returning HTTP 500 at run time",
+   "exhaustiveness": 8,
+   "seed": 42,
+   "scoring": {
+    "vina": {
+     "roc_auc": 0.5931,
+     "auc_ci95": [
+      0.4416,
+      0.7392
+     ],
+     "ef_1pct": 2.179,
+     "ef_5pct": 0.726,
+     "ef_10pct": 0.726,
+     "mean_active": -8.662,
+     "mean_decoy": -8.853,
+     "score_gap": -0.191,
+     "usable_for_ranking": false
+    },
+    "vinardo": {
+     "roc_auc": 0.5097,
+     "auc_ci95": [
+      0.3561,
+      0.6548
+     ],
+     "ef_1pct": 0.0,
+     "ef_5pct": 0.0,
+     "ef_10pct": 0.0,
+     "mean_active": -6.094,
+     "mean_decoy": -6.109,
+     "score_gap": -0.015,
+     "usable_for_ranking": false
+    }
+   },
+   "delta_auc_vinardo_minus_vina": {
+    "mean": -0.0812,
+    "ci95": [
+     -0.2251,
+     0.0682
+    ],
+    "excludes_zero": false
+   },
+   "_source_file": "docking_benchmark_egfr.json",
+   "_vina_binary": "vina_1.2.7_win.exe"
+  },
+  {
+   "pdb": "1M17",
+   "label": "EGFR kinase domain (1M17, erlotinib co-crystal)",
+   "family": "kinase",
+   "target": "CHEMBL203",
+   "accession": "P00533",
+   "chain": "A",
+   "box": {
+    "center": [
+     22.014,
+     0.253,
+     52.794
+    ],
+    "size": [
+     25.71,
+     18.0,
+     18.0
+    ]
+   },
+   "cocrystal_ligand": "AQ4",
+   "n_actives": 28,
+   "n_decoys": 33,
+   "n_failed_pairs": 9,
+   "decoy_class": "measured inactive (pChEMBL <= 5)",
+   "ligand_source": "ChEMBL via this system's local tool cache (1726 records in 4 cached responses); the ChEMBL web API was returning HTTP 500 at run time",
+   "exhaustiveness": 8,
+   "seed": 42,
+   "scoring": {
+    "vina": {
+     "roc_auc": 0.632,
+     "auc_ci95": [
+      0.4794,
+      0.7695
+     ],
+     "ef_1pct": 0.0,
+     "ef_5pct": 0.0,
+     "ef_10pct": 0.726,
+     "mean_active": -8.013,
+     "mean_decoy": -8.307,
+     "score_gap": -0.294,
+     "usable_for_ranking": false
+    },
+    "vinardo": {
+     "roc_auc": 0.7338,
+     "auc_ci95": [
+      0.6006,
+      0.8517
+     ],
+     "ef_1pct": 0.0,
+     "ef_5pct": 0.0,
+     "ef_10pct": 0.0,
+     "mean_active": -5.659,
+     "mean_decoy": -6.156,
+     "score_gap": -0.497,
+     "usable_for_ranking": true
+    }
+   },
+   "delta_auc_vinardo_minus_vina": {
+    "mean": 0.1025,
+    "ci95": [
+     0.0043,
+     0.1991
+    ],
+    "excludes_zero": true
+   },
+   "_source_file": "docking_benchmark_egfr.json",
+   "_vina_binary": "vina_1.2.7_win.exe"
+  },
+  {
+   "pdb": "1OYT",
+   "label": "Thrombin (1OYT, non-kinase serine protease)",
+   "family": "serine protease",
+   "target": "CHEMBL204",
+   "accession": "P00734",
+   "chain": "H",
+   "box": {
+    "center": [
+     16.793,
+     -12.378,
+     21.829
+    ],
+    "size": [
+     21.7,
+     18.0,
+     19.75
+    ]
+   },
+   "cocrystal_ligand": "FSN",
+   "n_actives": 27,
+   "n_decoys": 25,
+   "n_failed_pairs": 18,
+   "decoy_class": "measured inactive (pChEMBL <= 5)",
+   "ligand_source": "PubChem BioAssay via PUG REST, retrieved 2026-11-12T11:20:02+00:00; 49 assays scanned; active: Activity Outcome Active and potency <= 0.1 uM (pAct >= 7); measured inactive: dose-response potency >= 10 uM (pAct <= 5); most potent record per compound decides (docs/preregistration.md W3)",
+   "exhaustiveness": 8,
+   "seed": 42,
+   "scoring": {
+    "vina": {
+     "roc_auc": 0.2904,
+     "auc_ci95": [
+      0.1467,
+      0.4459
+     ],
+     "ef_1pct": 1.926,
+     "ef_5pct": 1.284,
+     "ef_10pct": 1.541,
+     "mean_active": -8.683,
+     "mean_decoy": -8.013,
+     "score_gap": 0.67,
+     "usable_for_ranking": false
+    },
+    "vinardo": {
+     "roc_auc": 0.3156,
+     "auc_ci95": [
+      0.1748,
+      0.4696
+     ],
+     "ef_1pct": 1.926,
+     "ef_5pct": 1.284,
+     "ef_10pct": 1.541,
+     "mean_active": -6.286,
+     "mean_decoy": -5.845,
+     "score_gap": 0.441,
+     "usable_for_ranking": false
+    }
+   },
+   "delta_auc_vinardo_minus_vina": {
+    "mean": 0.0261,
+    "ci95": [
+     -0.08,
+     0.1363
+    ],
+    "excludes_zero": false
+   },
+   "_source_file": "docking_benchmark_thrombin.json",
+   "_vina_binary": "vina_1.2.7_win.exe"
+  }
+ ]
+}

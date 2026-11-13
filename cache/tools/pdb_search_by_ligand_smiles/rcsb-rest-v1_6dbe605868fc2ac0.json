@@ -1,0 +1,27 @@
+{
+ "tool": "pdb.search_by_ligand_smiles",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "smiles": "COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC"
+ },
+ "params_hash": "6dbe605868fc2ac0",
+ "cached_at": "2026-11-12T16:50:14+00:00",
+ "data": {
+  "smiles": "COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC",
+  "match_type": "graph-relaxed",
+  "component_ids": [
+   "AQ4",
+   "A1A2V"
+  ],
+  "entry_ids": [
+   "1M17",
+   "4HJO",
+   "6DWN",
+   "9D5P",
+   "9D5G"
+  ],
+  "n_entries": 5,
+  "source_url": "https://search.rcsb.org/",
+  "retrieved_at": "2026-11-12T16:50:14+00:00"
+ }
+}

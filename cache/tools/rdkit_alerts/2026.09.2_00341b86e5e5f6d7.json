@@ -1,0 +1,30 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3O)c2cc1OC"
+ },
+ "params_hash": "00341b86e5e5f6d7",
+ "cached_at": "2026-11-11T22:40:32+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "catechol"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 1,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

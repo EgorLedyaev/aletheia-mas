@@ -1,0 +1,37 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C#CC=C1C=CC(NC=NC=NC=C2[P-]=C=CC(OCCOC)=C2OCCOC)=C1"
+ },
+ "params_hash": "61a72b9fa0052884",
+ "cached_at": "2026-11-11T18:27:20+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "imine_1",
+    "imine_2",
+    "phosphor",
+    "triple_bond"
+   ],
+   "NIH": [
+    "phosphite",
+    "phosphorane"
+   ]
+  },
+  "n_alerts": 7,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

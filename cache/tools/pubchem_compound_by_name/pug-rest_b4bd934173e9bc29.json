@@ -1,0 +1,25 @@
+{
+ "tool": "pubchem.compound_by_name",
+ "version": "pug-rest",
+ "params": {
+  "name": "imatinib"
+ },
+ "params_hash": "b4bd934173e9bc29",
+ "cached_at": "2026-11-11T18:24:09+00:00",
+ "data": {
+  "query": "imatinib",
+  "cid": 5291,
+  "smiles": "CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5",
+  "iupac_name": "4-[(4-methylpiperazin-1-yl)methyl]-N-[4-methyl-3-[(4-pyridin-3-ylpyrimidin-2-yl)amino]phenyl]benzamide",
+  "formula": "C29H31N7O",
+  "pubchem_properties": {
+   "MolecularWeight": "493.6",
+   "XLogP": 3.5,
+   "TPSA": 86.3,
+   "HBondDonorCount": 2,
+   "HBondAcceptorCount": 7
+  },
+  "retrieved_at": "2026-11-11T18:24:09+00:00",
+  "source_url": "https://pubchem.ncbi.nlm.nih.gov/compound/5291"
+ }
+}

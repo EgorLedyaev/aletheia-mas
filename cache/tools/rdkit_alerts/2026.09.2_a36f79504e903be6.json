@@ -1,0 +1,34 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "CCOCOC1=C(OCCOC)C=CN=CN=CN(C2C#CC=CC=C2)C1C"
+ },
+ "params_hash": "a36f79504e903be6",
+ "cached_at": "2026-11-11T22:40:23+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "het-C-het_not_in_ring",
+    "triple_bond"
+   ],
+   "NIH": [
+    "non_ring_CH2O_acetal"
+   ]
+  },
+  "n_alerts": 4,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

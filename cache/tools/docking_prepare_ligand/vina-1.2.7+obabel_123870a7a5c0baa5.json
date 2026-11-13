@@ -1,0 +1,22 @@
+{
+ "tool": "docking.prepare_ligand",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "smiles": "c1cc(ccc1CN2CCC(CC2)CO)C#Cc3cc4c(c(c3)C(F)(F)F)CN(C4=O)[C@H](c5c6n(cn5)CCC6)C(=O)Nc7nccs7",
+  "out_pdbqt": "cache/docking/redock_KY9.pdbqt",
+  "seed": 42
+ },
+ "params_hash": "123870a7a5c0baa5",
+ "cached_at": "2026-11-11T22:40:44+00:00",
+ "data": {
+  "path": "cache/docking/redock_KY9.pdbqt",
+  "sdf_path": "cache/docking/redock_KY9.sdf",
+  "smiles": "c1cc(ccc1CN2CCC(CC2)CO)C#Cc3cc4c(c(c3)C(F)(F)F)CN(C4=O)[C@H](c5c6n(cn5)CCC6)C(=O)Nc7nccs7",
+  "n_confs": 1,
+  "forcefield": "MMFF94",
+  "mmff_energy": 72.444,
+  "n_heavy_atoms": 48,
+  "seed": 42,
+  "n_rotatable": 10
+ }
+}

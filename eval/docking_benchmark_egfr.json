@@ -1,0 +1,999 @@
+{
+ "generated_by": "scripts/bench_docking.py",
+ "vina_binary": "vina_1.2.7_win.exe",
+ "n_per_class_requested": 35,
+ "criterion": "docs/preregistration.md W3",
+ "duration_s": 4422.5,
+ "receptors": [
+  {
+   "pdb": "8A27",
+   "label": "EGFR kinase domain (8A27, 1.07 A)",
+   "family": "kinase",
+   "target": "CHEMBL203",
+   "accession": "P00533",
+   "chain": "A",
+   "box": {
+    "center": [
+     23.815,
+     -10.622,
+     -11.554
+    ],
+    "size": [
+     28.22,
+     18.05,
+     23.97
+    ]
+   },
+   "cocrystal_ligand": "KY9",
+   "n_actives": 28,
+   "n_decoys": 33,
+   "n_failed_pairs": 9,
+   "decoy_class": "measured inactive (pChEMBL <= 5)",
+   "ligand_source": "ChEMBL via this system's local tool cache (1726 records in 4 cached responses); the ChEMBL web API was returning HTTP 500 at run time",
+   "exhaustiveness": 8,
+   "seed": 42,
+   "scoring": {
+    "vina": {
+     "roc_auc": 0.5931,
+     "auc_ci95": [
+      0.4416,
+      0.7392
+     ],
+     "ef_1pct": 2.179,
+     "ef_5pct": 0.726,
+     "ef_10pct": 0.726,
+     "mean_active": -8.662,
+     "mean_decoy": -8.853,
+     "score_gap": -0.191,
+     "usable_for_ranking": false
+    },
+    "vinardo": {
+     "roc_auc": 0.5097,
+     "auc_ci95": [
+      0.3561,
+      0.6548
+     ],
+     "ef_1pct": 0.0,
+     "ef_5pct": 0.0,
+     "ef_10pct": 0.0,
+     "mean_active": -6.094,
+     "mean_decoy": -6.109,
+     "score_gap": -0.015,
+     "usable_for_ranking": false
+    }
+   },
+   "delta_auc_vinardo_minus_vina": {
+    "mean": -0.0812,
+    "ci95": [
+     -0.2251,
+     0.0682
+    ],
+    "excludes_zero": false
+   },
+   "rows": [
+    {
+     "id": "CHEMBL137617",
+     "label": 1,
+     "pchembl": 7.41,
+     "vina": -8.325,
+     "vinardo": -5.867
+    },
+    {
+     "id": "CHEMBL165495",
+     "label": 1,
+     "pchembl": 8.51,
+     "vina": -8.758,
+     "vinardo": -6.595
+    },
+    {
+     "id": "CHEMBL300791",
+     "label": 1,
+     "pchembl": 8.0,
+     "vina": -8.884,
+     "vinardo": -5.215
+    },
+    {
+     "id": "CHEMBL52829",
+     "label": 1,
+     "pchembl": 8.4,
+     "vina": -8.385,
+     "vinardo": -5.093
+    },
+    {
+     "id": "CHEMBL162053",
+     "label": 1,
+     "pchembl": 7.715,
+     "vina": -8.294,
+     "vinardo": -5.831
+    },
+    {
+     "id": "CHEMBL53940",
+     "label": 1,
+     "pchembl": 8.05,
+     "vina": -7.969,
+     "vinardo": -5.028
+    },
+    {
+     "id": "CHEMBL165864",
+     "label": 1,
+     "pchembl": 9.72,
+     "vina": -8.537,
+     "vinardo": -5.912
+    },
+    {
+     "id": "CHEMBL136178",
+     "label": 1,
+     "pchembl": 7.45,
+     "vina": -9.061,
+     "vinardo": -6.552
+    },
+    {
+     "id": "CHEMBL51228",
+     "label": 1,
+     "pchembl": 8.64,
+     "vina": -8.977,
+     "vinardo": -6.087
+    },
+    {
+     "id": "CHEMBL345109",
+     "label": 1,
+     "pchembl": 7.23,
+     "vina": -9.277,
+     "vinardo": -6.531
+    },
+    {
+     "id": "CHEMBL169390",
+     "label": 1,
+     "pchembl": 7.1,
+     "vina": -8.392,
+     "vinardo": -6.584
+    },
+    {
+     "id": "CHEMBL162142",
+     "label": 1,
+     "pchembl": 8.655,
+     "vina": -8.843,
+     "vinardo": -6.557
+    },
+    {
+     "id": "CHEMBL345294",
+     "label": 1,
+     "pchembl": 7.96,
+     "vina": -7.711,
+     "vinardo": -5.627
+    },
+    {
+     "id": "CHEMBL435993",
+     "label": 1,
+     "pchembl": 8.04,
+     "vina": -8.079,
+     "vinardo": -6.332
+    },
+    {
+     "id": "CHEMBL134371",
+     "label": 1,
+     "pchembl": 9.43,
+     "vina": -8.831,
+     "vinardo": -6.448
+    },
+    {
+     "id": "CHEMBL166255",
+     "label": 1,
+     "pchembl": 8.17,
+     "vina": -8.371,
+     "vinardo": -6.204
+    },
+    {
+     "id": "CHEMBL14627",
+     "label": 1,
+     "pchembl": 7.13,
+     "vina": -9.336,
+     "vinardo": -6.872
+    },
+    {
+     "id": "CHEMBL52197",
+     "label": 1,
+     "pchembl": 7.52,
+     "vina": -8.283,
+     "vinardo": -6.095
+    },
+    {
+     "id": "CHEMBL40130",
+     "label": 1,
+     "pchembl": 8.115,
+     "vina": -10.01,
+     "vinardo": -6.424
+    },
+    {
+     "id": "CHEMBL294034",
+     "label": 1,
+     "pchembl": 7.18,
+     "vina": -8.637,
+     "vinardo": -5.914
+    },
+    {
+     "id": "CHEMBL304271",
+     "label": 1,
+     "pchembl": 9.35,
+     "vina": -10.32,
+     "vinardo": -6.595
+    },
+    {
+     "id": "CHEMBL54400",
+     "label": 1,
+     "pchembl": 8.845,
+     "vina": -7.993,
+     "vinardo": -5.339
+    },
+    {
+     "id": "CHEMBL299893",
+     "label": 1,
+     "pchembl": 8.3,
+     "vina": -8.055,
+     "vinardo": -4.915
+    },
+    {
+     "id": "CHEMBL97162",
+     "label": 1,
+     "pchembl": 7.08,
+     "vina": -7.578,
+     "vinardo": -6.056
+    },
+    {
+     "id": "CHEMBL287289",
+     "label": 1,
+     "pchembl": 7.16,
+     "vina": -9.402,
+     "vinardo": -6.728
+    },
+    {
+     "id": "CHEMBL123322",
+     "label": 1,
+     "pchembl": 7.16,
+     "vina": -8.38,
+     "vinardo": -6.494
+    },
+    {
+     "id": "CHEMBL300217",
+     "label": 1,
+     "pchembl": 7.7,
+     "vina": -8.769,
+     "vinardo": -6.332
+    },
+    {
+     "id": "CHEMBL346846",
+     "label": 1,
+     "pchembl": 7.1,
+     "vina": -9.073,
+     "vinardo": -6.403
+    },
+    {
+     "id": "CHEMBL347074",
+     "label": 0,
+     "pchembl": 4.66,
+     "vina": -10.09,
+     "vinardo": -7.214
+    },
+    {
+     "id": "CHEMBL56132",
+     "label": 0,
+     "pchembl": 4.85,
+     "vina": -7.858,
+     "vinardo": -7.028
+    },
+    {
+     "id": "CHEMBL13629",
+     "label": 0,
+     "pchembl": 5.0,
+     "vina": -8.984,
+     "vinardo": -5.31
+    },
+    {
+     "id": "CHEMBL422531",
+     "label": 0,
+     "pchembl": 4.92,
+     "vina": -9.015,
+     "vinardo": -5.899
+    },
+    {
+     "id": "CHEMBL77298",
+     "label": 0,
+     "pchembl": 4.3,
+     "vina": -7.134,
+     "vinardo": -4.231
+    },
+    {
+     "id": "CHEMBL428690",
+     "label": 0,
+     "pchembl": 4.89,
+     "vina": -8.478,
+     "vinardo": -5.351
+    },
+    {
+     "id": "CHEMBL55994",
+     "label": 0,
+     "pchembl": 4.51,
+     "vina": -7.32,
+     "vinardo": -5.72
+    },
+    {
+     "id": "CHEMBL170438",
+     "label": 0,
+     "pchembl": 4.88,
+     "vina": -8.768,
+     "vinardo": -7.099
+    },
+    {
+     "id": "CHEMBL419650",
+     "label": 0,
+     "pchembl": 4.99,
+     "vina": -9.235,
+     "vinardo": -6.182
+    },
+    {
+     "id": "CHEMBL155389",
+     "label": 0,
+     "pchembl": 4.0,
+     "vina": -8.068,
+     "vinardo": -6.264
+    },
+    {
+     "id": "CHEMBL118109",
+     "label": 0,
+     "pchembl": 4.72,
+     "vina": -9.051,
+     "vinardo": -7.231
+    },
+    {
+     "id": "CHEMBL366831",
+     "label": 0,
+     "pchembl": 4.51,
+     "vina": -8.067,
+     "vinardo": -6.384
+    },
+    {
+     "id": "CHEMBL358494",
+     "label": 0,
+     "pchembl": 5.0,
+     "vina": -8.864,
+     "vinardo": -5.861
+    },
+    {
+     "id": "CHEMBL141175",
+     "label": 0,
+     "pchembl": 4.8,
+     "vina": -8.757,
+     "vinardo": -6.261
+    },
+    {
+     "id": "CHEMBL79621",
+     "label": 0,
+     "pchembl": 4.46,
+     "vina": -9.306,
+     "vinardo": -4.124
+    },
+    {
+     "id": "CHEMBL115895",
+     "label": 0,
+     "pchembl": 4.66,
+     "vina": -8.526,
+     "vinardo": -5.505
+    },
+    {
+     "id": "CHEMBL79808",
+     "label": 0,
+     "pchembl": 4.68,
+     "vina": -9.074,
+     "vinardo": -6.271
+    },
+    {
+     "id": "CHEMBL114073",
+     "label": 0,
+     "pchembl": 4.97,
+     "vina": -9.487,
+     "vinardo": -5.883
+    },
+    {
+     "id": "CHEMBL98137",
+     "label": 0,
+     "pchembl": 4.09,
+     "vina": -8.121,
+     "vinardo": -5.995
+    },
+    {
+     "id": "CHEMBL157021",
+     "label": 0,
+     "pchembl": 4.8,
+     "vina": -8.946,
+     "vinardo": -5.035
+    },
+    {
+     "id": "CHEMBL148984",
+     "label": 0,
+     "pchembl": 4.64,
+     "vina": -9.968,
+     "vinardo": -6.833
+    },
+    {
+     "id": "CHEMBL337035",
+     "label": 0,
+     "pchembl": 4.9,
+     "vina": -7.826,
+     "vinardo": -4.912
+    },
+    {
+     "id": "CHEMBL141238",
+     "label": 0,
+     "pchembl": 4.72,
+     "vina": -9.173,
+     "vinardo": -6.61
+    },
+    {
+     "id": "CHEMBL86531",
+     "label": 0,
+     "pchembl": 4.54,
+     "vina": -10.18,
+     "vinardo": -6.973
+    },
+    {
+     "id": "CHEMBL171256",
+     "label": 0,
+     "pchembl": 4.84,
+     "vina": -8.732,
+     "vinardo": -5.819
+    },
+    {
+     "id": "CHEMBL338449",
+     "label": 0,
+     "pchembl": 4.87,
+     "vina": -8.024,
+     "vinardo": -5.199
+    },
+    {
+     "id": "CHEMBL116012",
+     "label": 0,
+     "pchembl": 4.99,
+     "vina": -9.186,
+     "vinardo": -6.098
+    },
+    {
+     "id": "CHEMBL146694",
+     "label": 0,
+     "pchembl": 4.5,
+     "vina": -9.67,
+     "vinardo": -6.927
+    },
+    {
+     "id": "CHEMBL414013",
+     "label": 0,
+     "pchembl": 4.12,
+     "vina": -8.023,
+     "vinardo": -5.553
+    },
+    {
+     "id": "CHEMBL158119",
+     "label": 0,
+     "pchembl": 4.05,
+     "vina": -9.235,
+     "vinardo": -6.23
+    },
+    {
+     "id": "CHEMBL147761",
+     "label": 0,
+     "pchembl": 4.54,
+     "vina": -9.075,
+     "vinardo": -6.818
+    },
+    {
+     "id": "CHEMBL149201",
+     "label": 0,
+     "pchembl": 4.66,
+     "vina": -9.928,
+     "vinardo": -6.997
+    },
+    {
+     "id": "CHEMBL450622",
+     "label": 0,
+     "pchembl": 4.31,
+     "vina": -9.986,
+     "vinardo": -7.77
+    }
+   ]
+  },
+  {
+   "pdb": "1M17",
+   "label": "EGFR kinase domain (1M17, erlotinib co-crystal)",
+   "family": "kinase",
+   "target": "CHEMBL203",
+   "accession": "P00533",
+   "chain": "A",
+   "box": {
+    "center": [
+     22.014,
+     0.253,
+     52.794
+    ],
+    "size": [
+     25.71,
+     18.0,
+     18.0
+    ]
+   },
+   "cocrystal_ligand": "AQ4",
+   "n_actives": 28,
+   "n_decoys": 33,
+   "n_failed_pairs": 9,
+   "decoy_class": "measured inactive (pChEMBL <= 5)",
+   "ligand_source": "ChEMBL via this system's local tool cache (1726 records in 4 cached responses); the ChEMBL web API was returning HTTP 500 at run time",
+   "exhaustiveness": 8,
+   "seed": 42,
+   "scoring": {
+    "vina": {
+     "roc_auc": 0.632,
+     "auc_ci95": [
+      0.4794,
+      0.7695
+     ],
+     "ef_1pct": 0.0,
+     "ef_5pct": 0.0,
+     "ef_10pct": 0.726,
+     "mean_active": -8.013,
+     "mean_decoy": -8.307,
+     "score_gap": -0.294,
+     "usable_for_ranking": false
+    },
+    "vinardo": {
+     "roc_auc": 0.7338,
+     "auc_ci95": [
+      0.6006,
+      0.8517
+     ],
+     "ef_1pct": 0.0,
+     "ef_5pct": 0.0,
+     "ef_10pct": 0.0,
+     "mean_active": -5.659,
+     "mean_decoy": -6.156,
+     "score_gap": -0.497,
+     "usable_for_ranking": true
+    }
+   },
+   "delta_auc_vinardo_minus_vina": {
+    "mean": 0.1025,
+    "ci95": [
+     0.0043,
+     0.1991
+    ],
+    "excludes_zero": true
+   },
+   "rows": [
+    {
+     "id": "CHEMBL137617",
+     "label": 1,
+     "pchembl": 7.41,
+     "vina": -7.625,
+     "vinardo": -5.409
+    },
+    {
+     "id": "CHEMBL165495",
+     "label": 1,
+     "pchembl": 8.51,
+     "vina": -7.886,
+     "vinardo": -5.953
+    },
+    {
+     "id": "CHEMBL300791",
+     "label": 1,
+     "pchembl": 8.0,
+     "vina": -8.354,
+     "vinardo": -6.047
+    },
+    {
+     "id": "CHEMBL52829",
+     "label": 1,
+     "pchembl": 8.4,
+     "vina": -8.041,
+     "vinardo": -5.174
+    },
+    {
+     "id": "CHEMBL162053",
+     "label": 1,
+     "pchembl": 7.715,
+     "vina": -7.462,
+     "vinardo": -4.85
+    },
+    {
+     "id": "CHEMBL53940",
+     "label": 1,
+     "pchembl": 8.05,
+     "vina": -7.893,
+     "vinardo": -5.294
+    },
+    {
+     "id": "CHEMBL165864",
+     "label": 1,
+     "pchembl": 9.72,
+     "vina": -7.507,
+     "vinardo": -5.294
+    },
+    {
+     "id": "CHEMBL136178",
+     "label": 1,
+     "pchembl": 7.45,
+     "vina": -8.12,
+     "vinardo": -6.583
+    },
+    {
+     "id": "CHEMBL51228",
+     "label": 1,
+     "pchembl": 8.64,
+     "vina": -7.762,
+     "vinardo": -5.09
+    },
+    {
+     "id": "CHEMBL345109",
+     "label": 1,
+     "pchembl": 7.23,
+     "vina": -7.886,
+     "vinardo": -6.303
+    },
+    {
+     "id": "CHEMBL169390",
+     "label": 1,
+     "pchembl": 7.1,
+     "vina": -9.126,
+     "vinardo": -6.634
+    },
+    {
+     "id": "CHEMBL162142",
+     "label": 1,
+     "pchembl": 8.655,
+     "vina": -8.017,
+     "vinardo": -5.799
+    },
+    {
+     "id": "CHEMBL345294",
+     "label": 1,
+     "pchembl": 7.96,
+     "vina": -6.832,
+     "vinardo": -4.836
+    },
+    {
+     "id": "CHEMBL435993",
+     "label": 1,
+     "pchembl": 8.04,
+     "vina": -7.697,
+     "vinardo": -5.743
+    },
+    {
+     "id": "CHEMBL134371",
+     "label": 1,
+     "pchembl": 9.43,
+     "vina": -8.614,
+     "vinardo": -6.514
+    },
+    {
+     "id": "CHEMBL166255",
+     "label": 1,
+     "pchembl": 8.17,
+     "vina": -7.446,
+     "vinardo": -5.152
+    },
+    {
+     "id": "CHEMBL14627",
+     "label": 1,
+     "pchembl": 7.13,
+     "vina": -8.016,
+     "vinardo": -6.297
+    },
+    {
+     "id": "CHEMBL52197",
+     "label": 1,
+     "pchembl": 7.52,
+     "vina": -7.366,
+     "vinardo": -5.437
+    },
+    {
+     "id": "CHEMBL40130",
+     "label": 1,
+     "pchembl": 8.115,
+     "vina": -9.008,
+     "vinardo": -5.953
+    },
+    {
+     "id": "CHEMBL294034",
+     "label": 1,
+     "pchembl": 7.18,
+     "vina": -7.983,
+     "vinardo": -5.027
+    },
+    {
+     "id": "CHEMBL304271",
+     "label": 1,
+     "pchembl": 9.35,
+     "vina": -9.115,
+     "vinardo": -6.235
+    },
+    {
+     "id": "CHEMBL54400",
+     "label": 1,
+     "pchembl": 8.845,
+     "vina": -7.719,
+     "vinardo": -5.299
+    },
+    {
+     "id": "CHEMBL299893",
+     "label": 1,
+     "pchembl": 8.3,
+     "vina": -7.317,
+     "vinardo": -4.746
+    },
+    {
+     "id": "CHEMBL97162",
+     "label": 1,
+     "pchembl": 7.08,
+     "vina": -8.369,
+     "vinardo": -5.453
+    },
+    {
+     "id": "CHEMBL287289",
+     "label": 1,
+     "pchembl": 7.16,
+     "vina": -8.303,
+     "vinardo": -6.042
+    },
+    {
+     "id": "CHEMBL123322",
+     "label": 1,
+     "pchembl": 7.16,
+     "vina": -8.203,
+     "vinardo": -6.109
+    },
+    {
+     "id": "CHEMBL300217",
+     "label": 1,
+     "pchembl": 7.7,
+     "vina": -8.423,
+     "vinardo": -5.519
+    },
+    {
+     "id": "CHEMBL346846",
+     "label": 1,
+     "pchembl": 7.1,
+     "vina": -8.263,
+     "vinardo": -5.657
+    },
+    {
+     "id": "CHEMBL347074",
+     "label": 0,
+     "pchembl": 4.66,
+     "vina": -8.975,
+     "vinardo": -6.734
+    },
+    {
+     "id": "CHEMBL56132",
+     "label": 0,
+     "pchembl": 4.85,
+     "vina": -7.289,
+     "vinardo": -5.735
+    },
+    {
+     "id": "CHEMBL13629",
+     "label": 0,
+     "pchembl": 5.0,
+     "vina": -7.818,
+     "vinardo": -6.012
+    },
+    {
+     "id": "CHEMBL422531",
+     "label": 0,
+     "pchembl": 4.92,
+     "vina": -8.628,
+     "vinardo": -6.636
+    },
+    {
+     "id": "CHEMBL77298",
+     "label": 0,
+     "pchembl": 4.3,
+     "vina": -5.847,
+     "vinardo": -4.419
+    },
+    {
+     "id": "CHEMBL428690",
+     "label": 0,
+     "pchembl": 4.89,
+     "vina": -9.221,
+     "vinardo": -6.436
+    },
+    {
+     "id": "CHEMBL55994",
+     "label": 0,
+     "pchembl": 4.51,
+     "vina": -6.807,
+     "vinardo": -5.224
+    },
+    {
+     "id": "CHEMBL170438",
+     "label": 0,
+     "pchembl": 4.88,
+     "vina": -8.429,
+     "vinardo": -6.317
+    },
+    {
+     "id": "CHEMBL419650",
+     "label": 0,
+     "pchembl": 4.99,
+     "vina": -8.461,
+     "vinardo": -6.365
+    },
+    {
+     "id": "CHEMBL155389",
+     "label": 0,
+     "pchembl": 4.0,
+     "vina": -7.838,
+     "vinardo": -5.797
+    },
+    {
+     "id": "CHEMBL118109",
+     "label": 0,
+     "pchembl": 4.72,
+     "vina": -8.168,
+     "vinardo": -5.962
+    },
+    {
+     "id": "CHEMBL366831",
+     "label": 0,
+     "pchembl": 4.51,
+     "vina": -8.349,
+     "vinardo": -6.089
+    },
+    {
+     "id": "CHEMBL358494",
+     "label": 0,
+     "pchembl": 5.0,
+     "vina": -8.185,
+     "vinardo": -5.982
+    },
+    {
+     "id": "CHEMBL141175",
+     "label": 0,
+     "pchembl": 4.8,
+     "vina": -7.664,
+     "vinardo": -5.726
+    },
+    {
+     "id": "CHEMBL79621",
+     "label": 0,
+     "pchembl": 4.46,
+     "vina": -7.799,
+     "vinardo": -5.62
+    },
+    {
+     "id": "CHEMBL115895",
+     "label": 0,
+     "pchembl": 4.66,
+     "vina": -8.076,
+     "vinardo": -6.092
+    },
+    {
+     "id": "CHEMBL79808",
+     "label": 0,
+     "pchembl": 4.68,
+     "vina": -8.01,
+     "vinardo": -6.325
+    },
+    {
+     "id": "CHEMBL114073",
+     "label": 0,
+     "pchembl": 4.97,
+     "vina": -9.109,
+     "vinardo": -6.239
+    },
+    {
+     "id": "CHEMBL98137",
+     "label": 0,
+     "pchembl": 4.09,
+     "vina": -7.49,
+     "vinardo": -4.925
+    },
+    {
+     "id": "CHEMBL157021",
+     "label": 0,
+     "pchembl": 4.8,
+     "vina": -9.024,
+     "vinardo": -7.857
+    },
+    {
+     "id": "CHEMBL148984",
+     "label": 0,
+     "pchembl": 4.64,
+     "vina": -9.053,
+     "vinardo": -6.443
+    },
+    {
+     "id": "CHEMBL337035",
+     "label": 0,
+     "pchembl": 4.9,
+     "vina": -10.33,
+     "vinardo": -6.699
+    },
+    {
+     "id": "CHEMBL141238",
+     "label": 0,
+     "pchembl": 4.72,
+     "vina": -8.157,
+     "vinardo": -6.463
+    },
+    {
+     "id": "CHEMBL86531",
+     "label": 0,
+     "pchembl": 4.54,
+     "vina": -8.634,
+     "vinardo": -6.837
+    },
+    {
+     "id": "CHEMBL171256",
+     "label": 0,
+     "pchembl": 4.84,
+     "vina": -8.089,
+     "vinardo": -6.204
+    },
+    {
+     "id": "CHEMBL338449",
+     "label": 0,
+     "pchembl": 4.87,
+     "vina": -9.942,
+     "vinardo": -6.278
+    },
+    {
+     "id": "CHEMBL116012",
+     "label": 0,
+     "pchembl": 4.99,
+     "vina": -8.359,
+     "vinardo": -5.865
+    },
+    {
+     "id": "CHEMBL146694",
+     "label": 0,
+     "pchembl": 4.5,
+     "vina": -8.848,
+     "vinardo": -6.515
+    },
+    {
+     "id": "CHEMBL414013",
+     "label": 0,
+     "pchembl": 4.12,
+     "vina": -7.292,
+     "vinardo": -5.402
+    },
+    {
+     "id": "CHEMBL158119",
+     "label": 0,
+     "pchembl": 4.05,
+     "vina": -8.171,
+     "vinardo": -5.926
+    },
+    {
+     "id": "CHEMBL147761",
+     "label": 0,
+     "pchembl": 4.54,
+     "vina": -8.013,
+     "vinardo": -6.329
+    },
+    {
+     "id": "CHEMBL149201",
+     "label": 0,
+     "pchembl": 4.66,
+     "vina": -8.814,
+     "vinardo": -6.931
+    },
+    {
+     "id": "CHEMBL450622",
+     "label": 0,
+     "pchembl": 4.31,
+     "vina": -9.234,
+     "vinardo": -6.775
+    }
+   ]
+  }
+ ]
+}

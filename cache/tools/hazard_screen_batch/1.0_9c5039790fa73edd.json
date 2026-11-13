@@ -1,0 +1,598 @@
+{
+ "tool": "hazard.screen_batch",
+ "version": "1.0",
+ "params": {
+  "smiles_list": [
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C#N",
+   "C#Cc1cc(C#N)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(C#N)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC(F)F)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC(F)F)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1O",
+   "C#Cc1cc(O)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1OC",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(OC)c1",
+   "C#Cc1ccc(OC)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1OCCN1CCOCC1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(OCCN2CCOCC2)c1",
+   "C#Cc1ccc(OCCN2CCOCC2)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1F",
+   "C#Cc1cc(F)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(F)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C",
+   "C#Cc1cc(C)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(C)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1Cl",
+   "C#Cc1cc(Cl)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(Cl)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1S(N)(=O)=O",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(S(N)(=O)=O)c1",
+   "C#Cc1ccc(S(N)(=O)=O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C(N)=O",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(C(N)=O)c1",
+   "C#Cc1ccc(C(N)=O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C(F)(F)F",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(C(F)(F)F)c1",
+   "C#Cc1ccc(C(F)(F)F)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1N1CCN(C)CC1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(N2CCN(C)CC2)c1",
+   "C#Cc1ccc(N2CCN(C)CC2)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+  ]
+ },
+ "params_hash": "9c5039790fa73edd",
+ "cached_at": "2026-11-12T21:58:56+00:00",
+ "data": {
+  "n_screened": 36,
+  "n_block": 0,
+  "n_review": 0,
+  "n_note": 0,
+  "n_clear": 36,
+  "blocked_smiles": [],
+  "results": [
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C#N",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(C#N)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(C#N)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC(F)F)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC(F)F)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1O",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(O)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(OC)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(OC)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1OCCN1CCOCC1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(OCCN2CCOCC2)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(OCCN2CCOCC2)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(F)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(F)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(C)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(C)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1Cl",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Cl)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(Cl)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1S(N)(=O)=O",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(S(N)(=O)=O)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(S(N)(=O)=O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C(N)=O",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(C(N)=O)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(C(N)=O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C(F)(F)F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(C(F)(F)F)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(C(F)(F)F)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1N1CCN(C)CC1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(N2CCN(C)CC2)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(N2CCN(C)CC2)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   }
+  ],
+  "errors": [],
+  "patterns_version": "aletheia-hazard-1.0"
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "tool": "pdb.extract_receptor",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/8A27.pdb",
+  "out_path": "cache/docking/bench_8A27_rec.pdb",
+  "chain": "A"
+ },
+ "params_hash": "f4ea3dbf3c480207",
+ "cached_at": "2026-11-12T10:49:27+00:00",
+ "data": {
+  "path": "cache/docking/bench_8A27_rec.pdb",
+  "n_atoms": 2159,
+  "chain": "A",
+  "sha256": "aeb275b5d55546cd3fe94bbf4592ad0108c14100ce09287fd284411799d3fcfc"
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COCCOC1=CC([S+]OCO)C=CN=CN=C(NC23C#CC(=CC=C2)C3)C=C1"
+ },
+ "params_hash": "16775c5a2bf5e710",
+ "cached_at": "2026-11-11T18:27:19+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "charged_oxygen_or_sulfur_atoms",
+    "het-C-het_not_in_ring",
+    "sulfur_oxygen_single_bond",
+    "triple_bond"
+   ],
+   "NIH": [
+    "non_ring_CH2O_acetal",
+    "sulf_D2_oxygen_D2"
+   ]
+  },
+  "n_alerts": 7,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

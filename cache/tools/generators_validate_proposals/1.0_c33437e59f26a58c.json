@@ -1,0 +1,121 @@
+{
+ "tool": "generators.validate_proposals",
+ "version": "1.0",
+ "params": {
+  "proposals": [
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOCC)c(OCCOC)cc23)c1",
+    "rationale": "Extended one methoxyethoxy chain to methoxypropoxy-like ethyl homolog to probe effect of side-chain length on the quinazoline 6-position"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+    "rationale": "Replaced one terminal methyl ether with a free hydroxyl to increase polarity and H-bond donor count"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+    "rationale": "Swapped one methoxyethoxy substituent for a dimethylaminoethoxy group to introduce a basic amine and modulate solubility"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+    "rationale": "Added a fluorine on the aniline ring (ortho to the alkyne) as a bioisosteric halogen substitution to tune electronics and metabolic stability"
+   },
+   {
+    "smiles": "C#CCc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "rationale": "Inserted a methylene spacer between the aryl ring and alkyne (propargyl instead of direct ethynyl) to modulate rigidity and electronic conjugation"
+   },
+   {
+    "smiles": "Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "rationale": "Replaced the terminal alkyne with a methyl group to remove the reactive/electrophilic alkyne while retaining similar sterics"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCC(F)(F)F)cc23)c1",
+    "rationale": "Replaced one methoxyethoxy chain with a trifluoroethoxy-ethoxy group to increase lipophilicity and metabolic stability via fluorination"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC4CC4)cc23)c1",
+    "rationale": "Substituted one methoxyethoxy arm with a cyclopropylmethoxy group as a bioisosteric replacement to reduce flexibility"
+   },
+   {
+    "smiles": "C#Cc1cccnc1Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+    "rationale": "Replaced the aniline benzene ring with a pyridine (aza-substitution) to modulate electronics and add a hydrogen-bond acceptor"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1Cl",
+    "rationale": "Added a chlorine substituent ortho to the alkyne on the aniline ring to explore steric and electronic effects of halogenation"
+   }
+  ],
+  "seed_smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+ },
+ "params_hash": "c33437e59f26a58c",
+ "cached_at": "2026-11-12T16:51:45+00:00",
+ "data": {
+  "generator": "G4_llm_edits",
+  "n_proposed": 10,
+  "n_generated": 10,
+  "n_rejected": 0,
+  "molecules": [
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOCC)c(OCCOC)cc23)c1",
+    "transform": "Extended one methoxyethoxy chain to methoxypropoxy-like ethyl homolog to probe effect of side-chain length on the quinaz",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+    "transform": "Replaced one terminal methyl ether with a free hydroxyl to increase polarity and H-bond donor count",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+    "transform": "Swapped one methoxyethoxy substituent for a dimethylaminoethoxy group to introduce a basic amine and modulate solubility",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+    "transform": "Added a fluorine on the aniline ring (ortho to the alkyne) as a bioisosteric halogen substitution to tune electronics an",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CCc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "transform": "Inserted a methylene spacer between the aryl ring and alkyne (propargyl instead of direct ethynyl) to modulate rigidity ",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C)c3)c2cc1OCCOC",
+    "transform": "Replaced the terminal alkyne with a methyl group to remove the reactive/electrophilic alkyne while retaining similar ste",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCC(F)(F)F)cc23)c1",
+    "transform": "Replaced one methoxyethoxy chain with a trifluoroethoxy-ethoxy group to increase lipophilicity and metabolic stability v",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC4CC4)cc23)c1",
+    "transform": "Substituted one methoxyethoxy arm with a cyclopropylmethoxy group as a bioisosteric replacement to reduce flexibility",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccnc1Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+    "transform": "Replaced the aniline benzene ring with a pyridine (aza-substitution) to modulate electronics and add a hydrogen-bond acc",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1Cl",
+    "transform": "Added a chlorine substituent ortho to the alkyne on the aniline ring to explore steric and electronic effects of halogen",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   }
+  ],
+  "rejected": [],
+  "validity": 1.0
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "tool": "docking.vina_dock",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "receptor_pdbqt": "cache/docking/8A27_rec.pdbqt",
+  "ligand_pdbqt": "cache/docking/C055.pdbqt",
+  "center": [
+   23.815,
+   -10.622,
+   -11.554
+  ],
+  "size": [
+   28.22,
+   18.05,
+   23.97
+  ],
+  "out_pdbqt": "cache/docking/C055_out.pdbqt",
+  "exhaustiveness": 8,
+  "num_modes": 9,
+  "seed": 42
+ },
+ "params_hash": "9e43f115202a26e4",
+ "cached_at": "2026-11-12T16:21:05+00:00",
+ "data": {
+  "best_score_kcal_per_mol": -6.345,
+  "scores": [
+   -6.345,
+   -6.12,
+   -6.043,
+   -5.74,
+   -5.732,
+   -5.725,
+   -5.545,
+   -5.526,
+   -5.485
+  ],
+  "n_poses": 9,
+  "out_pdbqt": "cache/docking/C055_out.pdbqt",
+  "center": [
+   23.815,
+   -10.622,
+   -11.554
+  ],
+  "size": [
+   28.22,
+   18.05,
+   23.97
+  ],
+  "exhaustiveness": 8,
+  "num_modes": 9,
+  "seed": 42,
+  "vina_version": "AutoDock Vina v1.2.7",
+  "command": "vina_1.2.7_win.exe --receptor cache/docking/8A27_rec.pdbqt --ligand cache/docking/C055.pdbqt --center_x 23.815 --center_y -10.622 --center_z -11.554 --size_x 28.22 --size_y 18.05 --size_z 23.97 --exhaustiveness 8 --num_modes 9 --seed 42 --cpu 4 --out cache/docking/C055_out.pdbqt",
+  "stdout_tail": "   90   100%\n|----|----|----|----|----|----|----|----|----|----|\n***************************************************\n\nmode |   affinity | dist from best mode\n     | (kcal/mol) | rmsd l.b.| rmsd u.b.\n-----+------------+----------+----------\n   1       -6.345          0          0\n   2        -6.12      3.395      5.123\n   3       -6.043      2.227       5.19\n   4        -5.74       14.1       16.4\n   5       -5.732      2.996      4.474\n   6       -5.725       2.97      5.324\n   7       -5.545      12.75      14.92\n   8       -5.526      13.65      16.11\n   9       -5.485      2.904      4.972\n",
+  "score_units": "kcal/mol (Vina scoring function; a docking score, not a measured affinity)"
+ }
+}

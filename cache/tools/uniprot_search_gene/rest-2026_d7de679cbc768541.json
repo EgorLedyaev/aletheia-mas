@@ -1,0 +1,27 @@
+{
+ "tool": "uniprot.search_gene",
+ "version": "rest-2026",
+ "params": {
+  "gene": "EGFR",
+  "organism_id": 9606
+ },
+ "params_hash": "d7de679cbc768541",
+ "cached_at": "2026-11-11T18:16:27+00:00",
+ "data": {
+  "query": "gene:EGFR AND organism_id:9606 AND reviewed:true",
+  "hits": [
+   {
+    "accession": "P00533",
+    "uniprot_id": "EGFR_HUMAN",
+    "protein_name": "Epidermal growth factor receptor",
+    "length": 1210,
+    "genes": [
+     "EGFR"
+    ]
+   }
+  ],
+  "n_hits": 1,
+  "retrieved_at": "2026-11-11T18:16:27+00:00",
+  "source_url": "https://rest.uniprot.org/uniprotkb/search?query=gene:EGFR AND organism_id:9606 AND reviewed:true"
+ }
+}

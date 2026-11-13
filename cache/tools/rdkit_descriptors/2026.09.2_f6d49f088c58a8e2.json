@@ -1,0 +1,26 @@
+{
+ "tool": "rdkit.descriptors",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(/N=N/N(C)C)cc34)c2c1"
+ },
+ "params_hash": "f6d49f088c58a8e2",
+ "cached_at": "2026-11-11T18:27:24+00:00",
+ "data": {
+  "MolWt": 416.449,
+  "cLogP": 4.486,
+  "TPSA": 116.71,
+  "HBD": 0,
+  "HBA": 9,
+  "RotB": 6,
+  "RingCount": 4,
+  "AromaticRings": 4,
+  "HeavyAtoms": 31,
+  "FractionCSP3": 0.2,
+  "FormalCharge": 0,
+  "MolMR": 115.556,
+  "NumStereocentres": 0,
+  "QED": 0.3357,
+  "SAscore": 3.279
+ }
+}

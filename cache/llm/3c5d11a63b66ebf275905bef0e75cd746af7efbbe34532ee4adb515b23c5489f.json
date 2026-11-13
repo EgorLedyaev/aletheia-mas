@@ -1,0 +1,135 @@
+{
+ "key": "3c5d11a63b66ebf275905bef0e75cd746af7efbbe34532ee4adb515b23c5489f",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "User request:\n\"\"\"Run a full hit-finding campaign against EGFR: retrieve known actives, generate new candidates, model activity, dock the best ones and give me a ranked shortlist with a portfolio.\"\"\"\n\nClassify it."
+   }
+  ],
+  "system": "You are the routing component of a drug-discovery multi-agent system. Classify the request into intents and extract entities. Do not answer the chemistry question itself, do not invent targets or molecules that the user did not mention, and do not guess identifiers. If the user names a gene symbol, return it verbatim.",
+  "tools": [
+   {
+    "name": "route_request",
+    "description": "Classify a drug-discovery request into intents and entities.",
+    "input_schema": {
+     "type": "object",
+     "properties": {
+      "intents": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "target_brief",
+         "ligand_lookup",
+         "property_profile",
+         "generate_analogs",
+         "docking",
+         "qsar",
+         "rank_candidates",
+         "protein_analysis",
+         "full_campaign"
+        ]
+       },
+       "description": "Ordered list of what the user is asking for."
+      },
+      "modality": {
+       "type": "string",
+       "enum": [
+        "small_molecule",
+        "protein",
+        "nucleic_acid",
+        "mixed",
+        "unknown"
+       ]
+      },
+      "targets": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Protein targets exactly as named by the user: gene symbol, UniProt accession or PDB id. Empty if none."
+      },
+      "molecules": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Molecules as named by the user: SMILES or compound name."
+      },
+      "objectives": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Optimisation objectives mentioned, e.g. 'improve solubility'."
+      },
+      "reasoning": {
+       "type": "string",
+       "description": "One sentence on why these intents."
+      }
+     },
+     "required": [
+      "intents",
+      "modality",
+      "targets",
+      "molecules"
+     ]
+    }
+   }
+  ],
+  "tool_choice": {
+   "type": "tool",
+   "name": "route_request"
+  },
+  "max_tokens": 900,
+  "model": null,
+  "purpose": "routing"
+ },
+ "response": {
+  "text": "",
+  "tool_use": {
+   "name": "route_request",
+   "input": {
+    "intents": [
+     "full_campaign",
+     "ligand_lookup",
+     "generate_analogs",
+     "qsar",
+     "docking",
+     "rank_candidates"
+    ],
+    "modality": "small_molecule",
+    "targets": [
+     "EGFR"
+    ],
+    "molecules": [],
+    "objectives": [
+     "find novel hits against EGFR",
+     "model/predict activity (QSAR)",
+     "dock top candidates",
+     "rank and shortlist candidates",
+     "produce a portfolio summary"
+    ],
+    "reasoning": "The user explicitly requests an end-to-end hit-finding workflow (full_campaign) against the named gene EGFR, comprising sub-tasks of retrieving known actives (ligand_lookup), generating new candidates (generate_analogs), modeling activity (qsar), docking (docking), and producing a ranked shortlist (rank_candidates)."
+   }
+  },
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 722,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5618,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 369,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

@@ -1,0 +1,218 @@
+{
+ "seed": 20261111,
+ "protocol": "qsar_tools.fit, scaffold split test_frac 0.2, RF 300 trees, split-conformal alpha 0.1",
+ "targets": [
+  {
+   "key": "EGFR",
+   "label": "EGFR (CHEMBL203)",
+   "uniprot": "P00533",
+   "source": "ChEMBL activities, cached tool call",
+   "note": "the target the whole pipeline was developed on",
+   "n_records": 271,
+   "seed_smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+   "qsar": {
+    "rmse_model": 0.8504,
+    "r2_model": 0.322,
+    "rmse_1nn": 0.9718,
+    "rmse_mean": 1.7296,
+    "n_fit": 174,
+    "n_test": 54,
+    "y_std": 1.3537,
+    "beats_1nn": true,
+    "beats_mean": true
+   },
+   "conformal": {
+    "alpha": 0.1,
+    "q_hat": 1.468,
+    "nominal_coverage": 0.9,
+    "empirical_test_coverage": 0.9444,
+    "interval_width": 2.936
+   },
+   "generators": {
+    "G1_rule_decorate": {
+     "requested": 40,
+     "delivered": 37,
+     "yield": 0.925,
+     "novel_fraction": null
+    },
+    "G3_selfies_mutate": {
+     "requested": 40,
+     "delivered": 40,
+     "yield": 1.0,
+     "novel_fraction": null
+    },
+    "G2_brics_recombine": {
+     "requested": 40,
+     "delivered": 40,
+     "yield": 1.0,
+     "novel_fraction": null
+    }
+   },
+   "applicability": {
+    "n": 117,
+    "in_domain": 0.5214,
+    "borderline": 0.2906,
+    "out_of_domain": 0.188
+   },
+   "docking": {
+    "8A27 / vina": {
+     "auc": 0.5931,
+     "lo": 0.4416,
+     "hi": 0.7392,
+     "n_active": 28,
+     "n_decoy": 33,
+     "usable": false
+    },
+    "8A27 / vinardo": {
+     "auc": 0.5097,
+     "lo": 0.3561,
+     "hi": 0.6548,
+     "n_active": 28,
+     "n_decoy": 33,
+     "usable": false
+    },
+    "1M17 / vina": {
+     "auc": 0.632,
+     "lo": 0.4794,
+     "hi": 0.7695,
+     "n_active": 28,
+     "n_decoy": 33,
+     "usable": false
+    },
+    "1M17 / vinardo": {
+     "auc": 0.7338,
+     "lo": 0.6006,
+     "hi": 0.8517,
+     "n_active": 28,
+     "n_decoy": 33,
+     "usable": true
+    }
+   }
+  },
+  {
+   "key": "CDK2",
+   "label": "CDK2 (CHEMBL301)",
+   "uniprot": "P24941",
+   "source": "ChEMBL activities, cached tool call",
+   "note": "a second kinase, never used during development",
+   "n_records": 267,
+   "seed_smiles": "NS(=O)(=O)c1ccc(Nc2cc(-c3ccc([N+](=O)[O-])cc3)[nH]n2)cc1",
+   "qsar": {
+    "rmse_model": 0.8552,
+    "r2_model": -0.0899,
+    "rmse_1nn": 1.3367,
+    "rmse_mean": 0.9791,
+    "n_fit": 172,
+    "n_test": 53,
+    "y_std": 1.2807,
+    "beats_1nn": true,
+    "beats_mean": true
+   },
+   "conformal": {
+    "alpha": 0.1,
+    "q_hat": 1.708,
+    "nominal_coverage": 0.9,
+    "empirical_test_coverage": 0.9434,
+    "interval_width": 3.4161
+   },
+   "generators": {
+    "G1_rule_decorate": {
+     "requested": 40,
+     "delivered": 33,
+     "yield": 0.825,
+     "novel_fraction": null
+    },
+    "G3_selfies_mutate": {
+     "requested": 40,
+     "delivered": 40,
+     "yield": 1.0,
+     "novel_fraction": null
+    },
+    "G2_brics_recombine": {
+     "requested": 40,
+     "delivered": 40,
+     "yield": 1.0,
+     "novel_fraction": null
+    }
+   },
+   "applicability": {
+    "n": 113,
+    "in_domain": 0.4159,
+    "borderline": 0.1593,
+    "out_of_domain": 0.4248
+   },
+   "docking": {}
+  },
+  {
+   "key": "thrombin",
+   "label": "thrombin (P00734)",
+   "uniprot": "P00734",
+   "source": "PubChem BioAssay dose-response, active: Activity Outcome Active and potency <= 0.1 uM (pAct >= 7); measured inactive: dose-response potency >= 10 uM (pAct <= 5); most potent record per compound decides (docs/preregistration.md W3)",
+   "note": "a serine protease: different fold, different chemotype",
+   "n_records": 669,
+   "seed_smiles": "B(C(CCCN=C(N)N)NC(=O)C1CCCN1C(=O)C(CC2=CC=CC=C2)NC(=O)C)(O)O",
+   "qsar": {
+    "rmse_model": 1.0934,
+    "r2_model": 0.6821,
+    "rmse_1nn": 1.0718,
+    "rmse_mean": 1.9686,
+    "n_fit": 428,
+    "n_test": 135,
+    "y_std": 1.5745,
+    "beats_1nn": false,
+    "beats_mean": true
+   },
+   "conformal": {
+    "alpha": 0.1,
+    "q_hat": 1.3976,
+    "nominal_coverage": 0.9,
+    "empirical_test_coverage": 0.8593,
+    "interval_width": 2.7952
+   },
+   "generators": {
+    "G1_rule_decorate": {
+     "requested": 40,
+     "delivered": 37,
+     "yield": 0.925,
+     "novel_fraction": null
+    },
+    "G3_selfies_mutate": {
+     "requested": 40,
+     "delivered": 40,
+     "yield": 1.0,
+     "novel_fraction": null
+    },
+    "G2_brics_recombine": {
+     "requested": 40,
+     "delivered": 40,
+     "yield": 1.0,
+     "novel_fraction": null
+    }
+   },
+   "applicability": {
+    "n": 117,
+    "in_domain": 0.735,
+    "borderline": 0.2479,
+    "out_of_domain": 0.0171
+   },
+   "docking": {
+    "1OYT / vina": {
+     "auc": 0.2904,
+     "lo": 0.1467,
+     "hi": 0.4459,
+     "n_active": 27,
+     "n_decoy": 25,
+     "usable": false
+    },
+    "1OYT / vinardo": {
+     "auc": 0.3156,
+     "lo": 0.1748,
+     "hi": 0.4696,
+     "n_active": 27,
+     "n_decoy": 25,
+     "usable": false
+    }
+   }
+  }
+ ]
+}

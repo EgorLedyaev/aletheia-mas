@@ -1,0 +1,203 @@
+{
+ "tool": "ranking.portfolio",
+ "version": "1.0",
+ "params": {
+  "candidates": [
+   {
+    "cand_id": "U1",
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "origin": "user:erlotinib",
+    "parent": null,
+    "properties": {
+     "inchikey": "AAKJLRGGTJKAMG-UHFFFAOYSA-N",
+     "formula": "C22H23N3O4",
+     "MolWt": 393.443,
+     "cLogP": 3.405,
+     "TPSA": 74.73,
+     "HBD": 1,
+     "HBA": 7,
+     "RotB": 10,
+     "RingCount": 3,
+     "AromaticRings": 3,
+     "HeavyAtoms": 29,
+     "FractionCSP3": 0.273,
+     "FormalCharge": 0,
+     "MolMR": 111.94,
+     "NumStereocentres": 0,
+     "QED": 0.4179,
+     "SAscore": 2.478,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 2,
+     "esol_logS": -4.173,
+     "cns_mpo_like": 5.188,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 2,
+     "vina_score": -7.048
+    },
+    "property_claims": {
+     "inchikey": "E-0006",
+     "MolWt": "E-0010",
+     "cLogP": "E-0011",
+     "TPSA": "E-0012",
+     "HBD": "E-0013",
+     "HBA": "E-0014",
+     "RotB": "E-0015",
+     "RingCount": "E-0016",
+     "AromaticRings": "E-0017",
+     "HeavyAtoms": "E-0018",
+     "FractionCSP3": "E-0019",
+     "FormalCharge": "E-0020",
+     "MolMR": "E-0021",
+     "NumStereocentres": "E-0022",
+     "QED": "E-0023",
+     "SAscore": "E-0024",
+     "lipinski_violations": "E-0025",
+     "n_structural_alerts": "E-0027",
+     "esol_logS": "E-0030",
+     "cns_mpo_like": "E-0031",
+     "n_panels_passed": "E-0032"
+    },
+    "flags": [
+     "BRENK:Aliphatic_long_chain",
+     "BRENK:triple_bond"
+    ],
+    "scores": {
+     "vina_score": -7.048
+    },
+    "score_claims": {
+     "vina_score": "E-0066"
+    },
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "input token: erlotinib"
+    ]
+   },
+   {
+    "cand_id": "U2",
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "origin": "user:C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "parent": null,
+    "properties": {
+     "inchikey": "AAKJLRGGTJKAMG-UHFFFAOYSA-N",
+     "formula": "C22H23N3O4",
+     "MolWt": 393.443,
+     "cLogP": 3.405,
+     "TPSA": 74.73,
+     "HBD": 1,
+     "HBA": 7,
+     "RotB": 10,
+     "RingCount": 3,
+     "AromaticRings": 3,
+     "HeavyAtoms": 29,
+     "FractionCSP3": 0.273,
+     "FormalCharge": 0,
+     "MolMR": 111.94,
+     "NumStereocentres": 0,
+     "QED": 0.4179,
+     "SAscore": 2.478,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 2,
+     "esol_logS": -4.173,
+     "cns_mpo_like": 5.188,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 2,
+     "vina_score": -7.048
+    },
+    "property_claims": {
+     "inchikey": "E-0033",
+     "MolWt": "E-0034",
+     "cLogP": "E-0035",
+     "TPSA": "E-0036",
+     "HBD": "E-0037",
+     "HBA": "E-0038",
+     "RotB": "E-0039",
+     "RingCount": "E-0040",
+     "AromaticRings": "E-0041",
+     "HeavyAtoms": "E-0042",
+     "FractionCSP3": "E-0043",
+     "FormalCharge": "E-0044",
+     "MolMR": "E-0045",
+     "NumStereocentres": "E-0046",
+     "QED": "E-0047",
+     "SAscore": "E-0048",
+     "lipinski_violations": "E-0049",
+     "n_structural_alerts": "E-0050",
+     "esol_logS": "E-0051",
+     "cns_mpo_like": "E-0052",
+     "n_panels_passed": "E-0053"
+    },
+    "flags": [
+     "BRENK:Aliphatic_long_chain",
+     "BRENK:triple_bond"
+    ],
+    "scores": {
+     "vina_score": -7.048
+    },
+    "score_claims": {
+     "vina_score": "E-0066"
+    },
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "input token: C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+    ]
+   }
+  ],
+  "k": 8,
+  "cutoff": 0.35,
+  "score_key": "vina_score",
+  "target_id": null
+ },
+ "params_hash": "3949677c8bc47e2a",
+ "cached_at": "2026-11-12T21:45:17+00:00",
+ "data": {
+  "k": 8,
+  "n_candidates": 2,
+  "selected": [
+   {
+    "cand_id": "U1",
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "p_hit_assumed": 0.1234,
+    "cluster": 0
+   },
+   {
+    "cand_id": "U2",
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "p_hit_assumed": 0.1234,
+    "cluster": 0
+   }
+  ],
+  "n_clusters_represented": 1,
+  "n_without_probability_out_of_domain": 0,
+  "p_at_least_one_hit_independent": 0.2315,
+  "p_at_least_one_hit_independent_ci95": null,
+  "p_at_least_one_hit_cluster_correlated": 0.1234,
+  "p_at_least_one_hit_fully_correlated": 0.1234,
+  "p_at_least_one_hit_cluster_correlated_ci95": null,
+  "p_at_least_one_hit_fully_correlated_ci95": null,
+  "oracle_disagreement_spearman": null,
+  "calibration": {
+   "source": "models\\hit_calibrator_CHEMBL203.pkl",
+   "method": "platt",
+   "ece_test": 0.1977,
+   "criterion_met": false,
+   "hit_definition": "measured pChEMBL >= 7.0"
+  },
+  "score_key": "vina_score",
+  "clustering": {
+   "n_clusters": 1,
+   "cutoff_tanimoto_distance": 0.35,
+   "cluster_sizes": [
+    2
+   ],
+   "method": "Taylor-Butina on Morgan r=2 2048-bit fingerprints"
+  },
+  "probability_model": "platt calibrator fitted on the 43-molecule scaffold-split calibration fold; test-fold ECE 0.1977 -- ABOVE the pre-registered 0.10 threshold, so this probability is a diagnostic, not a headline number",
+  "caveat": "P(>=1 hit) is a model-derived quantity, not a measured hit rate. The two rows bracket the correlation assumption; the truth lies between them."
+ }
+}

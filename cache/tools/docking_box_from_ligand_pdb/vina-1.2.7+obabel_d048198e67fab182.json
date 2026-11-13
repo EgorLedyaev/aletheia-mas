@@ -1,0 +1,25 @@
+{
+ "tool": "docking.box_from_ligand_pdb",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "ligand_pdb": "cache/docking/bench_1OYT_FSN.pdb",
+  "pad": 5.0
+ },
+ "params_hash": "d048198e67fab182",
+ "cached_at": "2026-11-12T10:40:37+00:00",
+ "data": {
+  "center": [
+   16.793,
+   -12.378,
+   21.829
+  ],
+  "size": [
+   21.7,
+   18.0,
+   19.75
+  ],
+  "pad": 5.0,
+  "n_points": 30,
+  "source": "bench_1OYT_FSN.pdb"
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "tool": "chembl.target_by_accession",
+ "version": "ws-2.x",
+ "params": {
+  "accession": "P00519"
+ },
+ "params_hash": "f580f5eae2168687",
+ "cached_at": "2026-11-12T17:14:01+00:00",
+ "data": {
+  "accession": "P00519",
+  "targets": [
+   {
+    "target_chembl_id": "CHEMBL1862",
+    "pref_name": "Tyrosine-protein kinase ABL1",
+    "type": "SINGLE PROTEIN",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL2096618",
+    "pref_name": "Bcr/Abl fusion protein",
+    "type": "CHIMERIC PROTEIN",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P11274"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL2111414",
+    "pref_name": "Tyrosine-protein kinase ABL",
+    "type": "PROTEIN FAMILY",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P42684"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL3885630",
+    "pref_name": "Ras and Rab interactor 1/Tyrosine-protein kinase ABL1",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "Q13671"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL3885645",
+    "pref_name": "Transcription factor ETV6/Tyrosine-protein kinase ABL1",
+    "type": "CHIMERIC PROTEIN",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P41212"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4296119",
+    "pref_name": "Baculoviral IAP repeat-containing protein 2/Tyrosine-protein kinase ABL1/Breakpoint cluster region protein",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P11274",
+     "Q13490"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4296120",
+    "pref_name": "E3 ubiquitin-protein ligase XIAP/Tyrosine-protein kinase ABL1/Breakpoint cluster region protein",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P98170",
+     "P11274"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4296137",
+    "pref_name": "Protein cereblon/Tyrosine-protein kinase ABL1/Breakpoint cluster region protein",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P11274",
+     "Q96SW2"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523725",
+    "pref_name": "von Hippel-Lindau disease tumor suppressor/Tyrosine-protein kinase ABL1",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P40337"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523750",
+    "pref_name": "Protein cereblon/Tyrosine-protein kinase ABL1",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "Q96SW2"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523751",
+    "pref_name": "von Hippel-Lindau disease tumor suppressor/Tyrosine-protein kinase ABL1/Breakpoint cluster region protein",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P11274",
+     "P40337"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6193840",
+    "pref_name": "Protein cereblon/Tyrosine-protein kinase ABL1/Breakpoint cluster region protein",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Mus musculus",
+    "accessions": [
+     "P00519",
+     "P11274",
+     "Q8C7D2"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6193843",
+    "pref_name": "Baculoviral IAP repeat-containing protein 2/E3 ubiquitin-protein ligase XIAP/Breakpoint cluster region protein/Tyrosine-protein kinase ABL1",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00519",
+     "P98170",
+     "P11274",
+     "Q13490"
+    ]
+   }
+  ],
+  "n_targets": 13,
+  "preferred": {
+   "target_chembl_id": "CHEMBL1862",
+   "pref_name": "Tyrosine-protein kinase ABL1",
+   "type": "SINGLE PROTEIN",
+   "organism": "Homo sapiens",
+   "accessions": [
+    "P00519"
+   ]
+  },
+  "retrieved_at": "2026-11-12T17:14:01+00:00",
+  "source_url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=P00519"
+ }
+}

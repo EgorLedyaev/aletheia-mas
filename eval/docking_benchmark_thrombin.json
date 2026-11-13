@@ -1,0 +1,441 @@
+{
+ "generated_by": "scripts/bench_docking.py",
+ "vina_binary": "vina_1.2.7_win.exe",
+ "n_per_class_requested": 35,
+ "criterion": "docs/preregistration.md W3",
+ "duration_s": 4919.1,
+ "receptors": [
+  {
+   "pdb": "1OYT",
+   "label": "Thrombin (1OYT, non-kinase serine protease)",
+   "family": "serine protease",
+   "target": "CHEMBL204",
+   "accession": "P00734",
+   "chain": "H",
+   "box": {
+    "center": [
+     16.793,
+     -12.378,
+     21.829
+    ],
+    "size": [
+     21.7,
+     18.0,
+     19.75
+    ]
+   },
+   "cocrystal_ligand": "FSN",
+   "n_actives": 27,
+   "n_decoys": 25,
+   "n_failed_pairs": 18,
+   "decoy_class": "measured inactive (pChEMBL <= 5)",
+   "ligand_source": "PubChem BioAssay via PUG REST, retrieved 2026-11-12T11:20:02+00:00; 49 assays scanned; active: Activity Outcome Active and potency <= 0.1 uM (pAct >= 7); measured inactive: dose-response potency >= 10 uM (pAct <= 5); most potent record per compound decides (docs/preregistration.md W3)",
+   "exhaustiveness": 8,
+   "seed": 42,
+   "scoring": {
+    "vina": {
+     "roc_auc": 0.2904,
+     "auc_ci95": [
+      0.1467,
+      0.4459
+     ],
+     "ef_1pct": 1.926,
+     "ef_5pct": 1.284,
+     "ef_10pct": 1.541,
+     "mean_active": -8.683,
+     "mean_decoy": -8.013,
+     "score_gap": 0.67,
+     "usable_for_ranking": false
+    },
+    "vinardo": {
+     "roc_auc": 0.3156,
+     "auc_ci95": [
+      0.1748,
+      0.4696
+     ],
+     "ef_1pct": 1.926,
+     "ef_5pct": 1.284,
+     "ef_10pct": 1.541,
+     "mean_active": -6.286,
+     "mean_decoy": -5.845,
+     "score_gap": 0.441,
+     "usable_for_ranking": false
+    }
+   },
+   "delta_auc_vinardo_minus_vina": {
+    "mean": 0.0261,
+    "ci95": [
+     -0.08,
+     0.1363
+    ],
+    "excludes_zero": false
+   },
+   "rows": [
+    {
+     "id": "PUBCHEM:CID977140",
+     "label": 1,
+     "pchembl": 9.0,
+     "vina": -7.577,
+     "vinardo": -5.508
+    },
+    {
+     "id": "PUBCHEM:CID9869699",
+     "label": 1,
+     "pchembl": 8.088,
+     "vina": -9.243,
+     "vinardo": -5.871
+    },
+    {
+     "id": "PUBCHEM:CID44333258",
+     "label": 1,
+     "pchembl": 7.31,
+     "vina": -8.665,
+     "vinardo": -6.271
+    },
+    {
+     "id": "PUBCHEM:CID3934876",
+     "label": 1,
+     "pchembl": 8.246,
+     "vina": -8.816,
+     "vinardo": -6.386
+    },
+    {
+     "id": "PUBCHEM:CID757197",
+     "label": 1,
+     "pchembl": 7.72,
+     "vina": -8.24,
+     "vinardo": -6.231
+    },
+    {
+     "id": "PUBCHEM:CID10094378",
+     "label": 1,
+     "pchembl": 7.959,
+     "vina": -8.772,
+     "vinardo": -7.037
+    },
+    {
+     "id": "PUBCHEM:CID2981331",
+     "label": 1,
+     "pchembl": 9.0,
+     "vina": -8.671,
+     "vinardo": -6.299
+    },
+    {
+     "id": "PUBCHEM:CID10345176",
+     "label": 1,
+     "pchembl": 7.495,
+     "vina": -10.08,
+     "vinardo": -7.396
+    },
+    {
+     "id": "PUBCHEM:CID9550135",
+     "label": 1,
+     "pchembl": 7.481,
+     "vina": -8.847,
+     "vinardo": -5.974
+    },
+    {
+     "id": "PUBCHEM:CID2314691",
+     "label": 1,
+     "pchembl": 7.386,
+     "vina": -7.592,
+     "vinardo": -5.867
+    },
+    {
+     "id": "PUBCHEM:CID44331436",
+     "label": 1,
+     "pchembl": 7.721,
+     "vina": -6.425,
+     "vinardo": -5.238
+    },
+    {
+     "id": "PUBCHEM:CID76316955",
+     "label": 1,
+     "pchembl": 7.097,
+     "vina": -8.808,
+     "vinardo": -6.087
+    },
+    {
+     "id": "PUBCHEM:CID10249621",
+     "label": 1,
+     "pchembl": 7.027,
+     "vina": -8.398,
+     "vinardo": -6.342
+    },
+    {
+     "id": "PUBCHEM:CID3896375",
+     "label": 1,
+     "pchembl": 7.0,
+     "vina": -9.191,
+     "vinardo": -6.507
+    },
+    {
+     "id": "PUBCHEM:CID10091675",
+     "label": 1,
+     "pchembl": 7.745,
+     "vina": -8.196,
+     "vinardo": -6.454
+    },
+    {
+     "id": "PUBCHEM:CID2976015",
+     "label": 1,
+     "pchembl": 7.016,
+     "vina": -8.077,
+     "vinardo": -5.813
+    },
+    {
+     "id": "PUBCHEM:CID15462938",
+     "label": 1,
+     "pchembl": 7.62,
+     "vina": -10.36,
+     "vinardo": -8.105
+    },
+    {
+     "id": "PUBCHEM:CID9913055",
+     "label": 1,
+     "pchembl": 9.149,
+     "vina": -9.185,
+     "vinardo": -6.706
+    },
+    {
+     "id": "PUBCHEM:CID15431805",
+     "label": 1,
+     "pchembl": 9.244,
+     "vina": -8.45,
+     "vinardo": -6.098
+    },
+    {
+     "id": "PUBCHEM:CID970713",
+     "label": 1,
+     "pchembl": 7.08,
+     "vina": -7.306,
+     "vinardo": -5.049
+    },
+    {
+     "id": "PUBCHEM:CID11811066",
+     "label": 1,
+     "pchembl": 7.155,
+     "vina": -8.039,
+     "vinardo": -5.326
+    },
+    {
+     "id": "PUBCHEM:CID1295977",
+     "label": 1,
+     "pchembl": 7.533,
+     "vina": -9.904,
+     "vinardo": -7.083
+    },
+    {
+     "id": "PUBCHEM:CID44341288",
+     "label": 1,
+     "pchembl": 7.785,
+     "vina": -8.93,
+     "vinardo": -5.931
+    },
+    {
+     "id": "PUBCHEM:CID44358398",
+     "label": 1,
+     "pchembl": 7.125,
+     "vina": -10.17,
+     "vinardo": -7.394
+    },
+    {
+     "id": "PUBCHEM:CID76331536",
+     "label": 1,
+     "pchembl": 10.0,
+     "vina": -8.039,
+     "vinardo": -5.162
+    },
+    {
+     "id": "PUBCHEM:CID976504",
+     "label": 1,
+     "pchembl": 8.466,
+     "vina": -8.249,
+     "vinardo": -6.151
+    },
+    {
+     "id": "PUBCHEM:CID44385263",
+     "label": 1,
+     "pchembl": 7.301,
+     "vina": -10.22,
+     "vinardo": -7.425
+    },
+    {
+     "id": "PUBCHEM:CID654121",
+     "label": 0,
+     "pchembl": 4.86,
+     "vina": -6.96,
+     "vinardo": -5.118
+    },
+    {
+     "id": "PUBCHEM:CID73354766",
+     "label": 0,
+     "pchembl": 4.056,
+     "vina": -7.644,
+     "vinardo": -5.746
+    },
+    {
+     "id": "PUBCHEM:CID9846259",
+     "label": 0,
+     "pchembl": 4.0,
+     "vina": -6.799,
+     "vinardo": -5.231
+    },
+    {
+     "id": "PUBCHEM:CID574179",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -8.067,
+     "vinardo": -6.591
+    },
+    {
+     "id": "PUBCHEM:CID6904687",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.481,
+     "vinardo": -5.75
+    },
+    {
+     "id": "PUBCHEM:CID1214685",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -9.309,
+     "vinardo": -6.826
+    },
+    {
+     "id": "PUBCHEM:CID9583963",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.658,
+     "vinardo": -5.19
+    },
+    {
+     "id": "PUBCHEM:CID44348505",
+     "label": 0,
+     "pchembl": 5.0,
+     "vina": -9.221,
+     "vinardo": -6.195
+    },
+    {
+     "id": "PUBCHEM:CID44364505",
+     "label": 0,
+     "pchembl": 3.854,
+     "vina": -9.307,
+     "vinardo": -6.202
+    },
+    {
+     "id": "PUBCHEM:CID784703",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.392,
+     "vinardo": -5.571
+    },
+    {
+     "id": "PUBCHEM:CID736468",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.437,
+     "vinardo": -5.464
+    },
+    {
+     "id": "PUBCHEM:CID135420980",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -8.298,
+     "vinardo": -5.779
+    },
+    {
+     "id": "PUBCHEM:CID9682024",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.965,
+     "vinardo": -5.576
+    },
+    {
+     "id": "PUBCHEM:CID1550286",
+     "label": 0,
+     "pchembl": 4.051,
+     "vina": -7.216,
+     "vinardo": -5.667
+    },
+    {
+     "id": "PUBCHEM:CID818146",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.75,
+     "vinardo": -5.513
+    },
+    {
+     "id": "PUBCHEM:CID16189281",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -8.335,
+     "vinardo": -6.319
+    },
+    {
+     "id": "PUBCHEM:CID54555233",
+     "label": 0,
+     "pchembl": 3.398,
+     "vina": -7.649,
+     "vinardo": -6.026
+    },
+    {
+     "id": "PUBCHEM:CID73351802",
+     "label": 0,
+     "pchembl": 2.529,
+     "vina": -8.929,
+     "vinardo": -6.5
+    },
+    {
+     "id": "PUBCHEM:CID1475775",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.71,
+     "vinardo": -5.124
+    },
+    {
+     "id": "PUBCHEM:CID2946126",
+     "label": 0,
+     "pchembl": 4.963,
+     "vina": -10.28,
+     "vinardo": -7.536
+    },
+    {
+     "id": "PUBCHEM:CID54352954",
+     "label": 0,
+     "pchembl": 4.0,
+     "vina": -6.964,
+     "vinardo": -6.245
+    },
+    {
+     "id": "PUBCHEM:CID4557306",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.914,
+     "vinardo": -5.527
+    },
+    {
+     "id": "PUBCHEM:CID3575942",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -8.844,
+     "vinardo": -5.58
+    },
+    {
+     "id": "PUBCHEM:CID2458653",
+     "label": 0,
+     "pchembl": 4.301,
+     "vina": -7.444,
+     "vinardo": -5.735
+    },
+    {
+     "id": "PUBCHEM:CID11525275",
+     "label": 0,
+     "pchembl": 5.0,
+     "vina": -7.753,
+     "vinardo": -5.106
+    }
+   ]
+  }
+ ]
+}

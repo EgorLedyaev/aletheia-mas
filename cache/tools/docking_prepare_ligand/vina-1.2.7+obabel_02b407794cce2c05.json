@@ -1,0 +1,21 @@
+{
+ "tool": "docking.prepare_ligand",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+  "out_pdbqt": "cache/docking/diag_erlo.pdbqt"
+ },
+ "params_hash": "02b407794cce2c05",
+ "cached_at": "2026-11-12T20:49:53+00:00",
+ "data": {
+  "path": "cache/docking/diag_erlo.pdbqt",
+  "sdf_path": "cache/docking/diag_erlo.sdf",
+  "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+  "n_confs": 1,
+  "forcefield": "MMFF94",
+  "mmff_energy": 60.447,
+  "n_heavy_atoms": 29,
+  "seed": 42,
+  "n_rotatable": 11
+ }
+}

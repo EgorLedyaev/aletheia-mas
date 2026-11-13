@@ -1,0 +1,244 @@
+{
+ "tool": "generators.rule_decorate",
+ "version": "1.0",
+ "params": {
+  "seed_smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+  "n": 40,
+  "seed": 20261111
+ },
+ "params_hash": "00c3f0695bef5a7e",
+ "cached_at": "2026-11-11T18:37:57+00:00",
+ "data": {
+  "generator": "G1_rule_decorate",
+  "n_generated": 37,
+  "molecules": [
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C#N)c1OC",
+    "transform": "aromatic H -> nitrile",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(C#N)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> nitrile",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC",
+    "transform": "aromatic H -> nitrile",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC(F)F",
+    "transform": "methyl ether -> difluoromethyl ether",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)F",
+    "transform": "methyl ether -> difluoromethyl ether",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(O)c1OC",
+    "transform": "aromatic H -> hydroxyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(O)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> hydroxyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3O)c2cc1OC",
+    "transform": "aromatic H -> hydroxyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(OC)c1OC",
+    "transform": "aromatic H -> methoxy",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1nc(Nc2cccc(Br)c2)c2cc(OC)c(OC)cc2n1",
+    "transform": "aromatic H -> methoxy",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1ccc(Br)cc1Nc1ncnc2cc(OC)c(OC)cc12",
+    "transform": "aromatic H -> methoxy",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(OCCN2CCOCC2)c1OC",
+    "transform": "aromatic H -> morpholinoethoxy",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(OCCN3CCOCC3)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> morpholinoethoxy",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3OCCN3CCOCC3)c2cc1OC",
+    "transform": "aromatic H -> morpholinoethoxy",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(F)c1OC",
+    "transform": "aromatic H -> F",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(F)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> F",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3F)c2cc1OC",
+    "transform": "aromatic H -> F",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C)c1OC",
+    "transform": "aromatic H -> methyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(C)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> methyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C)c2cc1OC",
+    "transform": "aromatic H -> methyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(Cl)c1OC",
+    "transform": "aromatic H -> Cl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(Cl)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> Cl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3Cl)c2cc1OC",
+    "transform": "aromatic H -> Cl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(S(N)(=O)=O)c1OC",
+    "transform": "aromatic H -> sulfonamide",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(S(N)(=O)=O)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> sulfonamide",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3S(N)(=O)=O)c2cc1OC",
+    "transform": "aromatic H -> sulfonamide",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "CCOc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "methoxy -> ethoxy",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "CCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+    "transform": "methoxy -> ethoxy",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C(N)=O)c1OC",
+    "transform": "aromatic H -> carboxamide",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(C(N)=O)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> carboxamide",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C(N)=O)c2cc1OC",
+    "transform": "aromatic H -> carboxamide",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C(F)(F)F)c1OC",
+    "transform": "aromatic H -> CF3",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(C(F)(F)F)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> CF3",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C(F)(F)F)c2cc1OC",
+    "transform": "aromatic H -> CF3",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(N2CCN(C)CC2)c1OC",
+    "transform": "aromatic H -> N-methylpiperazinyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2nc(N3CCN(C)CC3)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "transform": "aromatic H -> N-methylpiperazinyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3N3CCN(C)CC3)c2cc1OC",
+    "transform": "aromatic H -> N-methylpiperazinyl",
+    "generator": "G1_rule_decorate",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   }
+  ],
+  "seed": 20261111,
+  "n_rules": 21,
+  "params": {
+   "max_per_rule": 3
+  }
+ }
+}

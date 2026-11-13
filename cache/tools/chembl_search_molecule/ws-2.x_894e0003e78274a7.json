@@ -1,0 +1,35 @@
+{
+ "tool": "chembl.search_molecule",
+ "version": "ws-2.x",
+ "params": {
+  "name": "Gefitinib"
+ },
+ "params_hash": "894e0003e78274a7",
+ "cached_at": "2026-11-12T17:04:34+00:00",
+ "data": {
+  "query": "Gefitinib",
+  "hits": [
+   {
+    "molecule_chembl_id": "CHEMBL939",
+    "pref_name": "GEFITINIB",
+    "smiles": "COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCN1CCOCC1",
+    "max_phase": "4.0"
+   },
+   {
+    "molecule_chembl_id": "CHEMBL5956974",
+    "pref_name": null,
+    "smiles": "COc1cc2ncnc(NC3=CC(Cl)C(F)C=C3)c2cc1OCCCN1CCOCC1",
+    "max_phase": null
+   },
+   {
+    "molecule_chembl_id": "CHEMBL4587573",
+    "pref_name": null,
+    "smiles": "COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCCCOCCOCCC(=O)N[C@H](C(=O)N1C[C@H](O)C[C@H]1C(=O)NCc1ccc(-c2scnc2C)cc1)C(C)(C)C",
+    "max_phase": null
+   }
+  ],
+  "n_hits": 3,
+  "retrieved_at": "2026-11-12T17:04:34+00:00",
+  "source_url": "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Gefitinib"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C#CC=C1C=CC([S+]Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)=C1"
+ },
+ "params_hash": "15e397c4574e5a69",
+ "cached_at": "2026-11-11T22:40:22+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "charged_oxygen_or_sulfur_atoms",
+    "sulphur_nitrogen_single_bond",
+    "triple_bond"
+   ],
+   "NIH": [
+    "sulf_D2_nitrogen"
+   ]
+  },
+  "n_alerts": 5,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

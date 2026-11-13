@@ -1,0 +1,119 @@
+{
+ "tool": "ranking.portfolio",
+ "version": "1.0",
+ "params": {
+  "candidates": [
+   {
+    "cand_id": "C030",
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "origin": "G1_rule_decorate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "properties": {
+     "inchikey": "QJIHCROKGYMFNF-UHFFFAOYSA-N",
+     "formula": "C21H22N4O4",
+     "MolWt": 394.431,
+     "cLogP": 3.295,
+     "TPSA": 98.52,
+     "HBD": 1,
+     "HBA": 8,
+     "RotB": 10,
+     "RingCount": 3,
+     "AromaticRings": 3,
+     "HeavyAtoms": 29,
+     "FractionCSP3": 0.286,
+     "FormalCharge": 0,
+     "MolMR": 108.72,
+     "NumStereocentres": 0,
+     "QED": 0.5232,
+     "SAscore": 2.375,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 1,
+     "esol_logS": -4.11,
+     "cns_mpo_like": 5.007,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 2
+    },
+    "property_claims": {
+     "inchikey": "E-0650",
+     "MolWt": "E-0651",
+     "cLogP": "E-0652",
+     "TPSA": "E-0653",
+     "HBD": "E-0654",
+     "HBA": "E-0655",
+     "RotB": "E-0656",
+     "RingCount": "E-0657",
+     "AromaticRings": "E-0658",
+     "HeavyAtoms": "E-0659",
+     "FractionCSP3": "E-0660",
+     "FormalCharge": "E-0661",
+     "MolMR": "E-0662",
+     "NumStereocentres": "E-0663",
+     "QED": "E-0664",
+     "SAscore": "E-0665",
+     "lipinski_violations": "E-0666",
+     "n_structural_alerts": "E-0667",
+     "esol_logS": "E-0668",
+     "cns_mpo_like": "E-0669",
+     "n_panels_passed": "E-0670"
+    },
+    "flags": [
+     "BRENK:Aliphatic_long_chain"
+    ],
+    "scores": {},
+    "score_claims": {},
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "terminal alkyne -> nitrile"
+    ]
+   }
+  ],
+  "k": 8,
+  "cutoff": 0.35,
+  "score_key": "vina_score",
+  "target_id": null
+ },
+ "params_hash": "0b54765e1a973beb",
+ "cached_at": "2026-11-12T21:58:58+00:00",
+ "data": {
+  "k": 8,
+  "n_candidates": 1,
+  "selected": [
+   {
+    "cand_id": "C030",
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "p_hit_assumed": 0.05,
+    "cluster": 0
+   }
+  ],
+  "n_clusters_represented": 1,
+  "n_without_probability_out_of_domain": 0,
+  "p_at_least_one_hit_independent": 0.05,
+  "p_at_least_one_hit_independent_ci95": null,
+  "p_at_least_one_hit_cluster_correlated": 0.05,
+  "p_at_least_one_hit_fully_correlated": 0.05,
+  "p_at_least_one_hit_cluster_correlated_ci95": null,
+  "p_at_least_one_hit_fully_correlated_ci95": null,
+  "oracle_disagreement_spearman": null,
+  "calibration": {
+   "source": "models\\hit_calibrator_CHEMBL203.pkl",
+   "method": "platt",
+   "ece_test": 0.1977,
+   "criterion_met": false,
+   "hit_definition": "measured pChEMBL >= 7.0"
+  },
+  "score_key": "vina_score",
+  "clustering": {
+   "n_clusters": 1,
+   "cutoff_tanimoto_distance": 0.35,
+   "cluster_sizes": [
+    1
+   ],
+   "method": "Taylor-Butina on Morgan r=2 2048-bit fingerprints"
+  },
+  "probability_model": "platt calibrator fitted on the 43-molecule scaffold-split calibration fold; test-fold ECE 0.1977 -- ABOVE the pre-registered 0.10 threshold, so this probability is a diagnostic, not a headline number",
+  "caveat": "P(>=1 hit) is a model-derived quantity, not a measured hit rate. The two rows bracket the correlation assumption; the truth lies between them."
+ }
+}

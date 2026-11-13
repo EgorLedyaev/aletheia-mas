@@ -1,0 +1,33 @@
+﻿
+=== EGFR kinase domain (8A27, 1.07 A) ===
+  receptor chain A, box from co-crystal KY9 center=[23.82, -10.62, -11.55]
+  35 actives (pChEMBL>=7), 35 measured inactives (pChEMBL<=5) matched from a pool of 120
+  70/70 ligands prepared
+  140 docking runs, 12 already cached
+    20/128 (183s)
+    40/128 (577s)
+    60/128 (865s)
+    80/128 (1105s)
+    100/128 (1499s)
+    120/128 (1960s)
+  vina     AUC 0.593 [0.442, 0.739]  EF10% 0.726  gap -0.191 kcal/mol
+  vinardo  AUC 0.510 [0.356, 0.655]  EF10% 0.0  gap -0.015 kcal/mol
+  delta AUC (vinardo - vina) -0.081 [-0.225, +0.068]
+
+=== EGFR kinase domain (1M17, erlotinib co-crystal) ===
+  receptor chain A, box from co-crystal AQ4 center=[22.01, 0.25, 52.79]
+  35 actives (pChEMBL>=7), 35 measured inactives (pChEMBL<=5) matched from a pool of 120
+  70/70 ligands prepared
+  140 docking runs, 0 already cached
+    20/140 (2351s)
+    40/140 (2636s)
+    60/140 (3073s)
+    80/140 (3284s)
+    100/140 (3513s)
+    120/140 (4019s)
+    140/140 (4421s)
+  vina     AUC 0.632 [0.479, 0.769]  EF10% 0.726  gap -0.294 kcal/mol
+  vinardo  AUC 0.734 [0.601, 0.852]  EF10% 0.0  gap -0.497 kcal/mol
+  delta AUC (vinardo - vina) +0.102 [+0.004, +0.199]
+
+wrote eval/docking_benchmark_egfr.json (2 receptors, 4422.5s)

@@ -1,0 +1,21 @@
+{
+ "tool": "docking.pose_rmsd",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "reference_pdb": "cache/structures/1M17_AQ4.pdb",
+  "pose_pdbqt": "cache/docking/erlotinib_1M17_out.pdbqt",
+  "model_index": 0
+ },
+ "params_hash": "7fd53c4544dbfbf1",
+ "cached_at": "2026-11-11T17:45:02+00:00",
+ "data": {
+  "rmsd_A": 1.652,
+  "n_matched_atoms": 9,
+  "n_reference_heavy": 29,
+  "n_pose_heavy": 29,
+  "model_index": 0,
+  "pose_score": -7.048,
+  "method": "element-matched optimal assignment (Hungarian), no realignment",
+  "success_threshold_A": 2.0
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "target": "CHEMBL203",
+ "hit_definition": "measured pChEMBL >= 7.0",
+ "source_records": "ws-2.x_5d36519c2bbdb5ca.json",
+ "n_records": 271,
+ "split": {
+  "fit": 174,
+  "calibration": 43,
+  "test": 54,
+  "n_scaffolds": 71,
+  "method": "Bemis-Murcko scaffold split (whole scaffolds held out)"
+ },
+ "hit_rate": {
+  "calibration": 0.3953,
+  "test": 0.8519
+ },
+ "cv_logloss_calibration_fold": {
+  "platt": 0.3659,
+  "isotonic": 0.7815
+ },
+ "selected_calibrator": "platt",
+ "test_metrics": {
+  "uncalibrated_legacy_map": {
+   "ece_10bin": 0.5584,
+   "brier": 0.4187,
+   "log_loss": 1.0473,
+   "mean_p": 0.2934,
+   "bin_occupancy": [
+    6,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  "platt": {
+   "ece_10bin": 0.1977,
+   "brier": 0.1233,
+   "log_loss": 0.4138,
+   "mean_p": 0.6542,
+   "bin_occupancy": [
+    6,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  "base_rate_calibration_fold": {
+   "ece_10bin": 0.5297,
+   "brier": 0.3346,
+   "log_loss": 0.865,
+   "mean_p": 0.3953,
+   "bin_occupancy": [
+    6,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  }
+ },
+ "criterion": "ECE <= 0.10 on the held-out test fold (docs/preregistration.md W2)",
+ "criterion_met": false,
+ "portfolio": {
+  "k": 8,
+  "p_hit_per_candidate": [
+   0.8527,
+   0.8443,
+   0.8376,
+   0.8369,
+   0.8346,
+   0.819,
+   0.7994,
+   0.7789
+  ],
+  "p_at_least_one_independent": 1.0,
+  "p_at_least_one_independent_ci95": [
+   0.9999,
+   1.0
+  ],
+  "p_at_least_one_fully_correlated": 0.8527,
+  "p_at_least_one_fully_correlated_ci95": [
+   0.7131,
+   0.9313
+  ],
+  "legacy_uncalibrated_independent": 0.9651,
+  "note": "the two rows bracket the correlation assumption: independent candidates versus one shared chance of success; the truth is in between and is not measured here"
+ },
+ "bootstrap_resamples": 2000
+}

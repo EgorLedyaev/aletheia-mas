@@ -1,0 +1,128 @@
+{
+ "tool": "pocket.detect",
+ "version": "ligsite-like-1.0",
+ "params": {
+  "pdb_path": "cache/structures/AF-P00519.pdb",
+  "spacing": 1.0,
+  "probe": 3.2,
+  "psp_min": 5,
+  "reference_point": null
+ },
+ "params_hash": "4b11329bad70b71d",
+ "cached_at": "2026-11-12T21:58:51+00:00",
+ "data": {
+  "pdb_path": "cache/structures/AF-P00519.pdb",
+  "n_pockets": 5,
+  "pockets": [
+   {
+    "rank": 1,
+    "n_grid_points": 2484,
+    "volume_A3": 2484.0,
+    "center": [
+     -2.248,
+     -12.207,
+     -8.962
+    ],
+    "extent_A": [
+     36.0,
+     31.0,
+     36.0
+    ],
+    "mean_buriedness": 5.5
+   },
+   {
+    "rank": 2,
+    "n_grid_points": 1818,
+    "volume_A3": 1818.0,
+    "center": [
+     7.388,
+     19.463,
+     -14.492
+    ],
+    "extent_A": [
+     27.0,
+     29.0,
+     30.0
+    ],
+    "mean_buriedness": 5.81
+   },
+   {
+    "rank": 3,
+    "n_grid_points": 509,
+    "volume_A3": 509.0,
+    "center": [
+     8.606,
+     -27.542,
+     -2.911
+    ],
+    "extent_A": [
+     27.0,
+     16.0,
+     13.0
+    ],
+    "mean_buriedness": 5.33
+   },
+   {
+    "rank": 4,
+    "n_grid_points": 468,
+    "volume_A3": 468.0,
+    "center": [
+     -31.944,
+     20.954,
+     -7.207
+    ],
+    "extent_A": [
+     22.0,
+     19.0,
+     15.0
+    ],
+    "mean_buriedness": 5.26
+   },
+   {
+    "rank": 5,
+    "n_grid_points": 456,
+    "volume_A3": 456.0,
+    "center": [
+     -16.318,
+     2.739,
+     -13.431
+    ],
+    "extent_A": [
+     11.0,
+     16.0,
+     16.0
+    ],
+    "mean_buriedness": 5.86
+   }
+  ],
+  "top_pocket": {
+   "rank": 1,
+   "n_grid_points": 2484,
+   "volume_A3": 2484.0,
+   "center": [
+    -2.248,
+    -12.207,
+    -8.962
+   ],
+   "extent_A": [
+    36.0,
+    31.0,
+    36.0
+   ],
+   "mean_buriedness": 5.5
+  },
+  "params": {
+   "spacing_A": 1.0,
+   "probe_A": 3.2,
+   "psp_min": 5,
+   "min_cluster_points": 30
+  },
+  "grid_dims": [
+   138,
+   169,
+   166
+  ],
+  "n_protein_atoms": 8643,
+  "method": "LIGSITE-style protein-solvent-protein buriedness grid (re-implementation; see aletheia/tools/pocket.py)"
+ }
+}

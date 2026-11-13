@@ -1,0 +1,27 @@
+{
+ "tool": "uniprot.search_gene",
+ "version": "rest-2026",
+ "params": {
+  "gene": "CDK2",
+  "organism_id": 9606
+ },
+ "params_hash": "5537c0b43fb870fa",
+ "cached_at": "2026-11-11T18:24:20+00:00",
+ "data": {
+  "query": "gene:CDK2 AND organism_id:9606 AND reviewed:true",
+  "hits": [
+   {
+    "accession": "P24941",
+    "uniprot_id": "CDK2_HUMAN",
+    "protein_name": "Cyclin-dependent kinase 2",
+    "length": 298,
+    "genes": [
+     "CDK2"
+    ]
+   }
+  ],
+  "n_hits": 1,
+  "retrieved_at": "2026-11-11T18:24:20+00:00",
+  "source_url": "https://rest.uniprot.org/uniprotkb/search?query=gene:CDK2 AND organism_id:9606 AND reviewed:true"
+ }
+}

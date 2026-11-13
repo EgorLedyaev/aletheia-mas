@@ -1,0 +1,17 @@
+{
+ "tool": "pdb.extract_ligand",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/1M17.pdb",
+  "resname": "AQ4",
+  "out_path": "cache/docking/1M17_val_AQ4.pdb",
+  "chain": "A"
+ },
+ "params_hash": "b53513ad2d0d51de",
+ "cached_at": "2026-11-11T19:58:53+00:00",
+ "data": {
+  "path": "cache/docking/1M17_val_AQ4.pdb",
+  "resname": "AQ4",
+  "n_atoms": 29
+ }
+}

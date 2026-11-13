@@ -1,0 +1,86 @@
+{
+ "tool": "ranking.pareto_front",
+ "version": "1.0",
+ "params": {
+  "rows": [
+   {
+    "cand_id": "C030",
+    "qsar_pchembl": 7.456,
+    "vina_score": null,
+    "QED": 0.5232,
+    "SAscore": 2.375,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C046",
+    "qsar_pchembl": 7.32,
+    "vina_score": null,
+    "QED": 0.5489,
+    "SAscore": 2.155,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C064",
+    "qsar_pchembl": 6.382,
+    "vina_score": null,
+    "QED": 0.6645,
+    "SAscore": 2.606,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C070",
+    "qsar_pchembl": 6.058,
+    "vina_score": null,
+    "QED": 0.6157,
+    "SAscore": 3.696,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C086",
+    "qsar_pchembl": 7.832,
+    "vina_score": null,
+    "QED": 0.5261,
+    "SAscore": 2.506,
+    "n_structural_alerts": 1
+   }
+  ],
+  "objectives": {
+   "qsar_pchembl": "max",
+   "vina_score": "min",
+   "QED": "max",
+   "SAscore": "min",
+   "n_structural_alerts": "min"
+  }
+ },
+ "params_hash": "b495d8375734f0bc",
+ "cached_at": "2026-11-11T22:18:35+00:00",
+ "data": {
+  "objectives_used": [
+   "qsar_pchembl",
+   "QED",
+   "SAscore",
+   "n_structural_alerts"
+  ],
+  "n_usable": 5,
+  "n_fronts": 2,
+  "fronts": [
+   [
+    "C030",
+    "C046",
+    "C064",
+    "C086"
+   ],
+   [
+    "C070"
+   ]
+  ],
+  "front_of": {
+   "C030": 0,
+   "C046": 0,
+   "C064": 0,
+   "C070": 1,
+   "C086": 0
+  },
+  "method": "non-dominated sorting (exact, O(n^2))"
+ }
+}

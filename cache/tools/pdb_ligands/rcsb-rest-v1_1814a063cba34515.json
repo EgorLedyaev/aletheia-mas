@@ -1,0 +1,47 @@
+{
+ "tool": "pdb.ligands",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/8A27.pdb"
+ },
+ "params_hash": "1814a063cba34515",
+ "cached_at": "2026-11-11T18:16:29+00:00",
+ "data": {
+  "pdb_path": "cache/structures/8A27.pdb",
+  "n_ligands": 1,
+  "ligands": [
+   {
+    "resname": "KY9",
+    "chain": "A",
+    "resseq": "1102",
+    "n_heavy_atoms": 48,
+    "centroid": [
+     23.815,
+     -10.622,
+     -11.554
+    ],
+    "extent_A": [
+     18.22,
+     8.05,
+     13.97
+    ]
+   }
+  ],
+  "largest": {
+   "resname": "KY9",
+   "chain": "A",
+   "resseq": "1102",
+   "n_heavy_atoms": 48,
+   "centroid": [
+    23.815,
+    -10.622,
+    -11.554
+   ],
+   "extent_A": [
+    18.22,
+    8.05,
+    13.97
+   ]
+  }
+ }
+}

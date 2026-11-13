@@ -1,0 +1,32 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC=CC=NC=NC1(C=COC)NC=CC=CC1(C)C"
+ },
+ "params_hash": "f35d05ce51227f31",
+ "cached_at": "2026-11-11T18:38:14+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "acyclic_C=C-O",
+    "imine_1",
+    "imine_2"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 3,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

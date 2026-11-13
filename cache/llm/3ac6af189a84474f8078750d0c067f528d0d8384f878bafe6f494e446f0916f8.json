@@ -1,0 +1,38 @@
+{
+ "key": "3ac6af189a84474f8078750d0c067f528d0d8384f878bafe6f494e446f0916f8",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- gene_to_accession = P00533 (RETRIEVED)\n- uniprot_protein_name = Epidermal growth factor receptor (RETRIEVED)\n- sequence_length = 1210 (RETRIEVED)\n- n_pdb_structures = 388 (RETRIEVED)\n- chembl_target_id = CHEMBL203 (RETRIEVED)\n- sequence_gravy = -0.316 (COMPUTED)\n- net_charge_ph7 = -12 (COMPUTED)\n- critic_claims_recomputed = 0 (COMPUTED)\n- critic_recomputation_mismatches = 0 (COMPUTED)\n- predicted_claims_total = 0 (COMPUTED)\n- predicted_claims_out_of_domain = 0 (COMPUTED)\n- ledger_claims_total = 11 (COMPUTED)\n- identity_checks_passed = 1 (COMPUTED)\n- identity_checks_total = 1 (COMPUTED)\n\nUser request: What is the UniProt accession of human EGFR?\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "The retrieved accession confirms the target identity as human EGFR, consistent with the matched protein name and the identity check passing, which supports that downstream findings are anchored to the correct gene and protein record. The sequence-derived properties (length, hydropathy index, and net charge) describe bulk physicochemical character only and do not by themselves validate structural or functional annotations. The counts of associated structural entries and bioactivity target records indicate that external reference data exist for this target, but their presence alone does not substantiate any claim about binding, activity, or druggability. No critic mismatches or out-of-domain claims were flagged, which supports internal consistency of the ledger entries but does not constitute evidence of efficacy, safety, or clinical relevance.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 873,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 240,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

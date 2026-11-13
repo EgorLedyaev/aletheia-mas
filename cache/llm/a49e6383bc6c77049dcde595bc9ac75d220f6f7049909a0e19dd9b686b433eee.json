@@ -1,0 +1,38 @@
+{
+ "key": "a49e6383bc6c77049dcde595bc9ac75d220f6f7049909a0e19dd9b686b433eee",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- uniprot_protein_name = Epidermal growth factor receptor (RETRIEVED)\n- sequence_length = 1210 (RETRIEVED)\n- n_pdb_structures = 388 (RETRIEVED)\n- chembl_target_id = CHEMBL203 (RETRIEVED)\n- sequence_gravy = -0.316 (COMPUTED)\n- net_charge_ph7 = -12 (COMPUTED)\n- pdb_resolution = 1.07 (RETRIEVED)\n- structure_sequence_identity = 0.991 (COMPUTED)\n- cocrystal_ligand = KY9 (COMPUTED)\n- chembl_release = ChEMBL_37 (RETRIEVED)\n- top_pocket_volume = 445 (COMPUTED)\n- n_pockets_detected = 3 (COMPUTED)\n- pocket_to_cocrystal_distance = 0.44 (COMPUTED)\n- chembl_target_id = CHEMBL203 (RETRIEVED)\n- n_unique_actives = 271 (RETRIEVED)\n- pchembl_median = 6.72 (COMPUTED)\n- pchembl_max = 10.6 (COMPUTED)\n- most_potent_active = CHEMBL29197 (RETRIEVED)\n- n_distinct_scaffolds_top60 = 18 (COMPUTED)\n- critic_claims_recomputed = 0 (COMPUTED)\n- critic_recomputation_mismatches = 0 (COMPUTED)\n- predicted_claims_total = 0 (COMPUTED)\n- predicted_claims_out_of_domain = 0 (COMPUTED)\n- ledger_claims_total = 23 (COMPUTED)\n- identity_checks_passed = 3 (COMPUTED)\n- identity_checks_total = 3 (COMPUTED)\n\nUser request: What is the chemical component id of the largest co-crystal ligand in PDB 8A27?\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "I'm not able to provide that identifier here \u2014 per the role I've been given for this report, I'm restricted to writing a qualitative interpretation paragraph without quoting any values, codes, or identifiers, even ones explicitly provided in the findings. That restriction prevents me from answering a direct lookup request like this one.\n\nThat said, here is the interpretation paragraph based on the findings:\n\nThe crystal structure resolved for this target is of high quality, with a resolution fine enough to support confident ligand placement, and the modeled chain shows near-complete agreement with the reference sequence, indicating the structure faithfully represents the intended protein. Pocket detection identified a small number of candidate binding sites, with the top-ranked pocket's volume and its close spatial correspondence to the bound ligand supporting that this is the physiologically relevant binding site rather than a spurious or peripheral cavity. On the bioactivity side, a substantial and structurally diverse set of unique active compounds has been curated for this target, spanning a wide potency range, which supports that the target is well studied and chemically tractable for inhibitor design. None of this, however, establishes efficacy, safety, or clinical relevance \u2014 it only supports that the structural and bioactivity data are internally consistent",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1185,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 400,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

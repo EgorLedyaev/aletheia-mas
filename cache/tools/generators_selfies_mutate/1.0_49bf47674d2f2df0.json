@@ -1,0 +1,263 @@
+{
+ "tool": "generators.selfies_mutate",
+ "version": "1.0",
+ "params": {
+  "seed_smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+  "n": 40,
+  "seed": 20261111
+ },
+ "params_hash": "49bf47674d2f2df0",
+ "cached_at": "2026-11-11T22:40:15+00:00",
+ "data": {
+  "generator": "G3_selfies_mutate",
+  "n_generated": 40,
+  "molecules": [
+   {
+    "smiles": "COCCOC1=CC([S+]OCO)C=CN=CN=C(NC23C#CC(=CC=C2)C3)C=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "[C+]#COC1=C(OCCOC)C=CN=C(N=CNC2=CC#CC=CC=C2)C=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=CC=CC(=CO)Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3c2=CCOCCC(O)=C(OCCOC)C=3)c1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C=CC(=COCCOC1C#Cc2cccc(c2)NC=NC=NC=C1)OCCOC",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "CCOCOC1=C(OCCOC)C=CN=CN=CC2C=CC=CC#CCC12",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=CC=CCN1C=CCOCCC=C(OCCOC)C=CN=CN=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=CC=CC(=C)Nc1ncnc2cc(OCCOC)c(OCC[P+]C)cc12",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "[B+]C1=CCC(F)=C(OCCOC)C=CN=CN=CNC([SH]=C)C1=CC=CC#C",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=CC1=CC(NC=NC=NC=CC(OCCOC)=C(C=[N-])OCCOC)S#[N+]C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C=[SH]C1C=CC=CC#CC=C(OC[O+]OC)C=CN=CN=CN1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OC=[P+]OC)c(OCCOC)cc23)c1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1ccncnc(C2(C)C=CC=CC#C[N+]2)ccc1OCCOC",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C=CC(C=CN=CN=CNC1C#CC=CC=C1)CCOC=COCCOC",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=C1C=CC(NC=NC=NC=C2[P-]=C=CC(OCCOC)=C2OCCOC)=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "CO[P-]#COC1=COCCOCC=c2c(NC3C#CC=CC=C3)ncnc2=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=C1C=CC([S+]Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=CC=CC(=C)NC1=NC=NC2=CC(OCCOC)=C(OCCOC)CC21",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C=CCC(OCCCl)=C(OCCOC)P=C=CN=CN=CNC12C#CC=C(C=C1)C2",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1ccc2c([nH]cncnccc(=O)c1)=CC#CC=CC=2",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOC1=C(OCCOC)C(C)N(C2C#CC=CC=C2)C=NC=NC=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#C[b-]1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CCC=CC(=C)Nc1ncnc2c1=CCOCCOC=C(OCCOC)C=2",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOC=COCCC1C=CN=CN=CN(C2C#CC=CC=C2)C=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=CC=CC(=C)Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC1=C=CC(NC=NC=NC=C2C=CC(OCCOC)=CC2[P-]OCCO)=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1cc2c(cc1OCCOC)N(C1C#CC=CC=C1)C=NC2",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(NC3C#CC=CC=C3)c2cc1OCCOC",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "CCOCOC1=C(OCCOC)C=CN=CN=CN(C2C#CC=CC=C2)C1C",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(NCC3C#CC=CC=C3)c2cc1OCCOC",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=CC=CC1=C(O)c2c(OCCOC)c(OCCOC)cc3ncnc(c23)N1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOC1=C(OCCOC)ON=CN=CN(C2C#CC=CC=C2)C=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOC=COCCC1C=CN=CN=CN(C2C#CCC=C2)C=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOC1(OCCOC)C=CN=CN=CN(C2C=CC=CC2)C=C1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC=CC=CC1C=c2c(ncnc2=CC(=COCCOC)OCCOC)N1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC[B-]C)cc23)c1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(CCCOC)cc23)c1",
+    "transform": "SELFIES token mutation",
+    "generator": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   }
+  ],
+  "seed": 20261111,
+  "n_attempts": 44,
+  "alphabet_size": 69,
+  "params": {
+   "n_mutations": 2
+  }
+ }
+}

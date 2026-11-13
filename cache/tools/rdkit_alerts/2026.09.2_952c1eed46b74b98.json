@@ -1,0 +1,28 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC1=Cc2c(Nc3cccc(Br)c3)ncnc21"
+ },
+ "params_hash": "952c1eed46b74b98",
+ "cached_at": "2026-11-11T18:38:14+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [],
+   "NIH": []
+  },
+  "n_alerts": 0,
+  "clean": true,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

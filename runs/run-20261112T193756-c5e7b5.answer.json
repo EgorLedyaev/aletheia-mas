@@ -1,0 +1,1811 @@
+{
+ "run_id": "run-20261112T193756-c5e7b5",
+ "query": "Dock erlotinib (C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1) into the EGFR structure 1M17 and validate the docking by redocking the co-crystal ligand.",
+ "plan": {
+  "query": "Dock erlotinib (C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1) into the EGFR structure 1M17 and validate the docking by redocking the co-crystal ligand.",
+  "intents": [
+   "docking"
+  ],
+  "modality": "mixed",
+  "targets": [
+   "EGFR",
+   "1M17"
+  ],
+  "molecules": [
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+  ],
+  "steps": [
+   {
+    "step_id": "S1",
+    "agent": "target_analyst",
+    "action": "resolve_target",
+    "inputs": {
+     "targets": [
+      "EGFR",
+      "1M17"
+     ],
+     "ligand": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+     "need_structure": true
+    },
+    "depends_on": [],
+    "rationale": "every downstream claim needs a verified target identity",
+    "optional": false
+   },
+   {
+    "step_id": "S2",
+    "agent": "property_agent",
+    "action": "profile_molecules",
+    "inputs": {
+     "smiles": [
+      "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+     ]
+    },
+    "depends_on": [],
+    "rationale": "descriptors and alerts for the molecules named by the user",
+    "optional": false
+   },
+   {
+    "step_id": "S3",
+    "agent": "docking_agent",
+    "action": "dock",
+    "inputs": {
+     "smiles": [
+      "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+     ],
+     "validate": true
+    },
+    "depends_on": [
+     "S1",
+     "S2"
+    ],
+    "rationale": "structure-based score, validated by redocking on the same receptor",
+    "optional": false
+   },
+   {
+    "step_id": "S4",
+    "agent": "structure_analyst",
+    "action": "analyse_structure",
+    "inputs": {},
+    "depends_on": [
+     "S1"
+    ],
+    "rationale": "binding-site detection on the selected structure",
+    "optional": false
+   },
+   {
+    "step_id": "S5",
+    "agent": "critic",
+    "action": "cross_check",
+    "inputs": {},
+    "depends_on": [
+     "S1",
+     "S2",
+     "S3",
+     "S4"
+    ],
+    "rationale": "independent recomputation and applicability-domain audit",
+    "optional": false
+   }
+  ],
+  "planner": "callable+cache",
+  "notes": [
+   "The user explicitly requests docking of a named small molecule (erlotinib, given as SMILES) into a specified PDB structure (1M17, EGFR), plus a redocking validation step, both of which fall under the docking intent."
+  ]
+ },
+ "blocks": [
+  {
+   "title": "What the system did",
+   "text": "Planner `callable+cache` routed this request to the intents docking.\n\n- `S1` **target_analyst** -> resolve_target \u2014 every downstream claim needs a verified target identity\n- `S2` **property_agent** -> profile_molecules \u2014 descriptors and alerts for the molecules named by the user\n- `S3` **docking_agent** -> dock \u2014 structure-based score, validated by redocking on the same receptor\n- `S4` **structure_analyst** -> analyse_structure \u2014 binding-site detection on the selected structure\n- `S5` **critic** -> cross_check \u2014 independent recomputation and applicability-domain audit\n\nTools actually invoked: `admet.profile`, `chembl.target_by_accession`, `docking.box_from_ligand_pdb`, `docking.contacts`, `docking.pose_rmsd_all_models`, `docking.prepare_ligand`, `docking.prepare_receptor`, `docking.vina_dock`, `docking.vina_version`, `pdb.chain_sequences`, `pdb.chemcomp`, `pdb.download`, `pdb.entry`, `pdb.extract_ligand`, `pdb.extract_receptor`, `pdb.ligands`, `pocket.detect`, `rdkit.alerts`, `rdkit.descriptors`, `rdkit.druglikeness`, `rdkit.standardize`, `uniprot.entry`, `uniprot.search_gene`, `uniprot.sequence_features`.",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "profile",
+    "target_by_accession",
+    "box_from_ligand_pdb",
+    "contacts",
+    "pose_rmsd_all_models",
+    "prepare_ligand",
+    "prepare_receptor",
+    "vina_dock",
+    "vina_version",
+    "chain_sequences",
+    "chemcomp",
+    "download",
+    "entry",
+    "extract_ligand",
+    "extract_receptor",
+    "ligands",
+    "detect",
+    "alerts",
+    "descriptors",
+    "druglikeness",
+    "standardize",
+    "entry",
+    "search_gene",
+    "sequence_features"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Target",
+   "text": "**EGFR** \u2014 Epidermal growth factor receptor (Homo sapiens), UniProt `P00533`.\n- Sequence length: 1210 residues [E-0003] \u2014 RETRIEVED | P00533 @ 2026-11-11\n- Experimental structures cross-referenced: 388 [E-0004] \u2014 RETRIEVED | P00533 @ 2026-11-11\n- Structure selected: `1M17` at 2.6 A resolution [E-0026]\n- Co-crystal ligand component id: `AQ4` [E-0031] \u2014 COMPUTED | pdb.ligands rcsb-rest-v1\n- ChEMBL target id: `CHEMBL203` [E-0006] \u2014 RETRIEVED | CHEMBL203 @ 2026-11-11\n- Target identity checks passed: 3 of 3 [E-0046] \u2014 uniprot_length_matches_sequence; pdb_belongs_to_accession; structure_sequence_matches_uniprot",
+   "claim_ids": [
+    "E-0002",
+    "E-0003",
+    "E-0004",
+    "E-0006",
+    "E-0026",
+    "E-0026",
+    "E-0031",
+    "E-0006",
+    "E-0046",
+    "E-0047"
+   ],
+   "structures": [
+    "P00533",
+    "1M17"
+   ],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Binding site",
+   "text": "- top pocket volume: 458 A^3 [E-0032] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- n pockets detected: 4  [E-0033] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- pocket to cocrystal distance: 0.31 A [E-0034] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- localisation check: the detected cavity nearest the crystallographic ligand centroid is pocket rank 1, within 5 A of it",
+   "claim_ids": [
+    "E-0032",
+    "E-0033",
+    "E-0034"
+   ],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "5"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Docking",
+   "text": "- redocking rmsd top1: 4.188 A [E-0035] \u2014 COMPUTED | docking.pose_rmsd_all_models vina-1.2.7+obabel \u2014 validation: success_threshold_A=2.0, exhaustiveness=24\n- redocking rmsd best of modes: 1.361 A [E-0036] \u2014 COMPUTED | docking.pose_rmsd_all_models vina-1.2.7+obabel \u2014 validation: best_rmsd_rank=3, n_poses=9\n- docking enrichment roc auc: 0.42  [E-0037] \u2014 COMPUTED | aletheia.docking_validation 1.0 \u2014 validation: roc_auc=0.42, ef_10pct=1.0, n_actives=10, n_decoys=10, mean_score_actives=-8.159, mean_score_decoys=-7.934, discriminates=False, limitation=decoys are PRESUMED inactive (absence of a ChEMBL measurement), not measured inactives; this is a setup sanity check, not a benchmark\n- vina score: -7.048 kcal/mol [E-0038] \u2014 COMPUTED | docking.vina_dock vina-1.2.7+obabel \u2014 validation: ligand=AQ4, redock_rmsd_A=4.188, passes=False\n- best vina score: -7.048 kcal/mol [E-0040] \u2014 COMPUTED | aletheia.docking_agent 1.0",
+   "claim_ids": [
+    "E-0035",
+    "E-0036",
+    "E-0037",
+    "E-0038",
+    "E-0040"
+   ],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Property profile \u2014 user:C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "text": "`C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1`\n\n- MW: 393.443 Da [E-0009] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- cLogP: 3.405  [E-0010] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- TPSA: 74.73 A^2 [E-0011] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- rotatable bonds: 10  [E-0014] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- H-bond donors: 1  [E-0012] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- H-bond acceptors: 7  [E-0013] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- heavy atoms: 29  [E-0017] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- QED: 0.418  [E-0022] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- SA score: 2.478  [E-0023] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- Ro5 violations: 0  [E-0024] \u2014 COMPUTED | rdkit.druglikeness 2026.09.2\n- structural alerts: 2  [E-0025] \u2014 COMPUTED | rdkit.alerts 2026.09.2\n- ESOL logS: -4.173 log10(mol/L) [E-0027] \u2014 PREDICTED | admet.profile rule-based-1.0 | AD=NOT_ASSESSED\n- CNS-MPO-like: 5.188  [E-0028] \u2014 PREDICTED | admet.profile rule-based-1.0 | AD=NOT_ASSESSED\n- structural alerts: BRENK:Aliphatic_long_chain; BRENK:triple_bond",
+   "claim_ids": [
+    "E-0009",
+    "E-0010",
+    "E-0011",
+    "E-0014",
+    "E-0012",
+    "E-0013",
+    "E-0017",
+    "E-0022",
+    "E-0023",
+    "E-0024",
+    "E-0025",
+    "E-0027",
+    "E-0028"
+   ],
+   "structures": [
+    "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   ],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Independent cross-check",
+   "text": "- critic claims recomputed: 8 [E-0041] \u2014 COMPUTED | aletheia.critic 1.0\n- critic recomputation mismatches: 0 [E-0042] \u2014 COMPUTED | aletheia.critic 1.0\n- predicted claims total: 2 [E-0043] \u2014 COMPUTED | aletheia.critic 1.0\n- predicted claims out of domain: 0 [E-0044] \u2014 COMPUTED | aletheia.critic 1.0\n- ledger claims total: 44 [E-0045] \u2014 COMPUTED | aletheia.critic 1.0\n- 2 predicted value(s) have no applicability-domain verdict and are reported as such\n- fewer than two oracles scored the candidates; no consensus check possible",
+   "claim_ids": [
+    "E-0041",
+    "E-0042",
+    "E-0043",
+    "E-0044",
+    "E-0045"
+   ],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "note"
+  }
+ ],
+ "candidates": [
+  {
+   "cand_id": "U1",
+   "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "origin": "user:C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "parent": null,
+   "properties": {
+    "inchikey": "AAKJLRGGTJKAMG-UHFFFAOYSA-N",
+    "formula": "C22H23N3O4",
+    "MolWt": 393.443,
+    "cLogP": 3.405,
+    "TPSA": 74.73,
+    "HBD": 1,
+    "HBA": 7,
+    "RotB": 10,
+    "RingCount": 3,
+    "AromaticRings": 3,
+    "HeavyAtoms": 29,
+    "FractionCSP3": 0.273,
+    "FormalCharge": 0,
+    "MolMR": 111.94,
+    "NumStereocentres": 0,
+    "QED": 0.4179,
+    "SAscore": 2.478,
+    "lipinski_violations": 0,
+    "veber_pass": true,
+    "n_structural_alerts": 2,
+    "esol_logS": -4.173,
+    "cns_mpo_like": 5.188,
+    "n_panels_passed": 4,
+    "herg_risk_flag": false,
+    "n_liability_alerts": 2,
+    "vina_score": -7.048
+   },
+   "property_claims": {
+    "inchikey": "E-0005",
+    "MolWt": "E-0009",
+    "cLogP": "E-0010",
+    "TPSA": "E-0011",
+    "HBD": "E-0012",
+    "HBA": "E-0013",
+    "RotB": "E-0014",
+    "RingCount": "E-0015",
+    "AromaticRings": "E-0016",
+    "HeavyAtoms": "E-0017",
+    "FractionCSP3": "E-0018",
+    "FormalCharge": "E-0019",
+    "MolMR": "E-0020",
+    "NumStereocentres": "E-0021",
+    "QED": "E-0022",
+    "SAscore": "E-0023",
+    "lipinski_violations": "E-0024",
+    "n_structural_alerts": "E-0025",
+    "esol_logS": "E-0027",
+    "cns_mpo_like": "E-0028",
+    "n_panels_passed": "E-0029"
+   },
+   "flags": [
+    "BRENK:Aliphatic_long_chain",
+    "BRENK:triple_bond"
+   ],
+   "scores": {
+    "vina_score": -7.048
+   },
+   "score_claims": {
+    "vina_score": "E-0038"
+   },
+   "rank": null,
+   "selected": false,
+   "notes": [
+    "input token: C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   ]
+  }
+ ],
+ "target": null,
+ "safety": {
+  "verdict": "ALLOW",
+  "category": "ordinary_research",
+  "reason": "Standard molecular docking and redocking validation of an approved oncology drug against a well-characterized EGFR crystal structure, a routine computational chemistry task.",
+  "lexicon_hits": [],
+  "caution_terms": [],
+  "llm_backend": "callable",
+  "llm_verdict": "ALLOW",
+  "classifier_available": true,
+  "force_structure_screen": false,
+  "query_sha256": "c65435a653e2a490",
+  "policy_version": "aletheia-safety-1.0"
+ },
+ "verification": {
+  "ok": true,
+  "summary": "ledger coverage 100.0% (59/59 numeric tokens), 34/47 claims cited, 0 violation(s)",
+  "numeric_coverage": 1.0,
+  "n_numeric_tokens": 59,
+  "n_resolved_tokens": 59,
+  "n_claims_total": 47,
+  "n_claims_used": 34,
+  "violations": []
+ },
+ "ledger_rows": [
+  {
+   "claim_id": "E-0001",
+   "tag": "RETRIEVED",
+   "key": "gene_to_accession",
+   "value": "P00533",
+   "units": "",
+   "subject": "EGFR",
+   "tool": "uniprot.search_gene",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "aa8700660754da3b",
+   "call_id": "C-2ac075b2",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "first reviewed human hit for gene EGFR"
+  },
+  {
+   "claim_id": "E-0002",
+   "tag": "RETRIEVED",
+   "key": "uniprot_protein_name",
+   "value": "Epidermal growth factor receptor",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-480b2cd3",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0003",
+   "tag": "RETRIEVED",
+   "key": "sequence_length",
+   "value": "1210",
+   "units": "residues",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-480b2cd3",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0004",
+   "tag": "RETRIEVED",
+   "key": "n_pdb_structures",
+   "value": "388",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-480b2cd3",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0005",
+   "tag": "COMPUTED",
+   "key": "inchikey",
+   "value": "AAKJLRGGTJKAMG-UHFFFAOYSA-N",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.standardize",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "d34a5dffddab20f0",
+   "call_id": "C-60248da5",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0006",
+   "tag": "RETRIEVED",
+   "key": "chembl_target_id",
+   "value": "CHEMBL203",
+   "units": "",
+   "subject": "P00533",
+   "tool": "chembl.target_by_accession",
+   "tool_version": "ws-2.x",
+   "source_id": "CHEMBL203",
+   "params_hash": "5964bd1072fcdd04",
+   "call_id": "C-1fcae407",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "ChEMBL target for P00533"
+  },
+  {
+   "claim_id": "E-0007",
+   "tag": "COMPUTED",
+   "key": "sequence_gravy",
+   "value": "-0.316",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "6d10467507380985",
+   "call_id": "C-c29407fa",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Kyte-Doolittle mean hydropathy"
+  },
+  {
+   "claim_id": "E-0008",
+   "tag": "COMPUTED",
+   "key": "net_charge_ph7",
+   "value": "-12",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "6d10467507380985",
+   "call_id": "C-c29407fa",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "K+R-D-E count, no pKa model"
+  },
+  {
+   "claim_id": "E-0009",
+   "tag": "COMPUTED",
+   "key": "MolWt",
+   "value": "393.443",
+   "units": "Da",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0010",
+   "tag": "COMPUTED",
+   "key": "cLogP",
+   "value": "3.405",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0011",
+   "tag": "COMPUTED",
+   "key": "TPSA",
+   "value": "74.73",
+   "units": "A^2",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0012",
+   "tag": "COMPUTED",
+   "key": "HBD",
+   "value": "1",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0013",
+   "tag": "COMPUTED",
+   "key": "HBA",
+   "value": "7",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0014",
+   "tag": "COMPUTED",
+   "key": "RotB",
+   "value": "10",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0015",
+   "tag": "COMPUTED",
+   "key": "RingCount",
+   "value": "3",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0016",
+   "tag": "COMPUTED",
+   "key": "AromaticRings",
+   "value": "3",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0017",
+   "tag": "COMPUTED",
+   "key": "HeavyAtoms",
+   "value": "29",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0018",
+   "tag": "COMPUTED",
+   "key": "FractionCSP3",
+   "value": "0.273",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0019",
+   "tag": "COMPUTED",
+   "key": "FormalCharge",
+   "value": "0",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0020",
+   "tag": "COMPUTED",
+   "key": "MolMR",
+   "value": "111.94",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0021",
+   "tag": "COMPUTED",
+   "key": "NumStereocentres",
+   "value": "0",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0022",
+   "tag": "COMPUTED",
+   "key": "QED",
+   "value": "0.418",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0023",
+   "tag": "COMPUTED",
+   "key": "SAscore",
+   "value": "2.478",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-1a854652",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0024",
+   "tag": "COMPUTED",
+   "key": "lipinski_violations",
+   "value": "0",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.druglikeness",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "ced15c320c0cacf4",
+   "call_id": "C-433cdab6",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Ro5 violations from RDKit descriptors"
+  },
+  {
+   "claim_id": "E-0025",
+   "tag": "COMPUTED",
+   "key": "n_structural_alerts",
+   "value": "2",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.alerts",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "979ec587856f2827",
+   "call_id": "C-7af84be0",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "catalogs PAINS,BRENK,NIH (765 patterns)"
+  },
+  {
+   "claim_id": "E-0026",
+   "tag": "RETRIEVED",
+   "key": "pdb_resolution",
+   "value": "2.6",
+   "units": "A",
+   "subject": "1M17",
+   "tool": "pdb.entry",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "1M17",
+   "params_hash": "36a52f26d4e9a9ad",
+   "call_id": "C-f3dfd3a1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0027",
+   "tag": "PREDICTED",
+   "key": "esol_logS",
+   "value": "-4.173",
+   "units": "log10(mol/L)",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "1c9c23fc88dfcc8f",
+   "call_id": "C-e6e9c17e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uncertainty_unavailable: ESOL-type literature equation with unverified constants, no local calibration set"
+  },
+  {
+   "claim_id": "E-0028",
+   "tag": "PREDICTED",
+   "key": "cns_mpo_like",
+   "value": "5.188",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "1c9c23fc88dfcc8f",
+   "call_id": "C-e6e9c17e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uncertainty_unavailable: CNS-MPO-style desirability sum with unverified breakpoints and a cLogP-1 logD proxy"
+  },
+  {
+   "claim_id": "E-0029",
+   "tag": "COMPUTED",
+   "key": "n_developability_panels_passed",
+   "value": "4",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "1c9c23fc88dfcc8f",
+   "call_id": "C-e6e9c17e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Lipinski/Veber/Egan/Ghose/lead-like/Ro3 panels"
+  },
+  {
+   "claim_id": "E-0030",
+   "tag": "COMPUTED",
+   "key": "structure_sequence_identity",
+   "value": "0.985",
+   "units": "",
+   "subject": "1M17:A",
+   "tool": "pdb.chain_sequences",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "",
+   "params_hash": "78a8b49b0dc43411",
+   "call_id": "C-cd31eceb",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "ungapped best-offset identity to the UniProt sequence"
+  },
+  {
+   "claim_id": "E-0031",
+   "tag": "COMPUTED",
+   "key": "cocrystal_ligand",
+   "value": "AQ4",
+   "units": "",
+   "subject": "1M17",
+   "tool": "pdb.ligands",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "",
+   "params_hash": "ff80a15ae3c1cb6b",
+   "call_id": "C-5119720d",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "29 heavy atoms, chain A"
+  },
+  {
+   "claim_id": "E-0032",
+   "tag": "COMPUTED",
+   "key": "top_pocket_volume",
+   "value": "458",
+   "units": "A^3",
+   "subject": "1M17",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "8dfcfd9a5a10512b",
+   "call_id": "C-9300b1cb",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "reference_point": [
+     22.014,
+     0.253,
+     52.794
+    ],
+    "top_pocket_centroid_distance_A": 8.19,
+    "top_pocket_nearest_point_distance_A": 0.31,
+    "best_pocket_rank": 1,
+    "best_pocket_nearest_point_distance_A": 0.31,
+    "hit_within_5A": true,
+    "criterion": "distance from the crystallographic ligand centroid to the nearest grid point of the detected cavity"
+   },
+   "note": "LIGSITE-style protein-solvent-protein buriedness grid (re-implementation; see aletheia/tools/pocket.py)"
+  },
+  {
+   "claim_id": "E-0033",
+   "tag": "COMPUTED",
+   "key": "n_pockets_detected",
+   "value": "4",
+   "units": "",
+   "subject": "1M17",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "8dfcfd9a5a10512b",
+   "call_id": "C-9300b1cb",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0034",
+   "tag": "COMPUTED",
+   "key": "pocket_to_cocrystal_distance",
+   "value": "0.31",
+   "units": "A",
+   "subject": "1M17",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "8dfcfd9a5a10512b",
+   "call_id": "C-9300b1cb",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "distance from the nearest detected pocket centre to the crystallographic ligand centroid (localisation check)"
+  },
+  {
+   "claim_id": "E-0035",
+   "tag": "COMPUTED",
+   "key": "redocking_rmsd_top1",
+   "value": "4.188",
+   "units": "A",
+   "subject": "1M17:AQ4",
+   "tool": "docking.pose_rmsd_all_models",
+   "tool_version": "vina-1.2.7+obabel",
+   "source_id": "",
+   "params_hash": "840db634b82b688c",
+   "call_id": "C-ac315a7a",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "success_threshold_A": 2.0,
+    "exhaustiveness": 24
+   },
+   "note": "co-crystal ligand re-docked into the same prepared receptor at exhaustiveness 24; <=2 A is the usual convention"
+  },
+  {
+   "claim_id": "E-0036",
+   "tag": "COMPUTED",
+   "key": "redocking_rmsd_best_of_modes",
+   "value": "1.361",
+   "units": "A",
+   "subject": "1M17:AQ4",
+   "tool": "docking.pose_rmsd_all_models",
+   "tool_version": "vina-1.2.7+obabel",
+   "source_id": "",
+   "params_hash": "840db634b82b688c",
+   "call_id": "C-ac315a7a",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "best_rmsd_rank": 3,
+    "n_poses": 9
+   },
+   "note": "near-native pose was sampled but not ranked first: a scoring-function failure, not a search failure"
+  },
+  {
+   "claim_id": "E-0037",
+   "tag": "COMPUTED",
+   "key": "docking_enrichment_roc_auc",
+   "value": "0.42",
+   "units": "",
+   "subject": "1M17",
+   "tool": "aletheia.docking_validation",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "1M17:10a/10d",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "roc_auc": 0.42,
+    "ef_10pct": 1.0,
+    "n_actives": 10,
+    "n_decoys": 10,
+    "mean_score_actives": -8.159,
+    "mean_score_decoys": -7.934,
+    "discriminates": false,
+    "limitation": "decoys are PRESUMED inactive (absence of a ChEMBL measurement), not measured inactives; this is a setup sanity check, not a benchmark"
+   },
+   "note": "10 known actives vs 10 property-matched presumed-inactive decoys docked into this receptor; decoys are PRESUMED inactive (absence of a ChEMBL measurement), not measured inactives; this is a setup sanity check, not a benchmark"
+  },
+  {
+   "claim_id": "E-0038",
+   "tag": "COMPUTED",
+   "key": "vina_score",
+   "value": "-7.048",
+   "units": "kcal/mol",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "docking.vina_dock",
+   "tool_version": "vina-1.2.7+obabel",
+   "source_id": "",
+   "params_hash": "c93943c97b480ad2",
+   "call_id": "C-3191c080",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "ligand": "AQ4",
+    "redock_rmsd_A": 4.188,
+    "passes": false
+   },
+   "note": "AutoDock Vina AutoDock Vina v1.2.7, exhaustiveness=8, seed=42, box from co-crystal ligand AQ4; a docking score, not an experimental affinity"
+  },
+  {
+   "claim_id": "E-0039",
+   "tag": "COMPUTED",
+   "key": "n_polar_contacts",
+   "value": "5",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "docking.contacts",
+   "tool_version": "vina-1.2.7+obabel",
+   "source_id": "",
+   "params_hash": "078a6370d456dc80",
+   "call_id": "C-76aa5dc2",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "distance-threshold geometric contacts (no angle terms, no protonation model); residues: MET769:A, CYS773:A, LEU764:A, GLY772:A, PRO770:A, ASP831:A"
+  },
+  {
+   "claim_id": "E-0040",
+   "tag": "COMPUTED",
+   "key": "best_vina_score",
+   "value": "-7.048",
+   "units": "kcal/mol",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "aletheia.docking_agent",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "n=1",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "best of 1 docked molecules"
+  },
+  {
+   "claim_id": "E-0041",
+   "tag": "COMPUTED",
+   "key": "critic_claims_recomputed",
+   "value": "8",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "seed=20261111",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "random sample of 8 recomputable descriptor claims, tool cache bypassed"
+  },
+  {
+   "claim_id": "E-0042",
+   "tag": "COMPUTED",
+   "key": "critic_recomputation_mismatches",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "seed=20261111",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "none"
+  },
+  {
+   "claim_id": "E-0043",
+   "tag": "COMPUTED",
+   "key": "predicted_claims_total",
+   "value": "2",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "ad-audit",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0044",
+   "tag": "COMPUTED",
+   "key": "predicted_claims_out_of_domain",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "ad-audit",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "applicability domain verdicts on model predictions"
+  },
+  {
+   "claim_id": "E-0045",
+   "tag": "COMPUTED",
+   "key": "ledger_claims_total",
+   "value": "44",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "hygiene",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "COMPUTED=36; PREDICTED=2; RETRIEVED=6; HYPOTHESIS=0"
+  },
+  {
+   "claim_id": "E-0046",
+   "tag": "COMPUTED",
+   "key": "identity_checks_passed",
+   "value": "3",
+   "units": "",
+   "subject": "P00533",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00533",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uniprot_length_matches_sequence=True; pdb_belongs_to_accession=True; structure_sequence_matches_uniprot=True"
+  },
+  {
+   "claim_id": "E-0047",
+   "tag": "COMPUTED",
+   "key": "identity_checks_total",
+   "value": "3",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00533",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  }
+ ],
+ "tool_calls": [
+  {
+   "call_id": "C-2ac075b2",
+   "tool": "uniprot.search_gene",
+   "tool_version": "rest-2026",
+   "params": {
+    "gene": "EGFR",
+    "organism_id": 9606
+   },
+   "params_hash": "aa8700660754da3b",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.008,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-480b2cd3",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "params": {
+    "accession": "P00533"
+   },
+   "params_hash": "a08313d5b3ed5b5a",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.005,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-60248da5",
+   "tool": "rdkit.standardize",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "d34a5dffddab20f0",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.02,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-1fcae407",
+   "tool": "chembl.target_by_accession",
+   "tool_version": "ws-2.x",
+   "params": {
+    "accession": "P00533"
+   },
+   "params_hash": "5964bd1072fcdd04",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.005,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-c29407fa",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "params": {
+    "sequence": "MRPSGTAGAALLALLAALCPASRALEEKKVCQGTSNKLTQLGTFEDHFLSLQRMFNNCEVVLGNLEITYVQRNYDLSFLKTIQEVAGYVLIALNTVERIPLENLQIIRGNMYYENSYALAVLSNYDANKTGLKELPMRNLQEILHGAVRFSNNPALCNVESIQWRDIVSSDFLSNMSMDFQNHLGSCQKCDPSCPNGSCW..."
+   },
+   "params_hash": "6d10467507380985",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-1a854652",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.016,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-50518dc5",
+   "tool": "pdb.download",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "entry_id": "1M17"
+   },
+   "params_hash": "18665411ecb938ff",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.004,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-433cdab6",
+   "tool": "rdkit.druglikeness",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "ced15c320c0cacf4",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.008,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-5119720d",
+   "tool": "pdb.ligands",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb"
+   },
+   "params_hash": "ff80a15ae3c1cb6b",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-7af84be0",
+   "tool": "rdkit.alerts",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "979ec587856f2827",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.003,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-f3dfd3a1",
+   "tool": "pdb.entry",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "entry_id": "1M17"
+   },
+   "params_hash": "36a52f26d4e9a9ad",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-e6e9c17e",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "1c9c23fc88dfcc8f",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.008,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-cd31eceb",
+   "tool": "pdb.chain_sequences",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb"
+   },
+   "params_hash": "78a8b49b0dc43411",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-9300b1cb",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb",
+    "spacing": 1.0,
+    "probe": 3.2,
+    "psp_min": 5,
+    "reference_point": "[22.014, 0.253, 52.794]"
+   },
+   "params_hash": "8dfcfd9a5a10512b",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "structure_analyst"
+  },
+  {
+   "call_id": "C-e35697eb",
+   "tool": "pdb.extract_receptor",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb",
+    "out_path": "cache/docking/1M17_rec.pdb",
+    "chain": "A"
+   },
+   "params_hash": "b25095cbc723dab9",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.03,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-5f46919a",
+   "tool": "docking.prepare_receptor",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "pdb_path": "cache/docking/1M17_rec.pdb",
+    "out_pdbqt": "cache/docking/1M17_rec.pdbqt"
+   },
+   "params_hash": "c85d7e19dfb65e56",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.019,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-746e7f56",
+   "tool": "pdb.extract_ligand",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb",
+    "resname": "AQ4",
+    "out_path": "cache/docking/1M17_AQ4.pdb",
+    "chain": "A"
+   },
+   "params_hash": "b0bc99f5fb09c375",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.02,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-86afb8ad",
+   "tool": "docking.box_from_ligand_pdb",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "ligand_pdb": "cache/docking/1M17_AQ4.pdb",
+    "pad": 5.0
+   },
+   "params_hash": "7cfb37e7eea9a2f7",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.02,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-ec44e472",
+   "tool": "docking.vina_version",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {},
+   "params_hash": "2e66221b2bd382e4",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-48c61ac4",
+   "tool": "pdb.chemcomp",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "comp_id": "AQ4"
+   },
+   "params_hash": "4f83b12baeda551c",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-1ffcd78f",
+   "tool": "docking.prepare_ligand",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "smiles": "COCCOc1cc2c(cc1OCCOC)ncnc2Nc3cccc(c3)C#C",
+    "out_pdbqt": "cache/docking/redock_AQ4.pdbqt",
+    "seed": 42
+   },
+   "params_hash": "4cdc54142486714d",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 0.018,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-a7d9aa14",
+   "tool": "docking.vina_dock",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "receptor_pdbqt": "cache/docking/1M17_rec.pdbqt",
+    "ligand_pdbqt": "cache/docking/redock_AQ4.pdbqt",
+    "center": "[22.014, 0.253, 52.794]",
+    "size": "[25.71, 18.0, 18.0]",
+    "out_pdbqt": "cache/docking/redock_AQ4_out.pdbqt",
+    "exhaustiveness": 24,
+    "num_modes": 9,
+    "seed": 42
+   },
+   "params_hash": "d0582857dc8ab40b",
+   "started_at": "2026-11-12T16:37:56+00:00",
+   "duration_s": 208.361,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-ac315a7a",
+   "tool": "docking.pose_rmsd_all_models",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "reference_pdb": "cache/docking/1M17_AQ4.pdb",
+    "pose_pdbqt": "cache/docking/redock_AQ4_out.pdbqt"
+   },
+   "params_hash": "840db634b82b688c",
+   "started_at": "2026-11-12T16:41:25+00:00",
+   "duration_s": 0.024,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-ff27fbd4",
+   "tool": "docking.prepare_ligand",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "out_pdbqt": "cache/docking/U1.pdbqt",
+    "seed": 42
+   },
+   "params_hash": "b4393fcf154e287d",
+   "started_at": "2026-11-12T16:41:25+00:00",
+   "duration_s": 0.018,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-3191c080",
+   "tool": "docking.vina_dock",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "receptor_pdbqt": "cache/docking/1M17_rec.pdbqt",
+    "ligand_pdbqt": "cache/docking/U1.pdbqt",
+    "center": "[22.014, 0.253, 52.794]",
+    "size": "[25.71, 18.0, 18.0]",
+    "out_pdbqt": "cache/docking/U1_out.pdbqt",
+    "exhaustiveness": 8,
+    "num_modes": 9,
+    "seed": 42
+   },
+   "params_hash": "c93943c97b480ad2",
+   "started_at": "2026-11-12T16:41:25+00:00",
+   "duration_s": 78.652,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-76aa5dc2",
+   "tool": "docking.contacts",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "receptor_pdb": "cache/docking/1M17_rec.pdb",
+    "pose_pdbqt": "cache/docking/U1_out.pdbqt",
+    "model_index": 0
+   },
+   "params_hash": "078a6370d456dc80",
+   "started_at": "2026-11-12T16:42:43+00:00",
+   "duration_s": 0.026,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-a9e4e040",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:42:43+00:00",
+   "duration_s": 0.015,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "critic"
+  },
+  {
+   "call_id": "C-40b36ef6",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:42:44+00:00",
+   "duration_s": 0.016,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "critic"
+  },
+  {
+   "call_id": "C-e0ae44ce",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:42:44+00:00",
+   "duration_s": 0.014,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "critic"
+  },
+  {
+   "call_id": "C-80acf8ab",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:42:44+00:00",
+   "duration_s": 0.014,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "critic"
+  },
+  {
+   "call_id": "C-ae6ca650",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:42:44+00:00",
+   "duration_s": 0.013,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "critic"
+  },
+  {
+   "call_id": "C-f759ef64",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:42:44+00:00",
+   "duration_s": 0.014,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "critic"
+  },
+  {
+   "call_id": "C-ac2998a2",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:42:44+00:00",
+   "duration_s": 0.014,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "critic"
+  },
+  {
+   "call_id": "C-21534048",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-12T16:42:44+00:00",
+   "duration_s": 0.014,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "critic"
+  }
+ ],
+ "agent_results": [
+  {
+   "agent": "target_analyst",
+   "step_id": "S1",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.088,
+   "error": null,
+   "messages": [
+    "EGFR: Epidermal growth factor receptor",
+    "identity checks passed: 3/3"
+   ]
+  },
+  {
+   "agent": "property_agent",
+   "step_id": "S2",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.085,
+   "error": null,
+   "messages": [
+    "profiled 1 molecule(s)"
+   ]
+  },
+  {
+   "agent": "docking_agent",
+   "step_id": "S3",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 287.264,
+   "error": null,
+   "messages": [
+    "docked 1 molecule(s) into 1M17",
+    "redocking top-1 RMSD 4.188 A (FAILS the 2 A convention); best of 9 poses 1.361 A at rank 3 \u2014 near-native pose was sampled but not ranked first: a scoring-function failure, not a search failure"
+   ]
+  },
+  {
+   "agent": "structure_analyst",
+   "step_id": "S4",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.018,
+   "error": null,
+   "messages": [
+    "4 buried cavities detected"
+   ]
+  },
+  {
+   "agent": "critic",
+   "step_id": "S5",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.153,
+   "error": null,
+   "messages": [
+    "2 predicted value(s) have no applicability-domain verdict and are reported as such",
+    "fewer than two oracles scored the candidates; no consensus check possible"
+   ]
+  }
+ ],
+ "source": "mixed",
+ "blocked": false,
+ "withheld_blocks": [],
+ "degraded": [
+  "on this receptor the docking setup does NOT separate known actives from property-matched decoys (ROC AUC 0.42); the scores below are reported as geometry-driven numbers and must not be read as a potency ranking",
+  "redocking did not reproduce the crystal pose at rank 1 (top-1 RMSD 4.188 A); near-native pose was sampled but not ranked first: a scoring-function failure, not a search failure"
+ ],
+ "started_at": "2026-11-12T16:37:56+00:00",
+ "duration_s": 287.58,
+ "cost": {
+  "llm_calls": 3,
+  "llm_backend": "replay/rules (offline)",
+  "tool_calls": 34,
+  "cached_tool_calls": 24
+ }
+}

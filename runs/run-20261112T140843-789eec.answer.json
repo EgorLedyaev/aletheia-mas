@@ -1,0 +1,1009 @@
+{
+ "run_id": "run-20261112T140843-789eec",
+ "query": "Analyse ABL1 kinase (P00519) using PDB structure 1M17 and dock imatinib into it.",
+ "plan": {
+  "query": "Analyse ABL1 kinase (P00519) using PDB structure 1M17 and dock imatinib into it.",
+  "intents": [
+   "protein_analysis",
+   "docking"
+  ],
+  "modality": "mixed",
+  "targets": [
+   "ABL1",
+   "P00519",
+   "1M17"
+  ],
+  "molecules": [
+   "imatinib"
+  ],
+  "steps": [
+   {
+    "step_id": "S1",
+    "agent": "target_analyst",
+    "action": "resolve_target",
+    "inputs": {
+     "targets": [
+      "ABL1",
+      "P00519",
+      "1M17"
+     ],
+     "need_structure": true
+    },
+    "depends_on": [],
+    "rationale": "every downstream claim needs a verified target identity",
+    "optional": false
+   },
+   {
+    "step_id": "S2",
+    "agent": "property_agent",
+    "action": "profile_molecules",
+    "inputs": {
+     "smiles": [
+      "imatinib"
+     ]
+    },
+    "depends_on": [],
+    "rationale": "descriptors and alerts for the molecules named by the user",
+    "optional": false
+   },
+   {
+    "step_id": "S3",
+    "agent": "docking_agent",
+    "action": "dock",
+    "inputs": {
+     "smiles": [
+      "imatinib"
+     ],
+     "validate": true
+    },
+    "depends_on": [
+     "S1",
+     "S2"
+    ],
+    "rationale": "structure-based score, validated by redocking on the same receptor",
+    "optional": false
+   },
+   {
+    "step_id": "S4",
+    "agent": "structure_analyst",
+    "action": "analyse_structure",
+    "inputs": {},
+    "depends_on": [
+     "S1"
+    ],
+    "rationale": "binding-site detection on the selected structure",
+    "optional": false
+   },
+   {
+    "step_id": "S5",
+    "agent": "critic",
+    "action": "cross_check",
+    "inputs": {},
+    "depends_on": [
+     "S1",
+     "S2",
+     "S3",
+     "S4"
+    ],
+    "rationale": "independent recomputation and applicability-domain audit",
+    "optional": false
+   }
+  ],
+  "planner": "callable+cache",
+  "notes": [
+   "User explicitly requests analysis of the ABL1 kinase protein structure (1M17) and docking of imatinib into it, corresponding to protein_analysis and docking intents."
+  ]
+ },
+ "blocks": [
+  {
+   "title": "What the system did",
+   "text": "Planner `callable+cache` routed this request to the intents protein_analysis, docking.\n\n- `S1` **target_analyst** -> resolve_target \u2014 every downstream claim needs a verified target identity\n- `S2` **property_agent** -> profile_molecules \u2014 descriptors and alerts for the molecules named by the user\n- `S3` **docking_agent** -> dock \u2014 structure-based score, validated by redocking on the same receptor\n- `S4` **structure_analyst** -> analyse_structure \u2014 binding-site detection on the selected structure\n- `S5` **critic** -> cross_check \u2014 independent recomputation and applicability-domain audit\n\nTools actually invoked: `admet.profile`, `alphafold.download_model`, `alphafold.plddt_summary`, `pubchem.compound_by_name`, `rdkit.alerts`, `rdkit.descriptors`, `rdkit.druglikeness`, `rdkit.standardize`, `uniprot.entry`, `uniprot.sequence_features`.",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "profile",
+    "download_model",
+    "plddt_summary",
+    "compound_by_name",
+    "alerts",
+    "descriptors",
+    "druglikeness",
+    "standardize",
+    "entry",
+    "sequence_features"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Target",
+   "text": "**ABL1** \u2014 Tyrosine-protein kinase ABL1 (Homo sapiens), UniProt `P00519`.\n- Sequence length: 1130 residues [E-0002] \u2014 RETRIEVED | P00519 @ 2026-11-11\n- Experimental structures cross-referenced: 85 [E-0003] \u2014 RETRIEVED | P00519 @ 2026-11-11\n- No usable experimental structure; AlphaFold DB model `AF-P00519-F1` used, mean pLDDT 63.37 [E-0008] \u2014 COMPUTED | alphafold.plddt_summary afdb-api\n- Target identity checks passed: 1 of 2 [E-0029] \u2014 uniprot_length_matches_sequence; pdb_belongs_to_accession",
+   "claim_ids": [
+    "E-0001",
+    "E-0002",
+    "E-0003",
+    "E-0008",
+    "E-0029",
+    "E-0030"
+   ],
+   "structures": [
+    "P00519"
+   ],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Property profile \u2014 user:imatinib",
+   "text": "`Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1`\n\n- MW: 493.615 Da [E-0009] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- cLogP: 4.59  [E-0010] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- TPSA: 86.28 A^2 [E-0011] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- QED: 0.389  [E-0022] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- SA score: 2.332  [E-0023] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- Ro5 violations: 0  [E-0024] \u2014 COMPUTED | rdkit.druglikeness 2026.09.2\n- structural alerts: 0  [E-0025] \u2014 COMPUTED | rdkit.alerts 2026.09.2\n- ESOL logS: -5.81 log10(mol/L) [E-0026] \u2014 PREDICTED | admet.profile rule-based-1.0 | AD=NOT_ASSESSED\n- CNS-MPO-like: 2.956  [E-0027] \u2014 PREDICTED | admet.profile rule-based-1.0 | AD=NOT_ASSESSED\n- structural alerts: liability:hERG-type basic amine with cLogP>3",
+   "claim_ids": [
+    "E-0009",
+    "E-0010",
+    "E-0011",
+    "E-0022",
+    "E-0023",
+    "E-0024",
+    "E-0025",
+    "E-0026",
+    "E-0027"
+   ],
+   "structures": [
+    "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1"
+   ],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Interpretation (LLM reasoning)",
+   "text": "The computed descriptors indicate a lead-like, moderately lipophilic small molecule with no structural alerts and full compliance with the Lipinski criteria, supporting its plausibility as a kinase-targeted ligand suitable for further profiling. Predicted aqueous solubility is low, and the aromatic ring content alongside the topological polar surface area suggest permeability and solubility should be examined experimentally rather than assumed. The modest AlphaFold confidence score for the target region means any structural interpretation of binding mode should be treated cautiously until corroborated by an experimental structure. Taken together, these results support progressing the compound for empirical binding and developability assays, but they do not by themselves establish binding affinity, selectivity, or any clinical relevance.\n\n*This paragraph is LLM reasoning over the findings above. It is tagged HYPOTHESIS: it contains no numbers of its own and was itself checked against the claims ledger before publication.*",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "note"
+  }
+ ],
+ "candidates": [
+  {
+   "cand_id": "U1",
+   "smiles": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "origin": "user:imatinib",
+   "parent": null,
+   "properties": {
+    "inchikey": "KTUFNOKKBVMGRW-UHFFFAOYSA-N",
+    "formula": "C29H31N7O",
+    "MolWt": 493.615,
+    "cLogP": 4.59,
+    "TPSA": 86.28,
+    "HBD": 2,
+    "HBA": 7,
+    "RotB": 7,
+    "RingCount": 5,
+    "AromaticRings": 4,
+    "HeavyAtoms": 37,
+    "FractionCSP3": 0.241,
+    "FormalCharge": 0,
+    "MolMR": 146.894,
+    "NumStereocentres": 0,
+    "QED": 0.3894,
+    "SAscore": 2.332,
+    "lipinski_violations": 0,
+    "veber_pass": true,
+    "n_structural_alerts": 0,
+    "esol_logS": -5.81,
+    "cns_mpo_like": 2.956,
+    "n_panels_passed": 3,
+    "herg_risk_flag": true,
+    "n_liability_alerts": 2
+   },
+   "property_claims": {
+    "inchikey": "E-0005",
+    "MolWt": "E-0009",
+    "cLogP": "E-0010",
+    "TPSA": "E-0011",
+    "HBD": "E-0012",
+    "HBA": "E-0013",
+    "RotB": "E-0014",
+    "RingCount": "E-0015",
+    "AromaticRings": "E-0016",
+    "HeavyAtoms": "E-0017",
+    "FractionCSP3": "E-0018",
+    "FormalCharge": "E-0019",
+    "MolMR": "E-0020",
+    "NumStereocentres": "E-0021",
+    "QED": "E-0022",
+    "SAscore": "E-0023",
+    "lipinski_violations": "E-0024",
+    "n_structural_alerts": "E-0025",
+    "esol_logS": "E-0026",
+    "cns_mpo_like": "E-0027",
+    "n_panels_passed": "E-0028"
+   },
+   "flags": [
+    "liability:hERG-type basic amine with cLogP>3"
+   ],
+   "scores": {},
+   "score_claims": {},
+   "rank": null,
+   "selected": false,
+   "notes": [
+    "input token: imatinib"
+   ]
+  }
+ ],
+ "target": null,
+ "safety": {
+  "verdict": "ALLOW",
+  "category": "ordinary_research",
+  "reason": "Routine computational docking of an approved drug (imatinib) into a well-characterized kinase target using a standard PDB structure is standard drug-discovery research.",
+  "lexicon_hits": [],
+  "caution_terms": [],
+  "llm_backend": "callable",
+  "llm_verdict": "ALLOW",
+  "classifier_available": true,
+  "force_structure_screen": false,
+  "query_sha256": "f459932007ae848e",
+  "policy_version": "aletheia-safety-1.0"
+ },
+ "verification": {
+  "ok": true,
+  "summary": "ledger coverage 100.0% (16/16 numeric tokens), 15/30 claims cited, 0 violation(s)",
+  "numeric_coverage": 1.0,
+  "n_numeric_tokens": 16,
+  "n_resolved_tokens": 16,
+  "n_claims_total": 30,
+  "n_claims_used": 15,
+  "violations": []
+ },
+ "ledger_rows": [
+  {
+   "claim_id": "E-0001",
+   "tag": "RETRIEVED",
+   "key": "uniprot_protein_name",
+   "value": "Tyrosine-protein kinase ABL1",
+   "units": "",
+   "subject": "P00519",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00519",
+   "params_hash": "8edf864a45066115",
+   "call_id": "C-9c2a37e8",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0002",
+   "tag": "RETRIEVED",
+   "key": "sequence_length",
+   "value": "1130",
+   "units": "residues",
+   "subject": "P00519",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00519",
+   "params_hash": "8edf864a45066115",
+   "call_id": "C-9c2a37e8",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0003",
+   "tag": "RETRIEVED",
+   "key": "n_pdb_structures",
+   "value": "85",
+   "units": "",
+   "subject": "P00519",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00519",
+   "params_hash": "8edf864a45066115",
+   "call_id": "C-9c2a37e8",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0004",
+   "tag": "RETRIEVED",
+   "key": "structure_source",
+   "value": "CID 5291",
+   "units": "",
+   "subject": "CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5",
+   "tool": "pubchem.compound_by_name",
+   "tool_version": "pug-rest",
+   "source_id": "CID 5291",
+   "params_hash": "e6c1227d3f695211",
+   "call_id": "C-c02057f2",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "name 'imatinib' resolved via PubChem"
+  },
+  {
+   "claim_id": "E-0005",
+   "tag": "COMPUTED",
+   "key": "inchikey",
+   "value": "KTUFNOKKBVMGRW-UHFFFAOYSA-N",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.standardize",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c654d4838611db9d",
+   "call_id": "C-96459d25",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0006",
+   "tag": "COMPUTED",
+   "key": "sequence_gravy",
+   "value": "-0.597",
+   "units": "",
+   "subject": "P00519",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "b1e5008ef4d45ff0",
+   "call_id": "C-a54343f5",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Kyte-Doolittle mean hydropathy"
+  },
+  {
+   "claim_id": "E-0007",
+   "tag": "COMPUTED",
+   "key": "net_charge_ph7",
+   "value": "14",
+   "units": "",
+   "subject": "P00519",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "b1e5008ef4d45ff0",
+   "call_id": "C-a54343f5",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "K+R-D-E count, no pKa model"
+  },
+  {
+   "claim_id": "E-0008",
+   "tag": "COMPUTED",
+   "key": "alphafold_mean_plddt",
+   "value": "63.37",
+   "units": "",
+   "subject": "P00519",
+   "tool": "alphafold.plddt_summary",
+   "tool_version": "afdb-api",
+   "source_id": "",
+   "params_hash": "2faf9feb227410cf",
+   "call_id": "C-5da2c6d1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "per-residue model confidence, not accuracy"
+  },
+  {
+   "claim_id": "E-0009",
+   "tag": "COMPUTED",
+   "key": "MolWt",
+   "value": "493.615",
+   "units": "Da",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0010",
+   "tag": "COMPUTED",
+   "key": "cLogP",
+   "value": "4.59",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0011",
+   "tag": "COMPUTED",
+   "key": "TPSA",
+   "value": "86.28",
+   "units": "A^2",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0012",
+   "tag": "COMPUTED",
+   "key": "HBD",
+   "value": "2",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0013",
+   "tag": "COMPUTED",
+   "key": "HBA",
+   "value": "7",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0014",
+   "tag": "COMPUTED",
+   "key": "RotB",
+   "value": "7",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0015",
+   "tag": "COMPUTED",
+   "key": "RingCount",
+   "value": "5",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0016",
+   "tag": "COMPUTED",
+   "key": "AromaticRings",
+   "value": "4",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0017",
+   "tag": "COMPUTED",
+   "key": "HeavyAtoms",
+   "value": "37",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0018",
+   "tag": "COMPUTED",
+   "key": "FractionCSP3",
+   "value": "0.241",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0019",
+   "tag": "COMPUTED",
+   "key": "FormalCharge",
+   "value": "0",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0020",
+   "tag": "COMPUTED",
+   "key": "MolMR",
+   "value": "146.894",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0021",
+   "tag": "COMPUTED",
+   "key": "NumStereocentres",
+   "value": "0",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0022",
+   "tag": "COMPUTED",
+   "key": "QED",
+   "value": "0.389",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0023",
+   "tag": "COMPUTED",
+   "key": "SAscore",
+   "value": "2.332",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "eec5efe349691c70",
+   "call_id": "C-fd2601c1",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0024",
+   "tag": "COMPUTED",
+   "key": "lipinski_violations",
+   "value": "0",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.druglikeness",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "b26da335e64a3d9b",
+   "call_id": "C-814ecde9",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Ro5 violations from RDKit descriptors"
+  },
+  {
+   "claim_id": "E-0025",
+   "tag": "COMPUTED",
+   "key": "n_structural_alerts",
+   "value": "0",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "rdkit.alerts",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "caad682a190abbb0",
+   "call_id": "C-40fd47c8",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "catalogs PAINS,BRENK,NIH (765 patterns)"
+  },
+  {
+   "claim_id": "E-0026",
+   "tag": "PREDICTED",
+   "key": "esol_logS",
+   "value": "-5.81",
+   "units": "log10(mol/L)",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "3a62f7137561d465",
+   "call_id": "C-57d57d67",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uncertainty_unavailable: ESOL-type literature equation with unverified constants, no local calibration set"
+  },
+  {
+   "claim_id": "E-0027",
+   "tag": "PREDICTED",
+   "key": "cns_mpo_like",
+   "value": "2.956",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "3a62f7137561d465",
+   "call_id": "C-57d57d67",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uncertainty_unavailable: CNS-MPO-style desirability sum with unverified breakpoints and a cLogP-1 logD proxy"
+  },
+  {
+   "claim_id": "E-0028",
+   "tag": "COMPUTED",
+   "key": "n_developability_panels_passed",
+   "value": "3",
+   "units": "",
+   "subject": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "3a62f7137561d465",
+   "call_id": "C-57d57d67",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Lipinski/Veber/Egan/Ghose/lead-like/Ro3 panels"
+  },
+  {
+   "claim_id": "E-0029",
+   "tag": "COMPUTED",
+   "key": "identity_checks_passed",
+   "value": "1",
+   "units": "",
+   "subject": "P00519",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00519",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uniprot_length_matches_sequence=True; pdb_belongs_to_accession=False"
+  },
+  {
+   "claim_id": "E-0030",
+   "tag": "COMPUTED",
+   "key": "identity_checks_total",
+   "value": "2",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00519",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  }
+ ],
+ "tool_calls": [
+  {
+   "call_id": "C-9c2a37e8",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "params": {
+    "accession": "P00519"
+   },
+   "params_hash": "8edf864a45066115",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.004,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-c02057f2",
+   "tool": "pubchem.compound_by_name",
+   "tool_version": "pug-rest",
+   "params": {
+    "name": "imatinib"
+   },
+   "params_hash": "e6c1227d3f695211",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.003,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-96459d25",
+   "tool": "rdkit.standardize",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5"
+   },
+   "params_hash": "c654d4838611db9d",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.005,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-a54343f5",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "params": {
+    "sequence": "MLEICLKLVGCKSKKGLSSSSSCYLEEALQRPVASDFEPQGLSEAARWNSKENLLAGPSENDPNLFVALYDFVASGDNTLSITKGEKLRVLGYNHNGEWCEAQTKNGQGWVPSNYITPVNSLEKHSWYHGPVSRNAAEYLLSSGINGSFLVRESESSPGQRSISLRYEGRVYHYRINTASDGKLYVSSESRFNTLAELVH..."
+   },
+   "params_hash": "b1e5008ef4d45ff0",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-75a6c103",
+   "tool": "alphafold.download_model",
+   "tool_version": "afdb-api",
+   "params": {
+    "accession": "P00519"
+   },
+   "params_hash": "ee139811a8a07d12",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-5da2c6d1",
+   "tool": "alphafold.plddt_summary",
+   "tool_version": "afdb-api",
+   "params": {
+    "pdb_path": "cache/structures/AF-P00519.pdb"
+   },
+   "params_hash": "2faf9feb227410cf",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-fd2601c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1"
+   },
+   "params_hash": "eec5efe349691c70",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.016,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-814ecde9",
+   "tool": "rdkit.druglikeness",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1"
+   },
+   "params_hash": "b26da335e64a3d9b",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-40fd47c8",
+   "tool": "rdkit.alerts",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1"
+   },
+   "params_hash": "caad682a190abbb0",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-57d57d67",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "params": {
+    "smiles": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1"
+   },
+   "params_hash": "3a62f7137561d465",
+   "started_at": "2026-11-12T11:08:43+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  }
+ ],
+ "agent_results": [
+  {
+   "agent": "target_analyst",
+   "step_id": "S1",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.037,
+   "error": "identity check failed: pdb_belongs_to_accession",
+   "messages": [
+    "ABL1: Tyrosine-protein kinase ABL1",
+    "identity checks passed: 1/2"
+   ]
+  },
+  {
+   "agent": "property_agent",
+   "step_id": "S2",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.053,
+   "error": null,
+   "messages": [
+    "profiled 1 molecule(s)"
+   ]
+  },
+  {
+   "agent": "docking_agent",
+   "step_id": "S3",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.0,
+   "error": "dependency ['S1'] failed",
+   "messages": []
+  },
+  {
+   "agent": "structure_analyst",
+   "step_id": "S4",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.0,
+   "error": "dependency ['S1'] failed",
+   "messages": []
+  },
+  {
+   "agent": "critic",
+   "step_id": "S5",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.0,
+   "error": "dependency ['S1', 'S3', 'S4'] failed",
+   "messages": []
+  }
+ ],
+ "source": "cached",
+ "blocked": false,
+ "withheld_blocks": [],
+ "degraded": [
+  "identity check failed: 1M17 is not cross-referenced to P00519; structure-based steps are blocked",
+  "structure steps skipped: target identity checks did not pass",
+  "step S3 (docking_agent) not executed: dependency ['S1'] failed",
+  "step S4 (structure_analyst) not executed: dependency ['S1'] failed",
+  "step S5 (critic) not executed: dependency ['S1', 'S3', 'S4'] failed"
+ ],
+ "started_at": "2026-11-12T11:08:43+00:00",
+ "duration_s": 0.08,
+ "cost": {
+  "llm_calls": 3,
+  "llm_backend": "replay/rules (offline)",
+  "tool_calls": 10,
+  "cached_tool_calls": 10
+ }
+}

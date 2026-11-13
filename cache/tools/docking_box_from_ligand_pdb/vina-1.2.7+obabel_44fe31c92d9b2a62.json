@@ -1,0 +1,25 @@
+{
+ "tool": "docking.box_from_ligand_pdb",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "ligand_pdb": "cache/docking/bench_8A27_KY9.pdb",
+  "pad": 5.0
+ },
+ "params_hash": "44fe31c92d9b2a62",
+ "cached_at": "2026-11-12T10:49:28+00:00",
+ "data": {
+  "center": [
+   23.815,
+   -10.622,
+   -11.554
+  ],
+  "size": [
+   28.22,
+   18.05,
+   23.97
+  ],
+  "pad": 5.0,
+  "n_points": 48,
+  "source": "bench_8A27_KY9.pdb"
+ }
+}

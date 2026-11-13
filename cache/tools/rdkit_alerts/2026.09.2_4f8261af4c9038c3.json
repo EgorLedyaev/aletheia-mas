@@ -1,0 +1,32 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C#CC=CC=CCN1C=CCOCCC=C(OCCOC)C=CN=CN=C1"
+ },
+ "params_hash": "4f8261af4c9038c3",
+ "cached_at": "2026-11-11T18:27:19+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "polyene",
+    "triple_bond"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 3,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

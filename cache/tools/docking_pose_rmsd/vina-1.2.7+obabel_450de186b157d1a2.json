@@ -1,0 +1,21 @@
+{
+ "tool": "docking.pose_rmsd",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "reference_pdb": "cache/docking/8A27_KY9.pdb",
+  "pose_pdbqt": "cache/docking/redock_KY9_out.pdbqt",
+  "model_index": 0
+ },
+ "params_hash": "450de186b157d1a2",
+ "cached_at": "2026-11-11T18:40:05+00:00",
+ "data": {
+  "rmsd_A": 1.881,
+  "n_matched_atoms": 48,
+  "n_reference_heavy": 48,
+  "n_pose_heavy": 48,
+  "model_index": 0,
+  "pose_score": -11.847,
+  "method": "element-matched optimal assignment (Hungarian), no realignment",
+  "success_threshold_A": 2.0
+ }
+}

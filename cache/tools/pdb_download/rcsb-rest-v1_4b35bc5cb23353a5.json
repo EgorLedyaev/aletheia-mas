@@ -1,0 +1,18 @@
+{
+ "tool": "pdb.download",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "1OYT"
+ },
+ "params_hash": "4b35bc5cb23353a5",
+ "cached_at": "2026-11-12T10:40:36+00:00",
+ "data": {
+  "pdb_id": "1OYT",
+  "path": "cache/structures/1OYT.pdb",
+  "n_atom_records": 2728,
+  "sha256": "2a68c0c0f88f5d9b63eec2cba7d118aaf7b3e99c257e859f21f4f228b092ddd6",
+  "bytes": 275930,
+  "retrieved_at": "2026-11-12T10:40:36+00:00",
+  "source_url": "https://files.rcsb.org/download/1OYT.pdb"
+ }
+}

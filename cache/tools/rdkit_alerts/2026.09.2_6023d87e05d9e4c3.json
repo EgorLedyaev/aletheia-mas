@@ -1,0 +1,28 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "Cn1ccc2cc3c(-c4ccc(-c5ncnc6cc7[nH]ncc7cc56)[nH]4)ncnc3cc21"
+ },
+ "params_hash": "6023d87e05d9e4c3",
+ "cached_at": "2026-11-11T22:40:28+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [],
+   "NIH": []
+  },
+  "n_alerts": 0,
+  "clean": true,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

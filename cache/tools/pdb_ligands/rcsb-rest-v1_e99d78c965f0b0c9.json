@@ -1,0 +1,47 @@
+{
+ "tool": "pdb.ligands",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/6Q4G.pdb"
+ },
+ "params_hash": "e99d78c965f0b0c9",
+ "cached_at": "2026-11-11T22:39:32+00:00",
+ "data": {
+  "pdb_path": "cache/structures/6Q4G.pdb",
+  "n_ligands": 1,
+  "ligands": [
+   {
+    "resname": "HJK",
+    "chain": "A",
+    "resseq": "301",
+    "n_heavy_atoms": 40,
+    "centroid": [
+     -0.669,
+     -6.226,
+     -25.358
+    ],
+    "extent_A": [
+     6.76,
+     7.08,
+     8.82
+    ]
+   }
+  ],
+  "largest": {
+   "resname": "HJK",
+   "chain": "A",
+   "resseq": "301",
+   "n_heavy_atoms": 40,
+   "centroid": [
+    -0.669,
+    -6.226,
+    -25.358
+   ],
+   "extent_A": [
+    6.76,
+    7.08,
+    8.82
+   ]
+  }
+ }
+}

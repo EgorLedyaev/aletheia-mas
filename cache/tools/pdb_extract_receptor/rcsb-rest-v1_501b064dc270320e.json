@@ -1,0 +1,16 @@
+{
+ "tool": "pdb.extract_receptor",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/1M17.pdb",
+  "out_path": "cache/structures/1M17_receptor.pdb"
+ },
+ "params_hash": "501b064dc270320e",
+ "cached_at": "2026-11-11T20:05:55+00:00",
+ "data": {
+  "path": "cache/structures/1M17_receptor.pdb",
+  "n_atoms": 2497,
+  "chain": null,
+  "sha256": "b34fd769c0f10fcd395c7fd96111cfd0e2165af1ea421a056862c051fbb81209"
+ }
+}

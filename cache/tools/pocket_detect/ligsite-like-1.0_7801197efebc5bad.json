@@ -1,0 +1,113 @@
+{
+ "tool": "pocket.detect",
+ "version": "ligsite-like-1.0",
+ "params": {
+  "pdb_path": "cache/structures/8A27.pdb",
+  "spacing": 1.0,
+  "probe": 3.2,
+  "psp_min": 5,
+  "reference_point": [
+   23.815,
+   -10.622,
+   -11.554
+  ]
+ },
+ "params_hash": "7801197efebc5bad",
+ "cached_at": "2026-11-11T22:38:27+00:00",
+ "data": {
+  "pdb_path": "cache/structures/8A27.pdb",
+  "n_pockets": 3,
+  "pockets": [
+   {
+    "rank": 1,
+    "n_grid_points": 445,
+    "volume_A3": 445.0,
+    "center": [
+     17.574,
+     -13.857,
+     -13.697
+    ],
+    "extent_A": [
+     27.0,
+     17.0,
+     18.0
+    ],
+    "mean_buriedness": 6.0
+   },
+   {
+    "rank": 2,
+    "n_grid_points": 105,
+    "volume_A3": 105.0,
+    "center": [
+     21.39,
+     -10.291,
+     -23.037
+    ],
+    "extent_A": [
+     6.0,
+     10.0,
+     5.0
+    ],
+    "mean_buriedness": 5.32
+   },
+   {
+    "rank": 3,
+    "n_grid_points": 36,
+    "volume_A3": 36.0,
+    "center": [
+     12.339,
+     -16.07,
+     -28.39
+    ],
+    "extent_A": [
+     7.0,
+     3.0,
+     5.0
+    ],
+    "mean_buriedness": 5.11
+   }
+  ],
+  "top_pocket": {
+   "rank": 1,
+   "n_grid_points": 445,
+   "volume_A3": 445.0,
+   "center": [
+    17.574,
+    -13.857,
+    -13.697
+   ],
+   "extent_A": [
+    27.0,
+    17.0,
+    18.0
+   ],
+   "mean_buriedness": 6.0
+  },
+  "params": {
+   "spacing_A": 1.0,
+   "probe_A": 3.2,
+   "psp_min": 5,
+   "min_cluster_points": 30
+  },
+  "grid_dims": [
+   71,
+   50,
+   77
+  ],
+  "n_protein_atoms": 2299,
+  "method": "LIGSITE-style protein-solvent-protein buriedness grid (re-implementation; see aletheia/tools/pocket.py)",
+  "validation": {
+   "reference_point": [
+    23.815,
+    -10.622,
+    -11.554
+   ],
+   "top_pocket_centroid_distance_A": 7.35,
+   "top_pocket_nearest_point_distance_A": 0.44,
+   "best_pocket_rank": 1,
+   "best_pocket_nearest_point_distance_A": 0.44,
+   "hit_within_5A": true,
+   "criterion": "distance from the crystallographic ligand centroid to the nearest grid point of the detected cavity"
+  }
+ }
+}

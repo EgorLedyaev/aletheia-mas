@@ -1,0 +1,12 @@
+{
+ "tool": "docking.vina_version",
+ "version": "vina-1.2.7+obabel",
+ "params": {},
+ "params_hash": "2e66221b2bd382e4",
+ "cached_at": "2026-11-11T22:28:16+00:00",
+ "data": {
+  "binary": "tools/vina/vina_1.2.7_win.exe",
+  "version": "AutoDock Vina v1.2.7",
+  "sha256": "e0c4b2715e0c1a74f6e92d0f3be0328ac97542eafbc111e6b1efad897a73cce5"
+ }
+}

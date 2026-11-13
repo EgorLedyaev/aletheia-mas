@@ -1,0 +1,35 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC[B-]C)cc23)c1"
+ },
+ "params_hash": "da97e515b55f149a",
+ "cached_at": "2026-11-11T22:40:24+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "heavy_metal",
+    "triple_bond"
+   ],
+   "NIH": [
+    "bad_boron",
+    "boron_warhead"
+   ]
+  },
+  "n_alerts": 5,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

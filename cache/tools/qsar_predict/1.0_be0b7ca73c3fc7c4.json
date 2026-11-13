@@ -1,0 +1,412 @@
+{
+ "tool": "qsar.predict",
+ "version": "1.0",
+ "params": {
+  "model_path": "models/qsar_CHEMBL203.pkl",
+  "smiles_list": [
+   "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+   "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+   "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+   "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+   "O=C(O)CCc1ncnc2cc3[nH]ncc3cc12",
+   "OCC(O)Cc1ncnc2cc3[nH]ncc3cc12",
+   "COc1ncnc2cc3[nH]ncc3cc12",
+   "c1cn(-c2ncnc3cc4[nH]ncc4cc23)cn1",
+   "Clc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+   "Brc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+   "Cc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+   "C#Cc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+   "Fc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+   "Fc1ccc(-c2ncnc3cc4[nH]ncc4cc23)cc1Cl",
+   "c1ccc(-c2ncnc3cc4[nH]ncc4cc23)cc1",
+   "CN(C)c1ncnc2cc3[nH]ncc3cc12",
+   "c1nc(N2CCOCC2)c2cc3cn[nH]c3cc2n1",
+   "C[N+](C)(C)c1ncnc2cc3[nH]ncc3cc12",
+   "CNc1ncnc2cc3[nH]ncc3cc12",
+   "Cn1ncc2cc3c(-c4ncnc5cc6[nH]ncc6cc45)ncnc3cc21",
+   "c1nc(-c2c[nH]cn2)c2cc3cn[nH]c3cc2n1",
+   "Nc1ncc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2n1",
+   "c1nc(-c2ncnc3cc4[nH]ncc4cc23)c2cc3cc[nH]c3cc2n1",
+   "Cn1ccc2cc3c(-c4ncnc5cc6[nH]ncc6cc45)ncnc3cc21",
+   "Nc1ccc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2c1",
+   "Nc1cc2c(-c3ncnc4cc5[nH]ncc5cc34)ncnc2cn1",
+   "Nc1ccc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2n1",
+   "c1ccc2c(-c3ncnc4cc5[nH]ncc5cc34)ncnc2c1",
+   "C=CS(=O)(=O)c1cc2c(-c3ncnc4cc5[nH]ncc5cc34)ncnc2cn1",
+   "c1nc(-c2ncnc3cc4[nH]ncc4cc23)c2cc3cn[nH]c3cc2n1",
+   "c1cn(-c2ccc(-c3ncnc4cc5[nH]ncc5cc34)[nH]2)cn1",
+   "CN(C)c1ccc(-c2ncnc3cc4[nH]ncc4cc23)[nH]1",
+   "c1nc(-c2ccc(N3CCOCC3)[nH]2)c2cc3cn[nH]c3cc2n1",
+   "C[N+](C)(C)c1ccc(-c2ncnc3cc4[nH]ncc4cc23)[nH]1",
+   "CNc1ccc(-c2ncnc3cc4[nH]ncc4cc23)[nH]1",
+   "Cn1ncc2cc3c(-c4ccc(-c5ncnc6cc7[nH]ncc7cc56)[nH]4)ncnc3cc21",
+   "c1nc(-c2ccc(-c3c[nH]cn3)[nH]2)c2cc3cn[nH]c3cc2n1",
+   "Nc1ncc2ncnc(-c3ccc(-c4ncnc5cc6[nH]ncc6cc45)[nH]3)c2n1",
+   "c1nc(-c2ccc(-c3ncnc4cc5[nH]ncc5cc34)[nH]2)c2cc3cc[nH]c3cc2n1",
+   "Cn1ccc2cc3c(-c4ccc(-c5ncnc6cc7[nH]ncc7cc56)[nH]4)ncnc3cc21",
+   "Nc1ccc2ncnc(-c3ccc(-c4ncnc5cc6[nH]ncc6cc45)[nH]3)c2c1",
+   "Nc1cc2c(-c3ccc(-c4ncnc5cc6[nH]ncc6cc45)[nH]3)ncnc2cn1"
+  ]
+ },
+ "params_hash": "be0b7ca73c3fc7c4",
+ "cached_at": "2026-11-11T22:40:29+00:00",
+ "data": {
+  "predictions": [
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "pred_pchembl": 7.456,
+    "lower": 5.988,
+    "upper": 8.924,
+    "max_tanimoto_to_train": 0.6066,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+    "pred_pchembl": 7.32,
+    "lower": 5.852,
+    "upper": 8.788,
+    "max_tanimoto_to_train": 0.4909,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+    "pred_pchembl": 6.382,
+    "lower": 4.914,
+    "upper": 7.85,
+    "max_tanimoto_to_train": 0.375,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+    "pred_pchembl": 6.058,
+    "lower": 4.59,
+    "upper": 7.526,
+    "max_tanimoto_to_train": 0.3158,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+    "pred_pchembl": 7.832,
+    "lower": 6.364,
+    "upper": 9.3,
+    "max_tanimoto_to_train": 0.5156,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "O=C(O)CCc1ncnc2cc3[nH]ncc3cc12",
+    "pred_pchembl": 5.227,
+    "lower": 3.759,
+    "upper": 6.695,
+    "max_tanimoto_to_train": 0.2817,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "OCC(O)Cc1ncnc2cc3[nH]ncc3cc12",
+    "pred_pchembl": 5.382,
+    "lower": 3.914,
+    "upper": 6.85,
+    "max_tanimoto_to_train": 0.2958,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "COc1ncnc2cc3[nH]ncc3cc12",
+    "pred_pchembl": 5.21,
+    "lower": 3.742,
+    "upper": 6.678,
+    "max_tanimoto_to_train": 0.2712,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1cn(-c2ncnc3cc4[nH]ncc4cc23)cn1",
+    "pred_pchembl": 5.341,
+    "lower": 3.873,
+    "upper": 6.809,
+    "max_tanimoto_to_train": 0.2462,
+    "applicability": "OUT_OF_DOMAIN"
+   },
+   {
+    "smiles": "Clc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+    "pred_pchembl": 5.572,
+    "lower": 4.104,
+    "upper": 7.04,
+    "max_tanimoto_to_train": 0.3016,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Brc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+    "pred_pchembl": 5.628,
+    "lower": 4.16,
+    "upper": 7.096,
+    "max_tanimoto_to_train": 0.4138,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "Cc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+    "pred_pchembl": 5.359,
+    "lower": 3.891,
+    "upper": 6.827,
+    "max_tanimoto_to_train": 0.3279,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "C#Cc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+    "pred_pchembl": 5.456,
+    "lower": 3.988,
+    "upper": 6.924,
+    "max_tanimoto_to_train": 0.2879,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Fc1cccc(-c2ncnc3cc4[nH]ncc4cc23)c1",
+    "pred_pchembl": 5.512,
+    "lower": 4.044,
+    "upper": 6.98,
+    "max_tanimoto_to_train": 0.3016,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Fc1ccc(-c2ncnc3cc4[nH]ncc4cc23)cc1Cl",
+    "pred_pchembl": 5.809,
+    "lower": 4.341,
+    "upper": 7.277,
+    "max_tanimoto_to_train": 0.284,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1ccc(-c2ncnc3cc4[nH]ncc4cc23)cc1",
+    "pred_pchembl": 5.464,
+    "lower": 3.996,
+    "upper": 6.932,
+    "max_tanimoto_to_train": 0.3051,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "CN(C)c1ncnc2cc3[nH]ncc3cc12",
+    "pred_pchembl": 5.287,
+    "lower": 3.819,
+    "upper": 6.755,
+    "max_tanimoto_to_train": 0.2712,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1nc(N2CCOCC2)c2cc3cn[nH]c3cc2n1",
+    "pred_pchembl": 5.409,
+    "lower": 3.941,
+    "upper": 6.877,
+    "max_tanimoto_to_train": 0.3014,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "C[N+](C)(C)c1ncnc2cc3[nH]ncc3cc12",
+    "pred_pchembl": 5.319,
+    "lower": 3.851,
+    "upper": 6.787,
+    "max_tanimoto_to_train": 0.2982,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "CNc1ncnc2cc3[nH]ncc3cc12",
+    "pred_pchembl": 6.083,
+    "lower": 4.615,
+    "upper": 7.551,
+    "max_tanimoto_to_train": 0.3636,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Cn1ncc2cc3c(-c4ncnc5cc6[nH]ncc6cc45)ncnc3cc21",
+    "pred_pchembl": 5.307,
+    "lower": 3.839,
+    "upper": 6.775,
+    "max_tanimoto_to_train": 0.3333,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1nc(-c2c[nH]cn2)c2cc3cn[nH]c3cc2n1",
+    "pred_pchembl": 5.373,
+    "lower": 3.905,
+    "upper": 6.841,
+    "max_tanimoto_to_train": 0.254,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Nc1ncc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2n1",
+    "pred_pchembl": 5.51,
+    "lower": 4.042,
+    "upper": 6.978,
+    "max_tanimoto_to_train": 0.3448,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1nc(-c2ncnc3cc4[nH]ncc4cc23)c2cc3cc[nH]c3cc2n1",
+    "pred_pchembl": 5.526,
+    "lower": 4.058,
+    "upper": 6.994,
+    "max_tanimoto_to_train": 0.4444,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "Cn1ccc2cc3c(-c4ncnc5cc6[nH]ncc6cc45)ncnc3cc21",
+    "pred_pchembl": 5.361,
+    "lower": 3.893,
+    "upper": 6.829,
+    "max_tanimoto_to_train": 0.4407,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "Nc1ccc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2c1",
+    "pred_pchembl": 5.86,
+    "lower": 4.392,
+    "upper": 7.328,
+    "max_tanimoto_to_train": 0.3585,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Nc1cc2c(-c3ncnc4cc5[nH]ncc5cc34)ncnc2cn1",
+    "pred_pchembl": 5.461,
+    "lower": 3.993,
+    "upper": 6.929,
+    "max_tanimoto_to_train": 0.2581,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Nc1ccc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2n1",
+    "pred_pchembl": 5.457,
+    "lower": 3.989,
+    "upper": 6.925,
+    "max_tanimoto_to_train": 0.3448,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1ccc2c(-c3ncnc4cc5[nH]ncc5cc34)ncnc2c1",
+    "pred_pchembl": 5.421,
+    "lower": 3.953,
+    "upper": 6.889,
+    "max_tanimoto_to_train": 0.3051,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "C=CS(=O)(=O)c1cc2c(-c3ncnc4cc5[nH]ncc5cc34)ncnc2cn1",
+    "pred_pchembl": 5.223,
+    "lower": 3.756,
+    "upper": 6.691,
+    "max_tanimoto_to_train": 0.2286,
+    "applicability": "OUT_OF_DOMAIN"
+   },
+   {
+    "smiles": "c1nc(-c2ncnc3cc4[nH]ncc4cc23)c2cc3cn[nH]c3cc2n1",
+    "pred_pchembl": 5.329,
+    "lower": 3.861,
+    "upper": 6.797,
+    "max_tanimoto_to_train": 0.2963,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1cn(-c2ccc(-c3ncnc4cc5[nH]ncc5cc34)[nH]2)cn1",
+    "pred_pchembl": 5.368,
+    "lower": 3.9,
+    "upper": 6.836,
+    "max_tanimoto_to_train": 0.2329,
+    "applicability": "OUT_OF_DOMAIN"
+   },
+   {
+    "smiles": "CN(C)c1ccc(-c2ncnc3cc4[nH]ncc4cc23)[nH]1",
+    "pred_pchembl": 5.292,
+    "lower": 3.824,
+    "upper": 6.76,
+    "max_tanimoto_to_train": 0.2576,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1nc(-c2ccc(N3CCOCC3)[nH]2)c2cc3cn[nH]c3cc2n1",
+    "pred_pchembl": 5.46,
+    "lower": 3.992,
+    "upper": 6.928,
+    "max_tanimoto_to_train": 0.284,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "C[N+](C)(C)c1ccc(-c2ncnc3cc4[nH]ncc4cc23)[nH]1",
+    "pred_pchembl": 5.383,
+    "lower": 3.915,
+    "upper": 6.851,
+    "max_tanimoto_to_train": 0.2537,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "CNc1ccc(-c2ncnc3cc4[nH]ncc4cc23)[nH]1",
+    "pred_pchembl": 5.361,
+    "lower": 3.893,
+    "upper": 6.829,
+    "max_tanimoto_to_train": 0.2769,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Cn1ncc2cc3c(-c4ccc(-c5ncnc6cc7[nH]ncc7cc56)[nH]4)ncnc3cc21",
+    "pred_pchembl": 5.293,
+    "lower": 3.825,
+    "upper": 6.761,
+    "max_tanimoto_to_train": 0.3243,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1nc(-c2ccc(-c3c[nH]cn3)[nH]2)c2cc3cn[nH]c3cc2n1",
+    "pred_pchembl": 5.42,
+    "lower": 3.952,
+    "upper": 6.888,
+    "max_tanimoto_to_train": 0.2464,
+    "applicability": "OUT_OF_DOMAIN"
+   },
+   {
+    "smiles": "Nc1ncc2ncnc(-c3ccc(-c4ncnc5cc6[nH]ncc6cc45)[nH]3)c2n1",
+    "pred_pchembl": 5.493,
+    "lower": 4.025,
+    "upper": 6.961,
+    "max_tanimoto_to_train": 0.3333,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "c1nc(-c2ccc(-c3ncnc4cc5[nH]ncc5cc34)[nH]2)c2cc3cc[nH]c3cc2n1",
+    "pred_pchembl": 5.369,
+    "lower": 3.901,
+    "upper": 6.837,
+    "max_tanimoto_to_train": 0.4068,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "Cn1ccc2cc3c(-c4ccc(-c5ncnc6cc7[nH]ncc7cc56)[nH]4)ncnc3cc21",
+    "pred_pchembl": 5.338,
+    "lower": 3.87,
+    "upper": 6.806,
+    "max_tanimoto_to_train": 0.4062,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "Nc1ccc2ncnc(-c3ccc(-c4ncnc5cc6[nH]ncc6cc45)[nH]3)c2c1",
+    "pred_pchembl": 6.021,
+    "lower": 4.553,
+    "upper": 7.489,
+    "max_tanimoto_to_train": 0.3276,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "Nc1cc2c(-c3ccc(-c4ncnc5cc6[nH]ncc6cc45)[nH]3)ncnc2cn1",
+    "pred_pchembl": 5.479,
+    "lower": 4.011,
+    "upper": 6.947,
+    "max_tanimoto_to_train": 0.2537,
+    "applicability": "BORDERLINE"
+   }
+  ],
+  "n": 43,
+  "model_path": "models/qsar_CHEMBL203.pkl",
+  "alpha": 0.1,
+  "q_hat": 1.468,
+  "target_id": "CHEMBL203",
+  "ad_thresholds": {
+   "in_domain_min_tanimoto": 0.4,
+   "borderline_min_tanimoto": 0.25
+  },
+  "units": "pChEMBL (-log10 molar)"
+ }
+}

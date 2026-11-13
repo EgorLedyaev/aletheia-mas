@@ -1,0 +1,245 @@
+{
+ "run_id": "run-20261113T005851-4ad7a1",
+ "query": "Give me a target brief and known actives for UniProt A0A0A0A0A0.",
+ "plan": {
+  "query": "Give me a target brief and known actives for UniProt A0A0A0A0A0.",
+  "intents": [
+   "target_brief",
+   "ligand_lookup"
+  ],
+  "modality": "unknown",
+  "targets": [
+   "A0A0A0A0A0"
+  ],
+  "molecules": [],
+  "steps": [
+   {
+    "step_id": "B-1",
+    "agent": "target_analyst",
+    "action": "(blackboard round)",
+    "inputs": {},
+    "depends_on": [],
+    "rationale": "fired when its blackboard preconditions were met",
+    "optional": false
+   },
+   {
+    "step_id": "B-2",
+    "agent": "critic",
+    "action": "(blackboard round)",
+    "inputs": {},
+    "depends_on": [],
+    "rationale": "fired when its blackboard preconditions were met",
+    "optional": false
+   }
+  ],
+  "planner": "callable+cache / blackboard",
+  "notes": [
+   "User explicitly requests a target brief and known active ligands for the given UniProt accession, with no molecules specified."
+  ]
+ },
+ "blocks": [
+  {
+   "title": "What the system did",
+   "text": "Planner `callable+cache / blackboard` routed this request to the intents target_brief, ligand_lookup.\n\n- `B-1` **target_analyst** -> (blackboard round) \u2014 fired when its blackboard preconditions were met\n- `B-2` **critic** -> (blackboard round) \u2014 fired when its blackboard preconditions were met\n\nTools actually invoked: `uniprot.search_gene`.",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "2",
+    "B-1",
+    "B-2",
+    "search_gene"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Independent cross-check",
+   "text": "- critic claims recomputed: 0 [E-0001] \u2014 COMPUTED | aletheia.critic 1.0\n- critic recomputation mismatches: 0 [E-0002] \u2014 COMPUTED | aletheia.critic 1.0\n- predicted claims total: 0 [E-0003] \u2014 COMPUTED | aletheia.critic 1.0\n- predicted claims out of domain: 0 [E-0004] \u2014 COMPUTED | aletheia.critic 1.0\n- ledger claims total: 4 [E-0005] \u2014 COMPUTED | aletheia.critic 1.0\n- fewer than two oracles scored the candidates; no consensus check possible",
+   "claim_ids": [
+    "E-0001",
+    "E-0002",
+    "E-0003",
+    "E-0004",
+    "E-0005"
+   ],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "note"
+  },
+  {
+   "title": "Interpretation (LLM reasoning)",
+   "text": "I cannot verify UniProt accession A0A0A0A0A0 as a legitimate, characterized target from the information given \u2014 the identifier format itself is atypical, and I have no tool access in this step to confirm its identity, associated protein, or any known ligands. Because the target's identity is unestablished, no target brief or list of known actives can be responsibly produced from this interpretation step: doing so would risk fabricating biological associations or compound activity claims that were never actually derived from the recomputation. The findings above indicate that no claims were recomputed, mismatched, predicted, or flagged as out-of-domain, and only a small number of ledger entries exist \u2014 this pattern is consistent with an empty or unresolved pipeline run rather than a validated set of results. Before any interpretation of actives or target rationale can proceed, the accession needs to be confirmed against an authoritative database and the discrepancy in claim counts resolved.\n\n*This paragraph is LLM reasoning over the findings above. It is tagged HYPOTHESIS: it contains no numbers of its own and was itself checked against the claims ledger before publication.*",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "note"
+  }
+ ],
+ "candidates": [],
+ "target": null,
+ "safety": {
+  "verdict": "ALLOW_WITH_NOTE",
+  "category": "dual_use_context",
+  "reason": "The UniProt accession given does not match a valid/real format well enough to confirm identity, so the system should verify the actual accession and confirm target identity before returning actives, but target-brief and known-actives requests are ordinary drug discovery research.",
+  "lexicon_hits": [],
+  "caution_terms": [],
+  "llm_backend": "callable",
+  "llm_verdict": "ALLOW_WITH_NOTE",
+  "classifier_available": true,
+  "force_structure_screen": true,
+  "query_sha256": "6570589445013c30",
+  "policy_version": "aletheia-safety-1.0"
+ },
+ "verification": {
+  "ok": true,
+  "summary": "ledger coverage 100.0% (12/12 numeric tokens), 5/5 claims cited, 0 violation(s)",
+  "numeric_coverage": 1.0,
+  "n_numeric_tokens": 12,
+  "n_resolved_tokens": 12,
+  "n_claims_total": 5,
+  "n_claims_used": 5,
+  "violations": []
+ },
+ "ledger_rows": [
+  {
+   "claim_id": "E-0001",
+   "tag": "COMPUTED",
+   "key": "critic_claims_recomputed",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "seed=20261111",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "random sample of 0 recomputable descriptor claims, tool cache bypassed"
+  },
+  {
+   "claim_id": "E-0002",
+   "tag": "COMPUTED",
+   "key": "critic_recomputation_mismatches",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "seed=20261111",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "none"
+  },
+  {
+   "claim_id": "E-0003",
+   "tag": "COMPUTED",
+   "key": "predicted_claims_total",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "ad-audit",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0004",
+   "tag": "COMPUTED",
+   "key": "predicted_claims_out_of_domain",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "ad-audit",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "applicability domain verdicts on model predictions"
+  },
+  {
+   "claim_id": "E-0005",
+   "tag": "COMPUTED",
+   "key": "ledger_claims_total",
+   "value": "4",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "hygiene",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "COMPUTED=4; PREDICTED=0; RETRIEVED=0; HYPOTHESIS=0"
+  }
+ ],
+ "tool_calls": [
+  {
+   "call_id": "C-0bb347de",
+   "tool": "uniprot.search_gene",
+   "tool_version": "rest-2026",
+   "params": {
+    "gene": "A0A0A0A0A0",
+    "organism_id": 9606
+   },
+   "params_hash": "b791d563a9290071",
+   "started_at": "2026-11-12T21:58:51+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  }
+ ],
+ "agent_results": [
+  {
+   "agent": "target_analyst",
+   "step_id": "B1-target_analyst",
+   "ok": false,
+   "degraded": false,
+   "duration_s": 0.006,
+   "error": "could not resolve ['A0A0A0A0A0'] to a UniProt accession",
+   "messages": []
+  },
+  {
+   "agent": "critic",
+   "step_id": "B-critic",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.001,
+   "error": null,
+   "messages": [
+    "fewer than two oracles scored the candidates; no consensus check possible"
+   ]
+  }
+ ],
+ "source": "cached",
+ "blocked": false,
+ "withheld_blocks": [],
+ "degraded": [
+  "UniProt gene search failed for A0A0A0A0A0: None"
+ ],
+ "started_at": "2026-11-12T21:58:51+00:00",
+ "duration_s": 0.03,
+ "cost": {
+  "llm_calls": 3,
+  "llm_backend": "replay/rules (offline)",
+  "tool_calls": 1,
+  "cached_tool_calls": 1
+ }
+}

@@ -1,0 +1,2070 @@
+{
+ "run_id": "run-20261113T000424-b9d7f3",
+ "query": "Dock erlotinib (C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1) into EGFR 1M17 with the default Vina scoring function and tell me whether I can rank candidates on that score.",
+ "plan": {
+  "query": "Dock erlotinib (C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1) into EGFR 1M17 with the default Vina scoring function and tell me whether I can rank candidates on that score.",
+  "intents": [
+   "docking",
+   "rank_candidates"
+  ],
+  "modality": "protein",
+  "targets": [
+   "1M17",
+   "OCCOC"
+  ],
+  "molecules": [],
+  "steps": [
+   {
+    "step_id": "S1",
+    "agent": "target_analyst",
+    "action": "resolve_target",
+    "inputs": {
+     "targets": [
+      "1M17",
+      "OCCOC"
+     ],
+     "ligand": null,
+     "need_structure": true
+    },
+    "depends_on": [],
+    "rationale": "every downstream claim needs a verified target identity",
+    "optional": false
+   },
+   {
+    "step_id": "S2",
+    "agent": "chemistry_retriever",
+    "action": "known_actives",
+    "inputs": {
+     "limit": 300
+    },
+    "depends_on": [
+     "S1"
+    ],
+    "rationale": "ground design in measured actives, not in LLM memory",
+    "optional": false
+   },
+   {
+    "step_id": "S3",
+    "agent": "docking_agent",
+    "action": "dock",
+    "inputs": {
+     "smiles": [],
+     "validate": true,
+     "scoring": "vina"
+    },
+    "depends_on": [
+     "S1"
+    ],
+    "rationale": "structure-based score, validated by redocking on the same receptor",
+    "optional": false
+   },
+   {
+    "step_id": "S4",
+    "agent": "structure_analyst",
+    "action": "analyse_structure",
+    "inputs": {},
+    "depends_on": [
+     "S1"
+    ],
+    "rationale": "binding-site detection on the selected structure",
+    "optional": false
+   },
+   {
+    "step_id": "S5",
+    "agent": "ranker",
+    "action": "rank_and_select",
+    "inputs": {
+     "k": 8
+    },
+    "depends_on": [
+     "S3"
+    ],
+    "rationale": "multi-objective Pareto ranking + diversity-aware portfolio",
+    "optional": false
+   },
+   {
+    "step_id": "S6",
+    "agent": "critic",
+    "action": "cross_check",
+    "inputs": {},
+    "depends_on": [
+     "S1",
+     "S2",
+     "S3",
+     "S4",
+     "S5"
+    ],
+    "rationale": "independent recomputation and applicability-domain audit",
+    "optional": false
+   }
+  ],
+  "planner": "rules",
+  "notes": [
+   "keyword routing (no LLM backend)"
+  ]
+ },
+ "blocks": [
+  {
+   "title": "What the system did",
+   "text": "Planner `rules` routed this request to the intents docking, rank_candidates.\n\n- `S1` **target_analyst** -> resolve_target \u2014 every downstream claim needs a verified target identity\n- `S2` **chemistry_retriever** -> known_actives \u2014 ground design in measured actives, not in LLM memory\n- `S3` **docking_agent** -> dock \u2014 structure-based score, validated by redocking on the same receptor\n- `S4` **structure_analyst** -> analyse_structure \u2014 binding-site detection on the selected structure\n- `S5` **ranker** -> rank_and_select \u2014 multi-objective Pareto ranking + diversity-aware portfolio\n- `S6` **critic** -> cross_check \u2014 independent recomputation and applicability-domain audit\n\nTools actually invoked: `chembl.activities`, `chembl.status`, `chembl.target_by_accession`, `docking.box_from_ligand_pdb`, `docking.pose_rmsd_all_models`, `docking.prepare_ligand`, `docking.prepare_receptor`, `docking.vina_dock`, `docking.vina_version`, `pdb.chain_sequences`, `pdb.chemcomp`, `pdb.download`, `pdb.entry`, `pdb.extract_ligand`, `pdb.extract_receptor`, `pdb.ligands`, `pocket.detect`, `rdkit.scaffold`, `uniprot.entry`, `uniprot.search_gene`, `uniprot.sequence_features`.",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "activities",
+    "status",
+    "target_by_accession",
+    "box_from_ligand_pdb",
+    "pose_rmsd_all_models",
+    "prepare_ligand",
+    "prepare_receptor",
+    "vina_dock",
+    "vina_version",
+    "chain_sequences",
+    "chemcomp",
+    "download",
+    "entry",
+    "extract_ligand",
+    "extract_receptor",
+    "ligands",
+    "detect",
+    "scaffold",
+    "entry",
+    "search_gene",
+    "sequence_features"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Target",
+   "text": "**EGFR** \u2014 Epidermal growth factor receptor (Homo sapiens), UniProt `P00533`.\n- Sequence length: 1210 residues [E-0002] \u2014 RETRIEVED | P00533 @ 2026-11-11\n- Experimental structures cross-referenced: 388 [E-0003] \u2014 RETRIEVED | P00533 @ 2026-11-11\n- Structure selected: `1M17` at 2.6 A resolution [E-0007]\n- Co-crystal ligand component id: `AQ4` [E-0009] \u2014 COMPUTED | pdb.ligands rcsb-rest-v1\n- ChEMBL target id: `CHEMBL203` [E-0004] \u2014 RETRIEVED | CHEMBL203 @ 2026-11-11\n- Target identity checks passed: 3 of 3 [E-0023] \u2014 uniprot_length_matches_sequence; pdb_belongs_to_accession; structure_sequence_matches_uniprot",
+   "claim_ids": [
+    "E-0001",
+    "E-0002",
+    "E-0003",
+    "E-0004",
+    "E-0007",
+    "E-0007",
+    "E-0009",
+    "E-0004",
+    "E-0023",
+    "E-0024"
+   ],
+   "structures": [
+    "P00533",
+    "1M17"
+   ],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Known chemistry (retrieved, not generated)",
+   "text": "- ChEMBL release: ChEMBL_37 [E-0010] \u2014 RETRIEVED | ChEMBL ChEMBL_37 @ 2026-11-11\n- ChEMBL target: CHEMBL203 [E-0014] \u2014 RETRIEVED | CHEMBL203 @ 2026-11-11\n- Unique actives retrieved: 271 [E-0015] \u2014 RETRIEVED | CHEMBL203 @ 2026-11-11\n- Median pChEMBL of retrieved actives: 6.72 [E-0016] \u2014 COMPUTED | chembl.activities ws-2.x\n- Best pChEMBL of retrieved actives: 10.6 [E-0017] \u2014 COMPUTED | chembl.activities ws-2.x\n- Most potent retrieved compound: CHEMBL29197 [E-0018] \u2014 RETRIEVED | CHEMBL29197 @ 2026-11-11",
+   "claim_ids": [
+    "E-0010",
+    "E-0014",
+    "E-0015",
+    "E-0016",
+    "E-0017",
+    "E-0018",
+    "E-0019"
+   ],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Binding site",
+   "text": "- top pocket volume: 458 A^3 [E-0011] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- n pockets detected: 4  [E-0012] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- pocket to cocrystal distance: 0.31 A [E-0013] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- localisation check: the detected cavity nearest the crystallographic ligand centroid is pocket rank 1, within 5 A of it",
+   "claim_ids": [
+    "E-0011",
+    "E-0012",
+    "E-0013"
+   ],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "5"
+   ],
+   "level": "section"
+  }
+ ],
+ "candidates": [],
+ "target": null,
+ "safety": {
+  "verdict": "ALLOW",
+  "category": "ordinary_research",
+  "reason": "deterministic lexicon only (no LLM backend); no hazard vocabulary",
+  "lexicon_hits": [],
+  "caution_terms": [],
+  "llm_backend": "rules",
+  "llm_verdict": "ALLOW",
+  "classifier_available": false,
+  "force_structure_screen": false,
+  "query_sha256": "de1490637ab988ec",
+  "policy_version": "aletheia-safety-1.0"
+ },
+ "verification": {
+  "ok": true,
+  "summary": "ledger coverage 100.0% (17/17 numeric tokens), 18/24 claims cited, 0 violation(s)",
+  "numeric_coverage": 1.0,
+  "n_numeric_tokens": 17,
+  "n_resolved_tokens": 17,
+  "n_claims_total": 24,
+  "n_claims_used": 18,
+  "violations": []
+ },
+ "ledger_rows": [
+  {
+   "claim_id": "E-0001",
+   "tag": "RETRIEVED",
+   "key": "uniprot_protein_name",
+   "value": "Epidermal growth factor receptor",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-6078ce90",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0002",
+   "tag": "RETRIEVED",
+   "key": "sequence_length",
+   "value": "1210",
+   "units": "residues",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-6078ce90",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0003",
+   "tag": "RETRIEVED",
+   "key": "n_pdb_structures",
+   "value": "388",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00533",
+   "params_hash": "a08313d5b3ed5b5a",
+   "call_id": "C-6078ce90",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0004",
+   "tag": "RETRIEVED",
+   "key": "chembl_target_id",
+   "value": "CHEMBL203",
+   "units": "",
+   "subject": "P00533",
+   "tool": "chembl.target_by_accession",
+   "tool_version": "ws-2.x",
+   "source_id": "CHEMBL203",
+   "params_hash": "5964bd1072fcdd04",
+   "call_id": "C-71b6f81e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "ChEMBL target for P00533"
+  },
+  {
+   "claim_id": "E-0005",
+   "tag": "COMPUTED",
+   "key": "sequence_gravy",
+   "value": "-0.316",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "6d10467507380985",
+   "call_id": "C-e2c33374",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Kyte-Doolittle mean hydropathy"
+  },
+  {
+   "claim_id": "E-0006",
+   "tag": "COMPUTED",
+   "key": "net_charge_ph7",
+   "value": "-12",
+   "units": "",
+   "subject": "P00533",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "6d10467507380985",
+   "call_id": "C-e2c33374",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "K+R-D-E count, no pKa model"
+  },
+  {
+   "claim_id": "E-0007",
+   "tag": "RETRIEVED",
+   "key": "pdb_resolution",
+   "value": "2.6",
+   "units": "A",
+   "subject": "1M17",
+   "tool": "pdb.entry",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "1M17",
+   "params_hash": "36a52f26d4e9a9ad",
+   "call_id": "C-601fc34b",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0008",
+   "tag": "COMPUTED",
+   "key": "structure_sequence_identity",
+   "value": "0.985",
+   "units": "",
+   "subject": "1M17:A",
+   "tool": "pdb.chain_sequences",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "",
+   "params_hash": "78a8b49b0dc43411",
+   "call_id": "C-c45ac93a",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "ungapped best-offset identity to the UniProt sequence"
+  },
+  {
+   "claim_id": "E-0009",
+   "tag": "COMPUTED",
+   "key": "cocrystal_ligand",
+   "value": "AQ4",
+   "units": "",
+   "subject": "1M17",
+   "tool": "pdb.ligands",
+   "tool_version": "rcsb-rest-v1",
+   "source_id": "",
+   "params_hash": "ff80a15ae3c1cb6b",
+   "call_id": "C-950bd937",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "29 heavy atoms, chain A"
+  },
+  {
+   "claim_id": "E-0010",
+   "tag": "RETRIEVED",
+   "key": "chembl_release",
+   "value": "ChEMBL_37",
+   "units": "",
+   "subject": "",
+   "tool": "chembl.status",
+   "tool_version": "ws-2.x",
+   "source_id": "ChEMBL ChEMBL_37",
+   "params_hash": "ee818c929d832faa",
+   "call_id": "C-36af255e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0011",
+   "tag": "COMPUTED",
+   "key": "top_pocket_volume",
+   "value": "458",
+   "units": "A^3",
+   "subject": "1M17",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "8dfcfd9a5a10512b",
+   "call_id": "C-ee5bae0e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "reference_point": [
+     22.014,
+     0.253,
+     52.794
+    ],
+    "top_pocket_centroid_distance_A": 8.19,
+    "top_pocket_nearest_point_distance_A": 0.31,
+    "best_pocket_rank": 1,
+    "best_pocket_nearest_point_distance_A": 0.31,
+    "hit_within_5A": true,
+    "criterion": "distance from the crystallographic ligand centroid to the nearest grid point of the detected cavity"
+   },
+   "note": "LIGSITE-style protein-solvent-protein buriedness grid (re-implementation; see aletheia/tools/pocket.py)"
+  },
+  {
+   "claim_id": "E-0012",
+   "tag": "COMPUTED",
+   "key": "n_pockets_detected",
+   "value": "4",
+   "units": "",
+   "subject": "1M17",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "8dfcfd9a5a10512b",
+   "call_id": "C-ee5bae0e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0013",
+   "tag": "COMPUTED",
+   "key": "pocket_to_cocrystal_distance",
+   "value": "0.31",
+   "units": "A",
+   "subject": "1M17",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "8dfcfd9a5a10512b",
+   "call_id": "C-ee5bae0e",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "distance from the nearest detected pocket centre to the crystallographic ligand centroid (localisation check)"
+  },
+  {
+   "claim_id": "E-0014",
+   "tag": "RETRIEVED",
+   "key": "chembl_target_id",
+   "value": "CHEMBL203",
+   "units": "",
+   "subject": "P00533",
+   "tool": "chembl.target_by_accession",
+   "tool_version": "ws-2.x",
+   "source_id": "CHEMBL203",
+   "params_hash": "5964bd1072fcdd04",
+   "call_id": "C-209bdbd3",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Epidermal growth factor receptor"
+  },
+  {
+   "claim_id": "E-0015",
+   "tag": "RETRIEVED",
+   "key": "n_unique_actives",
+   "value": "271",
+   "units": "",
+   "subject": "CHEMBL203",
+   "tool": "chembl.activities",
+   "tool_version": "ws-2.x",
+   "source_id": "CHEMBL203",
+   "params_hash": "5d36519c2bbdb5ca",
+   "call_id": "C-71e7cc04",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "standard types IC50,Ki,Kd,EC50; censored records dropped: 102"
+  },
+  {
+   "claim_id": "E-0016",
+   "tag": "COMPUTED",
+   "key": "pchembl_median",
+   "value": "6.72",
+   "units": "",
+   "subject": "CHEMBL203",
+   "tool": "chembl.activities",
+   "tool_version": "ws-2.x",
+   "source_id": "",
+   "params_hash": "5d36519c2bbdb5ca",
+   "call_id": "C-71e7cc04",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "median pChEMBL across unique molecules"
+  },
+  {
+   "claim_id": "E-0017",
+   "tag": "COMPUTED",
+   "key": "pchembl_max",
+   "value": "10.6",
+   "units": "",
+   "subject": "CHEMBL203",
+   "tool": "chembl.activities",
+   "tool_version": "ws-2.x",
+   "source_id": "",
+   "params_hash": "5d36519c2bbdb5ca",
+   "call_id": "C-71e7cc04",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0018",
+   "tag": "RETRIEVED",
+   "key": "most_potent_active",
+   "value": "CHEMBL29197",
+   "units": "",
+   "subject": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+   "tool": "chembl.activities",
+   "tool_version": "ws-2.x",
+   "source_id": "CHEMBL29197",
+   "params_hash": "5d36519c2bbdb5ca",
+   "call_id": "C-71e7cc04",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "pChEMBL 10.6 (IC50)"
+  },
+  {
+   "claim_id": "E-0019",
+   "tag": "COMPUTED",
+   "key": "n_distinct_scaffolds_top60",
+   "value": "18",
+   "units": "",
+   "subject": "CHEMBL203",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "6d218decea89d61e",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Bemis-Murcko scaffolds among the 60 most potent actives"
+  },
+  {
+   "claim_id": "E-0020",
+   "tag": "COMPUTED",
+   "key": "redocking_rmsd_top1",
+   "value": "4.188",
+   "units": "A",
+   "subject": "1M17:AQ4",
+   "tool": "docking.pose_rmsd_all_models",
+   "tool_version": "vina-1.2.7+obabel",
+   "source_id": "",
+   "params_hash": "840db634b82b688c",
+   "call_id": "C-620a4cec",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "success_threshold_A": 2.0,
+    "exhaustiveness": 24
+   },
+   "note": "co-crystal ligand re-docked into the same prepared receptor at exhaustiveness 24; <=2 A is the usual convention"
+  },
+  {
+   "claim_id": "E-0021",
+   "tag": "COMPUTED",
+   "key": "redocking_rmsd_best_of_modes",
+   "value": "1.361",
+   "units": "A",
+   "subject": "1M17:AQ4",
+   "tool": "docking.pose_rmsd_all_models",
+   "tool_version": "vina-1.2.7+obabel",
+   "source_id": "",
+   "params_hash": "840db634b82b688c",
+   "call_id": "C-620a4cec",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "best_rmsd_rank": 3,
+    "n_poses": 9
+   },
+   "note": "near-native pose was sampled but not ranked first: a scoring-function failure, not a search failure"
+  },
+  {
+   "claim_id": "E-0022",
+   "tag": "COMPUTED",
+   "key": "docking_enrichment_roc_auc",
+   "value": "0.632",
+   "units": "",
+   "subject": "1M17:vina",
+   "tool": "aletheia.docking_validation",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "1M17:vina:28a/33d",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": {
+    "roc_auc": 0.632,
+    "auc_ci95": [
+     0.4794,
+     0.7695
+    ],
+    "ef_10pct": 0.726,
+    "score_gap": -0.294,
+    "n_actives": 28,
+    "n_decoys": 33,
+    "decoy_class": "measured inactive (pChEMBL <= 5)",
+    "scoring_function": "vina",
+    "usable_for_ranking": false,
+    "ordering_inverted": false,
+    "discriminates": false,
+    "source": "eval/docking_benchmark.json (scripts/bench_docking.py, measured inactives)"
+   },
+   "note": "28 actives vs 33 measured inactive (pChEMBL <= 5) docked into this receptor with the vina scoring function; 95% CI [0.4794, 0.7695]"
+  },
+  {
+   "claim_id": "E-0023",
+   "tag": "COMPUTED",
+   "key": "identity_checks_passed",
+   "value": "3",
+   "units": "",
+   "subject": "P00533",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00533",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uniprot_length_matches_sequence=True; pdb_belongs_to_accession=True; structure_sequence_matches_uniprot=True"
+  },
+  {
+   "claim_id": "E-0024",
+   "tag": "COMPUTED",
+   "key": "identity_checks_total",
+   "value": "3",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00533",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  }
+ ],
+ "tool_calls": [
+  {
+   "call_id": "C-c706de55",
+   "tool": "uniprot.search_gene",
+   "tool_version": "rest-2026",
+   "params": {
+    "gene": "OCCOC",
+    "organism_id": 9606
+   },
+   "params_hash": "ab13a883028d331f",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.001,
+   "cached": false,
+   "ok": false,
+   "error": "network disabled (offline mode) and no cached result",
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-6078ce90",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "params": {
+    "accession": "P00533"
+   },
+   "params_hash": "a08313d5b3ed5b5a",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.004,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-71b6f81e",
+   "tool": "chembl.target_by_accession",
+   "tool_version": "ws-2.x",
+   "params": {
+    "accession": "P00533"
+   },
+   "params_hash": "5964bd1072fcdd04",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-e2c33374",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "params": {
+    "sequence": "MRPSGTAGAALLALLAALCPASRALEEKKVCQGTSNKLTQLGTFEDHFLSLQRMFNNCEVVLGNLEITYVQRNYDLSFLKTIQEVAGYVLIALNTVERIPLENLQIIRGNMYYENSYALAVLSNYDANKTGLKELPMRNLQEILHGAVRFSNNPALCNVESIQWRDIVSSDFLSNMSMDFQNHLGSCQKCDPSCPNGSCW..."
+   },
+   "params_hash": "6d10467507380985",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-16079425",
+   "tool": "pdb.download",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "entry_id": "1M17"
+   },
+   "params_hash": "18665411ecb938ff",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-950bd937",
+   "tool": "pdb.ligands",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb"
+   },
+   "params_hash": "ff80a15ae3c1cb6b",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-601fc34b",
+   "tool": "pdb.entry",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "entry_id": "1M17"
+   },
+   "params_hash": "36a52f26d4e9a9ad",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-c45ac93a",
+   "tool": "pdb.chain_sequences",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb"
+   },
+   "params_hash": "78a8b49b0dc43411",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-b9336a63",
+   "tool": "pdb.extract_receptor",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb",
+    "out_path": "cache/docking/1M17_rec.pdb",
+    "chain": "A"
+   },
+   "params_hash": "b25095cbc723dab9",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.011,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-36af255e",
+   "tool": "chembl.status",
+   "tool_version": "ws-2.x",
+   "params": {},
+   "params_hash": "ee818c929d832faa",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.013,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-ee5bae0e",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb",
+    "spacing": 1.0,
+    "probe": 3.2,
+    "psp_min": 5,
+    "reference_point": "[22.014, 0.253, 52.794]"
+   },
+   "params_hash": "8dfcfd9a5a10512b",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.003,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "structure_analyst"
+  },
+  {
+   "call_id": "C-074ae93f",
+   "tool": "docking.prepare_receptor",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "pdb_path": "cache/docking/1M17_rec.pdb",
+    "out_pdbqt": "cache/docking/1M17_rec.pdbqt"
+   },
+   "params_hash": "c85d7e19dfb65e56",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.004,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-209bdbd3",
+   "tool": "chembl.target_by_accession",
+   "tool_version": "ws-2.x",
+   "params": {
+    "accession": "P00533"
+   },
+   "params_hash": "5964bd1072fcdd04",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.003,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-1338fb17",
+   "tool": "pdb.extract_ligand",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/1M17.pdb",
+    "resname": "AQ4",
+    "out_path": "cache/docking/1M17_AQ4.pdb",
+    "chain": "A"
+   },
+   "params_hash": "b0bc99f5fb09c375",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.006,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-71e7cc04",
+   "tool": "chembl.activities",
+   "tool_version": "ws-2.x",
+   "params": {
+    "target_chembl_id": "CHEMBL203",
+    "limit": 300
+   },
+   "params_hash": "5d36519c2bbdb5ca",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.004,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-cd97ddfc",
+   "tool": "docking.box_from_ligand_pdb",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "ligand_pdb": "cache/docking/1M17_AQ4.pdb",
+    "pad": 5.0
+   },
+   "params_hash": "7cfb37e7eea9a2f7",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.003,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-9e9755b2",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   "params_hash": "c44140dd49e4f3b9",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-17b61251",
+   "tool": "docking.vina_version",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {},
+   "params_hash": "2e66221b2bd382e4",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-aebbd880",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "O=C(O)/C=C/C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "2edd4cf8aeda6260",
+   "started_at": "2026-11-12T21:04:24+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-3d17a061",
+   "tool": "pdb.chemcomp",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "comp_id": "AQ4"
+   },
+   "params_hash": "4f83b12baeda551c",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-fdac45c1",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=CS(=O)(=O)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "b29b5e39b11ff09c",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-850266bf",
+   "tool": "docking.prepare_ligand",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "smiles": "COCCOc1cc2c(cc1OCCOC)ncnc2Nc3cccc(c3)C#C",
+    "out_pdbqt": "cache/docking/redock_AQ4.pdbqt",
+    "seed": 42
+   },
+   "params_hash": "4cdc54142486714d",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-fc6d9ea4",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Brc1cccc(Nc2ncnc3cc4[nH]ncc4cc23)c1"
+   },
+   "params_hash": "1b112272a8a4686e",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-2636b577",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Brc1cccc(Nc2ncnc3cc4[nH]ccc4cc23)c1"
+   },
+   "params_hash": "cbef8b0608215dda",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-38baaf04",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CCN(CC)CC(O)CNC(=O)c1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1"
+   },
+   "params_hash": "7ae90696a4af381d",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-c7731401",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Brc1cccc(Nc2ncnc3cnc(NCCc4c[nH]cn4)nc23)c1"
+   },
+   "params_hash": "1fe8fccf49399467",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-f889ba37",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=CS(=O)(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "9cc5421548e52a66",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-43d08d7b",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=CC(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "d5dfe8757b958671",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-79c62411",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "12525ef95f6485ec",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-dc92d5b9",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=CC(=O)N(C)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "7f1d6f1fbd7b8399",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-dc7c8217",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Nc1ncc2ncnc(Nc3cccc(Br)c3)c2n1"
+   },
+   "params_hash": "50bfb7221512a9fb",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-c7d60e6a",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Brc1cccc(Nc2ncnc3cnc(NCCN4CCOCC4)nc23)c1"
+   },
+   "params_hash": "080e6a132daa8338",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-b36aa950",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=CC(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "2e54abbb05f146ca",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-db91870a",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=CS(=O)(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "cc4929272a1569a2",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.0,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-3db0d3b3",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "902da95fa6b71a2a",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-27dfa6ed",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C/C=C/C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "eec8ad8ab8f72456",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-da0de7dd",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cn1ncc2cc3c(Nc4cccc(Br)c4)ncnc3cc21"
+   },
+   "params_hash": "61f40b61318e88e1",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-a0fb91aa",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1cccc(Nc2ncnc3cnc(NCCN4CCOCC4)nc23)c1"
+   },
+   "params_hash": "d89caf4f5f8ac946",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-eb0c8c3e",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Brc1cccc(Nc2ncnc3cnc(NCCCn4ccnc4)nc23)c1"
+   },
+   "params_hash": "ea45dd24640176a2",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-6492892f",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Brc1cccc(Nc2ncnc3cnc(NCCCN4CCOCC4)nc23)c1"
+   },
+   "params_hash": "e9925f03f3b5e6d9",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-74a39cbf",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1cccc(Nc2ncnc3cnc(NCCc4c[nH]cn4)nc23)c1"
+   },
+   "params_hash": "614056e477fd0c76",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-0734f12f",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "O=C(/C=C/Cl)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "ec4315327943b4b4",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-d09512ac",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "COc1ncc2ncnc(Nc3cccc(Br)c3)c2n1"
+   },
+   "params_hash": "8930c98ec1943243",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-82617fc6",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1cccc(Nc2ncnc3cnc(N(C)C)nc23)c1"
+   },
+   "params_hash": "64d190a3185eddbd",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-f7b0705c",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cn1ccc2cc3c(Nc4cccc(Br)c4)ncnc3cc21"
+   },
+   "params_hash": "a08b65fe2922c7f9",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-9d488ab5",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CNc1ncc2ncnc(Nc3cccc(C)c3)c2n1"
+   },
+   "params_hash": "0cc02ef31eec96d0",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-a326c116",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "COc1ccc2ncnc(Nc3cccc(Br)c3)c2n1"
+   },
+   "params_hash": "45bf3b9412931f2a",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-4e4dcd21",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=C(C)C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "e2bf42d63c7b0326",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-84bd7ae7",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CN(C)c1ncc2ncnc(Nc3cccc(Br)c3)c2n1"
+   },
+   "params_hash": "82b9295c2eb2c5c1",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.0,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-2345f69d",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1cc(CCC(=O)O)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc(F)c(Cl)c3)c21"
+   },
+   "params_hash": "8e540bfcb0be19ed",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-faf054bb",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CNc1ncc2ncnc(Nc3cccc(Br)c3)c2n1"
+   },
+   "params_hash": "5bbf75d582a3281f",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-83f22b7c",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CN(C)Cc1c[nH]c2cc3ncnc(Nc4cccc(Br)c4)c3cc12"
+   },
+   "params_hash": "17bd16004e8824c0",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-22d97684",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=C/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "7fe816c26dd084c6",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-c989ce0e",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "COC(=O)CN(C)Cc1c[nH]c2cc3ncnc(Nc4cccc(Br)c4)c3cc12"
+   },
+   "params_hash": "c9a43e6405123ac3",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-5a79d5ae",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "b5764a2bac647731",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-0f22607e",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Brc1cccc(Nc2ncnc3cc4[nH]cc(CN5CCOCC5)c4cc23)c1"
+   },
+   "params_hash": "56bb0104e44cf708",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-9e899f8f",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=CC(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cc1OCCCN1CCOCC1.Cl.Cl"
+   },
+   "params_hash": "4b2973a21d47e0af",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-b1b672b6",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Brc1cccc(Nc2ncnc3cc4c(ccn4CCN4CCOCC4)cc23)c1"
+   },
+   "params_hash": "f5d174b848bcd279",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-db0af5e0",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "O=C(/C=C/C(F)(F)F)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "d8d8739e3bbf842b",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-a7175f03",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CNc1ccc2ncnc(Nc3cccc(Br)c3)c2n1"
+   },
+   "params_hash": "e140834716a32151",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-e6a16a75",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=C(C)C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "01281e0eaa6ceb33",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-f9a391f9",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "O=C(/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1)NCCCN1CCOCC1"
+   },
+   "params_hash": "c4aacb7a91cde339",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-a27d1831",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CCOC(=O)/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "12f8fc29862a66af",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-29a1ac1a",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "OCC(O)Cn1ccc2cc3c(Nc4cccc(Br)c4)ncnc3cc21"
+   },
+   "params_hash": "6cb9b8238321aa9c",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-02871937",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CS(=O)(=O)CCNCc1ccc(-c2ccc3ncnc(Nc4ccc(OCc5cccc(F)c5)c(Cl)c4)c3c2)o1"
+   },
+   "params_hash": "143c63715b86bb9d",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-d894c78c",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "31ada2bd1550f3a6",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.003,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-5a39098d",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CNc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "56f770ca97707181",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-27839e3b",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CN(C)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "62a2102c45230097",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-ae1aab38",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CNc1ncc2ncnc(Nc3ccccc3)c2n1"
+   },
+   "params_hash": "d10908f4c1f5d1f7",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-27492f89",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CCOC(=O)/C=C/C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "288ce95a520296a1",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-fa0b6443",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1cc(C(=O)N2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc4c(cnn4Cc4ccccc4)c3)c21"
+   },
+   "params_hash": "b74527753ec9246e",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-21cfb761",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C=C=CC(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1"
+   },
+   "params_hash": "9b1d40720c4fecd1",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.003,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-b5d85134",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Nc3cccc(Cl)c3)c2c1"
+   },
+   "params_hash": "8c118e5a0861be72",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-0bf4b8df",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "O=C(/C=C/C(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cn1)NCCCN1CCOCC1"
+   },
+   "params_hash": "1e7554ae3430f2c7",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-1064c49b",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "O=C(/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1)NCCCn1ccnc1"
+   },
+   "params_hash": "4a2ddc9056a6a011",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-8ac48272",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CNc1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "731cf2f7f4ac5a29",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-b9805f0d",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CN(C)CCCNC(=O)/C=C/C(=O)N(C)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+   },
+   "params_hash": "9ee438ff7ed9142d",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-d9bc1fef",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "Cc1cccc(Nc2ncnc3cnc(N)nc23)c1"
+   },
+   "params_hash": "41a1ff13dffbef8c",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-9d782cef",
+   "tool": "rdkit.scaffold",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "CN(C)c1ccc2ncnc(Nc3cccc(Br)c3)c2n1"
+   },
+   "params_hash": "6d218decea89d61e",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-89d30353",
+   "tool": "docking.vina_dock",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "scoring": "vina",
+    "receptor_pdbqt": "cache/docking/1M17_rec.pdbqt",
+    "ligand_pdbqt": "cache/docking/redock_AQ4.pdbqt",
+    "center": "[22.014, 0.253, 52.794]",
+    "size": "[25.71, 18.0, 18.0]",
+    "out_pdbqt": "cache/docking/redock_AQ4_out.pdbqt",
+    "exhaustiveness": 24,
+    "num_modes": 9,
+    "seed": 42
+   },
+   "params_hash": "f41f764929495c70",
+   "started_at": "2026-11-12T21:04:25+00:00",
+   "duration_s": 140.37,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-620a4cec",
+   "tool": "docking.pose_rmsd_all_models",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "reference_pdb": "cache/docking/1M17_AQ4.pdb",
+    "pose_pdbqt": "cache/docking/redock_AQ4_out.pdbqt"
+   },
+   "params_hash": "840db634b82b688c",
+   "started_at": "2026-11-12T21:06:45+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  }
+ ],
+ "agent_results": [
+  {
+   "agent": "target_analyst",
+   "step_id": "S1",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.55,
+   "error": null,
+   "messages": [
+    "EGFR: Epidermal growth factor receptor",
+    "identity checks passed: 3/3"
+   ]
+  },
+  {
+   "agent": "chemistry_retriever",
+   "step_id": "S2",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.255,
+   "error": null,
+   "messages": [
+    "271 unique actives for CHEMBL203"
+   ]
+  },
+  {
+   "agent": "docking_agent",
+   "step_id": "S3",
+   "ok": false,
+   "degraded": false,
+   "duration_s": 140.438,
+   "error": "no molecules to dock",
+   "messages": []
+  },
+  {
+   "agent": "structure_analyst",
+   "step_id": "S4",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.02,
+   "error": null,
+   "messages": [
+    "4 buried cavities detected"
+   ]
+  },
+  {
+   "agent": "ranker",
+   "step_id": "S5",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.0,
+   "error": "dependency ['S3'] failed",
+   "messages": []
+  },
+  {
+   "agent": "critic",
+   "step_id": "S6",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.0,
+   "error": "dependency ['S3', 'S5'] failed",
+   "messages": []
+  }
+ ],
+ "source": "mixed",
+ "blocked": false,
+ "withheld_blocks": [],
+ "degraded": [
+  "UniProt gene search failed for OCCOC: network disabled (offline mode) and no cached result",
+  "on 1M17 the vina setup does not separate actives from measured inactives (ROC AUC 0.632, 95% CI [0.4794, 0.7695]); the scores below are geometry-driven numbers and must not be read as a potency ranking, and ranking on this oracle is disabled",
+  "step S5 (ranker) not executed: dependency ['S3'] failed",
+  "step S6 (critic) not executed: dependency ['S3', 'S5'] failed"
+ ],
+ "started_at": "2026-11-12T21:04:24+00:00",
+ "duration_s": 141.01,
+ "cost": {
+  "llm_calls": 3,
+  "llm_backend": "replay/rules (offline)",
+  "tool_calls": 81,
+  "cached_tool_calls": 79
+ }
+}

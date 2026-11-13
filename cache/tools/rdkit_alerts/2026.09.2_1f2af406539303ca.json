@@ -1,0 +1,34 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "[P-]C(Br)C=CC=CNC1COC=CC=NC=N1"
+ },
+ "params_hash": "1f2af406539303ca",
+ "cached_at": "2026-11-11T18:38:14+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "alkyl_halide",
+    "phosphor",
+    "polyene"
+   ],
+   "NIH": [
+    "secondary_halide_sulfate"
+   ]
+  },
+  "n_alerts": 4,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

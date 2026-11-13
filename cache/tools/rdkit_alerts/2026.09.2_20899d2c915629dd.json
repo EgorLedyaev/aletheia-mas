@@ -1,0 +1,36 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "[B+]C1=CCC(F)=C(OCCOC)C=CN=CN=CNC([SH]=C)C1=CC=CC#C"
+ },
+ "params_hash": "20899d2c915629dd",
+ "cached_at": "2026-11-11T22:40:22+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "Thiocarbonyl_group",
+    "heavy_metal",
+    "thiol_2",
+    "triple_bond"
+   ],
+   "NIH": [
+    "boron_warhead"
+   ]
+  },
+  "n_alerts": 6,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

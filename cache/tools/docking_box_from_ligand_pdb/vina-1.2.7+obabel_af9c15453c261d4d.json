@@ -1,0 +1,25 @@
+{
+ "tool": "docking.box_from_ligand_pdb",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "ligand_pdb": "cache/docking/diag_lig.pdb",
+  "pad": 5.0
+ },
+ "params_hash": "af9c15453c261d4d",
+ "cached_at": "2026-11-12T20:49:53+00:00",
+ "data": {
+  "center": [
+   22.014,
+   0.253,
+   52.794
+  ],
+  "size": [
+   25.71,
+   18.0,
+   18.0
+  ],
+  "pad": 5.0,
+  "n_points": 29,
+  "source": "diag_lig.pdb"
+ }
+}

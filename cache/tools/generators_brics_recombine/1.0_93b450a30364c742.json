@@ -1,0 +1,345 @@
+{
+ "tool": "generators.brics_recombine",
+ "version": "1.0",
+ "params": {
+  "smiles_list": [
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+   "O=C(O)/C=C/C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "C=CS(=O)(=O)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "Brc1cccc(Nc2ncnc3cc4[nH]ncc4cc23)c1",
+   "Brc1cccc(Nc2ncnc3cc4[nH]ccc4cc23)c1",
+   "CCN(CC)CC(O)CNC(=O)c1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1",
+   "Brc1cccc(Nc2ncnc3cnc(NCCc4c[nH]cn4)nc23)c1",
+   "C=CS(=O)(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "C=CC(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "C=CC(=O)N(C)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "Nc1ncc2ncnc(Nc3cccc(Br)c3)c2n1",
+   "Brc1cccc(Nc2ncnc3cnc(NCCN4CCOCC4)nc23)c1",
+   "C=CC(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "C=CS(=O)(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "C/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "C/C=C/C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "Cn1ncc2cc3c(Nc4cccc(Br)c4)ncnc3cc21",
+   "Cc1cccc(Nc2ncnc3cnc(NCCN4CCOCC4)nc23)c1",
+   "Brc1cccc(Nc2ncnc3cnc(NCCCn4ccnc4)nc23)c1",
+   "Brc1cccc(Nc2ncnc3cnc(NCCCN4CCOCC4)nc23)c1",
+   "Cc1cccc(Nc2ncnc3cnc(NCCc4c[nH]cn4)nc23)c1",
+   "O=C(/C=C/Cl)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "COc1ncc2ncnc(Nc3cccc(Br)c3)c2n1",
+   "Cc1cccc(Nc2ncnc3cnc(N(C)C)nc23)c1",
+   "Cn1ccc2cc3c(Nc4cccc(Br)c4)ncnc3cc21",
+   "CNc1ncc2ncnc(Nc3cccc(C)c3)c2n1",
+   "COc1ccc2ncnc(Nc3cccc(Br)c3)c2n1",
+   "C=C(C)C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "CN(C)c1ncc2ncnc(Nc3cccc(Br)c3)c2n1",
+   "Cc1cc(CCC(=O)O)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc(F)c(Cl)c3)c21",
+   "CNc1ncc2ncnc(Nc3cccc(Br)c3)c2n1",
+   "CN(C)Cc1c[nH]c2cc3ncnc(Nc4cccc(Br)c4)c3cc12",
+   "C=C/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "COC(=O)CN(C)Cc1c[nH]c2cc3ncnc(Nc4cccc(Br)c4)c3cc12",
+   "Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "Brc1cccc(Nc2ncnc3cc4[nH]cc(CN5CCOCC5)c4cc23)c1",
+   "C=CC(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cc1OCCCN1CCOCC1.Cl.Cl",
+   "Brc1cccc(Nc2ncnc3cc4c(ccn4CCN4CCOCC4)cc23)c1",
+   "O=C(/C=C/C(F)(F)F)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "CNc1ccc2ncnc(Nc3cccc(Br)c3)c2n1",
+   "C=C(C)C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "O=C(/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1)NCCCN1CCOCC1",
+   "CCOC(=O)/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "OCC(O)Cn1ccc2cc3c(Nc4cccc(Br)c4)ncnc3cc21",
+   "CS(=O)(=O)CCNCc1ccc(-c2ccc3ncnc(Nc4ccc(OCc5cccc(F)c5)c(Cl)c4)c3c2)o1",
+   "CN(C)/N=N/c1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "CNc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "CN(C)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "CNc1ncc2ncnc(Nc3ccccc3)c2n1",
+   "CCOC(=O)/C=C/C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "Cc1cc(C(=O)N2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc4c(cnn4Cc4ccccc4)c3)c21",
+   "C=C=CC(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Nc3cccc(Cl)c3)c2c1",
+   "O=C(/C=C/C(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cn1)NCCCN1CCOCC1",
+   "O=C(/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1)NCCCn1ccnc1",
+   "CNc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "CN(C)CCCNC(=O)/C=C/C(=O)N(C)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "Cc1cccc(Nc2ncnc3cnc(N)nc23)c1",
+   "CN(C)c1ccc2ncnc(Nc3cccc(Br)c3)c2n1",
+   "CO[C@H]1[C@@H]([N+](C)(C)C)C[C@@H]2O[C@@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4",
+   "Nc1ccc2ncnc(Nc3cccc(Br)c3)c2n1",
+   "C=CC(=O)N(CCCN1CCOCC1)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "CN(CC(=O)O)Cc1c[nH]c2cc3ncnc(Nc4cccc(Br)c4)c3cc12",
+   "CCN(CC)CCCNC(=O)/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "Cc1cc(C(=O)N2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc4c(ccn4Cc4ccccc4)c3)c21",
+   "OCCN(CCO)Cc1c[nH]c2cc3ncnc(Nc4cccc(Br)c4)c3cc12",
+   "O=C1Nc2ncnc(Nc3ccc(F)c(Cl)c3)c2/C1=C/c1ccc(C(=O)NCCN2CCOCC2)[nH]1",
+   "C#Cc1cccc(Nc2ncnc3ccc(OCCCCNCCS(C)(=O)=O)cc23)c1",
+   "COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCN1CCOCC1",
+   "Cc1cccc(Nc2ncnc3ccc(/N=N/N(C)C)cc23)c1",
+   "CN(C)CCN(C)Cc1c[nH]c2cc3ncnc(Nc4cccc(Br)c4)c3cc12",
+   "Brc1cccc(Nc2ncnc3ccc(N/N=N/Cc4ccccc4)cc23)c1",
+   "C=CC(=O)N(CCCN1CCOCC1)c1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "Brc1cccc(Nc2ncnc3cc4c(cnn4CCCN4CCOCC4)cc23)c1",
+   "O=C(/C=C/c1ccccc1)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "Brc1cccc(Nc2ncnc3cc4c(cnn4CCN4CCOCC4)cc23)c1",
+   "Brc1cccc(Nc2ncnc3ccccc23)c1",
+   "CS(=O)(=O)CCNCCCCOc1ccc2ncnc(Nc3ccc(OCc4cccc(F)c4)c(Cl)c3)c2c1",
+   "CS(=O)(=O)CCNc1nc(-c2ccc3ncnc(Nc4ccc(OCc5cccc(F)c5)c(Cl)c4)c3c2)cs1"
+  ],
+  "n": 40,
+  "seed": 20261111
+ },
+ "params_hash": "93b450a30364c742",
+ "cached_at": "2026-11-11T18:27:14+00:00",
+ "data": {
+  "generator": "G2_brics_recombine",
+  "n_generated": 40,
+  "molecules": [
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3cccc(Cl)c3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3cccc(Br)c3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "Cc1cccc(-c2ncnc3ccc(/N=N/N(C)C)cc23)c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "C#Cc1cccc(-c2ncnc3ccc(/N=N/N(C)C)cc23)c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3cccc(F)c3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ccc(F)c(Cl)c3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ccccc3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-n3ccnc3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5c(cnn5C)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3c[nH]cn3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cnc(N)nc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5[nH]ccc5cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5c(ccn5C)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(/N=N/N(C)C)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(N)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cnc(N)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(N)nc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccccc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "C=CS(=O)(=O)c1cc2c(-c3ncnc4ccc(/N=N/N(C)C)cc34)ncnc2cn1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "COc1ncnc2ccc(/N=N/N(C)C)cc12",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(CCC(=O)O)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(CC(O)CO)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(N(C)C)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(N3CCOCC3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc([N+](C)(C)C)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CNc1ncnc2ccc(/N=N/N(C)C)cc12",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5c(cnn5C)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3c[nH]cn3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)nc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5[nH]ccc5cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5c(ccn5C)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(/N=N/N(C)C)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(N)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(N)nc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccccc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "C=CS(=O)(=O)c1cc2c(Oc3ncnc4ccc(/N=N/N(C)C)cc34)ncnc2cn1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5[nH]ncc5cc34)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3cccc(Cl)c3)c2c1",
+    "transform": "BRICS recombination",
+    "generator": "G2_brics_recombine",
+    "parent": null
+   }
+  ],
+  "n_fragments": 74,
+  "n_inputs": 80,
+  "seed": 20261111,
+  "params": {
+   "min_heavy": 14,
+   "max_heavy": 45
+  }
+ }
+}

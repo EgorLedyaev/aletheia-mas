@@ -1,0 +1,11 @@
+name: aletheia
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - rdkit
+  - openbabel          # provides `obabel`, used to build PDBQT inputs for AutoDock Vina
+  - pip
+  - pip:
+      - -e .

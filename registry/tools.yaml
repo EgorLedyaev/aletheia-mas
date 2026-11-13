@@ -1,0 +1,128 @@
+generated_at: '2026-11-11T17:25:55+00:00'
+entries:
+- name: python
+  kind: runtime
+  version: 3.11.18
+  platform: Windows-10-10.0.26200-SP0
+  license: PSF-2.0
+  license_source: https://docs.python.org/3/license.html
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: rdkit
+  kind: python-library
+  version: 2026.09.2
+  license: BSD-3-Clause
+  license_source: https://github.com/rdkit/rdkit/blob/master/license.txt
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: sklearn
+  kind: python-library
+  version: 1.9.1
+  license: BSD-3-Clause
+  license_source: https://github.com/scikit-learn/scikit-learn/blob/main/COPYING
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: pydantic
+  kind: python-library
+  version: 2.14.3
+  license: MIT
+  license_source: https://github.com/pydantic/pydantic/blob/main/LICENSE
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: numpy
+  kind: python-library
+  version: 2.4.6
+  license: BSD-3-Clause
+  license_source: https://numpy.org/doc/stable/license.html
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: pandas
+  kind: python-library
+  version: 3.1.1
+  license: BSD-3-Clause
+  license_source: https://github.com/pandas-dev/pandas/blob/main/LICENSE
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: scipy
+  kind: python-library
+  version: 1.17.1
+  license: BSD-3-Clause
+  license_source: https://github.com/scipy/scipy/blob/main/LICENSE.txt
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: matplotlib
+  kind: python-library
+  version: 3.11.2
+  license: matplotlib (PSF-based)
+  license_source: https://matplotlib.org/stable/project/license.html
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: Bio
+  kind: python-library
+  version: '1.88'
+  license: Biopython License / BSD-3-Clause
+  license_source: https://github.com/biopython/biopython/blob/master/LICENSE.rst
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: AutoDock Vina
+  kind: binary
+  version: AutoDock Vina v1.2.7
+  path: tools\vina\vina_1.2.7_win.exe
+  sha256: e0c4b2715e0c1a74f6e92d0f3be0328ac97542eafbc111e6b1efad897a73cce5
+  license: Apache-2.0
+  license_source: https://github.com/ccsb-scripps/AutoDock-Vina/blob/develop/LICENSE
+  source_url: https://github.com/ccsb-scripps/AutoDock-Vina/releases/tag/v1.2.7
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: Open Babel
+  kind: binary
+  version: Open Babel 3.2.1 -- Aug 19 2026 -- 17:09:31
+  license: GPL-2.0
+  license_source: https://github.com/openbabel/openbabel/blob/master/COPYING
+  status: VERIFIED
+  verified_at: '2026-11-11T17:25:55+00:00'
+- name: ChEMBL
+  kind: database-api
+  endpoint: https://www.ebi.ac.uk/chembl/api/data/status.json
+  license: CC BY-SA 3.0
+  license_source: https://chembl.gitbook.io/chembl-interface-documentation/about
+  verified_at: '2026-11-11T17:25:55+00:00'
+  http_status: 200
+  status: VERIFIED
+  response_sha256_prefix: 29dc1fb09487a8d2
+- name: PubChem PUG-REST
+  kind: database-api
+  endpoint: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2244/property/MolecularFormula/JSON
+  license: Public domain (NCBI); depositor terms vary
+  license_source: https://www.ncbi.nlm.nih.gov/home/about/policies/
+  verified_at: '2026-11-11T17:25:55+00:00'
+  http_status: 200
+  status: VERIFIED
+  response_sha256_prefix: 11581258d350dd50
+- name: UniProtKB REST
+  kind: database-api
+  endpoint: https://rest.uniprot.org/uniprotkb/P00533.json
+  license: CC BY 4.0
+  license_source: https://www.uniprot.org/help/license
+  verified_at: '2026-11-11T17:25:55+00:00'
+  http_status: 200
+  status: VERIFIED
+  response_sha256_prefix: bb58ecfb1e472799
+- name: RCSB PDB Data API
+  kind: database-api
+  endpoint: https://data.rcsb.org/rest/v1/core/entry/1M17
+  license: CC0 1.0 (PDB core data)
+  license_source: https://www.rcsb.org/pages/usage-policy
+  verified_at: '2026-11-11T17:25:55+00:00'
+  http_status: 200
+  status: VERIFIED
+  response_sha256_prefix: bebc0ee33bac48ca
+- name: AlphaFold DB
+  kind: database-api
+  endpoint: https://alphafold.ebi.ac.uk/api/prediction/P00533
+  license: CC BY 4.0
+  license_source: https://alphafold.ebi.ac.uk/faq
+  verified_at: '2026-11-11T17:25:55+00:00'
+  http_status: 200
+  status: VERIFIED
+  response_sha256_prefix: 74eda8d5bbbebe52

@@ -1,0 +1,53 @@
+{
+ "tool": "rdkit.validate_batch",
+ "version": "2026.09.2",
+ "params": {
+  "smiles_list": [
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+   "C#CC1=CC=CC2=CCCOCCN1CCOc1cc3c(ncnc3cc1OCCOC)N2",
+   "C#Cc1cccc(Nc2ncnc3cc(OC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCCN4CCOCC4)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1"
+  ]
+ },
+ "params_hash": "38e1442e4d445a57",
+ "cached_at": "2026-11-11T22:40:17+00:00",
+ "data": {
+  "n_input": 10,
+  "n_valid": 10,
+  "n_invalid": 0,
+  "validity": 1.0,
+  "n_unique": 10,
+  "uniqueness": 1.0,
+  "invalid_examples": [],
+  "canonical": [
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+   "C#CC1=CC=CC2=CCCOCCN1CCOc1cc3c(ncnc3cc1OCCOC)N2",
+   "C#Cc1cccc(Nc2ncnc3cc(OC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCCN4CCOCC4)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1"
+  ],
+  "unique_smiles": [
+   "C#CC1=CC=CC2=CCCOCCN1CCOc1cc3c(ncnc3cc1OCCOC)N2",
+   "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+   "C#Cc1cccc(Nc2ncnc3cc(OC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCCN4CCOCC4)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCCOC)c(OCCOC)cc23)c1"
+  ]
+ }
+}

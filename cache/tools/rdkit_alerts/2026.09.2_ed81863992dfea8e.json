@@ -1,0 +1,32 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC=Cc1nc2c(cc1OC)=[S-]c1c(Br)cccc1NC(N)N=2"
+ },
+ "params_hash": "ed81863992dfea8e",
+ "cached_at": "2026-11-11T18:38:14+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Thiocarbonyl_group",
+    "acyclic_C=C-O",
+    "thiol_1"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 3,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

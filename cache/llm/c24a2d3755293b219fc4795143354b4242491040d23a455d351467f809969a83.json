@@ -1,0 +1,38 @@
+{
+ "key": "c24a2d3755293b219fc4795143354b4242491040d23a455d351467f809969a83",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Request: Which PDB entry holds the EGFR kinase domain with erlotinib bound, and what is the chemical component id of that ligand?\n\nTool results:\npubchem.compound_by_name({'name': 'erlotinib', 'human_description': 'Resolving erlotinib compound structure'}) -> ERROR TypeError: compound_by_name() got an unexpected keyword argument 'human_description'\npubchem.compound_by_name({'name': 'erlotinib'}) -> {\"query\": \"erlotinib\", \"cid\": 176870, \"smiles\": \"COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC\", \"iupac_name\": \"N-(3-ethynylphenyl)-6,7-bis(2-methoxyethoxy)quinazolin-4-amine\", \"formula\": \"C22H23N3O4\", \"pubchem_properties\": {\"MolecularWeight\": \"393.4\", \"XLogP\": 3.3, \"TPSA\": 74.7, \"HBondDonorCount\": 1, \"HBondAcceptorCount\": 7}, \"retrieved_at\": \"2026-11-11T22:39:30+00:00\", \"source_url\": \"https://pubchem.ncbi.nlm.nih.gov/compound/176870\"}\npdb.search_by_ligand_smiles({'smiles': 'COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC', 'rows': 5}) -> {\"smiles\": \"COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC\", \"match_type\": \"graph-relaxed\", \"component_ids\": [\"AQ4\", \"A1A2V\"], \"entry_ids\": [\"1M17\", \"4HJO\", \"6DWN\", \"9D5P\", \"9D5G\"], \"n_entries\": 5, \"source_url\": \"https://search.rcsb.org/\", \"retrieved_at\": \"2026-11-12T16:54:13+00:00\"}\npdb.entry({'entry_id': '1M17', 'human_description': 'Fetching 1M17 entry metadata'}) -> ERROR TypeError: entry() got an unexpected keyword argument 'human_description'\npdb.entry({'entry_id': '1M17'}) -> {\"pdb_id\": \"1M17\", \"title\": \"Epidermal Growth Factor Receptor tyrosine kinase domain with 4-anilinoquinazoline inhibitor erlotinib\", \"method\": [\"X-RAY DIFFRACTION\"], \"resolution_A\": 2.6, \"deposited\": \"2002-06-17T00:00:00.000+00:00\", \"released\": \"2002-09-04T00:00:00.000+00:00\", \"polymer_entities\": 1, \"nonpolymer_entities\": 1, \"ligand_ids\": [], \"retrieved_at\": \"2026-11-11T22:28:15+00:00\", \"source_url\": \"https://www.rcsb.org/structure/1M17\"}\npdb.chemcomp({'comp_id': 'AQ4'}) -> {\"comp_id\": \"AQ4\", \"name\": \"[6,7-BIS(2-METHOXY-ETHOXY)QUINAZOLINE-4-YL]-(3-ETHYNYLPHENYL)AMINE\", \"formula\": \"C22 H23 N3 O4\", \"formula_weight\": 393.436, \"smiles\": \"COCCOc1cc2c(cc1OCCOC)ncnc2Nc3cccc(c3)C#C\", \"type\": \"non-polymer\", \"retrieved_at\": \"2026-11-11T22:28:16+00:00\", \"source_url\": \"https://www.rcsb.org/ligand/AQ4\"}\n\nWrite the final answer."
+   }
+  ],
+  "system": null,
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1000,
+  "model": null,
+  "purpose": "baseline_single_agent_ledger_final"
+ },
+ "response": {
+  "text": "**PDB entry 1M17** \u2014 \"Epidermal Growth Factor Receptor tyrosine kinase domain with 4-anilinoquinazoline inhibitor erlotinib\" (X-ray diffraction, 2.6 \u00c5 resolution) \u2014 contains the EGFR kinase domain bound to erlotinib.\n\nThe chemical component ID for erlotinib in this entry is **AQ4**, defined as [6,7-bis(2-methoxyethoxy)quinazolin-4-yl]-(3-ethynylphenyl)amine (C22H23N3O4, MW 393.4), matching erlotinib's structure (PubChem CID 176870).",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1301,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 219,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

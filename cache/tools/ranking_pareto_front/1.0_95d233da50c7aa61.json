@@ -1,0 +1,991 @@
+{
+ "tool": "ranking.pareto_front",
+ "version": "1.0",
+ "params": {
+  "rows": [
+   {
+    "cand_id": "C001",
+    "qsar_pchembl": 7.622,
+    "QED": 0.7308,
+    "SAscore": 2.495,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C002",
+    "qsar_pchembl": 6.584,
+    "QED": 0.7308,
+    "SAscore": 2.317,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C003",
+    "qsar_pchembl": 6.683,
+    "QED": 0.7308,
+    "SAscore": 2.264,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C004",
+    "qsar_pchembl": 7.888,
+    "QED": 0.675,
+    "SAscore": 2.239,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C005",
+    "qsar_pchembl": 7.888,
+    "QED": 0.675,
+    "SAscore": 2.239,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C006",
+    "qsar_pchembl": 7.644,
+    "QED": 0.7203,
+    "SAscore": 2.334,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C007",
+    "qsar_pchembl": 6.537,
+    "QED": 0.7203,
+    "SAscore": 2.311,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C008",
+    "qsar_pchembl": 6.587,
+    "QED": 0.6738,
+    "SAscore": 2.164,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C009",
+    "qsar_pchembl": 7.636,
+    "QED": 0.7059,
+    "SAscore": 2.246,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C010",
+    "qsar_pchembl": 6.57,
+    "QED": 0.7059,
+    "SAscore": 2.19,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C011",
+    "qsar_pchembl": 6.692,
+    "QED": 0.7059,
+    "SAscore": 2.072,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C012",
+    "qsar_pchembl": 7.455,
+    "QED": 0.5114,
+    "SAscore": 2.514,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C013",
+    "qsar_pchembl": 6.512,
+    "QED": 0.5114,
+    "SAscore": 2.429,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C014",
+    "qsar_pchembl": 6.657,
+    "QED": 0.5114,
+    "SAscore": 2.361,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C015",
+    "qsar_pchembl": 7.764,
+    "QED": 0.7341,
+    "SAscore": 2.354,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C016",
+    "qsar_pchembl": 6.608,
+    "QED": 0.6867,
+    "SAscore": 2.251,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C017",
+    "qsar_pchembl": 6.826,
+    "QED": 0.7341,
+    "SAscore": 2.107,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C018",
+    "qsar_pchembl": 7.767,
+    "QED": 0.7308,
+    "SAscore": 2.279,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C019",
+    "qsar_pchembl": 6.631,
+    "QED": 0.7308,
+    "SAscore": 2.085,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C020",
+    "qsar_pchembl": 6.767,
+    "QED": 0.7308,
+    "SAscore": 2.06,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C021",
+    "qsar_pchembl": 7.677,
+    "QED": 0.6882,
+    "SAscore": 2.33,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C022",
+    "qsar_pchembl": 6.566,
+    "QED": 0.6438,
+    "SAscore": 2.12,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C023",
+    "qsar_pchembl": 6.753,
+    "QED": 0.6882,
+    "SAscore": 2.091,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C024",
+    "qsar_pchembl": 7.872,
+    "QED": 0.6281,
+    "SAscore": 2.54,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C025",
+    "qsar_pchembl": 6.675,
+    "QED": 0.5875,
+    "SAscore": 2.421,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C026",
+    "qsar_pchembl": 6.563,
+    "QED": 0.6281,
+    "SAscore": 2.313,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C027",
+    "qsar_pchembl": 7.874,
+    "QED": 0.7105,
+    "SAscore": 2.05,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C028",
+    "qsar_pchembl": 7.874,
+    "QED": 0.7105,
+    "SAscore": 2.05,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C029",
+    "qsar_pchembl": 7.46,
+    "QED": 0.6787,
+    "SAscore": 2.395,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C030",
+    "qsar_pchembl": 6.355,
+    "QED": 0.6787,
+    "SAscore": 2.275,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C031",
+    "qsar_pchembl": 6.287,
+    "QED": 0.6787,
+    "SAscore": 2.194,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C032",
+    "qsar_pchembl": 7.69,
+    "QED": 0.6216,
+    "SAscore": 2.566,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C033",
+    "qsar_pchembl": 6.614,
+    "QED": 0.6216,
+    "SAscore": 2.284,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C034",
+    "qsar_pchembl": 6.796,
+    "QED": 0.6216,
+    "SAscore": 2.295,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C035",
+    "qsar_pchembl": 7.489,
+    "QED": 0.6224,
+    "SAscore": 2.505,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C036",
+    "qsar_pchembl": 6.545,
+    "QED": 0.6224,
+    "SAscore": 2.269,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C037",
+    "qsar_pchembl": 6.682,
+    "QED": 0.6224,
+    "SAscore": 2.314,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C039",
+    "qsar_pchembl": 5.417,
+    "QED": 0.7676,
+    "SAscore": 5.444,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C040",
+    "qsar_pchembl": 6.686,
+    "QED": 0.7296,
+    "SAscore": 2.023,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C043",
+    "qsar_pchembl": 5.353,
+    "QED": 0.6643,
+    "SAscore": 3.058,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C046",
+    "qsar_pchembl": 7.882,
+    "QED": 0.6814,
+    "SAscore": 3.068,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C048",
+    "qsar_pchembl": 5.242,
+    "QED": 0.729,
+    "SAscore": 5.58,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C051",
+    "qsar_pchembl": 7.797,
+    "QED": 0.8977,
+    "SAscore": 3.224,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C053",
+    "qsar_pchembl": 7.781,
+    "QED": 0.7541,
+    "SAscore": 2.117,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C055",
+    "qsar_pchembl": 5.166,
+    "QED": 0.7748,
+    "SAscore": 4.688,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C058",
+    "qsar_pchembl": 5.426,
+    "QED": 0.7323,
+    "SAscore": 5.618,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C059",
+    "qsar_pchembl": 8.013,
+    "QED": 0.7666,
+    "SAscore": 2.345,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C061",
+    "qsar_pchembl": 8.11,
+    "QED": 0.7624,
+    "SAscore": 2.054,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C063",
+    "qsar_pchembl": 7.805,
+    "QED": 0.9433,
+    "SAscore": 2.661,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C064",
+    "qsar_pchembl": 5.101,
+    "QED": 0.5805,
+    "SAscore": 5.956,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C065",
+    "qsar_pchembl": 5.136,
+    "QED": 0.7558,
+    "SAscore": 4.829,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C068",
+    "qsar_pchembl": 7.824,
+    "QED": 0.6844,
+    "SAscore": 2.574,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C069",
+    "qsar_pchembl": 7.854,
+    "QED": 0.8562,
+    "SAscore": 3.155,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C071",
+    "qsar_pchembl": 5.146,
+    "QED": 0.7965,
+    "SAscore": 5.767,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C072",
+    "qsar_pchembl": 5.635,
+    "QED": 0.812,
+    "SAscore": 4.364,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C075",
+    "qsar_pchembl": 7.676,
+    "QED": 0.6011,
+    "SAscore": 3.484,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C076",
+    "qsar_pchembl": 6.619,
+    "QED": 0.6798,
+    "SAscore": 3.089,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C078",
+    "qsar_pchembl": 7.824,
+    "QED": 0.7984,
+    "SAscore": 1.944,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C079",
+    "qsar_pchembl": 7.734,
+    "QED": 0.787,
+    "SAscore": 1.935,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C080",
+    "qsar_pchembl": 7.58,
+    "QED": 0.7966,
+    "SAscore": 2.084,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C081",
+    "qsar_pchembl": 7.26,
+    "QED": 0.7575,
+    "SAscore": 1.936,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C082",
+    "qsar_pchembl": 7.502,
+    "QED": 0.5967,
+    "SAscore": 2.154,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C083",
+    "qsar_pchembl": 7.471,
+    "QED": 0.6253,
+    "SAscore": 2.218,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C084",
+    "qsar_pchembl": 8.048,
+    "QED": 0.7674,
+    "SAscore": 2.092,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C085",
+    "qsar_pchembl": 7.792,
+    "QED": 0.7079,
+    "SAscore": 2.165,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C086",
+    "qsar_pchembl": 7.767,
+    "QED": 0.6483,
+    "SAscore": 2.289,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C087",
+    "qsar_pchembl": 5.227,
+    "QED": 0.7261,
+    "SAscore": 2.565,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C088",
+    "qsar_pchembl": 5.382,
+    "QED": 0.6196,
+    "SAscore": 3.219,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C089",
+    "qsar_pchembl": 5.21,
+    "QED": 0.6463,
+    "SAscore": 2.509,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C090",
+    "qsar_pchembl": 5.341,
+    "QED": 0.5455,
+    "SAscore": 2.691,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C091",
+    "qsar_pchembl": 5.572,
+    "QED": 0.5764,
+    "SAscore": 2.317,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C092",
+    "qsar_pchembl": 5.628,
+    "QED": 0.5767,
+    "SAscore": 2.378,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C093",
+    "qsar_pchembl": 5.359,
+    "QED": 0.5697,
+    "SAscore": 2.3,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C094",
+    "qsar_pchembl": 5.456,
+    "QED": 0.5405,
+    "SAscore": 2.598,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C095",
+    "qsar_pchembl": 5.512,
+    "QED": 0.5735,
+    "SAscore": 2.328,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C096",
+    "qsar_pchembl": 5.809,
+    "QED": 0.5784,
+    "SAscore": 2.409,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C097",
+    "qsar_pchembl": 5.464,
+    "QED": 0.5609,
+    "SAscore": 2.188,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C098",
+    "qsar_pchembl": 5.287,
+    "QED": 0.6663,
+    "SAscore": 2.602,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C099",
+    "qsar_pchembl": 5.409,
+    "QED": 0.7105,
+    "SAscore": 2.451,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C100",
+    "qsar_pchembl": 5.319,
+    "QED": 0.6449,
+    "SAscore": 3.131,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C101",
+    "qsar_pchembl": 6.083,
+    "QED": 0.6236,
+    "SAscore": 2.527,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C102",
+    "qsar_pchembl": 5.307,
+    "QED": 0.4884,
+    "SAscore": 3.007,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C103",
+    "qsar_pchembl": 5.373,
+    "QED": 0.5284,
+    "SAscore": 3.067,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C104",
+    "qsar_pchembl": 5.51,
+    "QED": 0.4752,
+    "SAscore": 2.977,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C105",
+    "qsar_pchembl": 5.526,
+    "QED": 0.4778,
+    "SAscore": 2.927,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C106",
+    "qsar_pchembl": 5.361,
+    "QED": 0.489,
+    "SAscore": 2.963,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C108",
+    "qsar_pchembl": 5.86,
+    "QED": 0.4608,
+    "SAscore": 2.764,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C109",
+    "qsar_pchembl": 5.461,
+    "QED": 0.4859,
+    "SAscore": 2.96,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C110",
+    "qsar_pchembl": 5.457,
+    "QED": 0.4859,
+    "SAscore": 2.892,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C111",
+    "qsar_pchembl": 5.421,
+    "QED": 0.514,
+    "SAscore": 2.591,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C112",
+    "qsar_pchembl": 5.223,
+    "QED": 0.4983,
+    "SAscore": 3.294,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C113",
+    "qsar_pchembl": 5.329,
+    "QED": 0.4769,
+    "SAscore": 2.97,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C114",
+    "qsar_pchembl": 5.368,
+    "QED": 0.5245,
+    "SAscore": 3.169,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C115",
+    "qsar_pchembl": 5.292,
+    "QED": 0.5908,
+    "SAscore": 3.155,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C116",
+    "qsar_pchembl": 5.46,
+    "QED": 0.5922,
+    "SAscore": 2.99,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C117",
+    "qsar_pchembl": 5.383,
+    "QED": 0.5582,
+    "SAscore": 3.395,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C118",
+    "qsar_pchembl": 5.361,
+    "QED": 0.5193,
+    "SAscore": 3.161,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C119",
+    "qsar_pchembl": 5.293,
+    "QED": 0.4395,
+    "SAscore": 3.245,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C120",
+    "qsar_pchembl": 5.42,
+    "QED": 0.4666,
+    "SAscore": 3.287,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C121",
+    "qsar_pchembl": 5.493,
+    "QED": 0.4148,
+    "SAscore": 3.223,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C122",
+    "qsar_pchembl": 5.369,
+    "QED": 0.3914,
+    "SAscore": 3.173,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C123",
+    "qsar_pchembl": 5.338,
+    "QED": 0.4288,
+    "SAscore": 3.207,
+    "n_structural_alerts": 0
+   },
+   {
+    "cand_id": "C125",
+    "qsar_pchembl": 6.021,
+    "QED": 0.395,
+    "SAscore": 3.034,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "C126",
+    "qsar_pchembl": 5.479,
+    "QED": 0.4205,
+    "SAscore": 3.195,
+    "n_structural_alerts": 0
+   }
+  ],
+  "objectives": {
+   "qsar_pchembl": "max",
+   "QED": "max",
+   "SAscore": "min",
+   "n_structural_alerts": "min"
+  }
+ },
+ "params_hash": "95d233da50c7aa61",
+ "cached_at": "2026-11-12T21:53:28+00:00",
+ "data": {
+  "objectives_used": [
+   "qsar_pchembl",
+   "QED",
+   "SAscore",
+   "n_structural_alerts"
+  ],
+  "n_usable": 104,
+  "n_fronts": 12,
+  "fronts": [
+   [
+    "C027",
+    "C028",
+    "C061",
+    "C063",
+    "C069",
+    "C078",
+    "C079",
+    "C084"
+   ],
+   [
+    "C004",
+    "C005",
+    "C051",
+    "C053",
+    "C059",
+    "C080",
+    "C081",
+    "C085"
+   ],
+   [
+    "C009",
+    "C015",
+    "C017",
+    "C018",
+    "C020",
+    "C024",
+    "C040",
+    "C046",
+    "C068",
+    "C072",
+    "C082",
+    "C083"
+   ],
+   [
+    "C001",
+    "C003",
+    "C006",
+    "C011",
+    "C019",
+    "C021",
+    "C023",
+    "C039",
+    "C055",
+    "C058",
+    "C071",
+    "C086"
+   ],
+   [
+    "C002",
+    "C007",
+    "C008",
+    "C010",
+    "C016",
+    "C022",
+    "C029",
+    "C032",
+    "C033",
+    "C034",
+    "C035",
+    "C037",
+    "C065",
+    "C076"
+   ],
+   [
+    "C012",
+    "C014",
+    "C025",
+    "C026",
+    "C030",
+    "C031",
+    "C036",
+    "C048",
+    "C075",
+    "C087",
+    "C097",
+    "C099"
+   ],
+   [
+    "C013",
+    "C043",
+    "C089",
+    "C091",
+    "C092",
+    "C093",
+    "C096",
+    "C098",
+    "C101"
+   ],
+   [
+    "C088",
+    "C095",
+    "C100",
+    "C105",
+    "C108",
+    "C116",
+    "C125"
+   ],
+   [
+    "C090",
+    "C094",
+    "C103",
+    "C104",
+    "C109",
+    "C110",
+    "C111",
+    "C115",
+    "C117"
+   ],
+   [
+    "C064",
+    "C106",
+    "C114",
+    "C118",
+    "C120",
+    "C121",
+    "C122",
+    "C126"
+   ],
+   [
+    "C102",
+    "C112",
+    "C113",
+    "C123"
+   ],
+   [
+    "C119"
+   ]
+  ],
+  "front_of": {
+   "C001": 3,
+   "C002": 4,
+   "C003": 3,
+   "C004": 1,
+   "C005": 1,
+   "C006": 3,
+   "C007": 4,
+   "C008": 4,
+   "C009": 2,
+   "C010": 4,
+   "C011": 3,
+   "C012": 5,
+   "C013": 6,
+   "C014": 5,
+   "C015": 2,
+   "C016": 4,
+   "C017": 2,
+   "C018": 2,
+   "C019": 3,
+   "C020": 2,
+   "C021": 3,
+   "C022": 4,
+   "C023": 3,
+   "C024": 2,
+   "C025": 5,
+   "C026": 5,
+   "C027": 0,
+   "C028": 0,
+   "C029": 4,
+   "C030": 5,
+   "C031": 5,
+   "C032": 4,
+   "C033": 4,
+   "C034": 4,
+   "C035": 4,
+   "C036": 5,
+   "C037": 4,
+   "C039": 3,
+   "C040": 2,
+   "C043": 6,
+   "C046": 2,
+   "C048": 5,
+   "C051": 1,
+   "C053": 1,
+   "C055": 3,
+   "C058": 3,
+   "C059": 1,
+   "C061": 0,
+   "C063": 0,
+   "C064": 9,
+   "C065": 4,
+   "C068": 2,
+   "C069": 0,
+   "C071": 3,
+   "C072": 2,
+   "C075": 5,
+   "C076": 4,
+   "C078": 0,
+   "C079": 0,
+   "C080": 1,
+   "C081": 1,
+   "C082": 2,
+   "C083": 2,
+   "C084": 0,
+   "C085": 1,
+   "C086": 3,
+   "C087": 5,
+   "C088": 7,
+   "C089": 6,
+   "C090": 8,
+   "C091": 6,
+   "C092": 6,
+   "C093": 6,
+   "C094": 8,
+   "C095": 7,
+   "C096": 6,
+   "C097": 5,
+   "C098": 6,
+   "C099": 5,
+   "C100": 7,
+   "C101": 6,
+   "C102": 10,
+   "C103": 8,
+   "C104": 8,
+   "C105": 7,
+   "C106": 9,
+   "C108": 7,
+   "C109": 8,
+   "C110": 8,
+   "C111": 8,
+   "C112": 10,
+   "C113": 10,
+   "C114": 9,
+   "C115": 8,
+   "C116": 7,
+   "C117": 8,
+   "C118": 9,
+   "C119": 11,
+   "C120": 9,
+   "C121": 9,
+   "C122": 9,
+   "C123": 10,
+   "C125": 7,
+   "C126": 9
+  },
+  "method": "non-dominated sorting (exact, O(n^2))"
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "CC=C(Br)C=CC=NC1(C=COC)COC=CC=NC=N1"
+ },
+ "params_hash": "73c38385b21a5afe",
+ "cached_at": "2026-11-11T22:40:34+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "acyclic_C=C-O",
+    "imine_1",
+    "polyene"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 3,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

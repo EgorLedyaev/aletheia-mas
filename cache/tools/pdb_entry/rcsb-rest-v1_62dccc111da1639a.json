@@ -1,0 +1,26 @@
+{
+ "tool": "pdb.entry",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "6TG0"
+ },
+ "params_hash": "62dccc111da1639a",
+ "cached_at": "2026-11-12T16:47:31+00:00",
+ "data": {
+  "pdb_id": "6TG0",
+  "title": "Crystal Structure of EGFR T790M/V948R in Complex with Covalent Pyrrolopyrimidine 21a",
+  "method": [
+   "X-RAY DIFFRACTION"
+  ],
+  "resolution_A": 1.5,
+  "deposited": "2019-11-14T00:00:00.000+00:00",
+  "released": "2020-09-30T00:00:00.000+00:00",
+  "polymer_entities": 1,
+  "nonpolymer_entities": 3,
+  "ligand_ids": [
+   "N78"
+  ],
+  "retrieved_at": "2026-11-12T16:47:31+00:00",
+  "source_url": "https://www.rcsb.org/structure/6TG0"
+ }
+}

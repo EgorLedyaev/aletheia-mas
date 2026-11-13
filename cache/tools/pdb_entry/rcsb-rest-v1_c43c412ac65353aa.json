@@ -1,0 +1,26 @@
+{
+ "tool": "pdb.entry",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "5UG8"
+ },
+ "params_hash": "c43c412ac65353aa",
+ "cached_at": "2026-11-12T16:47:29+00:00",
+ "data": {
+  "pdb_id": "5UG8",
+  "title": "Crystal structure of the EGFR kinase domain (L858R, T790M, V948R) in complex with a covalent inhibitor N-[(3R,4R)-4-fluoro-1-{6-[(1-methyl-1H-pyrazol-4-yl)amino]-9-(propan-2-yl)-9H-purin-2-yl}pyrrolidin-3-yl]propanamide",
+  "method": [
+   "X-RAY DIFFRACTION"
+  ],
+  "resolution_A": 1.46,
+  "deposited": "2017-01-07T00:00:00.000+00:00",
+  "released": "2017-03-22T00:00:00.000+00:00",
+  "polymer_entities": 1,
+  "nonpolymer_entities": 3,
+  "ligand_ids": [
+   "8BP"
+  ],
+  "retrieved_at": "2026-11-12T16:47:29+00:00",
+  "source_url": "https://www.rcsb.org/structure/5UG8"
+ }
+}

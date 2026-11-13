@@ -1,0 +1,38 @@
+{
+ "key": "9af94cb76025c815a77f818d499b8834168ec1fe728f965ff8115e45190cfe80",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Give me a brief on the EGFR kinase target: what is known, which structures exist, and what are the most potent known inhibitors in ChEMBL?"
+   }
+  ],
+  "system": "You are a computational chemistry assistant. Answer the request directly and concretely, with specific identifiers and numbers where relevant.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1200,
+  "model": null,
+  "purpose": "baseline_plain_llm"
+ },
+ "response": {
+  "text": "# EGFR Kinase Target Brief\n\n## Target Overview\n\n**EGFR** (Epidermal Growth Factor Receptor, also known as ErbB1/HER1) is a receptor tyrosine kinase encoded by the **EGFR gene** (chromosome 7p11.2) in humans.\n\n- **UniProt ID:** P00533 (human EGFR)\n- **Gene family:** ErbB/HER family of receptor tyrosine kinases (EGFR/HER1, HER2/ErbB2, HER3/ErbB3, HER4/ErbB4)\n- **Domain architecture:** Extracellular ligand-binding domain (binds EGF, TGF-\u03b1, amphiregulin, and other ligands) \u2192 single transmembrane helix \u2192 intracellular tyrosine kinase domain \u2192 C-terminal regulatory tail with autophosphorylation sites\n\n**Biology:** Ligand binding induces receptor dimerization (homo- or heterodimerization with other ErbB members), activating the intracellular kinase domain via trans-autophosphorylation of tyrosine residues. This triggers downstream signaling through RAS/RAF/MEK/ERK, PI3K/AKT, and JAK/STAT pathways, driving cell proliferation, survival, and migration.\n\n**Disease relevance:**\n- Overexpression/amplification and activating mutations (e.g., **L858R**, **exon 19 deletions**, **T790M** gatekeeper resistance mutation, **C797S** third-generation resistance mutation) are major drivers in **non-small cell lung cancer (NSCLC)**\n- Also implicated in glioblastoma (EGFRvIII variant), colorectal cancer, and head & neck squamous cell carcinoma\n- One of the most clinically validated oncology drug targets, with multiple generations of approved inhibitors\n\n## Known Structures (PDB)\n\nEGFR kinase domain is one of the most extensively crystallized kinases \u2014 hundreds of structures exist. Representative/landmark entries:\n\n| PDB ID | Description |\n|---|---|\n| **1M17** | EGFR kinase domain with erlotinib (first EGFR\u2013inhibitor complex) |\n| **2ITY / 2ITZ** | T790M gatekeeper mutant structures |\n| **3W2S / 2ITO** | L858R activating mutant |\n| **4LRM** | Osimertinib-bound (AZD9291), active against T790M |\n| **5CAV** | EGFR with osimertinib, L858R/T790M double mutant |\n| **1IVO** | Extracellular domain, ligand-bound dimer |\n| **2J6M** | Inactive (apo) kinase conformation |\n\nI don't have live database access in this session to pull a current, exhaustive PDB list \u2014 if you want a complete up-to-date set with resolution/ligand annotations, I can query the **RCSB PDB API** or **UniProt cross-references** directly; let me know and I'll fetch and tabulate it.\n\n## Most Potent Known Inhibitors (ChEMBL)\n\nEGFR is extremely well-covered in ChEMBL (target **CHEMBL203**), with tens of thousands of bioactivity data points. Approved/clinical-stage inhibitors with sub-nanomolar to low-nanomolar potency include:\n\n| Compound | ChEMBL ID | Typical reported potency (WT EGFR) | Generation/notes |\n|---|---|---|---|\n| **Afatinib** | CHEMBL1173655 | IC50 ~0.5 nM (enzymatic) | 2nd-gen, covalent (",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 447,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1200,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

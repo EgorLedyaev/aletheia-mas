@@ -1,0 +1,19 @@
+{
+ "tool": "pdb.chemcomp",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "comp_id": "8BP"
+ },
+ "params_hash": "05e1cc51d3aafba5",
+ "cached_at": "2026-11-12T16:47:30+00:00",
+ "data": {
+  "comp_id": "8BP",
+  "name": "N-[(3R,4R)-4-fluoro-1-{6-[(1-methyl-1H-pyrazol-4-yl)amino]-9-(propan-2-yl)-9H-purin-2-yl}pyrrolidin-3-yl]propanamide",
+  "formula": "C19 H26 F N9 O",
+  "formula_weight": 415.468,
+  "smiles": "CCC(=O)N[C@@H]1CN(C[C@H]1F)c2nc(c3c(n2)n(cn3)C(C)C)Nc4cnn(c4)C",
+  "type": "non-polymer",
+  "retrieved_at": "2026-11-12T16:47:30+00:00",
+  "source_url": "https://www.rcsb.org/ligand/8BP"
+ }
+}

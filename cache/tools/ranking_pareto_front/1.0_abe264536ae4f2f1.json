@@ -1,0 +1,55 @@
+{
+ "tool": "ranking.pareto_front",
+ "version": "1.0",
+ "params": {
+  "rows": [
+   {
+    "cand_id": "U1",
+    "qsar_pchembl": null,
+    "vina_score": null,
+    "QED": 0.5501,
+    "SAscore": 1.58,
+    "n_structural_alerts": 1
+   },
+   {
+    "cand_id": "U2",
+    "qsar_pchembl": null,
+    "vina_score": null,
+    "QED": 0.4179,
+    "SAscore": 2.478,
+    "n_structural_alerts": 2
+   }
+  ],
+  "objectives": {
+   "qsar_pchembl": "max",
+   "vina_score": "min",
+   "QED": "max",
+   "SAscore": "min",
+   "n_structural_alerts": "min"
+  }
+ },
+ "params_hash": "abe264536ae4f2f1",
+ "cached_at": "2026-11-12T16:05:05+00:00",
+ "data": {
+  "objectives_used": [
+   "QED",
+   "SAscore",
+   "n_structural_alerts"
+  ],
+  "n_usable": 2,
+  "n_fronts": 2,
+  "fronts": [
+   [
+    "U1"
+   ],
+   [
+    "U2"
+   ]
+  ],
+  "front_of": {
+   "U1": 0,
+   "U2": 1
+  },
+  "method": "non-dominated sorting (exact, O(n^2))"
+ }
+}

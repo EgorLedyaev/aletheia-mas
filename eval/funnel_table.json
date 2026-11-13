@@ -1,0 +1,87 @@
+{
+ "funnels": [
+  {
+   "run_id": "run-20261113T013352-84470c",
+   "query": "Generate analogues of erlotinib (C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1) for EGFR with better predicted solubility and lower synthetic complexity, then rank them.",
+   "generators": {
+    "G1_rule_decorate_n_generated": 36,
+    "G3_selfies_mutate_n_generated": 40,
+    "G4_llm_edits_n_generated": 10
+   },
+   "counts": {
+    "raw_proposals": 86,
+    "unique_after_dedup": 86,
+    "hazard_blocked": 0,
+    "after_hazard_gate": 86,
+    "gate1_passed": 5,
+    "gate1_rejected": 81,
+    "oracle_scored": null,
+    "oracle_out_of_domain": null,
+    "docked": null,
+    "pareto_front": 2,
+    "chemotype_clusters": 3,
+    "portfolio": 5
+   },
+   "gate_thresholds": {
+    "max_lipinski_violations": 1,
+    "max_structural_alerts": 1,
+    "max_sa_score": 6.0,
+    "min_qed": 0.3
+   },
+   "generator_seed": null,
+   "source": "mixed",
+   "duration_s": 8.17,
+   "scenario": "S07",
+   "consistency_violations": []
+  },
+  {
+   "run_id": "run-20261113T013401-4077d6",
+   "query": "Run a full hit-finding campaign against EGFR: retrieve known actives, generate new candidates, model activity, dock the best ones and give me a ranked shortlist with a portfolio.",
+   "generators": {
+    "G1_rule_decorate_n_generated": 37,
+    "G3_selfies_mutate_n_generated": 40,
+    "G4_llm_edits_n_generated": 9,
+    "G2_brics_recombine_n_generated": 40
+   },
+   "counts": {
+    "raw_proposals": 126,
+    "unique_after_dedup": 126,
+    "hazard_blocked": 0,
+    "after_hazard_gate": 126,
+    "gate1_passed": 104,
+    "gate1_rejected": 22,
+    "oracle_scored": 104,
+    "oracle_out_of_domain": 11,
+    "docked": 8,
+    "pareto_front": 8,
+    "chemotype_clusters": 38,
+    "portfolio": 8
+   },
+   "gate_thresholds": {
+    "max_lipinski_violations": 1,
+    "max_structural_alerts": 1,
+    "max_sa_score": 6.0,
+    "min_qed": 0.3
+   },
+   "generator_seed": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+   "source": "mixed",
+   "duration_s": 3.67,
+   "scenario": "S08",
+   "consistency_violations": []
+  }
+ ],
+ "stages": {
+  "raw_proposals": "raw proposals from the generators",
+  "unique_after_dedup": "unique after cross-generator dedup",
+  "hazard_blocked": "removed by the hazard gate",
+  "after_hazard_gate": "candidates entering the cheap-filter gate",
+  "gate1_passed": "survive the cheap-filter gate",
+  "gate1_rejected": "rejected by the cheap-filter gate",
+  "oracle_scored": "scored by the activity model",
+  "oracle_out_of_domain": "of those, outside the applicability domain",
+  "docked": "docked with AutoDock Vina",
+  "pareto_front": "on the Pareto front",
+  "chemotype_clusters": "chemotype clusters (Butina)",
+  "portfolio": "selected into the portfolio"
+ }
+}

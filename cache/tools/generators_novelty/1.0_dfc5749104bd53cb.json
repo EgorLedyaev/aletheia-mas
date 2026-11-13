@@ -1,0 +1,93 @@
+{
+ "tool": "generators.novelty",
+ "version": "1.0",
+ "params": {
+  "smiles_list": [
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+   "C#CC1=CC=CC2=CCCOCCN1CCOc1cc3c(ncnc3cc1OCCOC)N2",
+   "C#Cc1cccc(Nc2ncnc3cc(OC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCCN4CCOCC4)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1"
+  ],
+  "reference_smiles": [
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+  ],
+  "threshold": 0.4
+ },
+ "params_hash": "dfc5749104bd53cb",
+ "cached_at": "2026-11-12T16:42:45+00:00",
+ "data": {
+  "n": 10,
+  "threshold": 0.4,
+  "n_exact_duplicates": 0,
+  "frac_novel": 0.1,
+  "mean_max_similarity": 0.7867,
+  "rows": [
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCCOC)cc23)c1",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.94,
+    "novel_at_threshold": false
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.9038,
+    "novel_at_threshold": false
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.8704,
+    "novel_at_threshold": false
+   },
+   {
+    "smiles": "C#CC1=CC=CC2=CCCOCCN1CCOc1cc3c(ncnc3cc1OCCOC)N2",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.3218,
+    "novel_at_threshold": true
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OC)c(OCCOC)cc23)c1",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.94,
+    "novel_at_threshold": false
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOCCN4CCOCC4)c(OCCOC)cc23)c1",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.7344,
+    "novel_at_threshold": false
+   },
+   {
+    "smiles": "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.7843,
+    "novel_at_threshold": false
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.6441,
+    "novel_at_threshold": false
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOCCOC)c(OCCOC)cc23)c1",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.94,
+    "novel_at_threshold": false
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+    "in_reference": false,
+    "max_tanimoto_to_reference": 0.7885,
+    "novel_at_threshold": false
+   }
+  ]
+ }
+}

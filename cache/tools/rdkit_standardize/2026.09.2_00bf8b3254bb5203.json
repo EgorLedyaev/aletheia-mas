@@ -1,0 +1,17 @@
+{
+ "tool": "rdkit.standardize",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)nc34)c2c1"
+ },
+ "params_hash": "00bf8b3254bb5203",
+ "cached_at": "2026-11-11T18:27:24+00:00",
+ "data": {
+  "canonical_smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)nc34)c2c1",
+  "inchikey": "VNEYAIQVRORJCH-OCOZRVBESA-N",
+  "formula": "C16H14N10O",
+  "n_fragments": 1,
+  "heavy_atoms": 27,
+  "input_smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)nc34)c2c1"
+ }
+}

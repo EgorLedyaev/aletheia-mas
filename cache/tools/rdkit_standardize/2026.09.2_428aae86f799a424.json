@@ -1,0 +1,17 @@
+{
+ "tool": "rdkit.standardize",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC1=CC2=C(N3C#CCC(Br)=C3)N=CN=C=C2OC1"
+ },
+ "params_hash": "428aae86f799a424",
+ "cached_at": "2026-11-11T22:40:35+00:00",
+ "data": {
+  "canonical_smiles": "COC1=CC2=C(N3C#CCC(Br)=C3)N=CN=C=C2OC1",
+  "inchikey": "JMMODZYIUWXHOF-UHFFFAOYSA-N",
+  "formula": "C14H10BrN3O2",
+  "n_fragments": 1,
+  "heavy_atoms": 20,
+  "input_smiles": "COC1=CC2=C(N3C#CCC(Br)=C3)N=CN=C=C2OC1"
+ }
+}

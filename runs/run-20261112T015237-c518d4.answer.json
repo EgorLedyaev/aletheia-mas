@@ -1,0 +1,779 @@
+{
+ "run_id": "run-20261112T015237-c518d4",
+ "query": "Dock erlotinib into PDB structure 9ZZZ and report the binding affinity.",
+ "plan": {
+  "query": "Dock erlotinib into PDB structure 9ZZZ and report the binding affinity.",
+  "intents": [
+   "docking"
+  ],
+  "modality": "small_molecule",
+  "targets": [
+   "9ZZZ"
+  ],
+  "molecules": [
+   "erlotinib"
+  ],
+  "steps": [
+   {
+    "step_id": "S1",
+    "agent": "target_analyst",
+    "action": "resolve_target",
+    "inputs": {
+     "targets": [
+      "9ZZZ"
+     ],
+     "need_structure": true
+    },
+    "depends_on": [],
+    "rationale": "every downstream claim needs a verified target identity",
+    "optional": false
+   },
+   {
+    "step_id": "S2",
+    "agent": "property_agent",
+    "action": "profile_molecules",
+    "inputs": {
+     "smiles": [
+      "erlotinib"
+     ]
+    },
+    "depends_on": [],
+    "rationale": "descriptors and alerts for the molecules named by the user",
+    "optional": false
+   },
+   {
+    "step_id": "S3",
+    "agent": "docking_agent",
+    "action": "dock",
+    "inputs": {
+     "smiles": [
+      "erlotinib"
+     ],
+     "validate": true
+    },
+    "depends_on": [
+     "S1",
+     "S2"
+    ],
+    "rationale": "structure-based score, validated by redocking on the same receptor",
+    "optional": false
+   },
+   {
+    "step_id": "S4",
+    "agent": "structure_analyst",
+    "action": "analyse_structure",
+    "inputs": {},
+    "depends_on": [
+     "S1"
+    ],
+    "rationale": "binding-site detection on the selected structure",
+    "optional": false
+   },
+   {
+    "step_id": "S5",
+    "agent": "critic",
+    "action": "cross_check",
+    "inputs": {},
+    "depends_on": [
+     "S1",
+     "S2",
+     "S3",
+     "S4"
+    ],
+    "rationale": "independent recomputation and applicability-domain audit",
+    "optional": false
+   }
+  ],
+  "planner": "callable",
+  "notes": [
+   "User explicitly requests docking a named small molecule (erlotinib) into a specified PDB structure and reporting the resulting binding affinity."
+  ]
+ },
+ "blocks": [
+  {
+   "title": "What the system did",
+   "text": "Planner `callable` routed this request to the intents docking.\n\n- `S1` **target_analyst** -> resolve_target \u2014 every downstream claim needs a verified target identity\n- `S2` **property_agent** -> profile_molecules \u2014 descriptors and alerts for the molecules named by the user\n- `S3` **docking_agent** -> dock \u2014 structure-based score, validated by redocking on the same receptor\n- `S4` **structure_analyst** -> analyse_structure \u2014 binding-site detection on the selected structure\n- `S5` **critic** -> cross_check \u2014 independent recomputation and applicability-domain audit\n\nTools actually invoked: `admet.profile`, `pubchem.compound_by_name`, `rdkit.alerts`, `rdkit.descriptors`, `rdkit.druglikeness`, `rdkit.standardize`.",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "profile",
+    "compound_by_name",
+    "alerts",
+    "descriptors",
+    "druglikeness",
+    "standardize"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Property profile \u2014 user:erlotinib",
+   "text": "`C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1`\n\n- MW: 393.443 Da [E-0003] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- cLogP: 3.405  [E-0004] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- TPSA: 74.73 A^2 [E-0005] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- QED: 0.418  [E-0016] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- SA score: 2.478  [E-0017] \u2014 COMPUTED | rdkit.descriptors 2026.09.2\n- Ro5 violations: 0  [E-0018] \u2014 COMPUTED | rdkit.druglikeness 2026.09.2\n- structural alerts: 2  [E-0019] \u2014 COMPUTED | rdkit.alerts 2026.09.2\n- ESOL logS: -4.173 log10(mol/L) [E-0020] \u2014 PREDICTED | admet.profile rule-based-1.0 | AD=NOT_ASSESSED\n- CNS-MPO-like: 5.188  [E-0021] \u2014 PREDICTED | admet.profile rule-based-1.0 | AD=NOT_ASSESSED\n- structural alerts: BRENK:Aliphatic_long_chain; BRENK:triple_bond",
+   "claim_ids": [
+    "E-0003",
+    "E-0004",
+    "E-0005",
+    "E-0016",
+    "E-0017",
+    "E-0018",
+    "E-0019",
+    "E-0020",
+    "E-0021"
+   ],
+   "structures": [
+    "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   ],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Interpretation (LLM reasoning)",
+   "text": "I'm not able to proceed with this request as posed. The findings provided are computed molecular descriptors for a structure retrieved from a PubChem CID, but the request asks me to report a docking result against PDB structure 9ZZZ \u2014 no docking was performed, and no such structure appears to have been retrieved or validated here. I won't fabricate a binding affinity or an interpretation of a docking pose that doesn't exist in the supplied data.\n\nSeparately, on the descriptor data itself: the overall profile is drug-like, with no Lipinski violations and a developability panel result indicating most standard criteria were met, alongside a favorable synthetic accessibility estimate. However, the presence of structural alerts and a modest quantitative estimate of drug-likeness temper that picture, and the predicted aqueous solubility and CNS-penetration-style score should be treated as rough computational estimates rather than confirmed properties. None of this supports or refutes any claim about target binding, efficacy, or clinical behavior \u2014 it reflects physicochemical character only, and actual target engagement would require a real docking or binding study against a verified structure.\n\n*This paragraph is LLM reasoning over the findings above. It is tagged HYPOTHESIS: it contains no numbers of its own and was itself checked against the claims ledger before publication.*",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "note"
+  }
+ ],
+ "candidates": [
+  {
+   "cand_id": "U1",
+   "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "origin": "user:erlotinib",
+   "parent": null,
+   "properties": {
+    "inchikey": "AAKJLRGGTJKAMG-UHFFFAOYSA-N",
+    "formula": "C22H23N3O4",
+    "MolWt": 393.443,
+    "cLogP": 3.405,
+    "TPSA": 74.73,
+    "HBD": 1,
+    "HBA": 7,
+    "RotB": 10,
+    "RingCount": 3,
+    "AromaticRings": 3,
+    "HeavyAtoms": 29,
+    "FractionCSP3": 0.273,
+    "FormalCharge": 0,
+    "MolMR": 111.94,
+    "NumStereocentres": 0,
+    "QED": 0.4179,
+    "SAscore": 2.478,
+    "lipinski_violations": 0,
+    "veber_pass": true,
+    "n_structural_alerts": 2,
+    "esol_logS": -4.173,
+    "cns_mpo_like": 5.188,
+    "n_panels_passed": 4,
+    "herg_risk_flag": false,
+    "n_liability_alerts": 2
+   },
+   "property_claims": {
+    "inchikey": "E-0002",
+    "MolWt": "E-0003",
+    "cLogP": "E-0004",
+    "TPSA": "E-0005",
+    "HBD": "E-0006",
+    "HBA": "E-0007",
+    "RotB": "E-0008",
+    "RingCount": "E-0009",
+    "AromaticRings": "E-0010",
+    "HeavyAtoms": "E-0011",
+    "FractionCSP3": "E-0012",
+    "FormalCharge": "E-0013",
+    "MolMR": "E-0014",
+    "NumStereocentres": "E-0015",
+    "QED": "E-0016",
+    "SAscore": "E-0017",
+    "lipinski_violations": "E-0018",
+    "n_structural_alerts": "E-0019",
+    "esol_logS": "E-0020",
+    "cns_mpo_like": "E-0021",
+    "n_panels_passed": "E-0022"
+   },
+   "flags": [
+    "BRENK:Aliphatic_long_chain",
+    "BRENK:triple_bond"
+   ],
+   "scores": {},
+   "score_claims": {},
+   "rank": null,
+   "selected": false,
+   "notes": [
+    "input token: erlotinib"
+   ]
+  }
+ ],
+ "target": null,
+ "safety": {
+  "verdict": "ALLOW",
+  "category": "ordinary_research",
+  "reason": "Docking an approved drug (erlotinib) against a protein structure to predict binding affinity is routine computational drug-discovery research.",
+  "lexicon_hits": [],
+  "caution_terms": [],
+  "llm_backend": "callable",
+  "llm_verdict": "ALLOW",
+  "classifier_available": true,
+  "force_structure_screen": false,
+  "query_sha256": "1280f4dda720ba82",
+  "policy_version": "aletheia-safety-1.0"
+ },
+ "verification": {
+  "ok": true,
+  "summary": "ledger coverage 100.0% (11/11 numeric tokens), 9/22 claims cited, 0 violation(s)",
+  "numeric_coverage": 1.0,
+  "n_numeric_tokens": 11,
+  "n_resolved_tokens": 11,
+  "n_claims_total": 22,
+  "n_claims_used": 9,
+  "violations": []
+ },
+ "ledger_rows": [
+  {
+   "claim_id": "E-0001",
+   "tag": "RETRIEVED",
+   "key": "structure_source",
+   "value": "CID 176870",
+   "units": "",
+   "subject": "COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC",
+   "tool": "pubchem.compound_by_name",
+   "tool_version": "pug-rest",
+   "source_id": "CID 176870",
+   "params_hash": "3e9dbf486ceb7818",
+   "call_id": "C-b61e85ae",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "name 'erlotinib' resolved via PubChem"
+  },
+  {
+   "claim_id": "E-0002",
+   "tag": "COMPUTED",
+   "key": "inchikey",
+   "value": "AAKJLRGGTJKAMG-UHFFFAOYSA-N",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.standardize",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "10f411761d095da0",
+   "call_id": "C-a1ffeefd",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0003",
+   "tag": "COMPUTED",
+   "key": "MolWt",
+   "value": "393.443",
+   "units": "Da",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0004",
+   "tag": "COMPUTED",
+   "key": "cLogP",
+   "value": "3.405",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0005",
+   "tag": "COMPUTED",
+   "key": "TPSA",
+   "value": "74.73",
+   "units": "A^2",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0006",
+   "tag": "COMPUTED",
+   "key": "HBD",
+   "value": "1",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0007",
+   "tag": "COMPUTED",
+   "key": "HBA",
+   "value": "7",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0008",
+   "tag": "COMPUTED",
+   "key": "RotB",
+   "value": "10",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0009",
+   "tag": "COMPUTED",
+   "key": "RingCount",
+   "value": "3",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0010",
+   "tag": "COMPUTED",
+   "key": "AromaticRings",
+   "value": "3",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0011",
+   "tag": "COMPUTED",
+   "key": "HeavyAtoms",
+   "value": "29",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0012",
+   "tag": "COMPUTED",
+   "key": "FractionCSP3",
+   "value": "0.273",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0013",
+   "tag": "COMPUTED",
+   "key": "FormalCharge",
+   "value": "0",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0014",
+   "tag": "COMPUTED",
+   "key": "MolMR",
+   "value": "111.94",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0015",
+   "tag": "COMPUTED",
+   "key": "NumStereocentres",
+   "value": "0",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0016",
+   "tag": "COMPUTED",
+   "key": "QED",
+   "value": "0.418",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0017",
+   "tag": "COMPUTED",
+   "key": "SAscore",
+   "value": "2.478",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "c0883f17eabda108",
+   "call_id": "C-f68e9a8f",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0018",
+   "tag": "COMPUTED",
+   "key": "lipinski_violations",
+   "value": "0",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.druglikeness",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "ced15c320c0cacf4",
+   "call_id": "C-7c3ed721",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Ro5 violations from RDKit descriptors"
+  },
+  {
+   "claim_id": "E-0019",
+   "tag": "COMPUTED",
+   "key": "n_structural_alerts",
+   "value": "2",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "rdkit.alerts",
+   "tool_version": "2026.09.2",
+   "source_id": "",
+   "params_hash": "979ec587856f2827",
+   "call_id": "C-ae2fd700",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "catalogs PAINS,BRENK,NIH (765 patterns)"
+  },
+  {
+   "claim_id": "E-0020",
+   "tag": "PREDICTED",
+   "key": "esol_logS",
+   "value": "-4.173",
+   "units": "log10(mol/L)",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "1c9c23fc88dfcc8f",
+   "call_id": "C-bee43b27",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uncertainty_unavailable: ESOL-type literature equation with unverified constants, no local calibration set"
+  },
+  {
+   "claim_id": "E-0021",
+   "tag": "PREDICTED",
+   "key": "cns_mpo_like",
+   "value": "5.188",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "1c9c23fc88dfcc8f",
+   "call_id": "C-bee43b27",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uncertainty_unavailable: CNS-MPO-style desirability sum with unverified breakpoints and a cLogP-1 logD proxy"
+  },
+  {
+   "claim_id": "E-0022",
+   "tag": "COMPUTED",
+   "key": "n_developability_panels_passed",
+   "value": "4",
+   "units": "",
+   "subject": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "source_id": "",
+   "params_hash": "1c9c23fc88dfcc8f",
+   "call_id": "C-bee43b27",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Lipinski/Veber/Egan/Ghose/lead-like/Ro3 panels"
+  }
+ ],
+ "tool_calls": [
+  {
+   "call_id": "C-b61e85ae",
+   "tool": "pubchem.compound_by_name",
+   "tool_version": "pug-rest",
+   "params": {
+    "name": "erlotinib"
+   },
+   "params_hash": "3e9dbf486ceb7818",
+   "started_at": "2026-11-11T22:52:41+00:00",
+   "duration_s": 0.015,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "chemistry_retriever"
+  },
+  {
+   "call_id": "C-a1ffeefd",
+   "tool": "rdkit.standardize",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC"
+   },
+   "params_hash": "10f411761d095da0",
+   "started_at": "2026-11-11T22:52:41+00:00",
+   "duration_s": 0.015,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-f68e9a8f",
+   "tool": "rdkit.descriptors",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "c0883f17eabda108",
+   "started_at": "2026-11-11T22:52:41+00:00",
+   "duration_s": 0.0,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-7c3ed721",
+   "tool": "rdkit.druglikeness",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "ced15c320c0cacf4",
+   "started_at": "2026-11-11T22:52:41+00:00",
+   "duration_s": 0.004,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-ae2fd700",
+   "tool": "rdkit.alerts",
+   "tool_version": "2026.09.2",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "979ec587856f2827",
+   "started_at": "2026-11-11T22:52:41+00:00",
+   "duration_s": 0.0,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  },
+  {
+   "call_id": "C-bee43b27",
+   "tool": "admet.profile",
+   "tool_version": "rule-based-1.0",
+   "params": {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   "params_hash": "1c9c23fc88dfcc8f",
+   "started_at": "2026-11-11T22:52:41+00:00",
+   "duration_s": 0.0,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "property_agent"
+  }
+ ],
+ "agent_results": [
+  {
+   "agent": "target_analyst",
+   "step_id": "S1",
+   "ok": false,
+   "degraded": false,
+   "duration_s": 0.458,
+   "error": "could not resolve ['9ZZZ'] to a UniProt accession",
+   "messages": []
+  },
+  {
+   "agent": "property_agent",
+   "step_id": "S2",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.063,
+   "error": null,
+   "messages": [
+    "profiled 1 molecule(s)"
+   ]
+  },
+  {
+   "agent": "docking_agent",
+   "step_id": "S3",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.0,
+   "error": "dependency ['S1'] failed",
+   "messages": []
+  },
+  {
+   "agent": "structure_analyst",
+   "step_id": "S4",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.0,
+   "error": "dependency ['S1'] failed",
+   "messages": []
+  },
+  {
+   "agent": "critic",
+   "step_id": "S5",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.0,
+   "error": "dependency ['S1', 'S3', 'S4'] failed",
+   "messages": []
+  }
+ ],
+ "source": "cached",
+ "blocked": false,
+ "withheld_blocks": [],
+ "degraded": [
+  "step S3 (docking_agent) not executed: dependency ['S1'] failed",
+  "step S4 (structure_analyst) not executed: dependency ['S1'] failed",
+  "step S5 (critic) not executed: dependency ['S1', 'S3', 'S4'] failed"
+ ],
+ "started_at": "2026-11-11T22:52:37+00:00",
+ "duration_s": 10.39,
+ "cost": {
+  "llm_calls": 3,
+  "llm_backend": "callable",
+  "tool_calls": 6,
+  "cached_tool_calls": 6
+ }
+}

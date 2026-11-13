@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+_view_*
+
+# сборочный артефакт, собирается заново из содержимого репозитория
+aletheia-mas.zip
+
+push_to_github.bat

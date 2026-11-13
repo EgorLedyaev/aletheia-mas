@@ -1,0 +1,101 @@
+{
+ "tool": "admet.profile",
+ "version": "rule-based-1.0",
+ "params": {
+  "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC"
+ },
+ "params_hash": "e50c198fcfb01c14",
+ "cached_at": "2026-11-11T18:38:10+00:00",
+ "data": {
+  "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC",
+  "developability": {
+   "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC",
+   "descriptors": {
+    "MolWt": 385.22,
+    "cLogP": 4.025,
+    "TPSA": 80.06,
+    "HBD": 1,
+    "HBA": 6,
+    "RotB": 4,
+    "HeavyAtoms": 24,
+    "AromaticRings": 3,
+    "MolMR": 94.78
+   },
+   "panels": {
+    "lipinski_ro5": {
+     "pass": true,
+     "violations": 0
+    },
+    "veber": {
+     "pass": true
+    },
+    "egan": {
+     "pass": true
+    },
+    "ghose": {
+     "pass": true
+    },
+    "lead_like": {
+     "pass": false
+    },
+    "ro3_fragment": {
+     "pass": false
+    }
+   },
+   "n_panels_passed": 4,
+   "n_panels": 6,
+   "method": "deterministic rule panels computed from RDKit descriptors"
+  },
+  "solubility": {
+   "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC",
+   "esol_logS": -4.993,
+   "solubility_class": "poorly soluble",
+   "inputs": {
+    "cLogP": 4.025,
+    "MolWt": 385.22,
+    "RotB": 4,
+    "aromatic_proportion": 0.667
+   },
+   "model": "ESOL-type linear equation (Delaney-form)",
+   "flag": "[UNVERIFIED-COEFFICIENTS] literature equation transcribed without source access",
+   "units": "log10(mol/L)",
+   "caveat": "ordering heuristic only; not calibrated on a local measured set"
+  },
+  "cns": {
+   "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC",
+   "cns_mpo_like": 4.629,
+   "max_score": 6.0,
+   "components": {
+    "cLogP": 0.488,
+    "cLogD_proxy": 0.488,
+    "MolWt": 0.82,
+    "TPSA_upper": 1.0,
+    "TPSA_lower": 1.0,
+    "HBD": 0.833
+   },
+   "model": "CNS-MPO-style desirability sum (Wager-form breakpoints)",
+   "flag": "[UNVERIFIED-COEFFICIENTS] literature equation transcribed without source access",
+   "caveat": "no pKa model on this host, so the logD term is a cLogP-1 proxy; use for ordering CNS-likeness only"
+  },
+  "liabilities": {
+   "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC",
+   "n_alerts": 2,
+   "alerts": [
+    "aniline N-dealkylation soft spot",
+    "O-dealkylation-prone alkyl aryl ether"
+   ],
+   "herg_risk_flag": false,
+   "herg_flag_basis": "basic tertiary amine motif together with cLogP > 3 (a coarse triage flag, not a hERG model)",
+   "cLogP": 4.025,
+   "method": "SMARTS substructure alerts; no trained toxicity model is bundled"
+  },
+  "summary": {
+   "n_panels_passed": 4,
+   "esol_logS": -4.993,
+   "cns_mpo_like": 4.629,
+   "n_liability_alerts": 2,
+   "herg_risk_flag": false
+  },
+  "disclaimer": "rule panels are COMPUTED; solubility and CNS scores are literature equations with unverified constants and no local calibration"
+ }
+}

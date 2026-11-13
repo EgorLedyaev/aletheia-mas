@@ -1,0 +1,1403 @@
+{
+ "tool": "hazard.screen_batch",
+ "version": "1.0",
+ "params": {
+  "smiles_list": [
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C#N",
+   "C#Cc1cc(C#N)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(C#N)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC(F)F)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC(F)F)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1O",
+   "C#Cc1cc(O)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1OC",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(OC)c1",
+   "C#Cc1ccc(OC)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1OCCN1CCOCC1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(OCCN2CCOCC2)c1",
+   "C#Cc1ccc(OCCN2CCOCC2)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1F",
+   "C#Cc1cc(F)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(F)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C",
+   "C#Cc1cc(C)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(C)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1Cl",
+   "C#Cc1cc(Cl)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1ccc(Cl)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1S(N)(=O)=O",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(S(N)(=O)=O)c1",
+   "C#Cc1ccc(S(N)(=O)=O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C(N)=O",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(C(N)=O)c1",
+   "C#Cc1ccc(C(N)=O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C(F)(F)F",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(C(F)(F)F)c1",
+   "C#Cc1ccc(C(F)(F)F)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1N1CCN(C)CC1",
+   "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(N2CCN(C)CC2)c1",
+   "C#Cc1ccc(N2CCN(C)CC2)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "COCCOC1=CC([S+]OCO)C=CN=CN=C(NC23C#CC(=CC=C2)C3)C=C1",
+   "[C+]#COC1=C(OCCOC)C=CN=C(N=CNC2=CC#CC=CC=C2)C=C1",
+   "C#CC=CC=CC(=CO)Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+   "C#Cc1cccc(Nc2ncnc3c2=CCOCCC(O)=C(OCCOC)C=3)c1",
+   "C=CC(=COCCOC1C#Cc2cccc(c2)NC=NC=NC=C1)OCCOC",
+   "CCOCOC1=C(OCCOC)C=CN=CN=CC2C=CC=CC#CCC12",
+   "C#CC=CC=CCN1C=CCOCCC=C(OCCOC)C=CN=CN=C1",
+   "C#CC=CC=CC(=C)Nc1ncnc2cc(OCCOC)c(OCC[P+]C)cc12",
+   "[B+]C1=CCC(F)=C(OCCOC)C=CN=CN=CNC([SH]=C)C1=CC=CC#C",
+   "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+   "C#CC=CC1=CC(NC=NC=NC=CC(OCCOC)=C(C=[N-])OCCOC)S#[N+]C1",
+   "C=[SH]C1C=CC=CC#CC=C(OC[O+]OC)C=CN=CN=CN1",
+   "C#Cc1cccc(Nc2ncnc3cc(OC=[P+]OC)c(OCCOC)cc23)c1",
+   "COCCOc1ccncnc(C2(C)C=CC=CC#C[N+]2)ccc1OCCOC",
+   "C=CC(C=CN=CN=CNC1C#CC=CC=C1)CCOC=COCCOC",
+   "C#CC=C1C=CC(NC=NC=NC=C2[P-]=C=CC(OCCOC)=C2OCCOC)=C1",
+   "CO[P-]#COC1=COCCOCC=c2c(NC3C#CC=CC=C3)ncnc2=C1",
+   "C#CC=C1C=CC([S+]Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)=C1",
+   "C#CC=CC=CC(=C)NC1=NC=NC2=CC(OCCOC)=C(OCCOC)CC21",
+   "C=CCC(OCCCl)=C(OCCOC)P=C=CN=CN=CNC12C#CC=C(C=C1)C2",
+   "COCCOc1ccc2c([nH]cncnccc(=O)c1)=CC#CC=CC=2",
+   "COCCOC1=C(OCCOC)C(C)N(C2C#CC=CC=C2)C=NC=NC=C1",
+   "C#C[b-]1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "C#CCC=CC(=C)Nc1ncnc2c1=CCOCCOC=C(OCCOC)C=2",
+   "COCCOC=COCCC1C=CN=CN=CN(C2C#CC=CC=C2)C=C1",
+   "C#CC=CC=CC(=C)Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+   "C#CC1=C=CC(NC=NC=NC=C2C=CC(OCCOC)=CC2[P-]OCCO)=C1",
+   "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+   "COCCOc1cc2c(cc1OCCOC)N(C1C#CC=CC=C1)C=NC2",
+   "COCCOc1cc2ncnc(NC3C#CC=CC=C3)c2cc1OCCOC",
+   "CCOCOC1=C(OCCOC)C=CN=CN=CN(C2C#CC=CC=C2)C1C",
+   "COCCOc1cc2ncnc(NCC3C#CC=CC=C3)c2cc1OCCOC",
+   "C#CC=CC=CC1=C(O)c2c(OCCOC)c(OCCOC)cc3ncnc(c23)N1",
+   "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+   "COCCOC1=C(OCCOC)ON=CN=CN(C2C#CC=CC=C2)C=C1",
+   "COCCOC=COCCC1C=CN=CN=CN(C2C#CCC=C2)C=C1",
+   "COCCOC1(OCCOC)C=CN=CN=CN(C2C=CC=CC2)C=C1",
+   "C#CC=CC=CC1C=c2c(ncnc2=CC(=COCCOC)OCCOC)N1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC[B-]C)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(CCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOCC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+   "C#CCc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "COCCOc1cc2ncnc(Nc3cccc(C)c3)c2cc1OCCOC",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCC(F)(F)F)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC4CC4)cc23)c1",
+   "C#Cc1cccnc1Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1Cl"
+  ]
+ },
+ "params_hash": "8442cc9b2180032d",
+ "cached_at": "2026-11-12T16:51:45+00:00",
+ "data": {
+  "n_screened": 86,
+  "n_block": 0,
+  "n_review": 0,
+  "n_note": 1,
+  "n_clear": 85,
+  "blocked_smiles": [],
+  "results": [
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C#N",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(C#N)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(C#N)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC(F)F)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC(F)F)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1O",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(O)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(OC)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(OC)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1OCCN1CCOCC1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(OCCN2CCOCC2)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(OCCN2CCOCC2)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(F)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(F)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(C)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(C)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1Cl",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Cl)cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(Cl)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1S(N)(=O)=O",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(S(N)(=O)=O)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(S(N)(=O)=O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C(N)=O",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(C(N)=O)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(C(N)=O)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1C(F)(F)F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(C(F)(F)F)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(C(F)(F)F)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)ccc1N1CCN(C)CC1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc(N2CCN(C)CC2)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1ccc(N2CCN(C)CC2)c(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOC1=CC([S+]OCO)C=CN=CN=C(NC23C#CC(=CC=C2)C3)C=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "[C+]#COC1=C(OCCOC)C=CN=C(N=CNC2=CC#CC=CC=C2)C=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=CC=CC(=CO)Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3c2=CCOCCC(O)=C(OCCOC)C=3)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C=CC(=COCCOC1C#Cc2cccc(c2)NC=NC=NC=C1)OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CCOCOC1=C(OCCOC)C=CN=CN=CC2C=CC=CC#CCC12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=CC=CCN1C=CCOCCC=C(OCCOC)C=CN=CN=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=CC=CC(=C)Nc1ncnc2cc(OCCOC)c(OCC[P+]C)cc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "[B+]C1=CCC(F)=C(OCCOC)C=CN=CN=CNC([SH]=C)C1=CC=CC#C",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=CC1=CC(NC=NC=NC=CC(OCCOC)=C(C=[N-])OCCOC)S#[N+]C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C=[SH]C1C=CC=CC#CC=C(OC[O+]OC)C=CN=CN=CN1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "peroxide",
+       "class": "energetic"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OC=[P+]OC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1ccncnc(C2(C)C=CC=CC#C[N+]2)ccc1OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C=CC(C=CN=CN=CNC1C#CC=CC=C1)CCOC=COCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=C1C=CC(NC=NC=NC=C2[P-]=C=CC(OCCOC)=C2OCCOC)=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CO[P-]#COC1=COCCOCC=c2c(NC3C#CC=CC=C3)ncnc2=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=C1C=CC([S+]Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=CC=CC(=C)NC1=NC=NC2=CC(OCCOC)=C(OCCOC)CC21",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C=CCC(OCCCl)=C(OCCOC)P=C=CN=CN=CNC12C#CC=C(C=C1)C2",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1ccc2c([nH]cncnccc(=O)c1)=CC#CC=CC=2",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOC1=C(OCCOC)C(C)N(C2C#CC=CC=C2)C=NC=NC=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#C[b-]1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CCC=CC(=C)Nc1ncnc2c1=CCOCCOC=C(OCCOC)C=2",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOC=COCCC1C=CN=CN=CN(C2C#CC=CC=C2)C=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=CC=CC(=C)Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC1=C=CC(NC=NC=NC=C2C=CC(OCCOC)=CC2[P-]OCCO)=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2c(cc1OCCOC)N(C1C#CC=CC=C1)C=NC2",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(NC3C#CC=CC=C3)c2cc1OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CCOCOC1=C(OCCOC)C=CN=CN=CN(C2C#CC=CC=C2)C1C",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(NCC3C#CC=CC=C3)c2cc1OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=CC=CC1=C(O)c2c(OCCOC)c(OCCOC)cc3ncnc(c23)N1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOC1=C(OCCOC)ON=CN=CN(C2C#CC=CC=C2)C=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOC=COCCC1C=CN=CN=CN(C2C#CCC=C2)C=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOC1(OCCOC)C=CN=CN=CN(C2C=CC=CC2)C=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CC=CC=CC1C=c2c(ncnc2=CC(=COCCOC)OCCOC)N1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC[B-]C)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(CCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOCC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#CCc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C)c3)c2cc1OCCOC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCC(F)(F)F)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC4CC4)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccnc1Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1Cl",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   }
+  ],
+  "errors": [],
+  "patterns_version": "aletheia-hazard-1.0"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "tool": "chembl.status",
+ "version": "ws-2.x",
+ "params": {},
+ "params_hash": "ee818c929d832faa",
+ "cached_at": "2026-11-11T22:38:29+00:00",
+ "data": {
+  "chembl_release": "ChEMBL_37",
+  "api_status": "UP",
+  "retrieved_at": "2026-11-11T22:38:29+00:00",
+  "source_url": "https://www.ebi.ac.uk/chembl/api/data/status.json"
+ }
+}

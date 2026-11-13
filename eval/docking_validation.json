@@ -1,0 +1,219 @@
+{
+ "pdb_id": "1M17",
+ "accession": "P00533",
+ "n_actives": 10,
+ "n_decoys": 10,
+ "roc_auc": 0.42,
+ "ef_10pct": 1.0,
+ "ef_20pct": 0.5,
+ "mean_score_actives": -8.159,
+ "mean_score_decoys": -7.934,
+ "score_gap": 0.225,
+ "exhaustiveness": 8,
+ "seed": 42,
+ "box": {
+  "center": [
+   22.014,
+   0.253,
+   52.794
+  ],
+  "size": [
+   25.71,
+   18.0,
+   18.0
+  ],
+  "origin": "co-crystal ligand AQ4"
+ },
+ "decoy_selection": {
+  "method": "property-matched (MW, cLogP) ChEMBL small molecules with no measured activity against this target",
+  "pool_size": 598,
+  "mw_window": [
+   266.2,
+   592.0
+  ]
+ },
+ "limitation": "decoys are PRESUMED inactive (absence of a ChEMBL measurement), not measured inactives; this is a setup sanity check, not a benchmark",
+ "duration_s": 552.3,
+ "rows": [
+  {
+   "id": "CHEMBL29197",
+   "label": 1,
+   "tag": "act00",
+   "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+   "score": -7.482,
+   "pchembl": 10.6,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL134371",
+   "label": 1,
+   "tag": "act01",
+   "smiles": "O=C(O)/C=C/C(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "score": -8.614,
+   "pchembl": 9.43,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL336264",
+   "label": 1,
+   "tag": "act02",
+   "smiles": "C=CS(=O)(=O)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "score": -8.113,
+   "pchembl": 9.37,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL39337",
+   "label": 1,
+   "tag": "act03",
+   "smiles": "Brc1cccc(Nc2ncnc3cc4[nH]ncc4cc23)c1",
+   "score": -8.01,
+   "pchembl": 9.36,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL40734",
+   "label": 1,
+   "tag": "act04",
+   "smiles": "Brc1cccc(Nc2ncnc3cc4[nH]ccc4cc23)c1",
+   "score": -8.213,
+   "pchembl": 9.36,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL304271",
+   "label": 1,
+   "tag": "act05",
+   "smiles": "CCN(CC)CC(O)CNC(=O)c1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1",
+   "score": -9.115,
+   "pchembl": 9.35,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL53426",
+   "label": 1,
+   "tag": "act06",
+   "smiles": "Brc1cccc(Nc2ncnc3cnc(NCCc4c[nH]cn4)nc23)c1",
+   "score": -7.647,
+   "pchembl": 8.945,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL139095",
+   "label": 1,
+   "tag": "act07",
+   "smiles": "C=CS(=O)(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "score": -8.384,
+   "pchembl": 8.87,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL285063",
+   "label": 1,
+   "tag": "act08",
+   "smiles": "C=CC(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1",
+   "score": -8.234,
+   "pchembl": 8.86,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL51853",
+   "label": 1,
+   "tag": "act09",
+   "smiles": "Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1",
+   "score": -7.778,
+   "pchembl": 8.845,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL6316",
+   "label": 0,
+   "tag": "dec00",
+   "smiles": "Cc1ccc(Sc2cncc3sc(/C=N/OCC(=O)O)cc23)cc1",
+   "score": -7.31,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL441172",
+   "label": 0,
+   "tag": "dec01",
+   "smiles": "Cn1cc(C2=C(c3cn(CCCCO)c4ccccc34)C(=O)NC2=O)c2ccccc21",
+   "score": -8.765,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL265410",
+   "label": 0,
+   "tag": "dec02",
+   "smiles": "C#CCN(Cc1ccc2nc(C)nc(O)c2c1)c1ccc(C(=O)NCCC)cc1",
+   "score": -8.088,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL267358",
+   "label": 0,
+   "tag": "dec03",
+   "smiles": "C[C@]12CCC(=O)C=C1C(=O)CC1C2CC[C@@]2(C)C1CC[C@@H]2OC1CC1",
+   "score": -8.939,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL6517",
+   "label": 0,
+   "tag": "dec04",
+   "smiles": "CON(C)C(=O)c1cc2c(Sc3ccc(C)cc3)cncc2s1",
+   "score": -6.743,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL268629",
+   "label": 0,
+   "tag": "dec05",
+   "smiles": "C#CCN(Cc1ccc2nc(C)nc(O)c2c1)c1ccc(C(=O)N[C@H](Cc2ccc([N+](=O)[O-])cc2)C(=O)O)cc1",
+   "score": -8.704,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL429244",
+   "label": 0,
+   "tag": "dec06",
+   "smiles": "CNCCCn1cc(C2=C(c3cn(C)c4ccccc34)C(=O)NC2=O)c2ccccc21",
+   "score": -8.692,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL6297",
+   "label": 0,
+   "tag": "dec07",
+   "smiles": "CN(C)c1cccc2c(S(=O)(=O)Nc3ccc(Br)nn3)cccc12",
+   "score": -7.731,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL266198",
+   "label": 0,
+   "tag": "dec08",
+   "smiles": "NC(=O)c1cc2c(Sc3ccc(Br)cc3)cncc2s1",
+   "score": -7.003,
+   "pchembl": null,
+   "cached": false
+  },
+  {
+   "id": "CHEMBL6389",
+   "label": 0,
+   "tag": "dec09",
+   "smiles": "O=C1N(CN2CCCCC2)c2ccccc2C12SCCS2",
+   "score": -7.365,
+   "pchembl": null,
+   "cached": false
+  }
+ ]
+}

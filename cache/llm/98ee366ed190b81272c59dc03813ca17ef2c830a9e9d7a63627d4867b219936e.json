@@ -1,0 +1,38 @@
+{
+ "key": "98ee366ed190b81272c59dc03813ca17ef2c830a9e9d7a63627d4867b219936e",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "How many Lipinski rule-of-five violations does aspirin have?"
+   }
+  ],
+  "system": "You are a computational chemistry assistant. Answer the request directly and concretely, with specific identifiers and numbers where relevant.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1200,
+  "model": null,
+  "purpose": "baseline_plain_llm"
+ },
+ "response": {
+  "text": "**Aspirin (acetylsalicylic acid)** \u2014 Lipinski's Rule of Five analysis:\n\n| Parameter | Value | Threshold | Violation? |\n|---|---|---|---|\n| Molecular weight | ~180.16 g/mol | \u2264 500 | No |\n| LogP (calculated) | ~1.2\u20131.3 | \u2264 5 | No |\n| Hydrogen bond donors | 1 (carboxylic acid OH) | \u2264 5 | No |\n| Hydrogen bond acceptors | 4 (carbonyl O, ester O x2, carboxyl O) | \u2264 10 | No |\n\n**Result: 0 violations.**\n\nAspirin fully satisfies Lipinski's Rule of Five, consistent with its being a small, orally bioavailable drug. (SMILES: `CC(=O)Oc1ccccc1C(=O)O`, PubChem CID 2244.)",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 421,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 315,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

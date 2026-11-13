@@ -1,0 +1,35 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "CN(C)/N=N/c1ccc2ncnc(N(C)C)c2c1"
+ },
+ "params_hash": "09b8b1448506127b",
+ "cached_at": "2026-11-11T18:27:24+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [
+    "azo_A(324)"
+   ],
+   "BRENK": [
+    "Oxygen-nitrogen_single_bond",
+    "diazo_group"
+   ],
+   "NIH": [
+    "azo_amino"
+   ]
+  },
+  "n_alerts": 4,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

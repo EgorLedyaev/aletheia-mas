@@ -1,0 +1,41 @@
+# Aletheia configuration. Environment variables override: ALETHEIA_OFFLINE=1 forces the
+# cache-only path (no network, no live LLM).
+llm:
+  # First backend that initialises wins; the rest are fallbacks. `callable` is for embedding
+  # Aletheia in a host notebook/SDK; `replay` and `rules` are the offline path.
+  backends: [callable, anthropic, openai, ollama, replay, rules]
+  model: null            # null = backend default (ANTHROPIC_MODEL / OPENAI_MODEL / OLLAMA_MODEL)
+  max_tokens: 2000
+  cache_dir: cache/llm
+  record: true           # write every live response to the replay cache
+  prefer_cache: true     # reuse a recorded response for an identical request
+  offline: false
+
+tools:
+  cache_dir: cache/tools
+  use_cache: true
+  network: true
+  timeout_s: 60
+  vina_bin: tools/vina/vina_1.2.7_win.exe   # linux/mac: tools/vina/vina_1.2.7_linux_x86_64
+
+run:
+  run_dir: runs
+  echo: false
+  seed: 20261111
+
+orchestrator:
+  pattern: supervisor    # supervisor | blackboard
+  max_parallel: 4
+  budget_s: 900
+
+verifier:
+  strict_citation: true
+  allow_global_pool: true
+  block_on_violation: true
+
+docking:
+  exhaustiveness: 8
+  redock_exhaustiveness: 24
+  num_modes: 9
+  seed: 42
+  box_pad: 5.0

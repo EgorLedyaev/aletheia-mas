@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-11-11T17:25:55+00:00",
+  "checks": [
+    {
+      "check": "import rdkit",
+      "result": "ok",
+      "version": "2026.09.2"
+    },
+    {
+      "check": "import sklearn",
+      "result": "ok",
+      "version": "1.9.1"
+    },
+    {
+      "check": "import pydantic",
+      "result": "ok",
+      "version": "2.14.3"
+    },
+    {
+      "check": "import numpy",
+      "result": "ok",
+      "version": "2.4.6"
+    },
+    {
+      "check": "import pandas",
+      "result": "ok",
+      "version": "3.1.1"
+    },
+    {
+      "check": "import scipy",
+      "result": "ok",
+      "version": "1.17.1"
+    },
+    {
+      "check": "import matplotlib",
+      "result": "ok",
+      "version": "3.11.2"
+    },
+    {
+      "check": "import Bio",
+      "result": "ok",
+      "version": "1.88"
+    },
+    {
+      "check": "vina --version",
+      "result": "ok",
+      "stdout": "AutoDock Vina v1.2.7"
+    },
+    {
+      "check": "obabel -V",
+      "result": 0
+    },
+    {
+      "check": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+      "result": 200
+    },
+    {
+      "check": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2244/property/MolecularFormula/JSON",
+      "result": 200
+    },
+    {
+      "check": "https://rest.uniprot.org/uniprotkb/P00533.json?fields=accession",
+      "result": 200
+    },
+    {
+      "check": "https://data.rcsb.org/rest/v1/core/entry/1M17",
+      "result": 200
+    },
+    {
+      "check": "https://alphafold.ebi.ac.uk/api/prediction/P00533",
+      "result": 200
+    }
+  ]
+}

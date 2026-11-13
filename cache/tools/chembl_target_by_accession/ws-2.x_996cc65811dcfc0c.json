@@ -1,0 +1,190 @@
+{
+ "tool": "chembl.target_by_accession",
+ "version": "ws-2.x",
+ "params": {
+  "accession": "P00533"
+ },
+ "params_hash": "996cc65811dcfc0c",
+ "cached_at": "2026-11-11T18:16:35+00:00",
+ "data": {
+  "accession": "P00533",
+  "targets": [
+   {
+    "target_chembl_id": "CHEMBL203",
+    "pref_name": "Epidermal growth factor receptor",
+    "type": "SINGLE PROTEIN",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL2111431",
+    "pref_name": "Epidermal growth factor receptor and ErbB2 (HER1 and HER2)",
+    "type": "PROTEIN FAMILY",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P04626",
+     "P00533"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL2363049",
+    "pref_name": "Epidermal growth factor receptor",
+    "type": "PROTEIN FAMILY",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P04626",
+     "P00533",
+     "Q15303",
+     "P21860"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL3137284",
+    "pref_name": "MER intracellular domain/EGFR extracellular domain chimera",
+    "type": "CHIMERIC PROTEIN",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "Q12866"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523680",
+    "pref_name": "Protein cereblon/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "Q96SW2"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523747",
+    "pref_name": "EGFR/PPP1CA",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "P62136"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523998",
+    "pref_name": "von Hippel-Lindau disease tumor suppressor/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "P40337"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4802031",
+    "pref_name": "Baculoviral IAP repeat-containing protein 2/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "Q13490"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL5465557",
+    "pref_name": "CCN2-EGFR",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "P29279"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6066839",
+    "pref_name": "Microtubule-associated protein 1 light chain 3 beta/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "Q9GZQ8"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6066845",
+    "pref_name": "Glucose-induced degradation protein 4 homolog/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "Q8IVV7"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6193792",
+    "pref_name": "E3 ubiquitin-protein ligase Mdm2/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "Q00987",
+     "P00533"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6193830",
+    "pref_name": "UBR/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "Q5T4S7",
+     "Q8IWV7",
+     "Q8IWV8"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6193837",
+    "pref_name": "Protein zyg-11 homolog B/Protein zer-1 homolog/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "Q9C0D3",
+     "Q7Z7L7"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6193841",
+    "pref_name": "Protein cereblon/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Mus musculus",
+    "accessions": [
+     "P00533",
+     "Q8C7D2"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6195769",
+    "pref_name": "E3 ubiquitin-protein ligase RNF149/Epidermal growth factor receptor",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P00533",
+     "Q8NC42"
+    ]
+   }
+  ],
+  "n_targets": 16,
+  "preferred": {
+   "target_chembl_id": "CHEMBL203",
+   "pref_name": "Epidermal growth factor receptor",
+   "type": "SINGLE PROTEIN",
+   "organism": "Homo sapiens",
+   "accessions": [
+    "P00533"
+   ]
+  },
+  "retrieved_at": "2026-11-11T18:16:35+00:00",
+  "source_url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=P00533"
+ }
+}

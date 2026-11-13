@@ -1,0 +1,69 @@
+{
+ "receptor": "cache/docking/1M17_rec.pdbqt",
+ "box": {
+  "center": [
+   22.014,
+   0.253,
+   52.794
+  ],
+  "size": [
+   25.71,
+   18.0,
+   18.0
+  ],
+  "origin": "co-crystal ligand AQ4"
+ },
+ "validation": {
+  "performed": true,
+  "ligand": "AQ4",
+  "redock_rmsd_A": 4.188,
+  "best_pose_rmsd_A": 1.361,
+  "best_pose_rank": 3,
+  "redock_score": -6.669,
+  "success_threshold_A": 2.0,
+  "passes": false,
+  "sampled_near_native": true,
+  "diagnosis": "near-native pose was sampled but not ranked first: a scoring-function failure, not a search failure",
+  "exhaustiveness": 24,
+  "method": "element-matched optimal assignment per pose, no realignment",
+  "enrichment": {
+   "roc_auc": 0.42,
+   "ef_10pct": 1.0,
+   "n_actives": 10,
+   "n_decoys": 10,
+   "mean_score_actives": -8.159,
+   "mean_score_decoys": -7.934,
+   "discriminates": false,
+   "limitation": "decoys are PRESUMED inactive (absence of a ChEMBL measurement), not measured inactives; this is a setup sanity check, not a benchmark"
+  }
+ },
+ "results": [
+  {
+   "cand_id": "U1",
+   "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+   "score": -7.048,
+   "claim_id": "E-0037",
+   "pose": "cache/docking/U1_out.pdbqt",
+   "contacts": {
+    "n_polar": 5,
+    "residues": [
+     "MET769:A",
+     "CYS773:A",
+     "LEU764:A",
+     "GLY772:A",
+     "PRO770:A",
+     "ASP831:A",
+     "PHE771:A",
+     "THR830:A",
+     "ALA719:A",
+     "LEU694:A"
+    ]
+   }
+  }
+ ],
+ "params": {
+  "exhaustiveness": 8,
+  "seed": 42,
+  "num_modes": 9
+ }
+}

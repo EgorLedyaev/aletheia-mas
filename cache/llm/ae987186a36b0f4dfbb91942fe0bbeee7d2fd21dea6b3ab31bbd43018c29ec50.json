@@ -1,0 +1,38 @@
+{
+ "key": "ae987186a36b0f4dfbb91942fe0bbeee7d2fd21dea6b3ab31bbd43018c29ec50",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- uniprot_protein_name = Epidermal growth factor receptor (RETRIEVED)\n- sequence_length = 1210 (RETRIEVED)\n- n_pdb_structures = 388 (RETRIEVED)\n- sequence_gravy = -0.316 (COMPUTED)\n- net_charge_ph7 = -12 (COMPUTED)\n- pdb_resolution = 1.07 (RETRIEVED)\n- structure_sequence_identity = 0.991 (COMPUTED)\n- cocrystal_ligand = KY9 (COMPUTED)\n- chembl_release = ChEMBL_37 (RETRIEVED)\n- chembl_target_id = CHEMBL203 (RETRIEVED)\n- top_pocket_volume = 445 (COMPUTED)\n- n_pockets_detected = 3 (COMPUTED)\n- pocket_to_cocrystal_distance = 0.44 (COMPUTED)\n- n_unique_actives = 271 (RETRIEVED)\n- pchembl_median = 6.72 (COMPUTED)\n- pchembl_max = 10.6 (COMPUTED)\n- most_potent_active = CHEMBL29197 (RETRIEVED)\n- n_distinct_scaffolds_top60 = 18 (COMPUTED)\n- critic_claims_recomputed = 0 (COMPUTED)\n- critic_recomputation_mismatches = 0 (COMPUTED)\n- predicted_claims_total = 0 (COMPUTED)\n- predicted_claims_out_of_domain = 0 (COMPUTED)\n- ledger_claims_total = 22 (COMPUTED)\n- identity_checks_passed = 3 (COMPUTED)\n- identity_checks_total = 3 (COMPUTED)\n\nUser request: What is the chemical component id of the largest co-crystal ligand in PDB 8A27?\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "The identity checks for this target structure all passed, and the resolved co-crystal ligand sits within a well-defined pocket essentially coincident with the top-ranked detected cavity, supporting that the binding site used for analysis corresponds to the physiologically relevant pocket rather than a crystallographic artifact. The retrieved bioactivity set shows a wide spread between the median and maximum potency values across a structurally diverse scaffold collection, which supports that known ligands span a broad potency range but does not by itself indicate which chemical features drive that range. This structural and bioactivity picture is internally consistent but describes only a single high-resolution snapshot and an associated activity dataset \u2014 it does not establish binding mechanism, selectivity, or any therapeutic or safety property of the cocrystallized ligand or the other active compounds. No efficacy, safety, or clinical relevance should be inferred from these results.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1158,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 292,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

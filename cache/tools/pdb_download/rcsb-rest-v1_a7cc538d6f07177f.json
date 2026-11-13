@@ -1,0 +1,18 @@
+{
+ "tool": "pdb.download",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "1M17"
+ },
+ "params_hash": "a7cc538d6f07177f",
+ "cached_at": "2026-11-11T17:43:30+00:00",
+ "data": {
+  "pdb_id": "1M17",
+  "path": "cache/structures/1M17.pdb",
+  "n_atom_records": 2560,
+  "sha256": "c27ce2f2a21ec08718ae94212135805da94f9bc02826af2f9a12089ed62e8fda",
+  "bytes": 255840,
+  "retrieved_at": "2026-11-11T17:43:30+00:00",
+  "source_url": "https://files.rcsb.org/download/1M17.pdb"
+ }
+}

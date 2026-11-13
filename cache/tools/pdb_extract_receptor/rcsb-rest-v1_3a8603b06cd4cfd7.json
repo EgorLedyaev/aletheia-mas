@@ -1,0 +1,17 @@
+{
+ "tool": "pdb.extract_receptor",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/1OYT.pdb",
+  "out_path": "cache/docking/bench_1OYT_rec.pdb",
+  "chain": "H"
+ },
+ "params_hash": "3a8603b06cd4cfd7",
+ "cached_at": "2026-11-12T10:40:36+00:00",
+ "data": {
+  "path": "cache/docking/bench_1OYT_rec.pdb",
+  "n_atoms": 2019,
+  "chain": "H",
+  "sha256": "880bf997b7464212357f0448d5af368a2344c53423885b744dfae407a833517a"
+ }
+}

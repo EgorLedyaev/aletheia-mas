@@ -1,0 +1,120 @@
+{
+ "tool": "generators.validate_proposals",
+ "version": "1.0",
+ "params": {
+  "proposals": [
+   {
+    "smiles": "N#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "rationale": "Replaced terminal alkyne (ethynyl) with nitrile; retains linear geometry and H-bond acceptor character of the quinazoline pharmacophore (erlotinib-like) while removing a reactive/less drug-like alkyne moiety, improving metabolic stability and synthetic tractability."
+   },
+   {
+    "smiles": "Fc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "rationale": "Swapped the ethynyl group for fluorine, a small bioisostere that reduces molecular weight and lipophilicity while retaining the electronic influence on the aniline ring, improving ligand efficiency and drug-likeness."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+    "rationale": "Removed one methyl from a methoxyethoxy side chain to give a free terminal hydroxyl, increasing polarity and hydrogen-bond donor count to improve aqueous solubility without altering the core scaffold."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCN)cc23)c1",
+    "rationale": "Replaced one terminal methoxy with a primary amine, introducing a basic center to improve solubility at acidic pH and offer an additional vector for salt formation."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OC)cc23)cc23",
+    "rationale": "Shortened one methoxyethoxy chain to a simple methoxy group, reducing molecular weight and flexibility (lower rotatable bond count) to improve ligand efficiency."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+    "rationale": "Added a fluorine ortho to the alkyne on the aniline ring to block a potential metabolic soft spot and modestly increase metabolic stability while retaining similar steric bulk."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCC(C)O)c(OCCOC)cc23)c1",
+    "rationale": "Introduced a methyl-branched hydroxyethyl ether in place of one methoxyethoxy chain, adding a stereocenter and H-bond donor for improved polarity while keeping similar chain length."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCCOC)cc23)c1",
+    "rationale": "Extended one side chain with an additional ethylene glycol unit to increase polarity and solubility, testing the effect of greater PEG-like character on physicochemical properties."
+   },
+   {
+    "smiles": "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+    "rationale": "Moved the alkyne substituent from meta to para position on the aniline ring, altering vector geometry to probe SAR while keeping identical atom count and functional groups."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCS(C)(=O)=O)cc23)c1",
+    "rationale": "Replaced the terminal methoxy of one side chain with a methylsulfonyl group, adding a polar, metabolically stable group to increase solubility and reduce lipophilicity."
+   }
+  ],
+  "seed_smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+ },
+ "params_hash": "89d0ea579b8ac1ae",
+ "cached_at": "2026-11-12T21:58:44+00:00",
+ "data": {
+  "generator": "G4_llm_edits",
+  "n_proposed": 10,
+  "n_generated": 9,
+  "n_rejected": 1,
+  "molecules": [
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "transform": "Replaced terminal alkyne (ethynyl) with nitrile; retains linear geometry and H-bond acceptor character of the quinazolin",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(F)c3)c2cc1OCCOC",
+    "transform": "Swapped the ethynyl group for fluorine, a small bioisostere that reduces molecular weight and lipophilicity while retain",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+    "transform": "Removed one methyl from a methoxyethoxy side chain to give a free terminal hydroxyl, increasing polarity and hydrogen-bo",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCN)cc23)c1",
+    "transform": "Replaced one terminal methoxy with a primary amine, introducing a basic center to improve solubility at acidic pH and of",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+    "transform": "Added a fluorine ortho to the alkyne on the aniline ring to block a potential metabolic soft spot and modestly increase ",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCC(C)O)c(OCCOC)cc23)c1",
+    "transform": "Introduced a methyl-branched hydroxyethyl ether in place of one methoxyethoxy chain, adding a stereocenter and H-bond do",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCCOC)cc23)c1",
+    "transform": "Extended one side chain with an additional ethylene glycol unit to increase polarity and solubility, testing the effect ",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+    "transform": "Moved the alkyne substituent from meta to para position on the aniline ring, altering vector geometry to probe SAR while",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCS(C)(=O)=O)cc23)c1",
+    "transform": "Replaced the terminal methoxy of one side chain with a methylsulfonyl group, adding a polar, metabolically stable group ",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   }
+  ],
+  "rejected": [
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OC)cc23)cc23",
+    "reason": "unparseable SMILES"
+   }
+  ],
+  "validity": 0.9
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "tool": "rdkit.standardize",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C#Cc1cccnc1Nc1ncnc2cc(OCCOC)c(OCCOC)cc12"
+ },
+ "params_hash": "af148db1db55b0d5",
+ "cached_at": "2026-11-12T16:51:48+00:00",
+ "data": {
+  "canonical_smiles": "C#Cc1cccnc1Nc1ncnc2cc(OCCOC)c(OCCOC)cc12",
+  "inchikey": "BKZDQONQFQWOKX-UHFFFAOYSA-N",
+  "formula": "C21H22N4O4",
+  "n_fragments": 1,
+  "heavy_atoms": 29,
+  "input_smiles": "C#Cc1cccnc1Nc1ncnc2cc(OCCOC)c(OCCOC)cc12"
+ }
+}

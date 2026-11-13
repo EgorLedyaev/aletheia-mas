@@ -1,0 +1,121 @@
+{
+ "tool": "generators.validate_proposals",
+ "version": "1.0",
+ "params": {
+  "proposals": [
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#C)c3)c2cc1OCCOCCOC",
+    "rationale": "Extended one methoxyethoxy chain to a diethylene glycol ether to add an additional H-bond acceptor/oxygen, improving aqueous solubility while retaining the core pharmacophore."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+    "rationale": "Replaced one methyl ether terminus with a free hydroxyl (diol-like side chain) to increase polarity and solubility without altering ring system or synthetic route significantly."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+    "rationale": "Substituted one methoxyethoxy chain with a dimethylaminoethoxy group, introducing a basic amine to enable salt formation and improve solubility."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCN1CCOCC1)cc23)c1",
+    "rationale": "Replaced one terminal methyl ether with a morpholine-capped ethoxy chain, adding a basic, water-solubilizing morpholine ring, a common EGFR-inhibitor solubilizing motif."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OC)c(OCCOC)cc23)c1",
+    "rationale": "Simplified one side chain back to a simple methoxy group, reducing molecular weight and synthetic complexity (fewer steps, cheaper building blocks) while keeping one solubilizing ether."
+   },
+   {
+    "smiles": "COCCOc1cc2c(Nc3cccc(C#C)c3)ncnc2cc1OCCOCCN1CCOCC1",
+    "rationale": "Capped one chain terminus with morpholine via an extra ethylene spacer, combining enhanced solubility with manageable synthetic accessibility (standard amine alkylation)."
+   },
+   {
+    "smiles": "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+    "rationale": "Moved the alkyne substituent from meta to para on the aniline ring, a simple regiochemical change to probe SAR while keeping identical physicochemical profile and synthetic ease."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+    "rationale": "Added a fluorine ortho to the aniline nitrogen to modestly modulate electronics/metabolic stability with minimal synthetic complexity increase."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOCCOC)c(OCCOC)cc23)c1",
+    "rationale": "Extended only one side chain to a longer PEG-like diether, increasing solubility while leaving the other arm and synthetic route largely unchanged for straightforward synthesis."
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+    "rationale": "Converted both methyl ethers to free hydroxyls (bis-diol), maximizing polar surface area and solubility while retaining a synthetically accessible quinazoline core."
+   }
+  ],
+  "seed_smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+ },
+ "params_hash": "f5a1c4eb3b91dd2b",
+ "cached_at": "2026-11-11T22:40:15+00:00",
+ "data": {
+  "generator": "G4_llm_edits",
+  "n_proposed": 10,
+  "n_generated": 10,
+  "n_rejected": 0,
+  "molecules": [
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOCCOC)cc23)c1",
+    "transform": "Extended one methoxyethoxy chain to a diethylene glycol ether to add an additional H-bond acceptor/oxygen, improving aqu",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCOC)cc23)c1",
+    "transform": "Replaced one methyl ether terminus with a free hydroxyl (diol-like side chain) to increase polarity and solubility witho",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCN(C)C)c(OCCOC)cc23)c1",
+    "transform": "Substituted one methoxyethoxy chain with a dimethylaminoethoxy group, introducing a basic amine to enable salt formation",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#CC1=CC=CC2=CCCOCCN1CCOc1cc3c(ncnc3cc1OCCOC)N2",
+    "transform": "Replaced one terminal methyl ether with a morpholine-capped ethoxy chain, adding a basic, water-solubilizing morpholine ",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OC)c(OCCOC)cc23)c1",
+    "transform": "Simplified one side chain back to a simple methoxy group, reducing molecular weight and synthetic complexity (fewer step",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOCCN4CCOCC4)c(OCCOC)cc23)c1",
+    "transform": "Capped one chain terminus with morpholine via an extra ethylene spacer, combining enhanced solubility with manageable sy",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1ccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)cc1",
+    "transform": "Moved the alkyne substituent from meta to para on the aniline ring, a simple regiochemical change to probe SAR while kee",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1F",
+    "transform": "Added a fluorine ortho to the aniline nitrogen to modestly modulate electronics/metabolic stability with minimal synthet",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOCCOC)c(OCCOC)cc23)c1",
+    "transform": "Extended only one side chain to a longer PEG-like diether, increasing solubility while leaving the other arm and synthet",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+    "transform": "Converted both methyl ethers to free hydroxyls (bis-diol), maximizing polar surface area and solubility while retaining ",
+    "generator": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+   }
+  ],
+  "rejected": [],
+  "validity": 1.0
+ }
+}

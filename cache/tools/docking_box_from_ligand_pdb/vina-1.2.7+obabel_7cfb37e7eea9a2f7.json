@@ -1,0 +1,25 @@
+{
+ "tool": "docking.box_from_ligand_pdb",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "ligand_pdb": "cache/docking/1M17_AQ4.pdb",
+  "pad": 5.0
+ },
+ "params_hash": "7cfb37e7eea9a2f7",
+ "cached_at": "2026-11-11T22:28:16+00:00",
+ "data": {
+  "center": [
+   22.014,
+   0.253,
+   52.794
+  ],
+  "size": [
+   25.71,
+   18.0,
+   18.0
+  ],
+  "pad": 5.0,
+  "n_points": 29,
+  "source": "1M17_AQ4.pdb"
+ }
+}

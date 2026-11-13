@@ -1,0 +1,35 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC=C1C=NC=NC[PH](NC2=CC=[N+]C(Br)=C2)=CC=C1OC"
+ },
+ "params_hash": "ab00a70857b09413",
+ "cached_at": "2026-11-11T18:38:14+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "N-C-halo",
+    "acyclic_C=C-O",
+    "phosphor"
+   ],
+   "NIH": [
+    "phosphorane",
+    "phosphorous_nitrogen_bond"
+   ]
+  },
+  "n_alerts": 5,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

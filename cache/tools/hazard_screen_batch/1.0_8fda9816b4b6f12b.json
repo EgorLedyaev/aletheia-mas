@@ -1,0 +1,2093 @@
+{
+ "tool": "hazard.screen_batch",
+ "version": "1.0",
+ "params": {
+  "smiles_list": [
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C#N)c1OC",
+   "COc1cc2nc(C#N)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC(F)F",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)F",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(O)c1OC",
+   "COc1cc2nc(O)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3O)c2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(OC)c1OC",
+   "COc1nc(Nc2cccc(Br)c2)c2cc(OC)c(OC)cc2n1",
+   "COc1ccc(Br)cc1Nc1ncnc2cc(OC)c(OC)cc12",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(OCCN2CCOCC2)c1OC",
+   "COc1cc2nc(OCCN3CCOCC3)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3OCCN3CCOCC3)c2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(F)c1OC",
+   "COc1cc2nc(F)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3F)c2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C)c1OC",
+   "COc1cc2nc(C)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3C)c2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(Cl)c1OC",
+   "COc1cc2nc(Cl)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3Cl)c2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(S(N)(=O)=O)c1OC",
+   "COc1cc2nc(S(N)(=O)=O)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3S(N)(=O)=O)c2cc1OC",
+   "CCOc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+   "CCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C(N)=O)c1OC",
+   "COc1cc2nc(C(N)=O)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3C(N)=O)c2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C(F)(F)F)c1OC",
+   "COc1cc2nc(C(F)(F)F)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3C(F)(F)F)c2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(N2CCN(C)CC2)c1OC",
+   "COc1cc2nc(N3CCN(C)CC3)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cc(Br)ccc3N3CCN(C)CC3)c2cc1OC",
+   "BrC1=[S+]=CC(C=CNC2COC=CC=NC=N2)=C1",
+   "COC=CC1C2=CC=NC3=C(O2)C3c2cccc(Br)c21",
+   "COc1cc2ccnc(Nc3cccc(Br)c3)c2cc1OC",
+   "COC=C1C=NC=NC(NC=C2C=CC(Br)=[P+]=C2)=CC=C1OC",
+   "COC=Cc1ncnc(Nc2cccc(Br)c2)c1C=O",
+   "COC=Cc1ncnc2c1cc(OC)n2-c1cccc(Br)c1",
+   "CC=C(Br)C=CC=NC1(C=COC)COC=CC=NC=N1",
+   "C=C(Br)C=CC=CNc1ncnc2cc(OC)c(OC)cc12",
+   "CO[C-]c1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+   "[B+]=CC=CC=CNC12C=C(OC)C1OC=CC=NC=N2",
+   "COC1=CC2=C(N3C#CCC(Br)=C3)N=CN=C=C2OC1",
+   "C=C(Br)C=CC=CNC1COC=CC=NC=N1",
+   "COC1=CC2N=CN=CC=C(CC(C)C=C=CN2)OC1",
+   "COC1=Cc2c(ncnc2Nc2cccc(Br)c2)C=COC1",
+   "COC=CC=NC=NC(N)c1cccc(Br)c1C=COC",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1O",
+   "CO[N+]c1cc2c(NC3=CC=C[C-](Br)C3)ncnc2cc1OC",
+   "COC=C1C=NC=NC(N)Nc2cccc(Br)c2CC=C1OC",
+   "COC=CC1=C2N=CN=CC1=COC=C1C=CC=C[O+]2C1",
+   "COC=CC=NC=Nc1[nH]c2cccc(Br)c2c1CO[N-]",
+   "COC=CC1(N2C=CCC(Br)=C2C)COC=CC=NC=N1",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2nc1OC",
+   "COC=CC=NC=NC1(C=COC)NC=CC=CC1(C)C",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1C",
+   "[P-]C(Br)C=CC=CNC1COC=CC=NC=N1",
+   "COC1=Cc2c(Nc3cccc(Br)c3)ncnc21",
+   "COC=CC1(N2C=C=CC(Br)=C2C)COC=CC=NC=N1",
+   "COC=C1C=NC=NCNC=CC=CC(Br)=C1",
+   "COC=C1C=NC=NC[PH](NC2=CC=[N+]C(Br)=C2)=CC=C1OC",
+   "COC=Cc1nc2c(cc1OC)=[S-]c1c(Br)cccc1NC(N)N=2",
+   "[C-]COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+   "CC=Cc1ncnc(Nc2cccc(Br)c2)c1C#COC",
+   "COC1=CC2(NC=CC=O)N=CN=CC=COC12",
+   "COC1=CC2(N=CN=CCOC1)NC=CC=CC2(C)C",
+   "CC=C1C=NC=NC(Nc2cccc(Br)c2)=C=CC=C1OC",
+   "COC=CC=NC=NCCl",
+   "C[B-]c1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+   "COC=C=Cc1c(C=COC)ncnc1Nc1cccc(Br)c1",
+   "COC=Cc1c(Nc2cccc(Br)c2)ncc2cocc12",
+   "CO[P+]c1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(F)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+   "COCCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN(C)C",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1F",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1N",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)(F)F",
+   "CN(C)/N=N/c1ccc2ncnc(-c3cccc(Cl)c3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3cccc(Br)c3)c2c1",
+   "Cc1cccc(-c2ncnc3ccc(/N=N/N(C)C)cc23)c1",
+   "C#Cc1cccc(-c2ncnc3ccc(/N=N/N(C)C)cc23)c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3cccc(F)c3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ccc(F)c(Cl)c3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ccccc3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-n3ccnc3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5c(cnn5C)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3c[nH]cn3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cnc(N)nc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5[nH]ccc5cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5c(ccn5C)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(/N=N/N(C)C)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(N)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cnc(N)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(N)nc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccccc34)c2c1",
+   "C=CS(=O)(=O)c1cc2c(-c3ncnc4ccc(/N=N/N(C)C)cc34)ncnc2cn1",
+   "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2c1",
+   "COc1ncnc2ccc(/N=N/N(C)C)cc12",
+   "CN(C)/N=N/c1ccc2ncnc(CCC(=O)O)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(CC(O)CO)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(N(C)C)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(N3CCOCC3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc([N+](C)(C)C)c2c1",
+   "CNc1ncnc2ccc(/N=N/N(C)C)cc12",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5c(cnn5C)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3c[nH]cn3)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)nc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5[nH]ccc5cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5c(ccn5C)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(/N=N/N(C)C)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(N)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(N)nc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccccc34)c2c1",
+   "C=CS(=O)(=O)c1cc2c(Oc3ncnc4ccc(/N=N/N(C)C)cc34)ncnc2cn1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5[nH]ncc5cc34)c2c1",
+   "CN(C)/N=N/c1ccc2ncnc(Oc3cccc(Cl)c3)c2c1"
+  ]
+ },
+ "params_hash": "8fda9816b4b6f12b",
+ "cached_at": "2026-11-11T18:38:09+00:00",
+ "data": {
+  "n_screened": 126,
+  "n_block": 0,
+  "n_review": 0,
+  "n_note": 11,
+  "n_clear": 115,
+  "blocked_smiles": [],
+  "results": [
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C#N)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(C#N)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C#N)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC(F)F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(O)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(O)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3O)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(OC)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1nc(Nc2cccc(Br)c2)c2cc(OC)c(OC)cc2n1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1ccc(Br)cc1Nc1ncnc2cc(OC)c(OC)cc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(OCCN2CCOCC2)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(OCCN3CCOCC3)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3OCCN3CCOCC3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(F)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(F)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3F)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(C)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(Cl)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(Cl)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3Cl)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(S(N)(=O)=O)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(S(N)(=O)=O)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3S(N)(=O)=O)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CCOc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C(N)=O)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(C(N)=O)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C(N)=O)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(C(F)(F)F)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(C(F)(F)F)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3C(F)(F)F)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2c(N2CCN(C)CC2)c1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2nc(N3CCN(C)CC3)nc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cc(Br)ccc3N3CCN(C)CC3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "BrC1=[S+]=CC(C=CNC2COC=CC=NC=N2)=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=CC1C2=CC=NC3=C(O2)C3c2cccc(Br)c21",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ccnc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=C1C=NC=NC(NC=C2C=CC(Br)=[P+]=C2)=CC=C1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=Cc1ncnc(Nc2cccc(Br)c2)c1C=O",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aldehyde",
+       "class": "reactive"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "COC=Cc1ncnc2c1cc(OC)n2-c1cccc(Br)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CC=C(Br)C=CC=NC1(C=COC)COC=CC=NC=N1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C=C(Br)C=CC=CNc1ncnc2cc(OC)c(OC)cc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CO[C-]c1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "[B+]=CC=CC=CNC12C=C(OC)C1OC=CC=NC=N2",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC1=CC2=C(N3C#CCC(Br)=C3)N=CN=C=C2OC1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C=C(Br)C=CC=CNC1COC=CC=NC=N1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC1=CC2N=CN=CC=C(CC(C)C=C=CN2)OC1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC1=Cc2c(ncnc2Nc2cccc(Br)c2)C=COC1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=CC=NC=NC(N)c1cccc(Br)c1C=COC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1O",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CO[N+]c1cc2c(NC3=CC=C[C-](Br)C3)ncnc2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=C1C=NC=NC(N)Nc2cccc(Br)c2CC=C1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=CC1=C2N=CN=CC1=COC=C1C=CC=C[O+]2C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=CC=NC=Nc1[nH]c2cccc(Br)c2c1CO[N-]",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=CC1(N2C=CCC(Br)=C2C)COC=CC=NC=N1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2nc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=CC=NC=NC1(C=COC)NC=CC=CC1(C)C",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1C",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "[P-]C(Br)C=CC=CNC1COC=CC=NC=N1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC1=Cc2c(Nc3cccc(Br)c3)ncnc21",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=CC1(N2C=C=CC(Br)=C2C)COC=CC=NC=N1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=C1C=NC=NCNC=CC=CC(Br)=C1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=C1C=NC=NC[PH](NC2=CC=[N+]C(Br)=C2)=CC=C1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=Cc1nc2c(cc1OC)=[S-]c1c(Br)cccc1NC(N)N=2",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "[C-]COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CC=Cc1ncnc(Nc2cccc(Br)c2)c1C#COC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC1=CC2(NC=CC=O)N=CN=CC=COC12",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aldehyde",
+       "class": "reactive"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "COC1=CC2(N=CN=CCOC1)NC=CC=CC2(C)C",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CC=C1C=NC=NC(Nc2cccc(Br)c2)=C=CC=C1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=CC=NC=NCCl",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C[B-]c1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=C=Cc1c(C=COC)ncnc1Nc1cccc(Br)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COC=Cc1c(Nc2cccc(Br)c2)ncc2cocc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CO[P+]c1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(F)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COCCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN(C)C",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1N",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)(F)F",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3cccc(Cl)c3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3cccc(Br)c3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "Cc1cccc(-c2ncnc3ccc(/N=N/N(C)C)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C#Cc1cccc(-c2ncnc3ccc(/N=N/N(C)C)cc23)c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3cccc(F)c3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ccc(F)c(Cl)c3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ccccc3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-n3ccnc3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5c(cnn5C)cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3c[nH]cn3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cnc(N)nc34)c2c1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5[nH]ccc5cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5c(ccn5C)cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(/N=N/N(C)C)cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(N)cc34)c2c1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cnc(N)cc34)c2c1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccc(N)nc34)c2c1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4ccccc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C=CS(=O)(=O)c1cc2c(-c3ncnc4ccc(/N=N/N(C)C)cc34)ncnc2cn1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(-c3ncnc4cc5[nH]ncc5cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "COc1ncnc2ccc(/N=N/N(C)C)cc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(CCC(=O)O)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(CC(O)CO)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(N(C)C)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(N3CCOCC3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc([N+](C)(C)C)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CNc1ncnc2ccc(/N=N/N(C)C)cc12",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5c(cnn5C)cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3c[nH]cn3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)nc34)c2c1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5[nH]ccc5cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5c(ccn5C)cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(/N=N/N(C)C)cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(N)cc34)c2c1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cnc(N)cc34)c2c1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccc(N)nc34)c2c1",
+    "severity": "NOTE",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": [
+      {
+       "motif": "aromatic amine",
+       "class": "toxicophore"
+      }
+     ]
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 1,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow with recorded structural alert"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4ccccc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "C=CS(=O)(=O)c1cc2c(Oc3ncnc4ccc(/N=N/N(C)C)cc34)ncnc2cn1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3ncnc4cc5[nH]ncc5cc34)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   },
+   {
+    "smiles": "CN(C)/N=N/c1ccc2ncnc(Oc3cccc(Cl)c3)c2c1",
+    "severity": "CLEAR",
+    "hits": {
+     "BLOCK": [],
+     "REVIEW": [],
+     "NOTE": []
+    },
+    "n_block": 0,
+    "n_review": 0,
+    "n_note": 0,
+    "patterns_version": "aletheia-hazard-1.0",
+    "n_patterns_screened": 33,
+    "decision": "allow"
+   }
+  ],
+  "errors": [],
+  "patterns_version": "aletheia-hazard-1.0"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "tool": "pubchem.compound_by_name",
+ "version": "pug-rest",
+ "params": {
+  "name": "CHEMBL1173655"
+ },
+ "params_hash": "40dc7a29213f8f73",
+ "cached_at": "2026-11-11T22:52:32+00:00",
+ "data": {
+  "query": "CHEMBL1173655",
+  "cid": 10184653,
+  "smiles": "CN(C)C/C=C/C(=O)NC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC(=C(C=C3)F)Cl)O[C@H]4CCOC4",
+  "iupac_name": "(E)-N-[4-(3-chloro-4-fluoroanilino)-7-[(3S)-oxolan-3-yl]oxyquinazolin-6-yl]-4-(dimethylamino)but-2-enamide",
+  "formula": "C24H25ClFN5O3",
+  "pubchem_properties": {
+   "MolecularWeight": "485.9",
+   "XLogP": 3.6,
+   "TPSA": 88.6,
+   "HBondDonorCount": 2,
+   "HBondAcceptorCount": 8
+  },
+  "retrieved_at": "2026-11-11T22:52:32+00:00",
+  "source_url": "https://pubchem.ncbi.nlm.nih.gov/compound/10184653"
+ }
+}

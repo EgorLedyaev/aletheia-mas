@@ -1,0 +1,50 @@
+{
+ "tool": "rdkit.validate_batch",
+ "version": "2026.09.2",
+ "params": {
+  "smiles_list": [
+   "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+   "COCCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN1CCOCC1",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1N",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1F",
+   "COc1cc2nc(N)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)F"
+  ]
+ },
+ "params_hash": "de1750c315996568",
+ "cached_at": "2026-11-12T12:23:14+00:00",
+ "data": {
+  "n_input": 9,
+  "n_valid": 9,
+  "n_invalid": 0,
+  "validity": 1.0,
+  "n_unique": 9,
+  "uniqueness": 1.0,
+  "invalid_examples": [],
+  "canonical": [
+   "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+   "COCCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN1CCOCC1",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1N",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1F",
+   "COc1cc2nc(N)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)F"
+  ],
+  "unique_smiles": [
+   "COCCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+   "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1N",
+   "COc1cc2nc(N)nc(Nc3cccc(Br)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1F",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)F",
+   "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN1CCOCC1",
+   "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+   "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC"
+  ]
+ }
+}

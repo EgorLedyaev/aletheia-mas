@@ -1,0 +1,33 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "BrC1=[S+]=CC(C=CNC2COC=CC=NC=N2)=C1"
+ },
+ "params_hash": "a8ebd28a86fa89b6",
+ "cached_at": "2026-11-11T18:38:12+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [
+    "thio_aldehyd_A(3)"
+   ],
+   "BRENK": [
+    "Thiocarbonyl_group",
+    "charged_oxygen_or_sulfur_atoms"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 3,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

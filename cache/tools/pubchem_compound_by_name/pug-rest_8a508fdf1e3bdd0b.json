@@ -1,0 +1,25 @@
+{
+ "tool": "pubchem.compound_by_name",
+ "version": "pug-rest",
+ "params": {
+  "name": "aspirin"
+ },
+ "params_hash": "8a508fdf1e3bdd0b",
+ "cached_at": "2026-11-11T22:53:08+00:00",
+ "data": {
+  "query": "aspirin",
+  "cid": 2244,
+  "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+  "iupac_name": "2-acetyloxybenzoic acid",
+  "formula": "C9H8O4",
+  "pubchem_properties": {
+   "MolecularWeight": "180.16",
+   "XLogP": 1.2,
+   "TPSA": 63.6,
+   "HBondDonorCount": 1,
+   "HBondAcceptorCount": 4
+  },
+  "retrieved_at": "2026-11-11T22:53:08+00:00",
+  "source_url": "https://pubchem.ncbi.nlm.nih.gov/compound/2244"
+ }
+}

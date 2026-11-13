@@ -1,0 +1,17 @@
+{
+ "frozen_snapshot_suite": "12/12",
+ "seconds": 26.3,
+ "mode": "ALETHEIA_OFFLINE=1",
+ "tests_passed": 27,
+ "n_pass_lines": 12,
+ "n_fail_lines": 0,
+ "recorded_at": "2026-11-12T09:58:42+00:00",
+ "git_tag": "v1.0-frozen",
+ "hashes": {
+  "eval/final_suite.json": "59d6bf581bec842b",
+  "eval/harness_report.json": "3442f2aa1365a849",
+  "registry/tools.yaml": "ed1ac59e8b7540c5",
+  "docs/deck.pdf": "b0d2fbcc4d4630f1",
+  "figures/generator_comparison.png": "04cc1ee1e8b7a71c"
+ }
+}

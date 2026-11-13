@@ -1,0 +1,38 @@
+{
+ "key": "574c5144f0e71bc840bdbb7d690b53b92e4738ad4b128c27c1a0583063b31862",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- uniprot_protein_name = Epidermal growth factor receptor (RETRIEVED)\n- sequence_length = 1210 (RETRIEVED)\n- n_pdb_structures = 388 (RETRIEVED)\n- chembl_target_id = CHEMBL203 (RETRIEVED)\n- sequence_gravy = -0.316 (COMPUTED)\n- net_charge_ph7 = -12 (COMPUTED)\n- pdb_resolution = 2.6 (RETRIEVED)\n- structure_sequence_identity = 0.985 (COMPUTED)\n- cocrystal_ligand = AQ4 (COMPUTED)\n- top_pocket_volume = 458 (COMPUTED)\n- n_pockets_detected = 4 (COMPUTED)\n- pocket_to_cocrystal_distance = 0.31 (COMPUTED)\n- critic_claims_recomputed = 0 (COMPUTED)\n- critic_recomputation_mismatches = 0 (COMPUTED)\n- predicted_claims_total = 0 (COMPUTED)\n- predicted_claims_out_of_domain = 0 (COMPUTED)\n- ledger_claims_total = 16 (COMPUTED)\n- identity_checks_passed = 3 (COMPUTED)\n- identity_checks_total = 3 (COMPUTED)\n\nUser request: What is the X-ray resolution of PDB entry 1M17, in angstroms?\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "The resolution reported for the crystal structure is consistent with a well-ordered, interpretable model suitable for identifying ligand-binding pockets and cross-checking sequence identity against the target protein. The detected binding pocket sits in close proximity to the co-crystallized ligand, supporting that the mapped pocket corresponds to the known binding site rather than a spurious surface cavity. These structural observations support confidence in the geometric and identity consistency of the model itself; they do not constitute evidence of binding affinity, selectivity, or any functional or therapeutic relevance of the target or ligand.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1009,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 194,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

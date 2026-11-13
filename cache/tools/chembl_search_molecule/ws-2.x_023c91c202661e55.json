@@ -1,0 +1,16 @@
+{
+ "tool": "chembl.search_molecule",
+ "version": "ws-2.x",
+ "params": {
+  "name": "CHEMBL99999999"
+ },
+ "params_hash": "023c91c202661e55",
+ "cached_at": "2026-11-12T17:12:06+00:00",
+ "data": {
+  "query": "CHEMBL99999999",
+  "hits": [],
+  "n_hits": 0,
+  "retrieved_at": "2026-11-12T17:12:06+00:00",
+  "source_url": "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=CHEMBL99999999"
+ }
+}

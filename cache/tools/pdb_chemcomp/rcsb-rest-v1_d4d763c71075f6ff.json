@@ -1,0 +1,19 @@
+{
+ "tool": "pdb.chemcomp",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "comp_id": "MG"
+ },
+ "params_hash": "d4d763c71075f6ff",
+ "cached_at": "2026-11-12T16:47:34+00:00",
+ "data": {
+  "comp_id": "MG",
+  "name": "MAGNESIUM ION",
+  "formula": "Mg",
+  "formula_weight": 24.305,
+  "smiles": "[Mg+2]",
+  "type": "non-polymer",
+  "retrieved_at": "2026-11-12T16:47:34+00:00",
+  "source_url": "https://www.rcsb.org/ligand/MG"
+ }
+}

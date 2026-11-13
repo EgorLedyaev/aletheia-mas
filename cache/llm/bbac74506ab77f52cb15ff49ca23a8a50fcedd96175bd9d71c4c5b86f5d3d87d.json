@@ -1,0 +1,126 @@
+{
+ "key": "bbac74506ab77f52cb15ff49ca23a8a50fcedd96175bd9d71c4c5b86f5d3d87d",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "User request:\n\"\"\"What is the measured IC50 of ChEMBL molecule CHEMBL99999999 against EGFR?\"\"\"\n\nClassify it."
+   }
+  ],
+  "system": "You are the routing component of a drug-discovery multi-agent system. Classify the request into intents and extract entities. Do not answer the chemistry question itself, do not invent targets or molecules that the user did not mention, and do not guess identifiers. If the user names a gene symbol, return it verbatim.",
+  "tools": [
+   {
+    "name": "route_request",
+    "description": "Classify a drug-discovery request into intents and entities.",
+    "input_schema": {
+     "type": "object",
+     "properties": {
+      "intents": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "target_brief",
+         "ligand_lookup",
+         "property_profile",
+         "generate_analogs",
+         "docking",
+         "qsar",
+         "rank_candidates",
+         "protein_analysis",
+         "full_campaign"
+        ]
+       },
+       "description": "Ordered list of what the user is asking for."
+      },
+      "modality": {
+       "type": "string",
+       "enum": [
+        "small_molecule",
+        "protein",
+        "nucleic_acid",
+        "mixed",
+        "unknown"
+       ]
+      },
+      "targets": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Protein targets exactly as named by the user: gene symbol, UniProt accession or PDB id. Empty if none."
+      },
+      "molecules": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Molecules as named by the user: SMILES or compound name."
+      },
+      "objectives": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Optimisation objectives mentioned, e.g. 'improve solubility'."
+      },
+      "reasoning": {
+       "type": "string",
+       "description": "One sentence on why these intents."
+      }
+     },
+     "required": [
+      "intents",
+      "modality",
+      "targets",
+      "molecules"
+     ]
+    }
+   }
+  ],
+  "tool_choice": {
+   "type": "tool",
+   "name": "route_request"
+  },
+  "max_tokens": 900,
+  "model": null,
+  "purpose": "routing"
+ },
+ "response": {
+  "text": "",
+  "tool_use": {
+   "name": "route_request",
+   "input": {
+    "intents": [
+     "ligand_lookup"
+    ],
+    "modality": "small_molecule",
+    "targets": [
+     "EGFR"
+    ],
+    "molecules": [
+     "CHEMBL99999999"
+    ],
+    "objectives": [],
+    "reasoning": "User asks for a specific measured potency value (IC50) of a named ChEMBL compound against a named target, which is a ligand/bioactivity data lookup request."
+   }
+  },
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 697,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5618,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 228,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

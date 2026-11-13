@@ -1,0 +1,38 @@
+{
+ "key": "24560e9ab0d578c4596b42ea3cf3864cb8e328acce605c913fde43593f508378",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Request: Which PDB entry holds the EGFR kinase domain with erlotinib bound, and what is the chemical component id of that ligand?\n\nTool results:\npdb.entry({'entry_id': '1M17', 'human_description': 'Fetching EGFR erlotinib PDB entry metadata'}) -> ERROR TypeError: entry() got an unexpected keyword argument 'human_description'\npdb.entry({'entry_id': '1M17'}) -> {\"pdb_id\": \"1M17\", \"title\": \"Epidermal Growth Factor Receptor tyrosine kinase domain with 4-anilinoquinazoline inhibitor erlotinib\", \"method\": [\"X-RAY DIFFRACTION\"], \"resolution_A\": 2.6, \"deposited\": \"2002-06-17T00:00:00.000+00:00\", \"released\": \"2002-09-04T00:00:00.000+00:00\", \"polymer_entities\": 1, \"nonpolymer_entities\": 1, \"ligand_ids\": [], \"retrieved_at\": \"2026-11-11T22:28:15+00:00\", \"source_url\": \"https://www.rcsb.org/structure/1M17\"}\npdb.download({'entry_id': '1M17'}) -> {\"pdb_id\": \"1M17\", \"path\": \"cache/structures/1M17.pdb\", \"n_atom_records\": 2560, \"sha256\": \"c27ce2f2a21ec08718ae94212135805da94f9bc02826af2f9a12089ed62e8fda\", \"bytes\": 255840, \"retrieved_at\": \"2026-11-11T22:28:15+00:00\", \"source_url\": \"https://files.rcsb.org/download/1M17.pdb\"}\npdb.ligands({'pdb_path': 'cache/structures/1M17.pdb', 'human_description': 'Listing bound ligands in 1M17'}) -> ERROR TypeError: ligands() got an unexpected keyword argument 'human_description'\npdb.ligands({'pdb_path': 'cache/structures/1M17.pdb'}) -> {\"pdb_path\": \"cache/structures/1M17.pdb\", \"n_ligands\": 1, \"ligands\": [{\"resname\": \"AQ4\", \"chain\": \"A\", \"resseq\": \"999\", \"n_heavy_atoms\": 29, \"centroid\": [22.014, 0.253, 52.794], \"extent_A\": [15.71, 4.68, 7.1]}], \"largest\": {\"resname\": \"AQ4\", \"chain\": \"A\", \"resseq\": \"999\", \"n_heavy_atoms\": 29, \"centroid\": [22.014, 0.253, 52.794], \"extent_A\": [15.71, 4.68, 7.1]}}\npdb.chemcomp({'comp_id': 'AQ4'}) -> {\"comp_id\": \"AQ4\", \"name\": \"[6,7-BIS(2-METHOXY-ETHOXY)QUINAZOLINE-4-YL]-(3-ETHYNYLPHENYL)AMINE\", \"formula\": \"C22 H23 N3 O4\", \"formula_weight\": 393.436, \"smiles\": \"COCCOc1cc2c(cc1OCCOC)ncnc2Nc3cccc(c3)C#C\", \"type\": \"non-polymer\", \"retrieved_at\": \"2026-11-11T22:28:16+00:00\", \"source_url\": \"https://www.rcsb.org/ligand/AQ4\"}\n\nWrite the final answer."
+   }
+  ],
+  "system": null,
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1000,
+  "model": null,
+  "purpose": "baseline_single_agent_ledger_final"
+ },
+ "response": {
+  "text": "**PDB entry 1M17** contains the EGFR tyrosine kinase domain bound to erlotinib (titled \"Epidermal Growth Factor Receptor tyrosine kinase domain with 4-anilinoquinazoline inhibitor erlotinib\"; X-ray structure, 2.6 \u00c5 resolution).\n\nThe bound ligand's chemical component ID is **AQ4** \u2014 [6,7-bis(2-methoxyethoxy)quinazolin-4-yl]-(3-ethynylphenyl)amine, formula C22H23N3O4 (MW \u2248 393.4), which is the RCSB component code corresponding to erlotinib.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1154,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 221,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

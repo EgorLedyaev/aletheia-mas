@@ -1,0 +1,22 @@
+{
+ "cuda": "13.0",
+ "cuda_available": true,
+ "gpu_name": "Tesla T4",
+ "gpu_total_MiB": 14913,
+ "have_datasets": "4.8.5",
+ "have_numpy": "2.4.6",
+ "have_pandas": "2.2.3",
+ "have_rdkit": null,
+ "have_scipy": "1.16.3",
+ "have_sklearn": "1.6.1",
+ "have_transformers": "5.22.1",
+ "matmul_dtype": "torch.float32",
+ "matmul_trace": 357.7520446777344,
+ "nvidia_smi_rc": 0,
+ "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+ "python": "3.13.16",
+ "stage": "smoke",
+ "torch": "2.14.1+cu130",
+ "nvidia_smi_total_MiB": 15360,
+ "source": "colab run --gpu T4 aletheia_gpu_smoke.py, host-run mode"
+}

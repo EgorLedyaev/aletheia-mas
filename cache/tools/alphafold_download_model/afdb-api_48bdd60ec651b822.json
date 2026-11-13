@@ -1,0 +1,19 @@
+{
+ "tool": "alphafold.download_model",
+ "version": "afdb-api",
+ "params": {
+  "accession": "P00519"
+ },
+ "params_hash": "48bdd60ec651b822",
+ "cached_at": "2026-11-11T18:27:41+00:00",
+ "data": {
+  "accession": "P00519",
+  "path": "cache/structures/AF-P00519.pdb",
+  "entry_id": "AF-P00519-F1",
+  "model_version": 6,
+  "sha256": "e18668fc295201499fde15fd5cea0fa488070f4a3f8c8f565945b7480fb5fc27",
+  "bytes": 719876,
+  "retrieved_at": "2026-11-11T18:27:41+00:00",
+  "source_url": "https://alphafold.ebi.ac.uk/files/AF-P00519-F1-model_v6.pdb"
+ }
+}

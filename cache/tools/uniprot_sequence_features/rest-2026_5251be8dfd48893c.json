@@ -1,0 +1,45 @@
+{
+ "tool": "uniprot.sequence_features",
+ "version": "rest-2026",
+ "params": {
+  "sequence": "MENFQKVEKIGEGTYGVVYKARNKLTGEVVALKKIRLDTETEGVPSTAIREISLLKELNHPNIVKLLDVIHTENKLYLVFEFLHQDLKKFMDASALTGIPLPLIKSYLFQLLQGLAFCHSHRVLHRDLKPQNLLINTEGAIKLADFGLARAFGVPVRTYTHEVVTLWYRAPEILLGCKYYSTAVDIWSLGCIFAEMVTRRALFPGDSEIDQLFRIFRTLGTPDEVVWPGVTSMPDYKPSFPKWARQDFSKVVPPLDEDGRSLLSQMLHYDPNKRISAKAALAHPFFQDVTKPVPHLRL"
+ },
+ "params_hash": "5251be8dfd48893c",
+ "cached_at": "2026-11-11T18:24:20+00:00",
+ "data": {
+  "length": 298,
+  "composition": {
+   "hydrophobic": 0.4195,
+   "polar": 0.1946,
+   "positive": 0.1577,
+   "negative": 0.1107,
+   "special": 0.1174
+  },
+  "gravy": -0.0826,
+  "mw_da": 33929.6,
+  "net_charge_ph7": 4,
+  "cys_count": 3,
+  "most_common": [
+   [
+    "L",
+    39
+   ],
+   [
+    "V",
+    23
+   ],
+   [
+    "K",
+    21
+   ],
+   [
+    "A",
+    19
+   ],
+   [
+    "P",
+    19
+   ]
+  ]
+ }
+}

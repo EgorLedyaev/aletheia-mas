@@ -1,0 +1,30 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC"
+ },
+ "params_hash": "e239b8cfd32d9080",
+ "cached_at": "2026-11-11T18:27:21+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 1,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

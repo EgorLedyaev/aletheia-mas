@@ -1,0 +1,26 @@
+{
+ "tool": "pdb.entry",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "3VRP"
+ },
+ "params_hash": "2a1bc4353a3de56c",
+ "cached_at": "2026-11-12T16:47:32+00:00",
+ "data": {
+  "pdb_id": "3VRP",
+  "title": "Crystal structure of the tyrosine kinase binding domain of Cbl-c in complex with phospho-EGFR peptide",
+  "method": [
+   "X-RAY DIFFRACTION"
+  ],
+  "resolution_A": 1.52,
+  "deposited": "2012-04-13T00:00:00.000+00:00",
+  "released": "2013-03-06T00:00:00.000+00:00",
+  "polymer_entities": 2,
+  "nonpolymer_entities": 1,
+  "ligand_ids": [
+   "CA"
+  ],
+  "retrieved_at": "2026-11-12T16:47:32+00:00",
+  "source_url": "https://www.rcsb.org/structure/3VRP"
+ }
+}

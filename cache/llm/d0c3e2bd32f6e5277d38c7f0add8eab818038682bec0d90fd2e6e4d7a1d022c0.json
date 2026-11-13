@@ -1,0 +1,38 @@
+{
+ "key": "d0c3e2bd32f6e5277d38c7f0add8eab818038682bec0d90fd2e6e4d7a1d022c0",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- chembl_release = ChEMBL_37 (RETRIEVED)\n- structure_source = CID 2244 (RETRIEVED)\n- inchikey = BSYNRYMUTXBXSQ-UHFFFAOYSA-N (COMPUTED)\n- MolWt = 180.159 (COMPUTED)\n- cLogP = 1.31 (COMPUTED)\n- TPSA = 63.6 (COMPUTED)\n- HBD = 1 (COMPUTED)\n- HBA = 3 (COMPUTED)\n- RotB = 2 (COMPUTED)\n- RingCount = 1 (COMPUTED)\n- AromaticRings = 1 (COMPUTED)\n- HeavyAtoms = 13 (COMPUTED)\n- FractionCSP3 = 0.111 (COMPUTED)\n- FormalCharge = 0 (COMPUTED)\n- MolMR = 44.71 (COMPUTED)\n- NumStereocentres = 0 (COMPUTED)\n- QED = 0.55 (COMPUTED)\n- SAscore = 1.58 (COMPUTED)\n- lipinski_violations = 0 (COMPUTED)\n- n_structural_alerts = 1 (COMPUTED)\n- esol_logS = -1.992 (PREDICTED)\n- cns_mpo_like = 5.833 (PREDICTED)\n- n_developability_panels_passed = 4 (COMPUTED)\n- structure_source = CID 176870 (RETRIEVED)\n- inchikey = AAKJLRGGTJKAMG-UHFFFAOYSA-N (COMPUTED)\n- MolWt = 393.443 (COMPUTED)\n- cLogP = 3.405 (COMPUTED)\n- TPSA = 74.73 (COMPUTED)\n- HBD = 1 (COMPUTED)\n- HBA = 7 (COMPUTED)\n- RotB = 10 (COMPUTED)\n- RingCount = 3 (COMPUTED)\n- AromaticRings = 3 (COMPUTED)\n- HeavyAtoms = 29 (COMPUTED)\n- FractionCSP3 = 0.273 (COMPUTED)\n- FormalCharge = 0 (COMPUTED)\n- MolMR = 111.94 (COMPUTED)\n- NumStereocentres = 0 (COMPUTED)\n- QED = 0.418 (COMPUTED)\n- SAscore = 2.478 (COMPUTED)\n\nUser request: Which has the higher QED: aspirin or erlotinib?\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "The compound identified by the first structure source shows a higher drug-likeness composite score than the one identified by the second structure source, consistent with its smaller size, lower molecular complexity, and more favorable balance of polar and lipophilic character. This comparison reflects a single computed heuristic metric, not a measure of potency, selectivity, or target engagement, and the lower-scoring compound still falls within an acceptable range by common filters. A higher composite drug-likeness score does not indicate which molecule would perform better against any biological target, nor does it speak to pharmacokinetics, toxicity, or clinical outcome. No efficacy, safety, or therapeutic conclusions can be drawn from this metric alone.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1395,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 229,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

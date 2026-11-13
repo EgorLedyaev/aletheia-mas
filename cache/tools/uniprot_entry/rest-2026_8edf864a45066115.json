@@ -1,0 +1,662 @@
+{
+ "tool": "uniprot.entry",
+ "version": "rest-2026",
+ "params": {
+  "accession": "P00519"
+ },
+ "params_hash": "8edf864a45066115",
+ "cached_at": "2026-11-11T22:48:15+00:00",
+ "data": {
+  "accession": "P00519",
+  "uniprot_id": "ABL1_HUMAN",
+  "protein_name": "Tyrosine-protein kinase ABL1",
+  "genes": [
+   "ABL1"
+  ],
+  "organism": "Homo sapiens",
+  "taxon_id": 9606,
+  "length": 1130,
+  "sequence": "MLEICLKLVGCKSKKGLSSSSSCYLEEALQRPVASDFEPQGLSEAARWNSKENLLAGPSENDPNLFVALYDFVASGDNTLSITKGEKLRVLGYNHNGEWCEAQTKNGQGWVPSNYITPVNSLEKHSWYHGPVSRNAAEYLLSSGINGSFLVRESESSPGQRSISLRYEGRVYHYRINTASDGKLYVSSESRFNTLAELVHHHSTVADGLITTLHYPAPKRNKPTVYGVSPNYDKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLAYNKFSIKSDVWAFGVLLWEIATYGMSPYPGIDLSQVYELLEKDYRMERPEGCPEKVYELMRACWQWNPSDRPSFAEIHQAFETMFQESSISDEVEKELGKQGVRGAVSTLLQAPELPTKTRTSRRAAEHRDTTDVPEMPHSKGQGESDPLDHEPAVSPLLPRKERGPPEGGLNEDERLLPKDKKTNLFSALIKKKKKTAPTPPKRSSSFREMDGQPERRGAGEEEGRDISNGALAFTPLDTADPAKSPKPSNGAGVPNGALRESGGSGFRSPHLWKKSSTLTSSRLATGEEEGGGSSSKRFLRSCSASCVPHGAKDTEWRSVTLPRDLQSTGRQFDSSTFGGHKSEKPALPRKRAGENRSDQVTRGTVTPPPRLVKKNEEAADEVFKDIMESSPGSSPPNLTPKPLRRQVTVAPASGLPHKEEAGKGSALGTPAAAEPVTPTSKAGSGAPGGTSKGPAEESRVRRHKHSSESPGRDKGKLSRLKPAPPPPPAASAGKAGGKPSQSPSQEAAGEAVLGAKTKATSLVDAVNSDAAKPSQPGEGLKKPVLPATPKPQSAKPSGTPISPAPVPSTLPSASSALAGDQPSSTAFIPLISTRVSLRKTRQPPERIASGAITKGVVLDSTEALCLAISRNSEQMASHSAVLEAGKNLYTFCVSYVDSIQQMRNKFAFREAINKLENNLRELQICPATAGSGPAATQDFSKLLSSVKEISDIVQR",
+  "sequence_md5": "d24f1ea01ac4c8d96e75dd9550a0fb09",
+  "sequence_crc64": "85FE6C1C0E483EA2",
+  "function": [
+   "Non-receptor tyrosine-protein kinase that plays a role in many key processes linked to cell growth and survival such as cytoskeleton remodeling in response to extracellular stimuli, cell motility and adhesion, receptor endocytosis, autophagy, DNA damage response and apoptosis. Coordinates actin remodeling through tyrosine phosphorylation of proteins controlling cytoskeleton dynamics like WASF3 (involved in branch formation); ANXA1 (involved in membrane anchoring); DBN1, DBNL, CTTN, RAPH1 and ENAH (involved in signaling); or MAPT and PXN (microtubule-binding proteins). Phosphorylation of WASF3 is critical for the stimulation of lamellipodia formation and cell migration. Involved in the regulation of cell adhesion and motility through phosphorylation of key regulators of these processes such as BCAR1, CRK, CRKL, DOK1, EFS or NEDD9 (PubMed:22810897). Phosphorylates multiple receptor tyrosine kinases and more particularly promotes endocytosis of EGFR, facilitates the formation of neuromuscular synapses through MUSK, inhibits PDGFRB-mediated chemotaxis and modulates the endocytosis of activated B-cell receptor complexes. Other substrates which are involved in endocytosis regulation are the caveolin (CAV1) and RIN1. Moreover, ABL1 regulates the CBL family of ubiquitin ligases that drive receptor down-regulation and actin remodeling. Phosphorylation of CBL leads to increased EGFR stability. Involved in late-stage autophagy by regulating positively the trafficking and function of lysosomal components. ABL1 targets to mitochondria in response to oxidative stress and thereby mediates mitochondrial dysfunction and cell death. In response to oxidative stress, phosphorylates serine/threonine kinase PRKD2 at 'Tyr-717' (PubMed:28428613). ABL1 is also translocated in the nucleus where it has DNA-binding activity and is involved in DNA-damage response and apoptosis. Many substrates are known mediators of DNA repair: DDB1, DDB2, ERCC3, ERCC6, RAD9A, RAD51, RAD52 or WRN. Activates the pro-apoptotic pathway when the DNA damage is too severe to be repaired. Phosphorylates TP73, a primary regulator for this type of damage-induced apoptosis. Phosphorylates the caspase CASP9 on 'Tyr-153' and regulates its processing in the apoptotic response to DNA damage. Phosphorylates PSMA7 that leads to an inhibition of proteasomal activity and cell cycle transition blocks. ABL1 also acts as a regulator of multiple pathological signaling cascades during infection. Several known tyrosine-phosphorylated microbial proteins have been identified as ABL1 substrates. This is the case of A36R of Vaccinia virus, Tir (translocated intimin receptor) of pathogenic E.coli and possibly Citrobacter, CagA (cytotoxin-associated gene A) of H.pylori, or AnkA (ankyrin repeat-containing protein A) of A.phagocytophilum. Pathogens can highjack ABL1 kinase signaling to reorganize the host actin cytoskeleton for multiple purposes, like facilitating intracellular movement and host cell exit. Finally, functions as its own regulator through autocatalytic activity as well as through phosphorylation of its inhibitor, ABI1. Regulates T-cell differentiation in a TBX21-dependent manner (By similarity). Positively regulates chemokine-mediated T-cell migration, polarization, and homing to lymph nodes and immune-challenged tissues, potentially via activation of NEDD9/HEF1 and RAP1 (By similarity). Phosphorylates TBX21 on tyrosine residues leading to an enhancement of its transcriptional activator activity (By similarity)"
+  ],
+  "binding_features": [
+   {
+    "type": "Active site",
+    "start": 363,
+    "end": 363,
+    "ligand": null,
+    "description": "Proton acceptor"
+   },
+   {
+    "type": "Binding site",
+    "start": 248,
+    "end": 256,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 271,
+    "end": 271,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 316,
+    "end": 322,
+    "ligand": "ATP",
+    "description": ""
+   }
+  ],
+  "pdb_ids": [
+   "1AB2",
+   "1AWO",
+   "1BBZ",
+   "1JU5",
+   "1OPL",
+   "1ZZP",
+   "2ABL",
+   "2E2B",
+   "2F4J",
+   "2FO0",
+   "2G1T",
+   "2G2F",
+   "2G2H",
+   "2G2I",
+   "2GQG",
+   "2HIW",
+   "2HYY",
+   "2HZ0",
+   "2HZ4",
+   "2HZI",
+   "2O88",
+   "2V7A",
+   "3CS9",
+   "3EG0",
+   "3EG1",
+   "3EG2",
+   "3EG3",
+   "3EGU",
+   "3K2M",
+   "3PYY",
+   "3QRI",
+   "3QRJ",
+   "3QRK",
+   "3T04",
+   "3UE4",
+   "3UYO",
+   "4J9B",
+   "4J9C",
+   "4J9D",
+   "4J9E",
+   "4J9F",
+   "4J9G",
+   "4J9H",
+   "4J9I",
+   "4JJB",
+   "4JJC",
+   "4JJD",
+   "4TWP",
+   "4WA9",
+   "4XEY",
+   "4YC8",
+   "4ZOG",
+   "5DC0",
+   "5DC4",
+   "5DC9",
+   "5HU9",
+   "5MO4",
+   "5NP2",
+   "5OAZ",
+   "6AMV",
+   "6AMW",
+   "6BL8",
+   "6NPE",
+   "6NPU",
+   "6NPV",
+   "6XR6",
+   "6XR7",
+   "6XRG",
+   "7CC2",
+   "7DT2",
+   "7N9G",
+   "7PVQ",
+   "7PVR",
+   "7PVS",
+   "7PVV",
+   "7PW2",
+   "7W7X",
+   "7W7Y",
+   "8H7F",
+   "8H7H",
+   "8I7S",
+   "8I7T",
+   "8I7Z",
+   "8SSN",
+   "9KS5"
+  ],
+  "pdb_entries": [
+   {
+    "pdb_id": "1AB2",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "A=120-220"
+   },
+   {
+    "pdb_id": "1AWO",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "A=59-120"
+   },
+   {
+    "pdb_id": "1BBZ",
+    "method": "X-ray",
+    "resolution": "1.65 A",
+    "chains": "A/C/E/G=64-121"
+   },
+   {
+    "pdb_id": "1JU5",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "C=62-122"
+   },
+   {
+    "pdb_id": "1OPL",
+    "method": "X-ray",
+    "resolution": "3.42 A",
+    "chains": "A/B=6-512"
+   },
+   {
+    "pdb_id": "1ZZP",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "A=1007-1130"
+   },
+   {
+    "pdb_id": "2ABL",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A=57-218"
+   },
+   {
+    "pdb_id": "2E2B",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/B=229-515"
+   },
+   {
+    "pdb_id": "2F4J",
+    "method": "X-ray",
+    "resolution": "1.91 A",
+    "chains": "A=227-513"
+   },
+   {
+    "pdb_id": "2FO0",
+    "method": "X-ray",
+    "resolution": "2.27 A",
+    "chains": "A=38-512"
+   },
+   {
+    "pdb_id": "2G1T",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A/B/C/D=229-512"
+   },
+   {
+    "pdb_id": "2G2F",
+    "method": "X-ray",
+    "resolution": "2.70 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "2G2H",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "2G2I",
+    "method": "X-ray",
+    "resolution": "3.12 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "2GQG",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/B=229-500"
+   },
+   {
+    "pdb_id": "2HIW",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/B=230-512"
+   },
+   {
+    "pdb_id": "2HYY",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/B/C/D=228-500"
+   },
+   {
+    "pdb_id": "2HZ0",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/B=228-497"
+   },
+   {
+    "pdb_id": "2HZ4",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A/B/C=228-500"
+   },
+   {
+    "pdb_id": "2HZI",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A/B=229-500"
+   },
+   {
+    "pdb_id": "2O88",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A/B=64-121"
+   },
+   {
+    "pdb_id": "2V7A",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/B=227-512"
+   },
+   {
+    "pdb_id": "3CS9",
+    "method": "X-ray",
+    "resolution": "2.21 A",
+    "chains": "A/B/C/D=229-500"
+   },
+   {
+    "pdb_id": "3EG0",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "3EG1",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A/B=60-121"
+   },
+   {
+    "pdb_id": "3EG2",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "3EG3",
+    "method": "X-ray",
+    "resolution": "1.40 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "3EGU",
+    "method": "X-ray",
+    "resolution": "2.25 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "3K2M",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A/B=121-232"
+   },
+   {
+    "pdb_id": "3PYY",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "3QRI",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/B=229-499"
+   },
+   {
+    "pdb_id": "3QRJ",
+    "method": "X-ray",
+    "resolution": "1.82 A",
+    "chains": "A/B=229-499"
+   },
+   {
+    "pdb_id": "3QRK",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=229-499"
+   },
+   {
+    "pdb_id": "3T04",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=112-232"
+   },
+   {
+    "pdb_id": "3UE4",
+    "method": "X-ray",
+    "resolution": "2.42 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "3UYO",
+    "method": "X-ray",
+    "resolution": "1.83 A",
+    "chains": "A=112-232"
+   },
+   {
+    "pdb_id": "4J9B",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "4J9C",
+    "method": "X-ray",
+    "resolution": "1.05 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "4J9D",
+    "method": "X-ray",
+    "resolution": "1.50 A",
+    "chains": "A/C/E=60-121"
+   },
+   {
+    "pdb_id": "4J9E",
+    "method": "X-ray",
+    "resolution": "1.40 A",
+    "chains": "A/C/E=60-121"
+   },
+   {
+    "pdb_id": "4J9F",
+    "method": "X-ray",
+    "resolution": "1.09 A",
+    "chains": "A/C/E=60-121"
+   },
+   {
+    "pdb_id": "4J9G",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A/C/E=60-121"
+   },
+   {
+    "pdb_id": "4J9H",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A/B/C/D/E/F=60-121"
+   },
+   {
+    "pdb_id": "4J9I",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/C/E=60-121"
+   },
+   {
+    "pdb_id": "4JJB",
+    "method": "X-ray",
+    "resolution": "1.65 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "4JJC",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "4JJD",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=60-121"
+   },
+   {
+    "pdb_id": "4TWP",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/B=233-503"
+   },
+   {
+    "pdb_id": "4WA9",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/B=246-512"
+   },
+   {
+    "pdb_id": "4XEY",
+    "method": "X-ray",
+    "resolution": "2.89 A",
+    "chains": "A/B=119-515"
+   },
+   {
+    "pdb_id": "4YC8",
+    "method": "X-ray",
+    "resolution": "2.90 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "4ZOG",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/B=229-511"
+   },
+   {
+    "pdb_id": "5DC0",
+    "method": "X-ray",
+    "resolution": "2.23 A",
+    "chains": "B=112-232"
+   },
+   {
+    "pdb_id": "5DC4",
+    "method": "X-ray",
+    "resolution": "1.48 A",
+    "chains": "A=112-232"
+   },
+   {
+    "pdb_id": "5DC9",
+    "method": "X-ray",
+    "resolution": "1.56 A",
+    "chains": "A=112-232"
+   },
+   {
+    "pdb_id": "5HU9",
+    "method": "X-ray",
+    "resolution": "1.53 A",
+    "chains": "A=229-500"
+   },
+   {
+    "pdb_id": "5MO4",
+    "method": "X-ray",
+    "resolution": "2.17 A",
+    "chains": "A=27-515"
+   },
+   {
+    "pdb_id": "5NP2",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A/B=64-120"
+   },
+   {
+    "pdb_id": "5OAZ",
+    "method": "X-ray",
+    "resolution": "1.03 A",
+    "chains": "A/B=60-121"
+   },
+   {
+    "pdb_id": "6AMV",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "A=6-236"
+   },
+   {
+    "pdb_id": "6AMW",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "A=6-236"
+   },
+   {
+    "pdb_id": "6BL8",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/B=233-504"
+   },
+   {
+    "pdb_id": "6NPE",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "6NPU",
+    "method": "X-ray",
+    "resolution": "2.33 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "6NPV",
+    "method": "X-ray",
+    "resolution": "1.86 A",
+    "chains": "A/B=229-512"
+   },
+   {
+    "pdb_id": "6XR6",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "A=229-515"
+   },
+   {
+    "pdb_id": "6XR7",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "A=229-515"
+   },
+   {
+    "pdb_id": "6XRG",
+    "method": "NMR",
+    "resolution": "-",
+    "chains": "A=229-515"
+   },
+   {
+    "pdb_id": "7CC2",
+    "method": "X-ray",
+    "resolution": "2.72 A",
+    "chains": "A/B=229-510"
+   },
+   {
+    "pdb_id": "7DT2",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/B=229-510"
+   },
+   {
+    "pdb_id": "7N9G",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/B/C=229-499"
+   },
+   {
+    "pdb_id": "7PVQ",
+    "method": "X-ray",
+    "resolution": "1.55 A",
+    "chains": "A/B=63-120"
+   },
+   {
+    "pdb_id": "7PVR",
+    "method": "X-ray",
+    "resolution": "1.65 A",
+    "chains": "A=63-120"
+   },
+   {
+    "pdb_id": "7PVS",
+    "method": "X-ray",
+    "resolution": "1.05 A",
+    "chains": "A/B=63-120"
+   },
+   {
+    "pdb_id": "7PVV",
+    "method": "X-ray",
+    "resolution": "1.82 A",
+    "chains": "A=63-120"
+   },
+   {
+    "pdb_id": "7PW2",
+    "method": "X-ray",
+    "resolution": "1.10 A",
+    "chains": "A=63-120"
+   },
+   {
+    "pdb_id": "7W7X",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/B=229-500"
+   },
+   {
+    "pdb_id": "7W7Y",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/B=229-504"
+   },
+   {
+    "pdb_id": "8H7F",
+    "method": "X-ray",
+    "resolution": "2.45 A",
+    "chains": "A/B=229-500"
+   },
+   {
+    "pdb_id": "8H7H",
+    "method": "X-ray",
+    "resolution": "2.28 A",
+    "chains": "A/B=229-500"
+   },
+   {
+    "pdb_id": "8I7S",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A/B=229-500"
+   },
+   {
+    "pdb_id": "8I7T",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A/B=229-500"
+   },
+   {
+    "pdb_id": "8I7Z",
+    "method": "X-ray",
+    "resolution": "2.25 A",
+    "chains": "A/B=229-500"
+   },
+   {
+    "pdb_id": "8SSN",
+    "method": "X-ray",
+    "resolution": "2.86 A",
+    "chains": "A/B=64-510"
+   },
+   {
+    "pdb_id": "9KS5",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/B=229-500"
+   }
+  ],
+  "ec_numbers": [
+   "2.7.10.2"
+  ],
+  "entry_version": 295,
+  "last_modified": "2026-11-04",
+  "retrieved_at": "2026-11-11T22:48:15+00:00",
+  "source_url": "https://www.uniprot.org/uniprotkb/P00519"
+ }
+}

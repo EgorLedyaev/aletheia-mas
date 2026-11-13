@@ -1,0 +1,77 @@
+{
+ "tool": "docking.contacts",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "receptor_pdb": "cache/docking/8A27_rec.pdb",
+  "pose_pdbqt": "cache/docking/C079_vina_out.pdbqt",
+  "model_index": 0
+ },
+ "params_hash": "ee1e32c90b563b26",
+ "cached_at": "2026-11-12T21:53:28+00:00",
+ "data": {
+  "n_polar_contacts": 3,
+  "polar_contacts": [
+   {
+    "residue": "THR854:A",
+    "protein_atom": "OG1",
+    "ligand_atom": "N",
+    "distance_A": 3.19
+   },
+   {
+    "residue": "THR854:A",
+    "protein_atom": "OG1",
+    "ligand_atom": "N",
+    "distance_A": 3.04
+   },
+   {
+    "residue": "ASP855:A",
+    "protein_atom": "OD1",
+    "ligand_atom": "N",
+    "distance_A": 2.8
+   }
+  ],
+  "n_hydrophobic_contacts": 57,
+  "hydrophobic_residues": [
+   "ALA743:A",
+   "ALA763:A",
+   "ARG776:A",
+   "CYS775:A",
+   "GLY857:A",
+   "ILE744:A",
+   "LEU777:A",
+   "LEU788:A",
+   "LEU844:A",
+   "LEU858:A",
+   "LYS745:A",
+   "MET766:A",
+   "THR790:A",
+   "VAL726:A"
+  ],
+  "contact_residues": [
+   "ASP855:A",
+   "THR854:A",
+   "MET766:A",
+   "THR790:A",
+   "LEU777:A",
+   "LEU788:A",
+   "ALA743:A",
+   "LYS745:A",
+   "VAL726:A",
+   "LEU844:A",
+   "LEU858:A",
+   "ALA763:A",
+   "ARG776:A",
+   "CYS775:A",
+   "GLY857:A",
+   "ILE744:A"
+  ],
+  "n_contact_residues": 16,
+  "criteria": {
+   "polar_NO_NO_max_A": 3.5,
+   "hydrophobic_CC_max_A": 4.5
+  },
+  "method": "distance-threshold geometric contacts (no angle terms, no protonation model)",
+  "model_index": 0,
+  "pose_score": -8.311
+ }
+}

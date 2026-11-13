@@ -1,0 +1,41 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C=CCC(OCCCl)=C(OCCOC)P=C=CN=CN=CNC12C#CC=C(C=C1)C2"
+ },
+ "params_hash": "1dbee84e89dd2d55",
+ "cached_at": "2026-11-11T22:40:22+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Aliphatic_long_chain",
+    "acyclic_C=C-O",
+    "alkyl_halide",
+    "imine_1",
+    "imine_2",
+    "isolated_alkene",
+    "phosphor",
+    "triple_bond"
+   ],
+   "NIH": [
+    "phosphite",
+    "phosphorane",
+    "primary_halide_sulfate"
+   ]
+  },
+  "n_alerts": 11,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

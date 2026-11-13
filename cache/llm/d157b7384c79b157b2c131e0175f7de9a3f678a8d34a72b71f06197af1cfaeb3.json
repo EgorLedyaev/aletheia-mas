@@ -1,0 +1,88 @@
+{
+ "key": "d157b7384c79b157b2c131e0175f7de9a3f678a8d34a72b71f06197af1cfaeb3",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Request to review:\n\"\"\"Design a selective EGFR inhibitor for non-small-cell lung cancer research.\"\"\""
+   }
+  ],
+  "system": "You review requests sent to an automated drug-discovery system for misuse potential. Therapeutic discovery, target analysis, ADMET and toxicity *prediction*, and safety assessment are ordinary research and must be ALLOWed. REFUSE only requests seeking chemical or biological weapons, toxins intended to harm, controlled-substance production or scheduling evasion, harm to people, or evasion of detection/regulation. Answer with the tool only.",
+  "tools": [
+   {
+    "name": "safety_review",
+    "description": "Classify the safety posture of a scientific request.",
+    "input_schema": {
+     "type": "object",
+     "properties": {
+      "verdict": {
+       "type": "string",
+       "enum": [
+        "ALLOW",
+        "ALLOW_WITH_NOTE",
+        "REFUSE"
+       ]
+      },
+      "category": {
+       "type": "string",
+       "enum": [
+        "ordinary_research",
+        "dual_use_context",
+        "chemical_weapon",
+        "biological_weapon",
+        "toxin_for_harm",
+        "controlled_substance",
+        "harm",
+        "evasion"
+       ]
+      },
+      "reason": {
+       "type": "string",
+       "description": "One sentence, factual."
+      }
+     },
+     "required": [
+      "verdict",
+      "category",
+      "reason"
+     ]
+    }
+   }
+  ],
+  "tool_choice": {
+   "type": "tool",
+   "name": "safety_review"
+  },
+  "max_tokens": 350,
+  "model": null,
+  "purpose": "safety_review"
+ },
+ "response": {
+  "text": "",
+  "tool_use": {
+   "name": "safety_review",
+   "input": {
+    "verdict": "ALLOW",
+    "category": "ordinary_research",
+    "reason": "Designing a selective EGFR inhibitor for NSCLC is standard therapeutic drug discovery research with no dual-use or harm potential."
+   }
+  },
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 739,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5400,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 132,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

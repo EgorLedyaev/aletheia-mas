@@ -1,0 +1,120 @@
+{
+ "tool": "generators.validate_proposals",
+ "version": "1.0",
+ "params": {
+  "proposals": [
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(F)c3)c2cc1OC",
+    "rationale": "Replaced meta-Br on aniline with F to reduce molecular weight/lipophilicity while retaining electron-withdrawing character, mimicking gefitinib-type halogen SAR."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+    "rationale": "Swapped Br for Cl at the meta position; smaller halogen often improves ligand efficiency in anilinoquinazoline EGFR inhibitors."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+    "rationale": "Replaced Br with nitrile as a polar bioisostere, potentially forming additional H-bond interactions in the EGFR back pocket."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+    "rationale": "Moved Br from meta to para position on the aniline ring to probe alternate vector into the hydrophobic pocket."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCOC",
+    "rationale": "Extended one methoxy to a 2-methoxyethoxy chain (erlotinib-like) to improve solubility and explore the solvent-exposed region."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN(C)C",
+    "rationale": "Introduced a basic dimethylaminoethoxy side chain in place of one methoxy to enhance aqueous solubility and potential for salt formation."
+   },
+   {
+    "smiles": "Fc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+    "rationale": "Replaced one ring methoxy with fluorine to reduce metabolic liability (demethylation) while retaining electronic effects on the quinazoline core."
+   },
+   {
+    "smiles": "COc1cc2c(ncnc2Nc2cccc(Br)c2)cc1OC",
+    "rationale": "Reconnected the quinazoline nitrogen substitution pattern (ring fusion isomer) to probe altered tautomeric/binding geometry while keeping same substituents."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1N",
+    "rationale": "Replaced one methoxy with a primary amine to introduce an H-bond donor and test alternate polarity in that region of the molecule."
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)(F)F",
+    "rationale": "Substituted methoxy with trifluoromethoxy to block oxidative O-demethylation and modulate electronics/lipophilicity."
+   }
+  ],
+  "seed_smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+ },
+ "params_hash": "3f44a28791bdb004",
+ "cached_at": "2026-11-11T22:40:30+00:00",
+ "data": {
+  "generator": "G4_llm_edits",
+  "n_proposed": 10,
+  "n_generated": 9,
+  "n_rejected": 1,
+  "molecules": [
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(F)c3)c2cc1OC",
+    "transform": "Replaced meta-Br on aniline with F to reduce molecular weight/lipophilicity while retaining electron-withdrawing charact",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC",
+    "transform": "Swapped Br for Cl at the meta position; smaller halogen often improves ligand efficiency in anilinoquinazoline EGFR inhi",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OC",
+    "transform": "Replaced Br with nitrile as a polar bioisostere, potentially forming additional H-bond interactions in the EGFR back poc",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3ccc(Br)cc3)c2cc1OC",
+    "transform": "Moved Br from meta to para position on the aniline ring to probe alternate vector into the hydrophobic pocket.",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COCCOc1cc2c(Nc3cccc(Br)c3)ncnc2cc1OC",
+    "transform": "Extended one methoxy to a 2-methoxyethoxy chain (erlotinib-like) to improve solubility and explore the solvent-exposed r",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OCCN(C)C",
+    "transform": "Introduced a basic dimethylaminoethoxy side chain in place of one methoxy to enhance aqueous solubility and potential fo",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2c(Nc3cccc(Br)c3)ncnc2cc1F",
+    "transform": "Replaced one ring methoxy with fluorine to reduce metabolic liability (demethylation) while retaining electronic effects",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1N",
+    "transform": "Replaced one methoxy with a primary amine to introduce an H-bond donor and test alternate polarity in that region of the",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   },
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC(F)(F)F",
+    "transform": "Substituted methoxy with trifluoromethoxy to block oxidative O-demethylation and modulate electronics/lipophilicity.",
+    "generator": "G4_llm_edits",
+    "parent": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC"
+   }
+  ],
+  "rejected": [
+   {
+    "smiles": "COc1cc2ncnc(Nc3cccc(Br)c3)c2cc1OC",
+    "reason": "duplicate of parent or earlier proposal"
+   }
+  ],
+  "validity": 0.9
+ }
+}

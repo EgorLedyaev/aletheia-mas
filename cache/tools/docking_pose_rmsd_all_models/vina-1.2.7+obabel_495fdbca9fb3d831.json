@@ -1,0 +1,88 @@
+{
+ "tool": "docking.pose_rmsd_all_models",
+ "version": "vina-1.2.7+obabel",
+ "params": {
+  "reference_pdb": "cache/docking/diag_lig.pdb",
+  "pose_pdbqt": "cache/docking/diag_aq4_out_vina.pdbqt"
+ },
+ "params_hash": "495fdbca9fb3d831",
+ "cached_at": "2026-11-12T20:58:30+00:00",
+ "data": {
+  "n_poses": 9,
+  "poses": [
+   {
+    "model_index": 0,
+    "rank": 1,
+    "rmsd_A": 4.188,
+    "score_kcal_per_mol": -6.669,
+    "n_matched_atoms": 29
+   },
+   {
+    "model_index": 1,
+    "rank": 2,
+    "rmsd_A": 5.11,
+    "score_kcal_per_mol": -6.546,
+    "n_matched_atoms": 29
+   },
+   {
+    "model_index": 2,
+    "rank": 3,
+    "rmsd_A": 1.361,
+    "score_kcal_per_mol": -6.52,
+    "n_matched_atoms": 29
+   },
+   {
+    "model_index": 3,
+    "rank": 4,
+    "rmsd_A": 4.386,
+    "score_kcal_per_mol": -6.496,
+    "n_matched_atoms": 29
+   },
+   {
+    "model_index": 4,
+    "rank": 5,
+    "rmsd_A": 4.843,
+    "score_kcal_per_mol": -6.464,
+    "n_matched_atoms": 29
+   },
+   {
+    "model_index": 5,
+    "rank": 6,
+    "rmsd_A": 5.135,
+    "score_kcal_per_mol": -6.46,
+    "n_matched_atoms": 29
+   },
+   {
+    "model_index": 6,
+    "rank": 7,
+    "rmsd_A": 5.911,
+    "score_kcal_per_mol": -6.43,
+    "n_matched_atoms": 29
+   },
+   {
+    "model_index": 7,
+    "rank": 8,
+    "rmsd_A": 4.268,
+    "score_kcal_per_mol": -6.38,
+    "n_matched_atoms": 29
+   },
+   {
+    "model_index": 8,
+    "rank": 9,
+    "rmsd_A": 5.438,
+    "score_kcal_per_mol": -6.374,
+    "n_matched_atoms": 29
+   }
+  ],
+  "top1_rmsd_A": 4.188,
+  "top1_score": -6.669,
+  "best_rmsd_A": 1.361,
+  "best_rmsd_rank": 3,
+  "best_rmsd_score": -6.52,
+  "success_threshold_A": 2.0,
+  "top1_success": false,
+  "sampled_near_native": true,
+  "diagnosis": "near-native pose was sampled but not ranked first: a scoring-function failure, not a search failure",
+  "method": "element-matched optimal assignment per pose, no realignment"
+ }
+}

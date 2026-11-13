@@ -1,0 +1,33 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC=CC1=C2N=CN=CC1=COC=C1C=CC=C[O+]2C1"
+ },
+ "params_hash": "430cfb9b8640449d",
+ "cached_at": "2026-11-11T18:38:13+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "acyclic_C=C-O",
+    "charged_oxygen_or_sulfur_atoms"
+   ],
+   "NIH": [
+    "oxonium"
+   ]
+  },
+  "n_alerts": 3,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "tool": "pdb.entry",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "5HG8"
+ },
+ "params_hash": "2d74b381f3815ec4",
+ "cached_at": "2026-11-12T16:47:28+00:00",
+ "data": {
+  "pdb_id": "5HG8",
+  "title": "EGFR (L858R, T790M, V948R) in complex with N-[3-({2-[(1-methyl-1H-pyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]pyrimidin-4-yl}oxy)phenyl]prop-2-enamide",
+  "method": [
+   "X-RAY DIFFRACTION"
+  ],
+  "resolution_A": 1.42,
+  "deposited": "2016-01-08T00:00:00.000+00:00",
+  "released": "2016-02-03T00:00:00.000+00:00",
+  "polymer_entities": 1,
+  "nonpolymer_entities": 3,
+  "ligand_ids": [
+   "634"
+  ],
+  "retrieved_at": "2026-11-12T16:47:28+00:00",
+  "source_url": "https://www.rcsb.org/structure/5HG8"
+ }
+}

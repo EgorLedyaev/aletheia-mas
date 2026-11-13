@@ -1,0 +1,119 @@
+{
+ "generated_by": "scripts/bench_docking.py",
+ "vina_binary": "vina_1.2.7_win.exe",
+ "n_per_class_requested": 3,
+ "criterion": "docs/preregistration.md W3",
+ "duration_s": 302.1,
+ "receptors": [
+  {
+   "pdb": "8A27",
+   "label": "EGFR kinase domain (8A27, 1.07 A)",
+   "family": "kinase",
+   "target": "CHEMBL203",
+   "accession": "P00533",
+   "chain": "A",
+   "box": {
+    "center": [
+     23.815,
+     -10.622,
+     -11.554
+    ],
+    "size": [
+     28.22,
+     18.05,
+     23.97
+    ]
+   },
+   "cocrystal_ligand": "KY9",
+   "n_actives": 3,
+   "n_decoys": 3,
+   "n_failed_pairs": 0,
+   "decoy_class": "measured inactive (pChEMBL <= 5)",
+   "ligand_source": "ChEMBL via this system's local tool cache (1726 records in 4 cached responses); the ChEMBL web API was returning HTTP 500 at run time",
+   "exhaustiveness": 8,
+   "seed": 42,
+   "scoring": {
+    "vina": {
+     "roc_auc": 0.6667,
+     "auc_ci95": [
+      0.0,
+      1.0
+     ],
+     "ef_1pct": 0.0,
+     "ef_5pct": 0.0,
+     "ef_10pct": 0.0,
+     "mean_active": -8.656,
+     "mean_decoy": -8.977,
+     "score_gap": -0.322,
+     "usable_for_ranking": false
+    },
+    "vinardo": {
+     "roc_auc": 0.7778,
+     "auc_ci95": [
+      0.3333,
+      1.0
+     ],
+     "ef_1pct": 0.0,
+     "ef_5pct": 0.0,
+     "ef_10pct": 0.0,
+     "mean_active": -5.892,
+     "mean_decoy": -6.517,
+     "score_gap": -0.625,
+     "usable_for_ranking": false
+    }
+   },
+   "delta_auc_vinardo_minus_vina": {
+    "mean": 0.1208,
+    "ci95": [
+     -0.6667,
+     1.0
+    ],
+    "excludes_zero": false
+   },
+   "rows": [
+    {
+     "id": "CHEMBL137617",
+     "label": 1,
+     "pchembl": 7.41,
+     "vina": -8.325,
+     "vinardo": -5.867
+    },
+    {
+     "id": "CHEMBL165495",
+     "label": 1,
+     "pchembl": 8.51,
+     "vina": -8.758,
+     "vinardo": -6.595
+    },
+    {
+     "id": "CHEMBL300791",
+     "label": 1,
+     "pchembl": 8.0,
+     "vina": -8.884,
+     "vinardo": -5.215
+    },
+    {
+     "id": "CHEMBL347074",
+     "label": 0,
+     "pchembl": 4.66,
+     "vina": -10.09,
+     "vinardo": -7.214
+    },
+    {
+     "id": "CHEMBL56132",
+     "label": 0,
+     "pchembl": 4.85,
+     "vina": -7.858,
+     "vinardo": -7.028
+    },
+    {
+     "id": "CHEMBL13629",
+     "label": 0,
+     "pchembl": 5.0,
+     "vina": -8.984,
+     "vinardo": -5.31
+    }
+   ]
+  }
+ ]
+}

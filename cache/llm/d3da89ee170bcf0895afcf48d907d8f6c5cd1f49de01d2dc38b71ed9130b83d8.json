@@ -1,0 +1,38 @@
+{
+ "key": "d3da89ee170bcf0895afcf48d907d8f6c5cd1f49de01d2dc38b71ed9130b83d8",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is the molecular weight of aspirin?"
+   }
+  ],
+  "system": "You are a computational chemistry assistant. Answer the request directly and concretely, with specific identifiers and numbers where relevant.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1200,
+  "model": null,
+  "purpose": "baseline_plain_llm"
+ },
+ "response": {
+  "text": "Aspirin (acetylsalicylic acid) has the molecular formula **C\u2089H\u2088O\u2084**.\n\n**Molecular weight: 180.16 g/mol**\n\nBreakdown by atomic contributions:\n- Carbon: 9 \u00d7 12.011 = 108.099\n- Hydrogen: 8 \u00d7 1.008 = 8.064\n- Oxygen: 4 \u00d7 15.999 = 63.996\n\nTotal \u2248 180.16 g/mol\n\nOther relevant identifiers:\n- **CAS number:** 50-78-2\n- **PubChem CID:** 2244\n- **SMILES:** CC(=O)OC1=CC=CC=C1C(=O)O",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 413,
+   "cache_creation_input_tokens": 4888,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 4888
+   },
+   "output_tokens": 226,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

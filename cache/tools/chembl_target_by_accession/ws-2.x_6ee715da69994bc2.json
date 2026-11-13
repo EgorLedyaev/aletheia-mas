@@ -1,0 +1,248 @@
+{
+ "tool": "chembl.target_by_accession",
+ "version": "ws-2.x",
+ "params": {
+  "accession": "P24941"
+ },
+ "params_hash": "6ee715da69994bc2",
+ "cached_at": "2026-11-11T22:40:03+00:00",
+ "data": {
+  "accession": "P24941",
+  "targets": [
+   {
+    "target_chembl_id": "CHEMBL301",
+    "pref_name": "Cyclin-dependent kinase 2",
+    "type": "SINGLE PROTEIN",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL1907605",
+    "pref_name": "Cyclin-dependent kinase 2/cyclin E1",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24864",
+     "P24941"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL2094126",
+    "pref_name": "Cyclin-dependent kinase 2/cyclin E",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24864",
+     "P24941",
+     "O96020"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL2094128",
+    "pref_name": "Cyclin-dependent kinase 2/cyclin A",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P20248",
+     "P78396"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL2111326",
+    "pref_name": "Cyclin-dependent kinase 2 and 4 (CDK2 and CDK4)",
+    "type": "SELECTIVITY GROUP",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P11802",
+     "P24941"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL3038469",
+    "pref_name": "CDK2/Cyclin A2",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P20248"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL3038470",
+    "pref_name": "CDK2/Cyclin A1",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P78396"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL3038517",
+    "pref_name": "CDK2/CDK4",
+    "type": "PROTEIN FAMILY",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P11802",
+     "P24941"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL3559691",
+    "pref_name": "Cyclin-dependent kinase",
+    "type": "PROTEIN FAMILY",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P06493",
+     "P11802",
+     "P24941",
+     "Q00535",
+     "Q00534",
+     "P50613",
+     "Q00526",
+     "Q00536",
+     "Q07002",
+     "P49336",
+     "Q00537",
+     "P21127",
+     "Q96Q40",
+     "Q9BWU1",
+     "O94921",
+     "P50750",
+     "Q15131",
+     "Q14004",
+     "Q8IZL9",
+     "Q9NYV4"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL3885552",
+    "pref_name": "Cyclin-dependent kinase 2/G1/S-specific cyclin-D1",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24385",
+     "P24941"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4106152",
+    "pref_name": "CDK2/Cyclin O",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P22674"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4106153",
+    "pref_name": "CDK2/Bovine cyclin A",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P30274"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523633",
+    "pref_name": "CDK2/Cyclin-E2",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "O96020"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523634",
+    "pref_name": "CDK2/Cyclin-Y",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "Q8ND76"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4523689",
+    "pref_name": "Protein cereblon/Cyclin-dependent kinase 2",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "Q96SW2"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4888444",
+    "pref_name": "Cyclin-dependent kinase 2/4/6",
+    "type": "PROTEIN FAMILY",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P11802",
+     "P24941",
+     "Q00534"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL4888454",
+    "pref_name": "CDK2/Cyclin C",
+    "type": "PROTEIN COMPLEX",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P24863"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6066123",
+    "pref_name": "von Hippel-Lindau disease tumor suppressor/Cyclin-dependent kinase 2",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P40337"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6193781",
+    "pref_name": "Protein cereblon/Cyclin-dependent kinase 2/Cyclin-dependent kinase 9",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P50750",
+     "Q96SW2"
+    ]
+   },
+   {
+    "target_chembl_id": "CHEMBL6195578",
+    "pref_name": "Microtubule-associated protein 1 light chain 3 beta/Cyclin-dependent kinase 2/Cyclin-A2",
+    "type": "PROTEIN-PROTEIN INTERACTION",
+    "organism": "Homo sapiens",
+    "accessions": [
+     "P24941",
+     "P20248",
+     "Q9GZQ8"
+    ]
+   }
+  ],
+  "n_targets": 20,
+  "preferred": {
+   "target_chembl_id": "CHEMBL301",
+   "pref_name": "Cyclin-dependent kinase 2",
+   "type": "SINGLE PROTEIN",
+   "organism": "Homo sapiens",
+   "accessions": [
+    "P24941"
+   ]
+  },
+  "retrieved_at": "2026-11-11T22:40:03+00:00",
+  "source_url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=P24941"
+ }
+}

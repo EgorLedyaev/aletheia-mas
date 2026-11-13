@@ -1,0 +1,43 @@
+{
+ "tool": "rdkit.druglikeness",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCC4CC4)cc23)c1"
+ },
+ "params_hash": "0850e6a21e93fdd4",
+ "cached_at": "2026-11-12T16:51:48+00:00",
+ "data": {
+  "lipinski": {
+   "MolWt<=500": true,
+   "cLogP<=5": true,
+   "HBD<=5": true,
+   "HBA<=10": true
+  },
+  "lipinski_violations": 0,
+  "lipinski_pass": true,
+  "veber": {
+   "RotB<=10": true,
+   "TPSA<=140": true
+  },
+  "veber_pass": true,
+  "qed": 0.4377,
+  "sa_score": 2.515,
+  "descriptors": {
+   "MolWt": 389.455,
+   "cLogP": 4.169,
+   "TPSA": 65.5,
+   "HBD": 1,
+   "HBA": 6,
+   "RotB": 9,
+   "RingCount": 4,
+   "AromaticRings": 3,
+   "HeavyAtoms": 29,
+   "FractionCSP3": 0.304,
+   "FormalCharge": 0,
+   "MolMR": 112.788,
+   "NumStereocentres": 0,
+   "QED": 0.4377,
+   "SAscore": 2.515
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "tool": "pdb.extract_ligand",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/1OYT.pdb",
+  "resname": "FSN",
+  "out_path": "cache/docking/bench_1OYT_FSN.pdb",
+  "chain": "H"
+ },
+ "params_hash": "105fa766a6872bbc",
+ "cached_at": "2026-11-12T10:40:37+00:00",
+ "data": {
+  "path": "cache/docking/bench_1OYT_FSN.pdb",
+  "resname": "FSN",
+  "n_atoms": 30
+ }
+}

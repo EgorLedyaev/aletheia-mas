@@ -1,0 +1,105 @@
+{
+ "tool": "ranking.portfolio",
+ "version": "1.0",
+ "params": {
+  "candidates": [
+   {
+    "cand_id": "C030",
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "origin": "G1_rule_decorate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "properties": {
+     "inchikey": "QJIHCROKGYMFNF-UHFFFAOYSA-N",
+     "formula": "C21H22N4O4",
+     "MolWt": 394.431,
+     "cLogP": 3.295,
+     "TPSA": 98.52,
+     "HBD": 1,
+     "HBA": 8,
+     "RotB": 10,
+     "RingCount": 3,
+     "AromaticRings": 3,
+     "HeavyAtoms": 29,
+     "FractionCSP3": 0.286,
+     "FormalCharge": 0,
+     "MolMR": 108.72,
+     "NumStereocentres": 0,
+     "QED": 0.5232,
+     "SAscore": 2.375,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 1,
+     "esol_logS": -4.11,
+     "cns_mpo_like": 5.007,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 2
+    },
+    "property_claims": {
+     "inchikey": "E-0648",
+     "MolWt": "E-0649",
+     "cLogP": "E-0650",
+     "TPSA": "E-0651",
+     "HBD": "E-0652",
+     "HBA": "E-0653",
+     "RotB": "E-0654",
+     "RingCount": "E-0655",
+     "AromaticRings": "E-0656",
+     "HeavyAtoms": "E-0657",
+     "FractionCSP3": "E-0658",
+     "FormalCharge": "E-0659",
+     "MolMR": "E-0660",
+     "NumStereocentres": "E-0661",
+     "QED": "E-0662",
+     "SAscore": "E-0663",
+     "lipinski_violations": "E-0664",
+     "n_structural_alerts": "E-0665",
+     "esol_logS": "E-0666",
+     "cns_mpo_like": "E-0667",
+     "n_panels_passed": "E-0668"
+    },
+    "flags": [
+     "BRENK:Aliphatic_long_chain"
+    ],
+    "scores": {},
+    "score_claims": {},
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "terminal alkyne -> nitrile"
+    ]
+   }
+  ],
+  "k": 8,
+  "cutoff": 0.35,
+  "score_key": "vina_score"
+ },
+ "params_hash": "7a65274e3d09c905",
+ "cached_at": "2026-11-11T20:02:36+00:00",
+ "data": {
+  "k": 8,
+  "n_candidates": 1,
+  "selected": [
+   {
+    "cand_id": "C030",
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "p_hit_assumed": 0.05,
+    "cluster": 0
+   }
+  ],
+  "n_clusters_represented": 1,
+  "p_at_least_one_hit_independent": 0.05,
+  "p_at_least_one_hit_cluster_correlated": 0.05,
+  "score_key": "vina_score",
+  "clustering": {
+   "n_clusters": 1,
+   "cutoff_tanimoto_distance": 0.35,
+   "cluster_sizes": [
+    1
+   ],
+   "method": "Taylor-Butina on Morgan r=2 2048-bit fingerprints"
+  },
+  "probability_model": "uncalibrated monotone map from score to P(hit); independence vs perfect within-cluster correlation give the two bounds reported here",
+  "caveat": "these probabilities are assumptions, not measured hit rates"
+ }
+}

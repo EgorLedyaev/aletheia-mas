@@ -1,0 +1,24 @@
+{
+ "tool": "pdb.entry",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "8A2D"
+ },
+ "params_hash": "acd4c50c7c1e3603",
+ "cached_at": "2026-11-12T16:47:27+00:00",
+ "data": {
+  "pdb_id": "8A2D",
+  "title": "EGFR kinase domain (L858R/V948R) in complex with 2-[4-(difluoromethyl)-6-[2-[4-[[4-(hydroxymethyl)-1-piperidyl]methyl]phenyl]ethynyl]-7-methyl-indazol-2-yl]-2-spiro[6,7-dihydropyrrolo[1,2-c]imidazole-5,1'-cyclopropane]-1-yl-N-thiazol-2-yl-acetamide",
+  "method": [
+   "X-RAY DIFFRACTION"
+  ],
+  "resolution_A": 1.11,
+  "deposited": "2022-06-03T00:00:00.000+00:00",
+  "released": "2022-10-19T00:00:00.000+00:00",
+  "polymer_entities": 1,
+  "nonpolymer_entities": 3,
+  "ligand_ids": [],
+  "retrieved_at": "2026-11-12T16:47:27+00:00",
+  "source_url": "https://www.rcsb.org/structure/8A2D"
+ }
+}

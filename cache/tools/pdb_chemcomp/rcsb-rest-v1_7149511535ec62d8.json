@@ -1,0 +1,19 @@
+{
+ "tool": "pdb.chemcomp",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "comp_id": "KY9"
+ },
+ "params_hash": "7149511535ec62d8",
+ "cached_at": "2026-11-11T22:40:43+00:00",
+ "data": {
+  "comp_id": "KY9",
+  "name": "(2R)-2-(6,7-dihydro-5H-pyrrolo[1,2-c]imidazol-1-yl)-2-[5-[2-[4-[[4-(hydroxymethyl)piperidin-1-yl]methyl]phenyl]ethynyl]-3-oxidanylidene-7-(trifluoromethyl)-1H-isoindol-2-yl]-N-(1,3-thiazol-2-yl)ethanamide",
+  "formula": "C35 H33 F3 N6 O3 S",
+  "formula_weight": 674.735,
+  "smiles": "c1cc(ccc1CN2CCC(CC2)CO)C#Cc3cc4c(c(c3)C(F)(F)F)CN(C4=O)[C@H](c5c6n(cn5)CCC6)C(=O)Nc7nccs7",
+  "type": "non-polymer",
+  "retrieved_at": "2026-11-11T22:40:43+00:00",
+  "source_url": "https://www.rcsb.org/ligand/KY9"
+ }
+}

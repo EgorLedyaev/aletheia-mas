@@ -1,0 +1,3847 @@
+{
+ "tool": "uniprot.entry",
+ "version": "rest-2026",
+ "params": {
+  "accession": "P24941"
+ },
+ "params_hash": "8684523c732a83c5",
+ "cached_at": "2026-11-11T22:39:31+00:00",
+ "data": {
+  "accession": "P24941",
+  "uniprot_id": "CDK2_HUMAN",
+  "protein_name": "Cyclin-dependent kinase 2",
+  "genes": [
+   "CDK2"
+  ],
+  "organism": "Homo sapiens",
+  "taxon_id": 9606,
+  "length": 298,
+  "sequence": "MENFQKVEKIGEGTYGVVYKARNKLTGEVVALKKIRLDTETEGVPSTAIREISLLKELNHPNIVKLLDVIHTENKLYLVFEFLHQDLKKFMDASALTGIPLPLIKSYLFQLLQGLAFCHSHRVLHRDLKPQNLLINTEGAIKLADFGLARAFGVPVRTYTHEVVTLWYRAPEILLGCKYYSTAVDIWSLGCIFAEMVTRRALFPGDSEIDQLFRIFRTLGTPDEVVWPGVTSMPDYKPSFPKWARQDFSKVVPPLDEDGRSLLSQMLHYDPNKRISAKAALAHPFFQDVTKPVPHLRL",
+  "sequence_md5": "e738af340c97db8838eaaca382c140e1",
+  "sequence_crc64": "F90A0F4E70910B51",
+  "function": [
+   "Serine/threonine-protein kinase involved in the control of the cell cycle; essential for meiosis, but dispensable for mitosis (PubMed:10499802, PubMed:10884347, PubMed:10995386, PubMed:10995387, PubMed:11051553, PubMed:11113184, PubMed:12944431, PubMed:15800615, PubMed:17495531, PubMed:19966300, PubMed:20935635, PubMed:21262353, PubMed:21596315, PubMed:28216226, PubMed:28666995). Phosphorylates CABLES1, CTNNB1, CDK2AP2, ERCC6, NBN, USP37, p53/TP53, NPM1, CDK7, RB1, BRCA2, MYC, NPAT, SUV39H1, EZH2 (PubMed:10499802, PubMed:10995386, PubMed:10995387, PubMed:11051553, PubMed:11113184, PubMed:12944431, PubMed:15800615, PubMed:19966300, PubMed:20935635, PubMed:21262353, PubMed:21596315, PubMed:24728993, PubMed:28216226). Triggers duplication of centrosomes and DNA (PubMed:11051553). Acts at the G1-S transition to promote the E2F transcriptional program and the initiation of DNA synthesis, and modulates G2 progression; controls the timing of entry into mitosis/meiosis by controlling the subsequent activation of cyclin B/CDK1 by phosphorylation, and coordinates the activation of cyclin B/CDK1 at the centrosome and in the nucleus (PubMed:18372919, PubMed:19238148, PubMed:19561645). Crucial role in orchestrating a fine balance between cellular proliferation, cell death, and DNA repair in embryonic stem cells (ESCs) (PubMed:18372919, PubMed:19238148, PubMed:19561645). Activated by the CDK-activating kinase (CAK) complex consisting of CDK7, cyclin-H/CCNH and MAT1, which is a master regulator of CDK activity (PubMed:41100585). Activity of CDK2 is maximal during S phase and G2; activated by interaction with cyclin E during the early stages of DNA synthesis to permit G1-S transition, and subsequently activated by cyclin A2 (cyclin A1 in germ cells) during the late stages of DNA replication to drive the transition from S phase to mitosis, the G2 phase (PubMed:18372919, PubMed:19238148, PubMed:19561645). EZH2 phosphorylation promotes H3K27me3 maintenance and epigenetic gene silencing (PubMed:20935635). Cyclin E/CDK2 prevents oxidative stress-mediated Ras-induced senescence by phosphorylating MYC (PubMed:19966300). Involved in G1-S phase DNA damage checkpoint that prevents cells with damaged DNA from initiating mitosis; regulates homologous recombination-dependent repair by phosphorylating BRCA2, this phosphorylation is low in S phase when recombination is active, but increases as cells progress towards mitosis (PubMed:15800615, PubMed:20195506, PubMed:21319273). In response to DNA damage, double-strand break repair by homologous recombination a reduction of CDK2-mediated BRCA2 phosphorylation (PubMed:15800615). Involved in regulation of telomere repair by mediating phosphorylation of NBN (PubMed:28216226). Phosphorylation of RB1 disturbs its interaction with E2F1 (PubMed:10499802). NPM1 phosphorylation by cyclin E/CDK2 promotes its dissociates from unduplicated centrosomes, thus initiating centrosome duplication (PubMed:11051553). Cyclin E/CDK2-mediated phosphorylation of NPAT at G1-S transition and until prophase stimulates the NPAT-mediated activation of histone gene transcription during S phase (PubMed:10995386, PubMed:10995387). Required for vitamin D-mediated growth inhibition by being itself inactivated (PubMed:20147522). Involved in the nitric oxide- (NO) mediated signaling in a nitrosylation/activation-dependent manner (PubMed:20079829). USP37 is activated by phosphorylation and thus triggers G1-S transition (PubMed:21596315). CTNNB1 phosphorylation regulates insulin internalization (PubMed:21262353). Phosphorylates FOXP3 and negatively regulates its transcriptional activity and protein stability (By similarity). Phosphorylates ERCC6 which is essential for its chromatin remodeling activity at DNA double-strand breaks (PubMed:29203878). Acts as a regulator of the phosphatidylinositol 3-kinase/protein kinase B signal transduction by mediating phosphorylation of the C-terminus of protein kinase B (PKB/AKT1 and PKB/AKT2), promoting its activation (PubMed:24670654)"
+  ],
+  "binding_features": [
+   {
+    "type": "Active site",
+    "start": 127,
+    "end": 127,
+    "ligand": null,
+    "description": "Proton acceptor"
+   },
+   {
+    "type": "Binding site",
+    "start": 10,
+    "end": 10,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 11,
+    "end": 11,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 12,
+    "end": 12,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 13,
+    "end": 13,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 14,
+    "end": 14,
+    "ligand": "ADP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 14,
+    "end": 14,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 15,
+    "end": 15,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 16,
+    "end": 16,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 17,
+    "end": 17,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 18,
+    "end": 18,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 33,
+    "end": 33,
+    "ligand": "ADP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 33,
+    "end": 33,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 81,
+    "end": 83,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 81,
+    "end": 81,
+    "ligand": "ADP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 83,
+    "end": 83,
+    "ligand": "ADP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 86,
+    "end": 86,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 127,
+    "end": 127,
+    "ligand": "Mg(2+)",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 129,
+    "end": 132,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 132,
+    "end": 132,
+    "ligand": "Mg(2+)",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 145,
+    "end": 145,
+    "ligand": "ATP",
+    "description": ""
+   },
+   {
+    "type": "Binding site",
+    "start": 145,
+    "end": 145,
+    "ligand": "Mg(2+)",
+    "description": ""
+   }
+  ],
+  "pdb_ids": [
+   "1AQ1",
+   "1B38",
+   "1B39",
+   "1BUH",
+   "1CKP",
+   "1DI8",
+   "1DM2",
+   "1E1V",
+   "1E1X",
+   "1E9H",
+   "1F5Q",
+   "1FIN",
+   "1FQ1",
+   "1FVT",
+   "1FVV",
+   "1G5S",
+   "1GIH",
+   "1GII",
+   "1GIJ",
+   "1GY3",
+   "1GZ8",
+   "1H00",
+   "1H01",
+   "1H07",
+   "1H08",
+   "1H0V",
+   "1H0W",
+   "1H1P",
+   "1H1Q",
+   "1H1R",
+   "1H1S",
+   "1H24",
+   "1H25",
+   "1H26",
+   "1H27",
+   "1H28",
+   "1HCK",
+   "1HCL",
+   "1JST",
+   "1JSU",
+   "1JSV",
+   "1JVP",
+   "1KE5",
+   "1KE6",
+   "1KE7",
+   "1KE8",
+   "1KE9",
+   "1OGU",
+   "1OI9",
+   "1OIQ",
+   "1OIR",
+   "1OIT",
+   "1OIU",
+   "1OIY",
+   "1OKV",
+   "1OKW",
+   "1OL1",
+   "1OL2",
+   "1P2A",
+   "1P5E",
+   "1PF8",
+   "1PKD",
+   "1PW2",
+   "1PXI",
+   "1PXJ",
+   "1PXK",
+   "1PXL",
+   "1PXM",
+   "1PXN",
+   "1PXO",
+   "1PXP",
+   "1PYE",
+   "1QMZ",
+   "1R78",
+   "1URC",
+   "1URW",
+   "1V1K",
+   "1VYW",
+   "1VYZ",
+   "1W0X",
+   "1W8C",
+   "1W98",
+   "1WCC",
+   "1Y8Y",
+   "1Y91",
+   "1YKR",
+   "23SR",
+   "2A0C",
+   "2A4L",
+   "2B52",
+   "2B53",
+   "2B54",
+   "2B55",
+   "2BHE",
+   "2BHH",
+   "2BKZ",
+   "2BPM",
+   "2BTR",
+   "2BTS",
+   "2C4G",
+   "2C5N",
+   "2C5O",
+   "2C5V",
+   "2C5X",
+   "2C5Y",
+   "2C68",
+   "2C69",
+   "2C6I",
+   "2C6K",
+   "2C6L",
+   "2C6M",
+   "2C6O",
+   "2C6T",
+   "2CCH",
+   "2CCI",
+   "2CJM",
+   "2CLX",
+   "2DS1",
+   "2DUV",
+   "2EXM",
+   "2FVD",
+   "2G9X",
+   "2I40",
+   "2IW6",
+   "2IW8",
+   "2IW9",
+   "2J9M",
+   "2JGZ",
+   "2R3F",
+   "2R3G",
+   "2R3H",
+   "2R3I",
+   "2R3J",
+   "2R3K",
+   "2R3L",
+   "2R3M",
+   "2R3N",
+   "2R3O",
+   "2R3P",
+   "2R3Q",
+   "2R3R",
+   "2R64",
+   "2UUE",
+   "2UZB",
+   "2UZD",
+   "2UZE",
+   "2UZL",
+   "2UZN",
+   "2UZO",
+   "2V0D",
+   "2V22",
+   "2VTA",
+   "2VTH",
+   "2VTI",
+   "2VTJ",
+   "2VTL",
+   "2VTM",
+   "2VTN",
+   "2VTO",
+   "2VTP",
+   "2VTQ",
+   "2VTR",
+   "2VTS",
+   "2VTT",
+   "2VU3",
+   "2VV9",
+   "2W05",
+   "2W06",
+   "2W17",
+   "2W1H",
+   "2WEV",
+   "2WFY",
+   "2WHB",
+   "2WIH",
+   "2WIP",
+   "2WMA",
+   "2WMB",
+   "2WPA",
+   "2WXV",
+   "2X1N",
+   "2XMY",
+   "2XNB",
+   "3BHT",
+   "3BHU",
+   "3BHV",
+   "3DDP",
+   "3DDQ",
+   "3DOG",
+   "3EID",
+   "3EJ1",
+   "3EOC",
+   "3EZR",
+   "3EZV",
+   "3F5X",
+   "3FZ1",
+   "3IG7",
+   "3IGG",
+   "3LE6",
+   "3LFN",
+   "3LFQ",
+   "3LFS",
+   "3MY5",
+   "3NS9",
+   "3PJ8",
+   "3PXF",
+   "3PXQ",
+   "3PXR",
+   "3PXY",
+   "3PXZ",
+   "3PY0",
+   "3PY1",
+   "3QHR",
+   "3QHW",
+   "3QL8",
+   "3QQF",
+   "3QQG",
+   "3QQH",
+   "3QQJ",
+   "3QQK",
+   "3QQL",
+   "3QRT",
+   "3QRU",
+   "3QTQ",
+   "3QTR",
+   "3QTS",
+   "3QTU",
+   "3QTW",
+   "3QTX",
+   "3QTZ",
+   "3QU0",
+   "3QWJ",
+   "3QWK",
+   "3QX2",
+   "3QX4",
+   "3QXO",
+   "3QXP",
+   "3QZF",
+   "3QZG",
+   "3QZH",
+   "3QZI",
+   "3R1Q",
+   "3R1S",
+   "3R1Y",
+   "3R28",
+   "3R6X",
+   "3R71",
+   "3R73",
+   "3R7E",
+   "3R7I",
+   "3R7U",
+   "3R7V",
+   "3R7Y",
+   "3R83",
+   "3R8L",
+   "3R8M",
+   "3R8P",
+   "3R8U",
+   "3R8V",
+   "3R8Z",
+   "3R9D",
+   "3R9H",
+   "3R9N",
+   "3R9O",
+   "3RAH",
+   "3RAI",
+   "3RAK",
+   "3RAL",
+   "3RJC",
+   "3RK5",
+   "3RK7",
+   "3RK9",
+   "3RKB",
+   "3RM6",
+   "3RM7",
+   "3RMF",
+   "3RNI",
+   "3ROY",
+   "3RPO",
+   "3RPR",
+   "3RPV",
+   "3RPY",
+   "3RZB",
+   "3S00",
+   "3S0O",
+   "3S1H",
+   "3S2P",
+   "3SQQ",
+   "3SW4",
+   "3SW7",
+   "3TI1",
+   "3TIY",
+   "3TIZ",
+   "3TNW",
+   "3ULI",
+   "3UNJ",
+   "3UNK",
+   "3WBL",
+   "4ACM",
+   "4BCK",
+   "4BCM",
+   "4BCN",
+   "4BCO",
+   "4BCP",
+   "4BCQ",
+   "4BGH",
+   "4BZD",
+   "4CFM",
+   "4CFN",
+   "4CFU",
+   "4CFV",
+   "4CFW",
+   "4CFX",
+   "4D1X",
+   "4D1Z",
+   "4EK3",
+   "4EK4",
+   "4EK5",
+   "4EK6",
+   "4EK8",
+   "4EOI",
+   "4EOJ",
+   "4EOK",
+   "4EOL",
+   "4EOM",
+   "4EON",
+   "4EOO",
+   "4EOP",
+   "4EOQ",
+   "4EOR",
+   "4EOS",
+   "4ERW",
+   "4EZ3",
+   "4EZ7",
+   "4FKG",
+   "4FKI",
+   "4FKJ",
+   "4FKL",
+   "4FKO",
+   "4FKP",
+   "4FKQ",
+   "4FKR",
+   "4FKS",
+   "4FKT",
+   "4FKU",
+   "4FKV",
+   "4FKW",
+   "4FX3",
+   "4GCJ",
+   "4I3Z",
+   "4II5",
+   "4KD1",
+   "4LYN",
+   "4NJ3",
+   "4RJ3",
+   "5A14",
+   "5AND",
+   "5ANE",
+   "5ANG",
+   "5ANI",
+   "5ANJ",
+   "5ANK",
+   "5ANO",
+   "5CYI",
+   "5D1J",
+   "5FP5",
+   "5FP6",
+   "5IEV",
+   "5IEX",
+   "5IEY",
+   "5IF1",
+   "5JQ5",
+   "5JQ8",
+   "5K4J",
+   "5L2W",
+   "5LMK",
+   "5MHQ",
+   "5NEV",
+   "5OO0",
+   "5OO1",
+   "5OO3",
+   "5OSJ",
+   "5OSM",
+   "5UQ1",
+   "5UQ2",
+   "5UQ3",
+   "6ATH",
+   "6GUB",
+   "6GUC",
+   "6GUE",
+   "6GUF",
+   "6GUH",
+   "6GUK",
+   "6GVA",
+   "6INL",
+   "6JGM",
+   "6OQI",
+   "6P3W",
+   "6Q3B",
+   "6Q3C",
+   "6Q3F",
+   "6Q48",
+   "6Q49",
+   "6Q4A",
+   "6Q4B",
+   "6Q4C",
+   "6Q4D",
+   "6Q4E",
+   "6Q4F",
+   "6Q4G",
+   "6Q4H",
+   "6Q4I",
+   "6Q4J",
+   "6Q4K",
+   "6RIJ",
+   "6SG4",
+   "6YL1",
+   "6YL6",
+   "6YLK",
+   "7ACK",
+   "7B5L",
+   "7B5R",
+   "7B7S",
+   "7E34",
+   "7KJS",
+   "7M2F",
+   "7MKX",
+   "7NVQ",
+   "7QHL",
+   "7RA5",
+   "7RWE",
+   "7RWF",
+   "7RXO",
+   "7S4T",
+   "7S7A",
+   "7S84",
+   "7S85",
+   "7S9X",
+   "7SA0",
+   "7UG1",
+   "7UXI",
+   "7UXK",
+   "7VDU",
+   "7ZPC",
+   "8B54",
+   "8BYA",
+   "8BZO",
+   "8CUR",
+   "8ERD",
+   "8ERN",
+   "8FOW",
+   "8FP0",
+   "8FP5",
+   "8H6P",
+   "8H6T",
+   "8OR0",
+   "8OR4",
+   "8OY2",
+   "8ROZ",
+   "8RU8",
+   "8UV0",
+   "8VQ3",
+   "8VQ4",
+   "8YNG",
+   "8YPW",
+   "8YQE",
+   "9BJC",
+   "9D0U",
+   "9D0V",
+   "9D0W",
+   "9D0X",
+   "9ESJ",
+   "9ESK",
+   "9ESL",
+   "9ESN",
+   "9ESO",
+   "9ESP",
+   "9ESQ",
+   "9ESR",
+   "9ESS",
+   "9ESU",
+   "9ESV",
+   "9ESW",
+   "9ESX",
+   "9ESY",
+   "9ESZ",
+   "9ET0",
+   "9ET1",
+   "9ET2",
+   "9ET3",
+   "9ET4",
+   "9ET5",
+   "9ET6",
+   "9ET7",
+   "9ET8",
+   "9ET9",
+   "9ETA",
+   "9ETB",
+   "9ETP",
+   "9FR2",
+   "9GLA",
+   "9GNO",
+   "9GOP",
+   "9GP3",
+   "9HIU",
+   "9HIW",
+   "9HJ1",
+   "9I9J",
+   "9I9K",
+   "9JJ5",
+   "9NYQ",
+   "9NYR",
+   "9OB2",
+   "9OB3",
+   "9OB4",
+   "9OB5",
+   "9OB6",
+   "9QCV",
+   "9QCX",
+   "9QJJ",
+   "9UAU",
+   "9UAW",
+   "9UGF"
+  ],
+  "pdb_entries": [
+   {
+    "pdb_id": "1AQ1",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1B38",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1B39",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1BUH",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1CKP",
+    "method": "X-ray",
+    "resolution": "2.05 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1DI8",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1DM2",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1E1V",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1E1X",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1E9H",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/C=1-296"
+   },
+   {
+    "pdb_id": "1F5Q",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1FIN",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1FQ1",
+    "method": "X-ray",
+    "resolution": "3.00 A",
+    "chains": "B=1-298"
+   },
+   {
+    "pdb_id": "1FVT",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1FVV",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1G5S",
+    "method": "X-ray",
+    "resolution": "2.61 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1GIH",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1GII",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1GIJ",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1GY3",
+    "method": "X-ray",
+    "resolution": "2.70 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1GZ8",
+    "method": "X-ray",
+    "resolution": "1.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1H00",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1H01",
+    "method": "X-ray",
+    "resolution": "1.79 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1H07",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1H08",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1H0V",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1H0W",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1H1P",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1H1Q",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1H1R",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1H1S",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1H24",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1H25",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1H26",
+    "method": "X-ray",
+    "resolution": "2.24 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1H27",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1H28",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1HCK",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1HCL",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1JST",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1JSU",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1JSV",
+    "method": "X-ray",
+    "resolution": "1.96 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1JVP",
+    "method": "X-ray",
+    "resolution": "1.53 A",
+    "chains": "P=1-298"
+   },
+   {
+    "pdb_id": "1KE5",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1KE6",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1KE7",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1KE8",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1KE9",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1OGU",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1OI9",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1OIQ",
+    "method": "X-ray",
+    "resolution": "2.31 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1OIR",
+    "method": "X-ray",
+    "resolution": "1.91 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1OIT",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1OIU",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1OIY",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1OKV",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1OKW",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1OL1",
+    "method": "X-ray",
+    "resolution": "2.90 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1OL2",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1P2A",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1P5E",
+    "method": "X-ray",
+    "resolution": "2.22 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1PF8",
+    "method": "X-ray",
+    "resolution": "2.51 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PKD",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/C=1-296"
+   },
+   {
+    "pdb_id": "1PW2",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PXI",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PXJ",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PXK",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PXL",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PXM",
+    "method": "X-ray",
+    "resolution": "2.53 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PXN",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PXO",
+    "method": "X-ray",
+    "resolution": "1.96 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PXP",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1PYE",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1QMZ",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1R78",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1URC",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1URW",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1V1K",
+    "method": "X-ray",
+    "resolution": "2.31 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1VYW",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "1VYZ",
+    "method": "X-ray",
+    "resolution": "2.21 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1W0X",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "C=1-298"
+   },
+   {
+    "pdb_id": "1W8C",
+    "method": "X-ray",
+    "resolution": "2.05 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1W98",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A=1-297"
+   },
+   {
+    "pdb_id": "1WCC",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1Y8Y",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1Y91",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "1YKR",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "23SR",
+    "method": "EM",
+    "resolution": "2.85 A",
+    "chains": "C=1-298"
+   },
+   {
+    "pdb_id": "2A0C",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "X=1-298"
+   },
+   {
+    "pdb_id": "2A4L",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2B52",
+    "method": "X-ray",
+    "resolution": "1.88 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2B53",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2B54",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2B55",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2BHE",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2BHH",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2BKZ",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2BPM",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2BTR",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2BTS",
+    "method": "X-ray",
+    "resolution": "1.99 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C4G",
+    "method": "X-ray",
+    "resolution": "2.70 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2C5N",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2C5O",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2C5V",
+    "method": "X-ray",
+    "resolution": "2.90 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2C5X",
+    "method": "X-ray",
+    "resolution": "2.90 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2C5Y",
+    "method": "X-ray",
+    "resolution": "2.25 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C68",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C69",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C6I",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C6K",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C6L",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C6M",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C6O",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2C6T",
+    "method": "X-ray",
+    "resolution": "2.61 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2CCH",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2CCI",
+    "method": "X-ray",
+    "resolution": "2.70 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2CJM",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2CLX",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2DS1",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2DUV",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2EXM",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2FVD",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2G9X",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2I40",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2IW6",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2IW8",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2IW9",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2J9M",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2JGZ",
+    "method": "X-ray",
+    "resolution": "2.90 A",
+    "chains": "A=1-288"
+   },
+   {
+    "pdb_id": "2R3F",
+    "method": "X-ray",
+    "resolution": "1.50 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3G",
+    "method": "X-ray",
+    "resolution": "1.55 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3H",
+    "method": "X-ray",
+    "resolution": "1.50 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3I",
+    "method": "X-ray",
+    "resolution": "1.28 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3J",
+    "method": "X-ray",
+    "resolution": "1.65 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3K",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3L",
+    "method": "X-ray",
+    "resolution": "1.65 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3M",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3N",
+    "method": "X-ray",
+    "resolution": "1.63 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3O",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3P",
+    "method": "X-ray",
+    "resolution": "1.66 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3Q",
+    "method": "X-ray",
+    "resolution": "1.35 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R3R",
+    "method": "X-ray",
+    "resolution": "1.47 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2R64",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2UUE",
+    "method": "X-ray",
+    "resolution": "2.06 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2UZB",
+    "method": "X-ray",
+    "resolution": "2.70 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2UZD",
+    "method": "X-ray",
+    "resolution": "2.72 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2UZE",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2UZL",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2UZN",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2UZO",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2V0D",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2V22",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2VTA",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTH",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTI",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTJ",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTL",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTM",
+    "method": "X-ray",
+    "resolution": "2.25 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTN",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTO",
+    "method": "X-ray",
+    "resolution": "2.19 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTP",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTQ",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTR",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTS",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VTT",
+    "method": "X-ray",
+    "resolution": "1.68 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VU3",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2VV9",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2W05",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2W06",
+    "method": "X-ray",
+    "resolution": "2.04 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2W17",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2W1H",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2WEV",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2WFY",
+    "method": "X-ray",
+    "resolution": "2.53 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2WHB",
+    "method": "X-ray",
+    "resolution": "2.90 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2WIH",
+    "method": "X-ray",
+    "resolution": "2.50 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2WIP",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2WMA",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2WMB",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2WPA",
+    "method": "X-ray",
+    "resolution": "2.51 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2WXV",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2X1N",
+    "method": "X-ray",
+    "resolution": "2.75 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "2XMY",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "2XNB",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3BHT",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3BHU",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3BHV",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3DDP",
+    "method": "X-ray",
+    "resolution": "2.70 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3DDQ",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3DOG",
+    "method": "X-ray",
+    "resolution": "2.70 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3EID",
+    "method": "X-ray",
+    "resolution": "3.15 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3EJ1",
+    "method": "X-ray",
+    "resolution": "3.22 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3EOC",
+    "method": "X-ray",
+    "resolution": "3.20 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3EZR",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3EZV",
+    "method": "X-ray",
+    "resolution": "1.99 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3F5X",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3FZ1",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3IG7",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3IGG",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3LE6",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3LFN",
+    "method": "X-ray",
+    "resolution": "2.28 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3LFQ",
+    "method": "X-ray",
+    "resolution": "2.03 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3LFS",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3MY5",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3NS9",
+    "method": "X-ray",
+    "resolution": "1.78 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3PJ8",
+    "method": "X-ray",
+    "resolution": "1.96 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3PXF",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3PXQ",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3PXR",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3PXY",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3PXZ",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3PY0",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3PY1",
+    "method": "X-ray",
+    "resolution": "2.05 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QHR",
+    "method": "X-ray",
+    "resolution": "2.17 A",
+    "chains": "A/C=1-296"
+   },
+   {
+    "pdb_id": "3QHW",
+    "method": "X-ray",
+    "resolution": "1.91 A",
+    "chains": "A/C=1-296"
+   },
+   {
+    "pdb_id": "3QL8",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QQF",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QQG",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QQH",
+    "method": "X-ray",
+    "resolution": "1.87 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QQJ",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QQK",
+    "method": "X-ray",
+    "resolution": "1.86 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QQL",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QRT",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QRU",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QTQ",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QTR",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QTS",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QTU",
+    "method": "X-ray",
+    "resolution": "1.82 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QTW",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QTX",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QTZ",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QU0",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QWJ",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QWK",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QX2",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QX4",
+    "method": "X-ray",
+    "resolution": "1.92 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QXO",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QXP",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QZF",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QZG",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QZH",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3QZI",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R1Q",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R1S",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R1Y",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R28",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R6X",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R71",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R73",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R7E",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R7I",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R7U",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R7V",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R7Y",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R83",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R8L",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R8M",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R8P",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R8U",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R8V",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R8Z",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R9D",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R9H",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R9N",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3R9O",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RAH",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RAI",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RAK",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RAL",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RJC",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RK5",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RK7",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RK9",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RKB",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RM6",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RM7",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RMF",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RNI",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3ROY",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RPO",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RPR",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RPV",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RPY",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3RZB",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3S00",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3S0O",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3S1H",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3S2P",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3SQQ",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3SW4",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3SW7",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3TI1",
+    "method": "X-ray",
+    "resolution": "1.99 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3TIY",
+    "method": "X-ray",
+    "resolution": "1.84 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3TIZ",
+    "method": "X-ray",
+    "resolution": "2.02 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3TNW",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "3ULI",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3UNJ",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3UNK",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "3WBL",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4ACM",
+    "method": "X-ray",
+    "resolution": "1.63 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4BCK",
+    "method": "X-ray",
+    "resolution": "2.05 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4BCM",
+    "method": "X-ray",
+    "resolution": "2.45 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4BCN",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4BCO",
+    "method": "X-ray",
+    "resolution": "2.05 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4BCP",
+    "method": "X-ray",
+    "resolution": "2.26 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4BCQ",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4BGH",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4BZD",
+    "method": "X-ray",
+    "resolution": "1.83 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4CFM",
+    "method": "X-ray",
+    "resolution": "2.85 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4CFN",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4CFU",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4CFV",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4CFW",
+    "method": "X-ray",
+    "resolution": "2.45 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4CFX",
+    "method": "X-ray",
+    "resolution": "3.50 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4D1X",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4D1Z",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4EK3",
+    "method": "X-ray",
+    "resolution": "1.34 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4EK4",
+    "method": "X-ray",
+    "resolution": "1.26 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4EK5",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4EK6",
+    "method": "X-ray",
+    "resolution": "1.52 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4EK8",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4EOI",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4EOJ",
+    "method": "X-ray",
+    "resolution": "1.65 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4EOK",
+    "method": "X-ray",
+    "resolution": "2.57 A",
+    "chains": "A/C=1-297"
+   },
+   {
+    "pdb_id": "4EOL",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-297"
+   },
+   {
+    "pdb_id": "4EOM",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-297"
+   },
+   {
+    "pdb_id": "4EON",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4EOO",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A/C=1-297"
+   },
+   {
+    "pdb_id": "4EOP",
+    "method": "X-ray",
+    "resolution": "1.99 A",
+    "chains": "A/C=1-297"
+   },
+   {
+    "pdb_id": "4EOQ",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A/C=1-297"
+   },
+   {
+    "pdb_id": "4EOR",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/C=1-297"
+   },
+   {
+    "pdb_id": "4EOS",
+    "method": "X-ray",
+    "resolution": "2.57 A",
+    "chains": "A/C=1-297"
+   },
+   {
+    "pdb_id": "4ERW",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4EZ3",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4EZ7",
+    "method": "X-ray",
+    "resolution": "2.49 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKG",
+    "method": "X-ray",
+    "resolution": "1.51 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKI",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKJ",
+    "method": "X-ray",
+    "resolution": "1.63 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKL",
+    "method": "X-ray",
+    "resolution": "1.26 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKO",
+    "method": "X-ray",
+    "resolution": "1.55 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKP",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKQ",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKR",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKS",
+    "method": "X-ray",
+    "resolution": "1.55 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKT",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKU",
+    "method": "X-ray",
+    "resolution": "1.47 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKV",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FKW",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4FX3",
+    "method": "X-ray",
+    "resolution": "2.75 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4GCJ",
+    "method": "X-ray",
+    "resolution": "1.42 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4I3Z",
+    "method": "X-ray",
+    "resolution": "2.05 A",
+    "chains": "A/C=1-296"
+   },
+   {
+    "pdb_id": "4II5",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "4KD1",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4LYN",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4NJ3",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "4RJ3",
+    "method": "X-ray",
+    "resolution": "1.63 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5A14",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5AND",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5ANE",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5ANG",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5ANI",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5ANJ",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5ANK",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5ANO",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5CYI",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "5D1J",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5FP5",
+    "method": "X-ray",
+    "resolution": "2.16 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5FP6",
+    "method": "X-ray",
+    "resolution": "1.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5IEV",
+    "method": "X-ray",
+    "resolution": "2.03 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5IEX",
+    "method": "X-ray",
+    "resolution": "2.03 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5IEY",
+    "method": "X-ray",
+    "resolution": "1.66 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5IF1",
+    "method": "X-ray",
+    "resolution": "2.61 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "5JQ5",
+    "method": "X-ray",
+    "resolution": "1.94 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5JQ8",
+    "method": "X-ray",
+    "resolution": "1.94 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5K4J",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5L2W",
+    "method": "X-ray",
+    "resolution": "2.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5LMK",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A=1-298, C=1-296"
+   },
+   {
+    "pdb_id": "5MHQ",
+    "method": "X-ray",
+    "resolution": "1.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5NEV",
+    "method": "X-ray",
+    "resolution": "2.97 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "5OO0",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5OO1",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5OO3",
+    "method": "X-ray",
+    "resolution": "1.73 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5OSJ",
+    "method": "X-ray",
+    "resolution": "1.83 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5OSM",
+    "method": "X-ray",
+    "resolution": "1.77 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5UQ1",
+    "method": "X-ray",
+    "resolution": "3.20 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "5UQ2",
+    "method": "X-ray",
+    "resolution": "2.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "5UQ3",
+    "method": "X-ray",
+    "resolution": "3.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6ATH",
+    "method": "X-ray",
+    "resolution": "1.82 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6GUB",
+    "method": "X-ray",
+    "resolution": "2.52 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "6GUC",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "6GUE",
+    "method": "X-ray",
+    "resolution": "1.99 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "6GUF",
+    "method": "X-ray",
+    "resolution": "2.65 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "6GUH",
+    "method": "X-ray",
+    "resolution": "1.50 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6GUK",
+    "method": "X-ray",
+    "resolution": "1.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6GVA",
+    "method": "X-ray",
+    "resolution": "2.15 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6INL",
+    "method": "X-ray",
+    "resolution": "1.75 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6JGM",
+    "method": "X-ray",
+    "resolution": "2.30 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6OQI",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6P3W",
+    "method": "X-ray",
+    "resolution": "2.54 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "6Q3B",
+    "method": "X-ray",
+    "resolution": "1.11 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q3C",
+    "method": "X-ray",
+    "resolution": "1.29 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q3F",
+    "method": "X-ray",
+    "resolution": "1.18 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q48",
+    "method": "X-ray",
+    "resolution": "1.03 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q49",
+    "method": "X-ray",
+    "resolution": "1.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4A",
+    "method": "X-ray",
+    "resolution": "1.13 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4B",
+    "method": "X-ray",
+    "resolution": "1.12 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4C",
+    "method": "X-ray",
+    "resolution": "1.73 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4D",
+    "method": "X-ray",
+    "resolution": "1.07 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4E",
+    "method": "X-ray",
+    "resolution": "1.06 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4F",
+    "method": "X-ray",
+    "resolution": "1.21 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4G",
+    "method": "X-ray",
+    "resolution": "0.98 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4H",
+    "method": "X-ray",
+    "resolution": "1.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4I",
+    "method": "X-ray",
+    "resolution": "1.11 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4J",
+    "method": "X-ray",
+    "resolution": "1.05 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6Q4K",
+    "method": "X-ray",
+    "resolution": "1.06 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6RIJ",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "6SG4",
+    "method": "X-ray",
+    "resolution": "2.43 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "6YL1",
+    "method": "X-ray",
+    "resolution": "1.66 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6YL6",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "6YLK",
+    "method": "X-ray",
+    "resolution": "1.65 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7ACK",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "7B5L",
+    "method": "EM",
+    "resolution": "3.80 A",
+    "chains": "L=1-298"
+   },
+   {
+    "pdb_id": "7B5R",
+    "method": "EM",
+    "resolution": "3.80 A",
+    "chains": "L=1-298"
+   },
+   {
+    "pdb_id": "7B7S",
+    "method": "X-ray",
+    "resolution": "2.54 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "7E34",
+    "method": "X-ray",
+    "resolution": "3.19 A",
+    "chains": "A=2-298"
+   },
+   {
+    "pdb_id": "7KJS",
+    "method": "X-ray",
+    "resolution": "2.19 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7M2F",
+    "method": "X-ray",
+    "resolution": "1.63 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7MKX",
+    "method": "X-ray",
+    "resolution": "3.08 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "7NVQ",
+    "method": "X-ray",
+    "resolution": "2.05 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7QHL",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "7RA5",
+    "method": "X-ray",
+    "resolution": "1.67 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7RWE",
+    "method": "X-ray",
+    "resolution": "1.59 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7RWF",
+    "method": "X-ray",
+    "resolution": "1.50 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7RXO",
+    "method": "X-ray",
+    "resolution": "1.38 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7S4T",
+    "method": "X-ray",
+    "resolution": "1.91 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7S7A",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7S84",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7S85",
+    "method": "X-ray",
+    "resolution": "1.98 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7S9X",
+    "method": "X-ray",
+    "resolution": "1.69 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7SA0",
+    "method": "X-ray",
+    "resolution": "1.59 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7UG1",
+    "method": "X-ray",
+    "resolution": "1.84 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7UXI",
+    "method": "X-ray",
+    "resolution": "2.07 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7UXK",
+    "method": "X-ray",
+    "resolution": "2.63 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7VDU",
+    "method": "X-ray",
+    "resolution": "1.53 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "7ZPC",
+    "method": "X-ray",
+    "resolution": "1.40 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8B54",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "8BYA",
+    "method": "EM",
+    "resolution": "3.38 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8BZO",
+    "method": "EM",
+    "resolution": "3.50 A",
+    "chains": "A=1-297"
+   },
+   {
+    "pdb_id": "8CUR",
+    "method": "X-ray",
+    "resolution": "2.20 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8ERD",
+    "method": "X-ray",
+    "resolution": "1.33 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8ERN",
+    "method": "X-ray",
+    "resolution": "1.64 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8FOW",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8FP0",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8FP5",
+    "method": "X-ray",
+    "resolution": "1.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8H6P",
+    "method": "X-ray",
+    "resolution": "2.44 A",
+    "chains": "A=1-297"
+   },
+   {
+    "pdb_id": "8H6T",
+    "method": "X-ray",
+    "resolution": "3.00 A",
+    "chains": "A=1-297"
+   },
+   {
+    "pdb_id": "8OR0",
+    "method": "EM",
+    "resolution": "3.10 A",
+    "chains": "H=1-298"
+   },
+   {
+    "pdb_id": "8OR4",
+    "method": "EM",
+    "resolution": "3.80 A",
+    "chains": "H=1-298"
+   },
+   {
+    "pdb_id": "8OY2",
+    "method": "X-ray",
+    "resolution": "2.62 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8ROZ",
+    "method": "EM",
+    "resolution": "2.70 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8RU8",
+    "method": "X-ray",
+    "resolution": "1.51 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8UV0",
+    "method": "X-ray",
+    "resolution": "1.55 A",
+    "chains": "A=2-298"
+   },
+   {
+    "pdb_id": "8VQ3",
+    "method": "X-ray",
+    "resolution": "1.84 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8VQ4",
+    "method": "X-ray",
+    "resolution": "1.90 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8YNG",
+    "method": "X-ray",
+    "resolution": "1.82 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8YPW",
+    "method": "X-ray",
+    "resolution": "1.80 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "8YQE",
+    "method": "X-ray",
+    "resolution": "1.94 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9BJC",
+    "method": "X-ray",
+    "resolution": "2.22 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9D0U",
+    "method": "X-ray",
+    "resolution": "2.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9D0V",
+    "method": "X-ray",
+    "resolution": "2.54 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9D0W",
+    "method": "EM",
+    "resolution": "2.95 A",
+    "chains": "C=1-298"
+   },
+   {
+    "pdb_id": "9D0X",
+    "method": "EM",
+    "resolution": "2.84 A",
+    "chains": "C=1-298"
+   },
+   {
+    "pdb_id": "9ESJ",
+    "method": "X-ray",
+    "resolution": "2.37 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESK",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESL",
+    "method": "X-ray",
+    "resolution": "2.39 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESN",
+    "method": "X-ray",
+    "resolution": "2.39 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESO",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESP",
+    "method": "X-ray",
+    "resolution": "2.38 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESQ",
+    "method": "X-ray",
+    "resolution": "2.38 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESR",
+    "method": "X-ray",
+    "resolution": "2.39 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESS",
+    "method": "X-ray",
+    "resolution": "2.44 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESU",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESV",
+    "method": "X-ray",
+    "resolution": "2.40 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESW",
+    "method": "X-ray",
+    "resolution": "2.38 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESX",
+    "method": "X-ray",
+    "resolution": "2.37 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESY",
+    "method": "X-ray",
+    "resolution": "2.39 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ESZ",
+    "method": "X-ray",
+    "resolution": "2.42 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET0",
+    "method": "X-ray",
+    "resolution": "2.24 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET1",
+    "method": "X-ray",
+    "resolution": "2.39 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET2",
+    "method": "X-ray",
+    "resolution": "2.37 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET3",
+    "method": "X-ray",
+    "resolution": "2.34 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET4",
+    "method": "X-ray",
+    "resolution": "2.64 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET5",
+    "method": "X-ray",
+    "resolution": "2.53 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET6",
+    "method": "X-ray",
+    "resolution": "2.55 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET7",
+    "method": "X-ray",
+    "resolution": "2.31 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET8",
+    "method": "X-ray",
+    "resolution": "2.31 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ET9",
+    "method": "X-ray",
+    "resolution": "2.49 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ETA",
+    "method": "X-ray",
+    "resolution": "2.51 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ETB",
+    "method": "X-ray",
+    "resolution": "2.76 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9ETP",
+    "method": "X-ray",
+    "resolution": "2.48 A",
+    "chains": "A/C=1-298"
+   },
+   {
+    "pdb_id": "9FR2",
+    "method": "X-ray",
+    "resolution": "1.60 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9GLA",
+    "method": "X-ray",
+    "resolution": "2.18 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9GNO",
+    "method": "X-ray",
+    "resolution": "1.16 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9GOP",
+    "method": "X-ray",
+    "resolution": "2.16 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9GP3",
+    "method": "X-ray",
+    "resolution": "2.45 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9HIU",
+    "method": "EM",
+    "resolution": "3.20 A",
+    "chains": "B=1-297"
+   },
+   {
+    "pdb_id": "9HIW",
+    "method": "EM",
+    "resolution": "3.10 A",
+    "chains": "B=1-297"
+   },
+   {
+    "pdb_id": "9HJ1",
+    "method": "EM",
+    "resolution": "2.90 A",
+    "chains": "B=1-297"
+   },
+   {
+    "pdb_id": "9I9J",
+    "method": "EM",
+    "resolution": "3.10 A",
+    "chains": "K=1-298"
+   },
+   {
+    "pdb_id": "9I9K",
+    "method": "EM",
+    "resolution": "2.40 A",
+    "chains": "K=1-298"
+   },
+   {
+    "pdb_id": "9JJ5",
+    "method": "X-ray",
+    "resolution": "1.71 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9NYQ",
+    "method": "X-ray",
+    "resolution": "2.85 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9NYR",
+    "method": "EM",
+    "resolution": "3.90 A",
+    "chains": "D=1-298"
+   },
+   {
+    "pdb_id": "9OB2",
+    "method": "X-ray",
+    "resolution": "2.12 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9OB3",
+    "method": "X-ray",
+    "resolution": "1.98 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9OB4",
+    "method": "X-ray",
+    "resolution": "1.95 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9OB5",
+    "method": "X-ray",
+    "resolution": "2.10 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9OB6",
+    "method": "X-ray",
+    "resolution": "2.00 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9QCV",
+    "method": "EM",
+    "resolution": "2.50 A",
+    "chains": "K=1-298"
+   },
+   {
+    "pdb_id": "9QCX",
+    "method": "EM",
+    "resolution": "2.60 A",
+    "chains": "K=1-298"
+   },
+   {
+    "pdb_id": "9QJJ",
+    "method": "EM",
+    "resolution": "2.50 A",
+    "chains": "B=1-298"
+   },
+   {
+    "pdb_id": "9UAU",
+    "method": "X-ray",
+    "resolution": "1.47 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9UAW",
+    "method": "X-ray",
+    "resolution": "1.72 A",
+    "chains": "A=1-298"
+   },
+   {
+    "pdb_id": "9UGF",
+    "method": "X-ray",
+    "resolution": "1.64 A",
+    "chains": "A=1-298"
+   }
+  ],
+  "ec_numbers": [
+   "2.7.11.22"
+  ],
+  "entry_version": 278,
+  "last_modified": "2026-11-04",
+  "retrieved_at": "2026-11-11T22:39:31+00:00",
+  "source_url": "https://www.uniprot.org/uniprotkb/P24941"
+ }
+}

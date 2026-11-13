@@ -1,0 +1,33 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "[B+]=CC=CC=CNC12C=C(OC)C1OC=CC=NC=N2"
+ },
+ "params_hash": "affec86c6200a54f",
+ "cached_at": "2026-11-11T18:38:13+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "heavy_metal",
+    "polyene"
+   ],
+   "NIH": [
+    "boron_warhead"
+   ]
+  },
+  "n_alerts": 3,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

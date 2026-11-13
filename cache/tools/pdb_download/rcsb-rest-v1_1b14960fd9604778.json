@@ -1,0 +1,18 @@
+{
+ "tool": "pdb.download",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "6Q4G"
+ },
+ "params_hash": "1b14960fd9604778",
+ "cached_at": "2026-11-11T22:39:32+00:00",
+ "data": {
+  "pdb_id": "6Q4G",
+  "path": "cache/structures/6Q4G.pdb",
+  "n_atom_records": 2552,
+  "sha256": "05cbd2ecb79e369375d0d01a1bf05aa2b661eb9ebe9e93cb1a66c555c7fa7d08",
+  "bytes": 457888,
+  "retrieved_at": "2026-11-11T22:39:32+00:00",
+  "source_url": "https://files.rcsb.org/download/6Q4G.pdb"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "tool": "pubchem.compound_by_name",
+ "version": "pug-rest",
+ "params": {
+  "name": "erlotinib"
+ },
+ "params_hash": "6cccd3b572925f86",
+ "cached_at": "2026-11-11T18:24:08+00:00",
+ "data": {
+  "query": "erlotinib",
+  "cid": 176870,
+  "smiles": "COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC",
+  "iupac_name": "N-(3-ethynylphenyl)-6,7-bis(2-methoxyethoxy)quinazolin-4-amine",
+  "formula": "C22H23N3O4",
+  "pubchem_properties": {
+   "MolecularWeight": "393.4",
+   "XLogP": 3.3,
+   "TPSA": 74.7,
+   "HBondDonorCount": 1,
+   "HBondAcceptorCount": 7
+  },
+  "retrieved_at": "2026-11-11T18:24:08+00:00",
+  "source_url": "https://pubchem.ncbi.nlm.nih.gov/compound/176870"
+ }
+}

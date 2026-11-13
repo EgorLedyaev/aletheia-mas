@@ -1,0 +1,14 @@
+{
+ "tool": "rdkit.scaffold",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C=CS(=O)(=O)c1cc2c(Nc3cccc(Br)c3)ncnc2cn1"
+ },
+ "params_hash": "b29b5e39b11ff09c",
+ "cached_at": "2026-11-11T22:39:28+00:00",
+ "data": {
+  "murcko_smiles": "c1ccc(Nc2ncnc3cnccc23)cc1",
+  "generic_scaffold": "C1CCC(CC2CCCC3CCCCC32)CC1",
+  "n_scaffold_atoms": 17
+ }
+}

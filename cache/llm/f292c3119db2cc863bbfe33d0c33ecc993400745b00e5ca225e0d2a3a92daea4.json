@@ -1,0 +1,38 @@
+{
+ "key": "f292c3119db2cc863bbfe33d0c33ecc993400745b00e5ca225e0d2a3a92daea4",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- gene_to_accession = P00533 (RETRIEVED)\n- inchikey = AAKJLRGGTJKAMG-UHFFFAOYSA-N (COMPUTED)\n- uniprot_protein_name = Epidermal growth factor receptor (RETRIEVED)\n- sequence_length = 1210 (RETRIEVED)\n- n_pdb_structures = 388 (RETRIEVED)\n- MolWt = 393.443 (COMPUTED)\n- cLogP = 3.405 (COMPUTED)\n- TPSA = 74.73 (COMPUTED)\n- HBD = 1 (COMPUTED)\n- HBA = 7 (COMPUTED)\n- RotB = 10 (COMPUTED)\n- RingCount = 3 (COMPUTED)\n- AromaticRings = 3 (COMPUTED)\n- HeavyAtoms = 29 (COMPUTED)\n- FractionCSP3 = 0.273 (COMPUTED)\n- FormalCharge = 0 (COMPUTED)\n- MolMR = 111.94 (COMPUTED)\n- NumStereocentres = 0 (COMPUTED)\n- QED = 0.418 (COMPUTED)\n- SAscore = 2.478 (COMPUTED)\n- sequence_gravy = -0.316 (COMPUTED)\n- net_charge_ph7 = -12 (COMPUTED)\n- lipinski_violations = 0 (COMPUTED)\n- n_structural_alerts = 2 (COMPUTED)\n- esol_logS = -4.173 (PREDICTED)\n- cns_mpo_like = 5.188 (PREDICTED)\n- n_developability_panels_passed = 4 (COMPUTED)\n- pdb_resolution = 2.6 (RETRIEVED)\n- structure_sequence_identity = 0.985 (COMPUTED)\n- cocrystal_ligand = AQ4 (COMPUTED)\n- top_pocket_volume = 458 (COMPUTED)\n- n_pockets_detected = 4 (COMPUTED)\n- pocket_to_cocrystal_distance = 0.31 (COMPUTED)\n- redocking_rmsd = 5.11 (COMPUTED)\n- vina_score = -7.048 (COMPUTED)\n- n_polar_contacts = 5 (COMPUTED)\n- best_vina_score = -7.048 (COMPUTED)\n- identity_checks_passed = 3 (COMPUTED)\n- identity_checks_total = 3 (COMPUTED)\n\nUser request: Dock erlotinib (C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1) into the EGFR structure 1M17 and validate the docking by redocking the co-crystal ligand.\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "The docking result places the ligand within the top-ranked pocket of the target structure, and identity checks on both the protein and the pocket-defining co-crystal ligand passed consistently, supporting that the binding site used is the physiologically relevant one. However, the redocking validation of the co-crystal ligand produced a deviation from its native pose that is well outside the range typically considered acceptable, indicating the docking protocol does not reliably reproduce known binding geometry for this pocket. Given that failure, the docking score for the query compound should not be interpreted as a reliable estimate of binding affinity or pose correctness. The physicochemical and developability profile of the compound falls within broadly drug-like ranges, but this analysis does not establish, and should not be read as evidence of, actual target engagement, efficacy, or safety.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1478,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 263,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

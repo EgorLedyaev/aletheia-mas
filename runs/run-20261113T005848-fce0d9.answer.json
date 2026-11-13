@@ -1,0 +1,630 @@
+{
+ "run_id": "run-20261113T005848-fce0d9",
+ "query": "Analyse ABL1 kinase (P00519) using PDB structure 1M17 and dock imatinib into it.",
+ "plan": {
+  "query": "Analyse ABL1 kinase (P00519) using PDB structure 1M17 and dock imatinib into it.",
+  "intents": [
+   "protein_analysis",
+   "docking"
+  ],
+  "modality": "mixed",
+  "targets": [
+   "ABL1",
+   "P00519",
+   "1M17"
+  ],
+  "molecules": [
+   "imatinib"
+  ],
+  "steps": [
+   {
+    "step_id": "B-1",
+    "agent": "target_analyst",
+    "action": "(blackboard round)",
+    "inputs": {},
+    "depends_on": [],
+    "rationale": "fired when its blackboard preconditions were met",
+    "optional": false
+   },
+   {
+    "step_id": "B-2",
+    "agent": "docking_agent",
+    "action": "(blackboard round)",
+    "inputs": {},
+    "depends_on": [],
+    "rationale": "fired when its blackboard preconditions were met",
+    "optional": false
+   },
+   {
+    "step_id": "B-3",
+    "agent": "structure_analyst",
+    "action": "(blackboard round)",
+    "inputs": {},
+    "depends_on": [],
+    "rationale": "fired when its blackboard preconditions were met",
+    "optional": false
+   },
+   {
+    "step_id": "B-4",
+    "agent": "critic",
+    "action": "(blackboard round)",
+    "inputs": {},
+    "depends_on": [],
+    "rationale": "fired when its blackboard preconditions were met",
+    "optional": false
+   }
+  ],
+  "planner": "callable+cache / blackboard",
+  "notes": [
+   "User explicitly requests analysis of the ABL1 kinase protein structure (1M17) and docking of imatinib into it, corresponding to protein_analysis and docking intents."
+  ]
+ },
+ "blocks": [
+  {
+   "title": "What the system did",
+   "text": "Planner `callable+cache / blackboard` routed this request to the intents protein_analysis, docking.\n\n- `B-1` **target_analyst** -> (blackboard round) \u2014 fired when its blackboard preconditions were met\n- `B-2` **docking_agent** -> (blackboard round) \u2014 fired when its blackboard preconditions were met\n- `B-3` **structure_analyst** -> (blackboard round) \u2014 fired when its blackboard preconditions were met\n- `B-4` **critic** -> (blackboard round) \u2014 fired when its blackboard preconditions were met\n\nTools actually invoked: `alphafold.download_model`, `alphafold.plddt_summary`, `chembl.target_by_accession`, `docking.prepare_receptor`, `pdb.extract_receptor`, `pocket.detect`, `uniprot.entry`, `uniprot.sequence_features`.",
+   "claim_ids": [],
+   "structures": [],
+   "exempt_numbers": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "B-1",
+    "B-2",
+    "B-3",
+    "B-4",
+    "download_model",
+    "plddt_summary",
+    "target_by_accession",
+    "prepare_receptor",
+    "extract_receptor",
+    "detect",
+    "entry",
+    "sequence_features"
+   ],
+   "level": "section"
+  },
+  {
+   "title": "Target",
+   "text": "**ABL1** \u2014 Tyrosine-protein kinase ABL1 (Homo sapiens), UniProt `P00519`.\n- Sequence length: 1130 residues [E-0002] \u2014 RETRIEVED | P00519 @ 2026-11-11\n- Experimental structures cross-referenced: 85 [E-0003] \u2014 RETRIEVED | P00519 @ 2026-11-11\n- ChEMBL target id: `CHEMBL1862` [E-0004] \u2014 RETRIEVED | CHEMBL1862 @ 2026-11-12\n- No usable experimental structure; AlphaFold DB model `AF-P00519-F1` used, mean pLDDT 63.37 [E-0007] \u2014 COMPUTED | alphafold.plddt_summary afdb-api\n- Target identity checks passed: 1 of 2 [E-0015] \u2014 uniprot_length_matches_sequence; pdb_belongs_to_accession",
+   "claim_ids": [
+    "E-0001",
+    "E-0002",
+    "E-0003",
+    "E-0004",
+    "E-0004",
+    "E-0007",
+    "E-0015",
+    "E-0016"
+   ],
+   "structures": [
+    "P00519"
+   ],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Binding site",
+   "text": "- top pocket volume: 2484 A^3 [E-0008] \u2014 COMPUTED | pocket.detect ligsite-like-1.0\n- n pockets detected: 5  [E-0009] \u2014 COMPUTED | pocket.detect ligsite-like-1.0",
+   "claim_ids": [
+    "E-0008",
+    "E-0009"
+   ],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "section"
+  },
+  {
+   "title": "Independent cross-check",
+   "text": "- critic claims recomputed: 0 [E-0010] \u2014 COMPUTED | aletheia.critic 1.0\n- critic recomputation mismatches: 0 [E-0011] \u2014 COMPUTED | aletheia.critic 1.0\n- predicted claims total: 0 [E-0012] \u2014 COMPUTED | aletheia.critic 1.0\n- predicted claims out of domain: 0 [E-0013] \u2014 COMPUTED | aletheia.critic 1.0\n- ledger claims total: 13 [E-0014] \u2014 COMPUTED | aletheia.critic 1.0\n- fewer than two oracles scored the candidates; no consensus check possible",
+   "claim_ids": [
+    "E-0010",
+    "E-0011",
+    "E-0012",
+    "E-0013",
+    "E-0014"
+   ],
+   "structures": [],
+   "exempt_numbers": [],
+   "level": "note"
+  }
+ ],
+ "candidates": [],
+ "target": null,
+ "safety": {
+  "verdict": "ALLOW",
+  "category": "ordinary_research",
+  "reason": "Routine computational docking of an approved drug (imatinib) into a well-characterized kinase target using a standard PDB structure is standard drug-discovery research.",
+  "lexicon_hits": [],
+  "caution_terms": [],
+  "llm_backend": "callable",
+  "llm_verdict": "ALLOW",
+  "classifier_available": true,
+  "force_structure_screen": false,
+  "query_sha256": "f459932007ae848e",
+  "policy_version": "aletheia-safety-1.0"
+ },
+ "verification": {
+  "ok": true,
+  "summary": "ledger coverage 100.0% (21/21 numeric tokens), 14/16 claims cited, 0 violation(s)",
+  "numeric_coverage": 1.0,
+  "n_numeric_tokens": 21,
+  "n_resolved_tokens": 21,
+  "n_claims_total": 16,
+  "n_claims_used": 14,
+  "violations": []
+ },
+ "ledger_rows": [
+  {
+   "claim_id": "E-0001",
+   "tag": "RETRIEVED",
+   "key": "uniprot_protein_name",
+   "value": "Tyrosine-protein kinase ABL1",
+   "units": "",
+   "subject": "P00519",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00519",
+   "params_hash": "8edf864a45066115",
+   "call_id": "C-4fa1a2c5",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0002",
+   "tag": "RETRIEVED",
+   "key": "sequence_length",
+   "value": "1130",
+   "units": "residues",
+   "subject": "P00519",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00519",
+   "params_hash": "8edf864a45066115",
+   "call_id": "C-4fa1a2c5",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0003",
+   "tag": "RETRIEVED",
+   "key": "n_pdb_structures",
+   "value": "85",
+   "units": "",
+   "subject": "P00519",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "source_id": "P00519",
+   "params_hash": "8edf864a45066115",
+   "call_id": "C-4fa1a2c5",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0004",
+   "tag": "RETRIEVED",
+   "key": "chembl_target_id",
+   "value": "CHEMBL1862",
+   "units": "",
+   "subject": "P00519",
+   "tool": "chembl.target_by_accession",
+   "tool_version": "ws-2.x",
+   "source_id": "CHEMBL1862",
+   "params_hash": "f580f5eae2168687",
+   "call_id": "C-79cb5439",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "ChEMBL target for P00519"
+  },
+  {
+   "claim_id": "E-0005",
+   "tag": "COMPUTED",
+   "key": "sequence_gravy",
+   "value": "-0.597",
+   "units": "",
+   "subject": "P00519",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "b1e5008ef4d45ff0",
+   "call_id": "C-efaf4e7c",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "Kyte-Doolittle mean hydropathy"
+  },
+  {
+   "claim_id": "E-0006",
+   "tag": "COMPUTED",
+   "key": "net_charge_ph7",
+   "value": "14",
+   "units": "",
+   "subject": "P00519",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "source_id": "",
+   "params_hash": "b1e5008ef4d45ff0",
+   "call_id": "C-efaf4e7c",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "K+R-D-E count, no pKa model"
+  },
+  {
+   "claim_id": "E-0007",
+   "tag": "COMPUTED",
+   "key": "alphafold_mean_plddt",
+   "value": "63.37",
+   "units": "",
+   "subject": "P00519",
+   "tool": "alphafold.plddt_summary",
+   "tool_version": "afdb-api",
+   "source_id": "",
+   "params_hash": "2faf9feb227410cf",
+   "call_id": "C-785e7e5c",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "per-residue model confidence, not accuracy"
+  },
+  {
+   "claim_id": "E-0008",
+   "tag": "COMPUTED",
+   "key": "top_pocket_volume",
+   "value": "2484",
+   "units": "A^3",
+   "subject": "cache/structures/AF-P00519.pdb",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "4b11329bad70b71d",
+   "call_id": "C-98ef4273",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "LIGSITE-style protein-solvent-protein buriedness grid (re-implementation; see aletheia/tools/pocket.py)"
+  },
+  {
+   "claim_id": "E-0009",
+   "tag": "COMPUTED",
+   "key": "n_pockets_detected",
+   "value": "5",
+   "units": "",
+   "subject": "cache/structures/AF-P00519.pdb",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "source_id": "",
+   "params_hash": "4b11329bad70b71d",
+   "call_id": "C-98ef4273",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0010",
+   "tag": "COMPUTED",
+   "key": "critic_claims_recomputed",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "seed=20261111",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "random sample of 0 recomputable descriptor claims, tool cache bypassed"
+  },
+  {
+   "claim_id": "E-0011",
+   "tag": "COMPUTED",
+   "key": "critic_recomputation_mismatches",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "seed=20261111",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "none"
+  },
+  {
+   "claim_id": "E-0012",
+   "tag": "COMPUTED",
+   "key": "predicted_claims_total",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "ad-audit",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  },
+  {
+   "claim_id": "E-0013",
+   "tag": "COMPUTED",
+   "key": "predicted_claims_out_of_domain",
+   "value": "0",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "ad-audit",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "applicability domain verdicts on model predictions"
+  },
+  {
+   "claim_id": "E-0014",
+   "tag": "COMPUTED",
+   "key": "ledger_claims_total",
+   "value": "13",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.critic",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "hygiene",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "COMPUTED=9; PREDICTED=0; RETRIEVED=4; HYPOTHESIS=0"
+  },
+  {
+   "claim_id": "E-0015",
+   "tag": "COMPUTED",
+   "key": "identity_checks_passed",
+   "value": "1",
+   "units": "",
+   "subject": "P00519",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00519",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": "uniprot_length_matches_sequence=True; pdb_belongs_to_accession=False"
+  },
+  {
+   "claim_id": "E-0016",
+   "tag": "COMPUTED",
+   "key": "identity_checks_total",
+   "value": "2",
+   "units": "",
+   "subject": "",
+   "tool": "aletheia.identity_check",
+   "tool_version": "1.0",
+   "source_id": "",
+   "params_hash": "P00519",
+   "call_id": "",
+   "applicability": "NOT_ASSESSED",
+   "uncertainty": null,
+   "validation": null,
+   "note": ""
+  }
+ ],
+ "tool_calls": [
+  {
+   "call_id": "C-4fa1a2c5",
+   "tool": "uniprot.entry",
+   "tool_version": "rest-2026",
+   "params": {
+    "accession": "P00519"
+   },
+   "params_hash": "8edf864a45066115",
+   "started_at": "2026-11-12T21:58:48+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-79cb5439",
+   "tool": "chembl.target_by_accession",
+   "tool_version": "ws-2.x",
+   "params": {
+    "accession": "P00519"
+   },
+   "params_hash": "f580f5eae2168687",
+   "started_at": "2026-11-12T21:58:48+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-efaf4e7c",
+   "tool": "uniprot.sequence_features",
+   "tool_version": "rest-2026",
+   "params": {
+    "sequence": "MLEICLKLVGCKSKKGLSSSSSCYLEEALQRPVASDFEPQGLSEAARWNSKENLLAGPSENDPNLFVALYDFVASGDNTLSITKGEKLRVLGYNHNGEWCEAQTKNGQGWVPSNYITPVNSLEKHSWYHGPVSRNAAEYLLSSGINGSFLVRESESSPGQRSISLRYEGRVYHYRINTASDGKLYVSSESRFNTLAELVH..."
+   },
+   "params_hash": "b1e5008ef4d45ff0",
+   "started_at": "2026-11-12T21:58:48+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-6ff0b647",
+   "tool": "alphafold.download_model",
+   "tool_version": "afdb-api",
+   "params": {
+    "accession": "P00519"
+   },
+   "params_hash": "ee139811a8a07d12",
+   "started_at": "2026-11-12T21:58:48+00:00",
+   "duration_s": 0.001,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-785e7e5c",
+   "tool": "alphafold.plddt_summary",
+   "tool_version": "afdb-api",
+   "params": {
+    "pdb_path": "cache/structures/AF-P00519.pdb"
+   },
+   "params_hash": "2faf9feb227410cf",
+   "started_at": "2026-11-12T21:58:48+00:00",
+   "duration_s": 0.002,
+   "cached": true,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "target_analyst"
+  },
+  {
+   "call_id": "C-99400355",
+   "tool": "pdb.extract_receptor",
+   "tool_version": "rcsb-rest-v1",
+   "params": {
+    "pdb_path": "cache/structures/AF-P00519.pdb",
+    "out_path": "cache/docking/model_rec.pdb",
+    "chain": null
+   },
+   "params_hash": "abc5f294a1a41dfe",
+   "started_at": "2026-11-12T21:58:48+00:00",
+   "duration_s": 0.098,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-a127122c",
+   "tool": "docking.prepare_receptor",
+   "tool_version": "vina-1.2.7+obabel",
+   "params": {
+    "pdb_path": "cache/docking/model_rec.pdb",
+    "out_pdbqt": "cache/docking/model_rec.pdbqt"
+   },
+   "params_hash": "6c84c5e149dd853a",
+   "started_at": "2026-11-12T21:58:48+00:00",
+   "duration_s": 1.94,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "docking_agent"
+  },
+  {
+   "call_id": "C-98ef4273",
+   "tool": "pocket.detect",
+   "tool_version": "ligsite-like-1.0",
+   "params": {
+    "pdb_path": "cache/structures/AF-P00519.pdb",
+    "spacing": 1.0,
+    "probe": 3.2,
+    "psp_min": 5,
+    "reference_point": null
+   },
+   "params_hash": "4b11329bad70b71d",
+   "started_at": "2026-11-12T21:58:48+00:00",
+   "duration_s": 2.54,
+   "cached": false,
+   "ok": true,
+   "error": null,
+   "n_evidence": 0,
+   "agent": "structure_analyst"
+  }
+ ],
+ "agent_results": [
+  {
+   "agent": "target_analyst",
+   "step_id": "B1-target_analyst",
+   "ok": false,
+   "degraded": true,
+   "duration_s": 0.031,
+   "error": "identity check failed: pdb_belongs_to_accession",
+   "messages": [
+    "ABL1: Tyrosine-protein kinase ABL1",
+    "identity checks passed: 1/2"
+   ]
+  },
+  {
+   "agent": "docking_agent",
+   "step_id": "B2-docking_agent",
+   "ok": false,
+   "degraded": false,
+   "duration_s": 2.057,
+   "error": "no binding site definition",
+   "messages": []
+  },
+  {
+   "agent": "structure_analyst",
+   "step_id": "B2-structure_analyst",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 2.552,
+   "error": null,
+   "messages": [
+    "5 buried cavities detected"
+   ]
+  },
+  {
+   "agent": "critic",
+   "step_id": "B-critic",
+   "ok": true,
+   "degraded": false,
+   "duration_s": 0.001,
+   "error": null,
+   "messages": [
+    "fewer than two oracles scored the candidates; no consensus check possible"
+   ]
+  }
+ ],
+ "source": "mixed",
+ "blocked": false,
+ "withheld_blocks": [],
+ "degraded": [
+  "identity check failed: 1M17 is not cross-referenced to P00519; structure-based steps are blocked",
+  "structure steps skipped: target identity checks did not pass",
+  "docking skipped: no binding site could be defined (no co-crystal ligand and no detected pocket)"
+ ],
+ "started_at": "2026-11-12T21:58:48+00:00",
+ "duration_s": 2.61,
+ "cost": {
+  "llm_calls": 3,
+  "llm_backend": "replay/rules (offline)",
+  "tool_calls": 8,
+  "cached_tool_calls": 5
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC=CC=NC=Nc1[nH]c2cccc(Br)c2c1CO[N-]"
+ },
+ "params_hash": "32119803c894ea14",
+ "cached_at": "2026-11-11T18:38:13+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "Oxygen-nitrogen_single_bond",
+    "acyclic_C=C-O",
+    "imine_1",
+    "imine_2"
+   ],
+   "NIH": []
+  },
+  "n_alerts": 4,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

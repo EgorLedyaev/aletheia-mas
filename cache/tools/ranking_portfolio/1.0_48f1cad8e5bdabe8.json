@@ -1,0 +1,425 @@
+{
+ "tool": "ranking.portfolio",
+ "version": "1.0",
+ "params": {
+  "candidates": [
+   {
+    "cand_id": "C030",
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "origin": "G1_rule_decorate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "properties": {
+     "inchikey": "QJIHCROKGYMFNF-UHFFFAOYSA-N",
+     "formula": "C21H22N4O4",
+     "MolWt": 394.431,
+     "cLogP": 3.295,
+     "TPSA": 98.52,
+     "HBD": 1,
+     "HBA": 8,
+     "RotB": 10,
+     "RingCount": 3,
+     "AromaticRings": 3,
+     "HeavyAtoms": 29,
+     "FractionCSP3": 0.286,
+     "FormalCharge": 0,
+     "MolMR": 108.72,
+     "NumStereocentres": 0,
+     "QED": 0.5232,
+     "SAscore": 2.375,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 1,
+     "esol_logS": -4.11,
+     "cns_mpo_like": 5.007,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 2,
+     "qsar_applicability": "IN_DOMAIN",
+     "qsar_pchembl": 7.456
+    },
+    "property_claims": {
+     "inchikey": "E-0655",
+     "MolWt": "E-0656",
+     "cLogP": "E-0657",
+     "TPSA": "E-0658",
+     "HBD": "E-0659",
+     "HBA": "E-0660",
+     "RotB": "E-0661",
+     "RingCount": "E-0662",
+     "AromaticRings": "E-0663",
+     "HeavyAtoms": "E-0664",
+     "FractionCSP3": "E-0665",
+     "FormalCharge": "E-0666",
+     "MolMR": "E-0667",
+     "NumStereocentres": "E-0668",
+     "QED": "E-0669",
+     "SAscore": "E-0670",
+     "lipinski_violations": "E-0671",
+     "n_structural_alerts": "E-0672",
+     "esol_logS": "E-0673",
+     "cns_mpo_like": "E-0674",
+     "n_panels_passed": "E-0675"
+    },
+    "flags": [
+     "BRENK:Aliphatic_long_chain"
+    ],
+    "scores": {
+     "qsar_pchembl": 7.456
+    },
+    "score_claims": {
+     "qsar_pchembl": "E-2701"
+    },
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "terminal alkyne -> nitrile"
+    ]
+   },
+   {
+    "cand_id": "C046",
+    "smiles": "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+    "origin": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "properties": {
+     "inchikey": "FIEPRWDRWNAAFJ-UHFFFAOYSA-N",
+     "formula": "C20H23N3O4",
+     "MolWt": 369.421,
+     "cLogP": 3.424,
+     "TPSA": 74.73,
+     "HBD": 1,
+     "HBA": 7,
+     "RotB": 10,
+     "RingCount": 3,
+     "AromaticRings": 3,
+     "HeavyAtoms": 27,
+     "FractionCSP3": 0.3,
+     "FormalCharge": 0,
+     "MolMR": 104.005,
+     "NumStereocentres": 0,
+     "QED": 0.5489,
+     "SAscore": 2.155,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 1,
+     "esol_logS": -4.066,
+     "cns_mpo_like": 5.342,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 3,
+     "qsar_applicability": "IN_DOMAIN",
+     "qsar_pchembl": 7.32
+    },
+    "property_claims": {
+     "inchikey": "E-0991",
+     "MolWt": "E-0992",
+     "cLogP": "E-0993",
+     "TPSA": "E-0994",
+     "HBD": "E-0995",
+     "HBA": "E-0996",
+     "RotB": "E-0997",
+     "RingCount": "E-0998",
+     "AromaticRings": "E-0999",
+     "HeavyAtoms": "E-1000",
+     "FractionCSP3": "E-1001",
+     "FormalCharge": "E-1002",
+     "MolMR": "E-1003",
+     "NumStereocentres": "E-1004",
+     "QED": "E-1005",
+     "SAscore": "E-1006",
+     "lipinski_violations": "E-1007",
+     "n_structural_alerts": "E-1008",
+     "esol_logS": "E-1009",
+     "cns_mpo_like": "E-1010",
+     "n_panels_passed": "E-1011"
+    },
+    "flags": [
+     "BRENK:Aliphatic_long_chain"
+    ],
+    "scores": {
+     "qsar_pchembl": 7.32
+    },
+    "score_claims": {
+     "qsar_pchembl": "E-2702"
+    },
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "SELFIES token mutation"
+    ]
+   },
+   {
+    "cand_id": "C064",
+    "smiles": "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+    "origin": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "properties": {
+     "inchikey": "KHQJQIPVOMFYQT-UHFFFAOYSA-N",
+     "formula": "C18H21N3O4",
+     "MolWt": 343.383,
+     "cLogP": 2.546,
+     "TPSA": 74.73,
+     "HBD": 1,
+     "HBA": 7,
+     "RotB": 10,
+     "RingCount": 3,
+     "AromaticRings": 2,
+     "HeavyAtoms": 25,
+     "FractionCSP3": 0.333,
+     "FormalCharge": 0,
+     "MolMR": 95.126,
+     "NumStereocentres": 0,
+     "QED": 0.6645,
+     "SAscore": 2.606,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 1,
+     "esol_logS": -3.209,
+     "cns_mpo_like": 5.833,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 2,
+     "qsar_applicability": "BORDERLINE",
+     "qsar_pchembl": 6.382
+    },
+    "property_claims": {
+     "inchikey": "E-1369",
+     "MolWt": "E-1370",
+     "cLogP": "E-1371",
+     "TPSA": "E-1372",
+     "HBD": "E-1373",
+     "HBA": "E-1374",
+     "RotB": "E-1375",
+     "RingCount": "E-1376",
+     "AromaticRings": "E-1377",
+     "HeavyAtoms": "E-1378",
+     "FractionCSP3": "E-1379",
+     "FormalCharge": "E-1380",
+     "MolMR": "E-1381",
+     "NumStereocentres": "E-1382",
+     "QED": "E-1383",
+     "SAscore": "E-1384",
+     "lipinski_violations": "E-1385",
+     "n_structural_alerts": "E-1386",
+     "esol_logS": "E-1387",
+     "cns_mpo_like": "E-1388",
+     "n_panels_passed": "E-1389"
+    },
+    "flags": [
+     "BRENK:Aliphatic_long_chain"
+    ],
+    "scores": {
+     "qsar_pchembl": 6.382
+    },
+    "score_claims": {
+     "qsar_pchembl": "E-2703"
+    },
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "SELFIES token mutation"
+    ]
+   },
+   {
+    "cand_id": "C070",
+    "smiles": "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+    "origin": "G3_selfies_mutate",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "properties": {
+     "inchikey": "XXEIZOSLTFKPNV-UHFFFAOYSA-N",
+     "formula": "C21H26N4O4",
+     "MolWt": 398.463,
+     "cLogP": 3.005,
+     "TPSA": 87.09,
+     "HBD": 1,
+     "HBA": 8,
+     "RotB": 10,
+     "RingCount": 3,
+     "AromaticRings": 2,
+     "HeavyAtoms": 29,
+     "FractionCSP3": 0.381,
+     "FormalCharge": 0,
+     "MolMR": 113.08,
+     "NumStereocentres": 1,
+     "QED": 0.6157,
+     "SAscore": 3.696,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 1,
+     "esol_logS": -3.799,
+     "cns_mpo_like": 5.552,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 2,
+     "qsar_applicability": "BORDERLINE",
+     "qsar_pchembl": 6.058
+    },
+    "property_claims": {
+     "inchikey": "E-1495",
+     "MolWt": "E-1496",
+     "cLogP": "E-1497",
+     "TPSA": "E-1498",
+     "HBD": "E-1499",
+     "HBA": "E-1500",
+     "RotB": "E-1501",
+     "RingCount": "E-1502",
+     "AromaticRings": "E-1503",
+     "HeavyAtoms": "E-1504",
+     "FractionCSP3": "E-1505",
+     "FormalCharge": "E-1506",
+     "MolMR": "E-1507",
+     "NumStereocentres": "E-1508",
+     "QED": "E-1509",
+     "SAscore": "E-1510",
+     "lipinski_violations": "E-1511",
+     "n_structural_alerts": "E-1512",
+     "esol_logS": "E-1513",
+     "cns_mpo_like": "E-1514",
+     "n_panels_passed": "E-1515"
+    },
+    "flags": [
+     "BRENK:Aliphatic_long_chain"
+    ],
+    "scores": {
+     "qsar_pchembl": 6.058
+    },
+    "score_claims": {
+     "qsar_pchembl": "E-2704"
+    },
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "SELFIES token mutation"
+    ]
+   },
+   {
+    "cand_id": "C086",
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+    "origin": "G4_llm_edits",
+    "parent": "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1",
+    "properties": {
+     "inchikey": "YWSAEKIQJPQSDJ-UHFFFAOYSA-N",
+     "formula": "C20H19N3O4",
+     "MolWt": 365.389,
+     "cLogP": 2.097,
+     "TPSA": 96.73,
+     "HBD": 3,
+     "HBA": 7,
+     "RotB": 8,
+     "RingCount": 3,
+     "AromaticRings": 3,
+     "HeavyAtoms": 27,
+     "FractionCSP3": 0.2,
+     "FormalCharge": 0,
+     "MolMR": 102.359,
+     "NumStereocentres": 0,
+     "QED": 0.5261,
+     "SAscore": 2.506,
+     "lipinski_violations": 0,
+     "veber_pass": true,
+     "n_structural_alerts": 1,
+     "esol_logS": -3.337,
+     "cns_mpo_like": 4.905,
+     "n_panels_passed": 4,
+     "herg_risk_flag": false,
+     "n_liability_alerts": 2,
+     "qsar_applicability": "IN_DOMAIN",
+     "qsar_pchembl": 7.832
+    },
+    "property_claims": {
+     "inchikey": "E-1831",
+     "MolWt": "E-1832",
+     "cLogP": "E-1833",
+     "TPSA": "E-1834",
+     "HBD": "E-1835",
+     "HBA": "E-1836",
+     "RotB": "E-1837",
+     "RingCount": "E-1838",
+     "AromaticRings": "E-1839",
+     "HeavyAtoms": "E-1840",
+     "FractionCSP3": "E-1841",
+     "FormalCharge": "E-1842",
+     "MolMR": "E-1843",
+     "NumStereocentres": "E-1844",
+     "QED": "E-1845",
+     "SAscore": "E-1846",
+     "lipinski_violations": "E-1847",
+     "n_structural_alerts": "E-1848",
+     "esol_logS": "E-1849",
+     "cns_mpo_like": "E-1850",
+     "n_panels_passed": "E-1851"
+    },
+    "flags": [
+     "BRENK:triple_bond"
+    ],
+    "scores": {
+     "qsar_pchembl": 7.832
+    },
+    "score_claims": {
+     "qsar_pchembl": "E-2705"
+    },
+    "rank": null,
+    "selected": false,
+    "notes": [
+     "Converted both methyl ethers to free hydroxyls (bis-diol), maximizing polar surface area and solubility while retaining "
+    ]
+   }
+  ],
+  "k": 8,
+  "cutoff": 0.35,
+  "score_key": "qsar_pchembl"
+ },
+ "params_hash": "48f1cad8e5bdabe8",
+ "cached_at": "2026-11-11T22:18:35+00:00",
+ "data": {
+  "k": 8,
+  "n_candidates": 5,
+  "selected": [
+   {
+    "cand_id": "C086",
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+    "p_hit_assumed": 0.3332,
+    "cluster": 1
+   },
+   {
+    "cand_id": "C030",
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "p_hit_assumed": 0.2956,
+    "cluster": 0
+   },
+   {
+    "cand_id": "C070",
+    "smiles": "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+    "p_hit_assumed": 0.1558,
+    "cluster": 2
+   },
+   {
+    "cand_id": "C046",
+    "smiles": "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+    "p_hit_assumed": 0.282,
+    "cluster": 0
+   },
+   {
+    "cand_id": "C064",
+    "smiles": "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+    "p_hit_assumed": 0.1882,
+    "cluster": 0
+   }
+  ],
+  "n_clusters_represented": 3,
+  "p_at_least_one_hit_independent": 0.7689,
+  "p_at_least_one_hit_cluster_correlated": 0.6035,
+  "score_key": "qsar_pchembl",
+  "clustering": {
+   "n_clusters": 3,
+   "cutoff_tanimoto_distance": 0.35,
+   "cluster_sizes": [
+    3,
+    1,
+    1
+   ],
+   "method": "Taylor-Butina on Morgan r=2 2048-bit fingerprints"
+  },
+  "probability_model": "uncalibrated monotone map from score to P(hit); independence vs perfect within-cluster correlation give the two bounds reported here",
+  "caveat": "these probabilities are assumptions, not measured hit rates"
+ }
+}

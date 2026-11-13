@@ -1,0 +1,38 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC=CC=NC=NCCl"
+ },
+ "params_hash": "0030996568b6330b",
+ "cached_at": "2026-11-11T22:40:37+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "N-C-halo",
+    "acyclic_C=C-O",
+    "alkyl_halide",
+    "imine_1",
+    "imine_2"
+   ],
+   "NIH": [
+    "alpha_halo_amine",
+    "alpha_halo_heteroatom",
+    "primary_halide_sulfate"
+   ]
+  },
+  "n_alerts": 8,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

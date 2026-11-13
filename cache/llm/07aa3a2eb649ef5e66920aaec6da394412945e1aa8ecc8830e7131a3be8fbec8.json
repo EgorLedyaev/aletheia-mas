@@ -1,0 +1,38 @@
+{
+ "key": "07aa3a2eb649ef5e66920aaec6da394412945e1aa8ecc8830e7131a3be8fbec8",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "How many residues does human CDK2 (UniProt P24941) have?"
+   }
+  ],
+  "system": "You are a computational chemistry assistant. Answer the request directly and concretely, with specific identifiers and numbers where relevant.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1200,
+  "model": null,
+  "purpose": "baseline_plain_llm"
+ },
+ "response": {
+  "text": "Human CDK2 (UniProt **P24941**) has **298 residues**.\n\nThis is the canonical sequence length for Cyclin-dependent kinase 2, consistent with UniProt's current annotation for the entry.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 421,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 73,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

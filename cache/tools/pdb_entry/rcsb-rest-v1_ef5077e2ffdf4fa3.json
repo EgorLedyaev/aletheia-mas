@@ -1,0 +1,24 @@
+{
+ "tool": "pdb.entry",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "entry_id": "8A2A"
+ },
+ "params_hash": "ef5077e2ffdf4fa3",
+ "cached_at": "2026-11-12T16:47:29+00:00",
+ "data": {
+  "pdb_id": "8A2A",
+  "title": "EGFR kinase domain in complex with 2-(6,7-dihydro-5H-pyrrolo[1,2-c]imidazol-1-yl)-2-[6-[2-[4-[[4-(hydroxymethyl)-1-piperidyl]methyl]phenyl]ethynyl]-1-oxo-4-(trifluoromethyl)isoindolin-2-yl]-N-thiazol-2-yl-acetamide (form 2)",
+  "method": [
+   "X-RAY DIFFRACTION"
+  ],
+  "resolution_A": 1.43,
+  "deposited": "2022-06-03T00:00:00.000+00:00",
+  "released": "2022-10-19T00:00:00.000+00:00",
+  "polymer_entities": 1,
+  "nonpolymer_entities": 2,
+  "ligand_ids": [],
+  "retrieved_at": "2026-11-12T16:47:29+00:00",
+  "source_url": "https://www.rcsb.org/structure/8A2A"
+ }
+}

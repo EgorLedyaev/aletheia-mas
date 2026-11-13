@@ -1,0 +1,38 @@
+{
+ "key": "a5bf3b53d3e87d8dccc10e7cdf096ba7e057757dc434aa708fa8e4f030b4d1fc",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Design a selective EGFR inhibitor for non-small-cell lung cancer research."
+   }
+  ],
+  "system": "You are a computational chemistry assistant. Answer the request directly and concretely, with specific identifiers and numbers where relevant.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1200,
+  "model": null,
+  "purpose": "baseline_plain_llm"
+ },
+ "response": {
+  "text": "# Selective EGFR Inhibitor Design for NSCLC Research\n\nBelow is a rational design covering target rationale, scaffold selection, a specific designed analog, and predicted SAR/selectivity profile \u2014 intended for *in vitro* / computational research use.\n\n## 1. Target Rationale\n\nThe clinically validated target in NSCLC is **EGFR with activating mutations** (exon 19 deletions, L858R) and the resistance mutation **T790M**, which raises ATP affinity and confers resistance to 1st-generation reversible inhibitors (erlotinib, gefitinib). Third-generation covalent inhibitors (osimertinib) solve this by:\n\n- **Mutant-selective binding** (L858R/T790M, del19/T790M) over wild-type EGFR \u2192 reduces skin/GI toxicity from WT EGFR inhibition\n- **Covalent trapping** via a Michael acceptor reacting with **Cys797** in the ATP pocket\n- Overcoming T790M's steric/affinity \"gatekeeper\" effect without competing head-to-head with ATP\n\nA new design should preserve these features while probing improved selectivity margins (mutant vs. WT) and addressing the common **C797S** resistance mutation that abolishes covalent bonding.\n\n## 2. Scaffold Choice\n\nOsimertinib's pyrimidine-indole core is the best-validated starting scaffold:\n\n- **2-anilinopyrimidine hinge binder** \u2014 occupies the adenine pocket, H-bonds to Met793 backbone\n- **Indole/pyrazolylindole at C4** \u2014 fills a hydrophobic back pocket, discriminates mutant vs. WT conformations\n- **Acrylamide warhead** on a pendant aniline \u2014 reacts with Cys797\n- **Dimethylamino-ethoxy solubilizing tail** \u2014 improves logP/solubility and basic amine for permeability\n\n## 3. Designed Analog: \"EGFR-NSCLC-1\"\n\n**Modification strategy:** retain the osimertinib core hinge-binding and covalent warhead, but swap the solubilizing group to a morpholino-propoxy tail (vs. osimertinib's piperazinyl) and introduce a fluorine ortho to the warhead-bearing aniline to modulate acrylamide electrophilicity and reduce off-target cysteine reactivity (a known driver of hERG/CYP liabilities in this class).\n\n**Proposed structure (SMILES):**\n```\nCOc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(NC(=O)C=C)cc1N1CCOCC1C\n```\n\n*Core features:*\n- 2-(4-indolyl)pyrimidin-2-yl-amino hinge binder (as in osimertinib)\n- Acrylamide (Michael acceptor) for Cys797 covalent trapping\n- Morpholine-based tail (replacing N-methylpiperazine) \u2192 lower CYP3A4 turnover, comparable solubility\n- Methoxy group ortho to warhead to electronically attenuate acrylamide reactivity (reduce indiscriminate cysteine adduction)\n\n**Predicted mechanism:** irreversible, mutant-selective ATP-competitive inhibition via covalent Cys797 adduction, analogous to osimertinib (PDB 4ZAU).\n\n## 4. Predicted Selectivity / SAR Profile\n\n| Parameter | Prediction | Rationale |\n|---|---|---|\n| EGFR(L858R/T790M) IC50 | ~1\u20135 nM | Retains core hinge ge",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 427,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1200,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "tool": "alphafold.plddt_summary",
+ "version": "afdb-api",
+ "params": {
+  "pdb_path": "cache/structures/AF-P00519.pdb"
+ },
+ "params_hash": "556d91be4ad741e4",
+ "cached_at": "2026-11-11T18:27:42+00:00",
+ "data": {
+  "n_residues": 1130,
+  "mean_plddt": 63.37,
+  "median_plddt": 53.98,
+  "min_plddt": 25.86,
+  "max_plddt": 98.81,
+  "frac_very_high_gt90": 0.3673,
+  "frac_confident_70_90": 0.0956,
+  "frac_low_lt70": 0.5372,
+  "interpretation": "pLDDT is a per-residue model-confidence score, not an accuracy guarantee"
+ }
+}

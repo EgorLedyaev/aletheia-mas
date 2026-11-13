@@ -1,0 +1,33 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "COC=Cc1ncnc(Nc2cccc(Br)c2)c1C=O"
+ },
+ "params_hash": "887cd3b1d88b4ec8",
+ "cached_at": "2026-11-11T22:40:34+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "acyclic_C=C-O",
+    "aldehyde"
+   ],
+   "NIH": [
+    "aldehyde"
+   ]
+  },
+  "n_alerts": 3,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

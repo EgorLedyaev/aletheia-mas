@@ -1,0 +1,70 @@
+{
+ "tool": "qsar.predict",
+ "version": "1.0",
+ "params": {
+  "model_path": "models/qsar_CHEMBL203.pkl",
+  "smiles_list": [
+   "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+   "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+   "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+   "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1"
+  ]
+ },
+ "params_hash": "7638fcd818f89938",
+ "cached_at": "2026-11-11T22:18:35+00:00",
+ "data": {
+  "predictions": [
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3cccc(C#N)c3)c2cc1OCCOC",
+    "pred_pchembl": 7.456,
+    "lower": 5.988,
+    "upper": 8.924,
+    "max_tanimoto_to_train": 0.6066,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(Nc3ccccc3)c2cc1OCCOC",
+    "pred_pchembl": 7.32,
+    "lower": 5.852,
+    "upper": 8.788,
+    "max_tanimoto_to_train": 0.4909,
+    "applicability": "IN_DOMAIN"
+   },
+   {
+    "smiles": "COCCOc1cc2ncnc(NC3=CC=C3)c2cc1OCCOC",
+    "pred_pchembl": 6.382,
+    "lower": 4.914,
+    "upper": 7.85,
+    "max_tanimoto_to_train": 0.375,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "CC=C1C=CC(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)N=C1",
+    "pred_pchembl": 6.058,
+    "lower": 4.59,
+    "upper": 7.526,
+    "max_tanimoto_to_train": 0.3158,
+    "applicability": "BORDERLINE"
+   },
+   {
+    "smiles": "C#Cc1cccc(Nc2ncnc3cc(OCCO)c(OCCO)cc23)c1",
+    "pred_pchembl": 7.832,
+    "lower": 6.364,
+    "upper": 9.3,
+    "max_tanimoto_to_train": 0.5156,
+    "applicability": "IN_DOMAIN"
+   }
+  ],
+  "n": 5,
+  "model_path": "models/qsar_CHEMBL203.pkl",
+  "alpha": 0.1,
+  "q_hat": 1.468,
+  "target_id": "CHEMBL203",
+  "ad_thresholds": {
+   "in_domain_min_tanimoto": 0.4,
+   "borderline_min_tanimoto": 0.25
+  },
+  "units": "pChEMBL (-log10 molar)"
+ }
+}

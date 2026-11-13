@@ -1,0 +1,32 @@
+{
+ "tool": "rdkit.validate_batch",
+ "version": "2026.09.2",
+ "params": {
+  "smiles_list": [
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC(F)F)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC(F)F)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3c(C(F)(F)F)c(OCCOC)c(OCCOC)cc23)c1"
+  ]
+ },
+ "params_hash": "a574706e0a56ce2e",
+ "cached_at": "2026-11-12T16:03:31+00:00",
+ "data": {
+  "n_input": 3,
+  "n_valid": 3,
+  "n_invalid": 0,
+  "validity": 1.0,
+  "n_unique": 3,
+  "uniqueness": 1.0,
+  "invalid_examples": [],
+  "canonical": [
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC(F)F)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC(F)F)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3c(C(F)(F)F)c(OCCOC)c(OCCOC)cc23)c1"
+  ],
+  "unique_smiles": [
+   "C#Cc1cccc(Nc2ncnc3c(C(F)(F)F)c(OCCOC)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC(F)F)c(OCCOC)cc23)c1",
+   "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC(F)F)cc23)c1"
+  ]
+ }
+}

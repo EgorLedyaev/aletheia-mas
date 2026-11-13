@@ -1,0 +1,32 @@
+{
+ "tool": "rdkit.alerts",
+ "version": "2026.09.2",
+ "params": {
+  "smiles": "C=C(Br)C=CC=CNc1ncnc2cc(OC)c(OC)cc12"
+ },
+ "params_hash": "7303d284c1384235",
+ "cached_at": "2026-11-11T22:40:35+00:00",
+ "data": {
+  "alerts": {
+   "PAINS": [],
+   "BRENK": [
+    "polyene"
+   ],
+   "NIH": [
+    "polyene"
+   ]
+  },
+  "n_alerts": 2,
+  "clean": false,
+  "catalogs_used": [
+   "PAINS",
+   "BRENK",
+   "NIH"
+  ],
+  "catalog_sizes": {
+   "PAINS": 480,
+   "BRENK": 105,
+   "NIH": 180
+  }
+ }
+}

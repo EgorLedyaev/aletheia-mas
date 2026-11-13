@@ -1,0 +1,129 @@
+{
+ "tool": "pocket.detect",
+ "version": "ligsite-like-1.0",
+ "params": {
+  "pdb_path": "cache/structures/6Q4G.pdb",
+  "spacing": 1.0,
+  "probe": 3.2,
+  "psp_min": 5,
+  "reference_point": [
+   -0.669,
+   -6.226,
+   -25.358
+  ]
+ },
+ "params_hash": "21b888fc7fa9b15e",
+ "cached_at": "2026-11-11T22:39:32+00:00",
+ "data": {
+  "pdb_path": "cache/structures/6Q4G.pdb",
+  "n_pockets": 4,
+  "pockets": [
+   {
+    "rank": 1,
+    "n_grid_points": 222,
+    "volume_A3": 222.0,
+    "center": [
+     0.309,
+     -10.927,
+     -25.73
+    ],
+    "extent_A": [
+     16.0,
+     11.0,
+     18.0
+    ],
+    "mean_buriedness": 5.7
+   },
+   {
+    "rank": 2,
+    "n_grid_points": 82,
+    "volume_A3": 82.0,
+    "center": [
+     -9.627,
+     -10.21,
+     -10.426
+    ],
+    "extent_A": [
+     6.0,
+     8.0,
+     12.0
+    ],
+    "mean_buriedness": 5.72
+   },
+   {
+    "rank": 3,
+    "n_grid_points": 71,
+    "volume_A3": 71.0,
+    "center": [
+     -11.734,
+     7.295,
+     -14.937
+    ],
+    "extent_A": [
+     6.0,
+     9.0,
+     5.0
+    ],
+    "mean_buriedness": 5.44
+   },
+   {
+    "rank": 4,
+    "n_grid_points": 32,
+    "volume_A3": 32.0,
+    "center": [
+     -16.039,
+     -5.145,
+     -37.848
+    ],
+    "extent_A": [
+     4.0,
+     6.0,
+     5.0
+    ],
+    "mean_buriedness": 5.69
+   }
+  ],
+  "top_pocket": {
+   "rank": 1,
+   "n_grid_points": 222,
+   "volume_A3": 222.0,
+   "center": [
+    0.309,
+    -10.927,
+    -25.73
+   ],
+   "extent_A": [
+    16.0,
+    11.0,
+    18.0
+   ],
+   "mean_buriedness": 5.7
+  },
+  "params": {
+   "spacing_A": 1.0,
+   "probe_A": 3.2,
+   "psp_min": 5,
+   "min_cluster_points": 30
+  },
+  "grid_dims": [
+   60,
+   49,
+   74
+  ],
+  "n_protein_atoms": 2298,
+  "method": "LIGSITE-style protein-solvent-protein buriedness grid (re-implementation; see aletheia/tools/pocket.py)",
+  "validation": {
+   "reference_point": [
+    -0.669,
+    -6.226,
+    -25.358
+   ],
+   "top_pocket_centroid_distance_A": 4.82,
+   "top_pocket_nearest_point_distance_A": 0.69,
+   "best_pocket_rank": 1,
+   "best_pocket_nearest_point_distance_A": 0.69,
+   "hit_within_5A": true,
+   "criterion": "distance from the crystallographic ligand centroid to the nearest grid point of the detected cavity"
+  }
+ }
+}

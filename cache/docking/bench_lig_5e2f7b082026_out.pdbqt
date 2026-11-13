@@ -1,0 +1,990 @@
+MODEL 1
+REMARK VINA RESULT:    -8.018      0.000      0.000
+REMARK INTER + INTRA:         -18.518
+REMARK INTER:                 -14.579
+REMARK INTRA:                  -3.939
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      15.767 -16.737  22.048  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      16.244 -18.163  22.335  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      17.095 -18.489  21.113  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      17.806 -17.173  20.841  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      16.868 -16.146  21.274  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      17.061 -14.788  21.203  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      16.231 -14.002  21.680  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      14.401 -15.918  20.164  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      14.416 -16.715  21.291  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      13.385 -17.239  21.717  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      15.253 -15.568  19.814  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      13.156 -15.579  19.476  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      12.924 -14.081  19.794  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      11.807 -13.584  19.899  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      14.096 -13.343  19.801  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      14.956 -13.822  19.815  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      14.106 -11.883  19.789  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      14.313 -11.310  21.201  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      13.876 -11.787  22.240  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      14.959 -10.128  21.230  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      14.916 -11.245  18.649  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      14.989 -12.009  17.337  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      13.260 -15.845  17.954  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      14.712 -16.150  17.559  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      10.844 -16.679  17.675  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      12.326 -17.009  17.547  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      18.364 -14.240  20.583  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      19.150 -13.761  21.732  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      20.278 -14.437  22.148  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      20.778 -15.365  21.520  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      18.868 -12.947  22.209  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      20.877 -14.037  23.453  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      20.077 -14.018  24.607  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      20.607 -13.629  25.837  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      21.951 -13.271  25.934  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      22.751 -13.314  24.797  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      22.232 -13.696  23.562  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      24.074 -12.988  24.849  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      24.468 -12.514  24.144  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      18.753 -14.372  24.609  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      18.418 -14.934  23.939  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      18.042 -13.061  19.666  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      18.695 -11.791  20.148  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      19.894 -11.554  20.084  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      17.832 -10.890  20.701  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      16.870 -11.092  20.745  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      18.172 -10.035  21.054  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:    -7.993      2.255      8.136
+REMARK INTER + INTRA:         -18.474
+REMARK INTER:                 -15.797
+REMARK INTRA:                  -2.677
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      19.611 -12.999  21.155  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      20.698 -12.314  20.322  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      20.200 -12.503  18.894  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      18.699 -12.310  19.035  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      18.385 -12.794  20.372  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      17.138 -12.841  20.948  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      16.994 -13.193  22.126  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      19.391 -15.005  22.573  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      19.926 -14.494  21.408  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      20.705 -15.155  20.718  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      18.723 -14.475  23.066  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      19.791 -16.311  23.096  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      21.057 -16.027  23.943  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      21.595 -16.876  24.647  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      21.423 -14.692  23.934  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      21.013 -14.094  23.268  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      22.394 -14.137  24.873  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      23.777 -13.972  24.220  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      24.457 -14.871  23.743  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      24.278 -12.723  24.291  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      21.881 -12.969  25.729  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      20.841 -13.291  26.790  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      18.658 -16.956  23.934  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      18.207 -16.004  25.051  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      16.195 -17.675  23.792  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      17.467 -17.335  23.025  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      15.911 -12.381  20.131  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      14.860 -12.154  21.137  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      13.944 -11.134  20.984  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      13.846 -10.463  19.960  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      14.809 -12.738  21.928  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      13.070 -10.814  22.148  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      12.267 -11.820  22.709  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      11.424 -11.543  23.786  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      11.388 -10.260  24.330  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      12.203  -9.269  23.791  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      13.044  -9.532  22.713  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      12.211  -8.005  24.301  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      12.926  -7.429  24.116  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      12.253 -13.112  22.252  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      11.700 -13.747  22.662  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      15.472 -13.500  19.188  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      14.608 -14.513  19.895  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      13.387 -14.461  19.965  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      15.302 -15.524  20.492  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      16.284 -15.554  20.427  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      14.820 -16.226  20.989  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:    -7.410      2.629      7.859
+REMARK INTER + INTRA:         -17.413
+REMARK INTER:                 -15.198
+REMARK INTRA:                  -2.215
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      19.696 -12.972  20.946  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      20.844 -12.338  20.157  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      20.351 -12.415  18.717  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      18.868 -12.107  18.856  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      18.500 -12.629  20.164  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      17.246 -12.602  20.727  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      17.060 -12.999  21.885  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      18.823 -15.142  21.727  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      19.885 -14.498  21.125  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      20.941 -15.089  20.892  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      17.972 -14.659  21.840  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      18.926 -16.522  22.202  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      19.329 -16.397  23.692  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      18.593 -16.733  24.615  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      20.534 -15.737  23.872  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      21.114 -15.592  23.091  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      20.976 -15.248  25.175  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      22.509 -15.244  25.284  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      23.273 -14.540  24.637  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      23.009 -16.184  26.111  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      20.234 -14.006  25.693  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      20.994 -13.085  26.633  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      17.592 -17.286  22.018  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      16.550 -16.390  21.333  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      19.290 -18.888  20.943  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      17.821 -18.580  21.204  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      16.071 -12.003  19.925  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      14.988 -11.851  20.911  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      14.023 -10.878  20.756  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      13.912 -10.194  19.742  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      14.952 -12.451  21.691  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      13.109 -10.626  21.906  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      13.216  -9.424  22.625  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      12.386  -9.170  23.718  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      11.425 -10.106  24.094  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      11.302 -11.286  23.367  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      12.127 -11.553  22.277  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      10.365 -12.223  23.690  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      10.220 -12.451  24.587  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      14.117  -8.439  22.314  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      15.034  -8.592  22.426  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      15.631 -12.989  18.843  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      15.560 -12.330  17.490  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      15.313 -12.913  16.441  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      15.816 -10.991  17.502  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      16.012 -10.535  18.352  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      15.804 -10.479  16.660  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:    -7.262      2.343      7.753
+REMARK INTER + INTRA:         -17.144
+REMARK INTER:                 -14.273
+REMARK INTRA:                  -2.871
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      19.490 -13.137  20.857  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      20.565 -12.324  20.132  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      20.096 -12.357  18.682  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      18.587 -12.229  18.816  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      18.269 -12.879  20.081  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      17.016 -13.034  20.623  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      16.867 -13.528  21.749  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      18.960 -15.409  21.657  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      19.851 -14.641  20.936  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      20.912 -15.112  20.523  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      18.092 -15.019  21.916  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      19.267 -16.784  22.048  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      20.066 -16.651  23.368  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      20.932 -17.451  23.709  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      19.602 -15.629  24.179  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      18.980 -14.968  23.797  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      19.997 -15.494  25.578  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      20.594 -14.107  25.863  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      20.488 -13.479  26.909  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      21.198 -13.535  24.802  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      18.988 -16.045  26.598  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      19.034 -17.537  26.883  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      17.978 -17.624  22.226  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      18.305 -18.986  22.852  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      16.405 -17.669  24.259  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      16.952 -16.856  23.091  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      15.787 -12.519  19.845  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      14.764 -12.284  20.877  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      13.934 -11.185  20.813  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      13.884 -10.433  19.844  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      14.671 -12.920  21.624  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      13.097 -10.884  22.009  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      12.248 -11.876  22.528  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      11.439 -11.615  23.634  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      11.481 -10.365  24.249  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      12.340  -9.390  23.751  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      13.149  -9.637  22.644  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      12.425  -8.159  24.330  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      11.663  -7.620  24.400  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      12.157 -13.138  22.001  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      11.676 -13.801  22.456  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      15.294 -13.602  18.886  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      14.348 -14.557  19.568  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      13.135 -14.405  19.640  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      14.955 -15.636  20.140  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      15.930 -15.746  20.073  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      14.415 -16.308  20.619  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:    -7.092      2.981      6.070
+REMARK INTER + INTRA:         -16.836
+REMARK INTER:                 -14.531
+REMARK INTRA:                  -2.305
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      18.713 -13.620  20.418  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      20.037 -13.317  19.712  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      20.906 -12.774  20.840  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      20.514 -13.653  22.017  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      19.117 -13.989  21.782  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      18.317 -14.754  22.596  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      17.162 -15.049  22.257  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      16.421 -12.747  20.153  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      17.742 -12.415  20.378  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      18.110 -11.239  20.399  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      16.150 -13.693  20.208  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      15.414 -11.735  19.835  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      15.156 -11.899  18.317  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      14.413 -12.759  17.853  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      15.958 -11.078  17.541  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      16.448 -10.346  17.980  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      16.103 -11.255  16.099  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      15.034 -10.466  15.325  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      14.535  -9.404  15.671  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      14.574 -11.091  14.223  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      17.546 -11.181  15.574  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      18.650 -11.643  16.511  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      14.127 -11.934  20.673  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      14.237 -13.199  21.536  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      12.571  -9.960  21.213  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      13.864 -10.691  21.555  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      18.892 -15.308  23.916  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      17.849 -16.214  24.425  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      18.123 -17.544  24.663  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      19.254 -18.019  24.618  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      16.944 -15.866  24.598  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      16.969 -18.445  24.942  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      16.993 -19.270  26.079  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      15.935 -20.138  26.353  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      14.830 -20.178  25.505  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      14.793 -19.343  24.393  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      15.845 -18.477  24.106  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      13.726 -19.338  23.546  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      13.738 -18.799  22.780  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      18.028 -19.282  26.977  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      18.774 -19.827  26.823  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      19.094 -14.165  24.910  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      20.405 -14.294  25.643  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      21.278 -15.109  25.373  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      20.558 -13.421  26.679  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      19.848 -12.770  26.884  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      21.379 -13.441  27.223  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:    -6.830      2.850      8.534
+REMARK INTER + INTRA:         -16.359
+REMARK INTER:                 -15.245
+REMARK INTRA:                  -1.114
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      17.568 -14.739  20.698  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      16.985 -16.144  20.530  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      15.536 -15.965  20.970  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      15.181 -14.600  20.402  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      16.429 -13.850  20.429  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      16.603 -12.546  20.030  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      17.729 -12.031  20.014  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      19.399 -15.148  22.299  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      18.182 -14.527  22.104  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      17.588 -13.977  23.034  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      19.876 -15.521  21.522  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      19.999 -15.269  23.628  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      20.677 -16.661  23.630  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      20.380 -17.549  24.424  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      21.742 -16.744  22.749  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      21.854 -16.036  22.075  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      22.706 -17.841  22.780  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      22.889 -18.469  21.389  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      23.554 -18.002  20.473  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      22.157 -19.580  21.181  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      23.978 -17.571  23.600  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      24.073 -16.231  24.311  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      21.007 -14.126  23.900  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      21.366 -13.402  22.594  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      21.293 -12.970  26.178  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      20.428 -13.132  24.934  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      15.385 -11.740  19.530  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      14.491 -11.655  20.697  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      13.544 -10.657  20.790  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      13.282  -9.887  19.870  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      14.570 -12.319  21.420  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      12.847 -10.489  22.097  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      12.019 -11.516  22.577  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      11.339 -11.377  23.788  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      11.494 -10.217  24.545  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      12.335  -9.210  24.082  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      13.014  -9.334  22.873  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      12.528  -8.065  24.796  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      13.009  -7.354  24.422  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      11.823 -12.698  21.912  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      11.491 -13.444  22.370  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      14.681 -12.510  18.413  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      14.886 -11.852  17.073  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      14.496 -10.729  16.780  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      15.546 -12.623  16.162  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      15.855 -13.524  16.411  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      15.714 -12.279  15.254  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:    -6.757      3.168      5.593
+REMARK INTER + INTRA:         -16.226
+REMARK INTER:                 -14.031
+REMARK INTRA:                  -2.195
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      18.819 -13.383  20.525  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      19.859 -13.153  19.426  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      20.927 -12.329  20.136  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      20.973 -12.963  21.517  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      19.615 -13.428  21.760  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      19.160 -14.052  22.896  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      18.001 -14.485  22.964  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      16.475 -12.701  20.171  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      17.735 -12.277  20.542  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      17.979 -11.084  20.727  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      16.298 -13.668  20.094  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      15.396 -11.756  19.887  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      15.091 -11.945  18.380  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      14.374 -12.845  17.951  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      15.822 -11.093  17.570  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      16.292 -10.334  17.985  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      15.924 -11.276  16.125  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      14.827 -10.496  15.381  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      14.492 -10.663  14.216  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      14.284  -9.489  16.092  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      17.349 -11.196  15.555  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      18.486 -11.631  16.465  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      14.157 -12.028  20.775  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      14.385 -13.267  21.652  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      12.526 -10.107  21.283  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      13.838 -10.792  21.647  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      20.130 -14.277  24.075  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      19.602 -15.462  24.771  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      20.068 -16.724  24.471  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      21.033 -16.930  23.739  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      18.907 -15.352  25.460  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      19.323 -17.886  25.033  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      18.478 -18.636  24.200  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      17.753 -19.716  24.705  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      17.879 -20.073  26.046  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      18.736 -19.346  26.867  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      19.461 -18.263  26.376  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      18.902 -19.669  28.181  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      19.452 -19.143  28.727  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      18.308 -18.370  22.866  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      18.980 -18.596  22.255  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      20.080 -13.076  25.019  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      21.240 -13.079  25.981  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      21.173 -12.743  27.157  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      22.423 -13.480  25.434  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      22.463 -13.749  24.488  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      23.239 -13.502  25.987  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:    -6.695      2.735      8.603
+REMARK INTER + INTRA:         -16.114
+REMARK INTER:                 -13.918
+REMARK INTRA:                  -2.196
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      16.756 -15.976  21.032  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      16.185 -17.296  20.509  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      14.728 -17.235  20.949  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      14.374 -15.772  20.733  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      15.616 -15.050  20.970  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      15.788 -13.688  20.911  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      16.911 -13.182  21.047  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      18.502 -15.404  22.678  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      17.341 -16.119  22.459  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      16.910 -16.910  23.299  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      18.783 -14.733  22.014  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      19.324 -15.616  23.869  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      20.781 -15.641  23.343  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      21.144 -15.020  22.348  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      21.584 -16.543  24.020  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      21.257 -16.924  24.867  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      22.897 -16.952  23.528  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      24.022 -16.468  24.457  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      24.206 -16.831  25.611  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      24.787 -15.487  23.938  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      22.982 -18.400  23.020  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      23.965 -18.685  21.897  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      19.099 -14.500  24.919  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      19.061 -15.093  26.334  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      20.873 -13.091  26.134  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      20.205 -13.425  24.806  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      14.574 -12.785  20.603  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      14.992 -11.984  19.441  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      14.859 -12.476  18.159  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      14.261 -13.515  17.894  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      15.371 -11.086  19.579  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      15.520 -11.719  17.059  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      16.913 -11.539  17.082  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      17.556 -10.818  16.075  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      16.817 -10.282  15.022  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      15.441 -10.482  14.985  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      14.787 -11.195  15.986  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      14.681  -9.989  13.966  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      14.503 -10.520  13.215  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      17.721 -12.046  18.066  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      18.540 -12.441  17.842  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      14.312 -11.855  21.787  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      12.842 -11.560  21.944  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      12.251 -10.643  21.389  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      12.187 -12.405  22.791  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      12.674 -13.139  23.230  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      11.225 -12.280  22.965  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:    -6.621      2.418      7.412
+REMARK INTER + INTRA:         -15.979
+REMARK INTER:                 -13.573
+REMARK INTRA:                  -2.406
+REMARK UNBOUND:                -3.939
+REMARK  Name = 
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CD1_1  and  CG1_2
+REMARK    2  A    between atoms: CG1_2  and  CB_3
+REMARK    3  A    between atoms: CB_3  and  CG2_4
+REMARK    4  A    between atoms: CB_3  and  CA_5
+REMARK    5  A    between atoms: CA_5  and  C_6
+REMARK    6  A    between atoms: CA_5  and  N_15
+REMARK    7  A    between atoms: N_8  and  CA_9
+REMARK    8  A    between atoms: CA_9  and  C_10
+REMARK    9  A    between atoms: CA_9  and  C_12
+REMARK   10  A    between atoms: C_10  and  C_11
+REMARK   11  A    between atoms: C_16  and  CA_18
+REMARK   12  A    between atoms: C_23  and  CA_25
+REMARK   13  A    between atoms: CA_25  and  CB_26
+REMARK   14  A    between atoms: CA_25  and  N_30
+REMARK   15  A    between atoms: CB_26  and  CG_27
+REMARK   16  A    between atoms: C_31  and  C_33
+REMARK   17  A    between atoms: C_34  and  O_40
+REMARK   18  A    between atoms: C_37  and  O_39
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  ASN A   1      15.501 -17.615  20.264  1.00  0.00    +0.000 C 
+ATOM      2  CB  ASN A   1      14.254 -18.501  20.201  1.00  0.00    +0.000 C 
+ATOM      3  CG  ASN A   1      13.280 -17.782  21.126  1.00  0.00    +0.000 C 
+ATOM      4  CD  ASN A   1      13.550 -16.317  20.823  1.00  0.00    +0.000 C 
+ATOM      5  N   ASN A   1      14.963 -16.263  20.473  1.00  0.00    +0.000 N 
+ATOM      6  C   ASN A   1      15.676 -15.137  20.141  1.00  0.00    +0.000 C 
+ATOM      7  O   ASN A   1      16.857 -15.217  19.776  1.00  0.00    +0.000 OA
+ENDROOT
+BRANCH   1   9
+ATOM      8  N   ASN A   1      17.067 -17.021  22.074  1.00  0.00    +0.000 N 
+ATOM      9  C   ASN A   1      16.475 -18.059  21.383  1.00  0.00    +0.000 C 
+ATOM     10  O   ASN A   1      16.821 -19.227  21.565  1.00  0.00    +0.000 OA
+ATOM     11  H   ASN A   1      16.723 -16.106  21.952  1.00  0.00    +0.000 HD
+BRANCH   8  12
+ATOM     12  CA  ASN A   1      18.192 -17.242  22.983  1.00  0.00    +0.000 C 
+BRANCH  12  13
+ATOM     13  C   ASN A   1      19.306 -16.297  22.469  1.00  0.00    +0.000 C 
+ATOM     14  O   ASN A   1      20.488 -16.623  22.415  1.00  0.00    +0.000 OA
+ATOM     15  N   ASN A   1      18.852 -15.012  22.220  1.00  0.00    +0.000 N 
+ATOM     16  H   ASN A   1      17.882 -14.853  22.183  1.00  0.00    +0.000 HD
+BRANCH  15  17
+ATOM     17  CA  ASN A   1      19.757 -13.885  22.010  1.00  0.00    +0.000 C 
+BRANCH  17  18
+ATOM     18  C   ASN A   1      20.668 -13.660  23.227  1.00  0.00    +0.000 C 
+ATOM     19  O   ASN A   1      20.299 -13.353  24.353  1.00  0.00    +0.000 OA
+ATOM     20  OXT ASN A   1      21.986 -13.728  22.954  1.00  0.00    +0.000 OA
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   ASN A   1      20.415 -13.826  20.622  1.00  0.00    +0.000 C 
+ATOM     22  C   ASN A   1      20.644 -12.450  20.020  1.00  0.00    +0.000 C 
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  12  13
+BRANCH  12  23
+ATOM     23  CB  ASN A   1      17.801 -16.943  24.451  1.00  0.00    +0.000 C 
+ATOM     24  CG2 ASN A   1      16.822 -18.004  24.973  1.00  0.00    +0.000 C 
+BRANCH  23  26
+ATOM     25  CD1 ASN A   1      18.988 -15.827  26.439  1.00  0.00    +0.000 C 
+ATOM     26  CG1 ASN A   1      19.064 -16.880  25.341  1.00  0.00    +0.000 C 
+ENDBRANCH  23  26
+ENDBRANCH  12  23
+ENDBRANCH   8  12
+ENDBRANCH   1   9
+BRANCH   6  27
+ATOM     27  CA  ASN A   1      14.971 -13.764  20.156  1.00  0.00    +0.000 C 
+BRANCH  27  28
+ATOM     28  N   ASN A   1      15.615 -13.003  19.072  1.00  0.00    +0.000 N 
+ATOM     29  C   UNK A   0      14.926 -12.021  18.392  1.00  0.00    +0.000 C 
+ATOM     30  O   UNK A   0      13.817 -11.617  18.731  1.00  0.00    +0.000 OA
+ATOM     31  H   ASN A   1      16.549 -13.198  18.830  1.00  0.00    +0.000 HD
+BRANCH  29  32
+ATOM     32  C   UNK A   0      15.555 -11.467  17.160  1.00  0.00    +0.000 A 
+ATOM     33  C   UNK A   0      16.955 -11.403  17.065  1.00  0.00    +0.000 A 
+ATOM     34  C   UNK A   0      17.569 -10.871  15.931  1.00  0.00    +0.000 A 
+ATOM     35  C   UNK A   0      16.793 -10.414  14.868  1.00  0.00    +0.000 A 
+ATOM     36  C   UNK A   0      15.407 -10.501  14.950  1.00  0.00    +0.000 A 
+ATOM     37  C   UNK A   0      14.781 -11.025  16.079  1.00  0.00    +0.000 A 
+BRANCH  36  38
+ATOM     38  O   UNK A   0      14.609 -10.080  13.928  1.00  0.00    +0.000 OA
+ATOM     39  H   UNK A   0      14.836  -9.313  13.440  1.00  0.00    +0.000 HD
+ENDBRANCH  36  38
+BRANCH  33  40
+ATOM     40  O   UNK A   0      17.796 -11.847  18.051  1.00  0.00    +0.000 OA
+ATOM     41  H   UNK A   0      18.021 -12.755  18.102  1.00  0.00    +0.000 HD
+ENDBRANCH  33  40
+ENDBRANCH  29  32
+ENDBRANCH  27  28
+BRANCH  27  42
+ATOM     42  CB  ASN A   1      15.236 -13.064  21.488  1.00  0.00    +0.000 C 
+BRANCH  42  43
+ATOM     43  CG  ASN A   1      13.983 -12.436  22.042  1.00  0.00    +0.000 C 
+ATOM     44  OD1 ASN A   1      13.795 -11.231  22.151  1.00  0.00    +0.000 OA
+ATOM     45  ND2 ASN A   1      13.038 -13.331  22.449  1.00  0.00    +0.000 N 
+ATOM     46 HD21 ASN A   1      13.201 -14.297  22.355  1.00  0.00    +0.000 HD
+ATOM     47 HD22 ASN A   1      12.190 -13.011  22.837  1.00  0.00    +0.000 HD
+ENDBRANCH  42  43
+ENDBRANCH  27  42
+ENDBRANCH   6  27
+TORSDOF 15
+ENDMDL

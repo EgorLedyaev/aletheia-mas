@@ -1,0 +1,38 @@
+{
+ "key": "d01acfa91a684f6f5a9f8517cf96ba046e051b7fb77470a9570fe0dee61ea2ad",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Findings available (do not quote any values):\n- gene_to_accession = P00533 (RETRIEVED)\n- structure_source = CID 176870 (RETRIEVED)\n- uniprot_protein_name = Epidermal growth factor receptor (RETRIEVED)\n- sequence_length = 1210 (RETRIEVED)\n- n_pdb_structures = 388 (RETRIEVED)\n- inchikey = AAKJLRGGTJKAMG-UHFFFAOYSA-N (COMPUTED)\n- sequence_gravy = -0.316 (COMPUTED)\n- net_charge_ph7 = -12 (COMPUTED)\n- MolWt = 393.443 (COMPUTED)\n- cLogP = 3.405 (COMPUTED)\n- TPSA = 74.73 (COMPUTED)\n- HBD = 1 (COMPUTED)\n- HBA = 7 (COMPUTED)\n- RotB = 10 (COMPUTED)\n- RingCount = 3 (COMPUTED)\n- AromaticRings = 3 (COMPUTED)\n- HeavyAtoms = 29 (COMPUTED)\n- FractionCSP3 = 0.273 (COMPUTED)\n- FormalCharge = 0 (COMPUTED)\n- MolMR = 111.94 (COMPUTED)\n- NumStereocentres = 0 (COMPUTED)\n- QED = 0.418 (COMPUTED)\n- SAscore = 2.478 (COMPUTED)\n- lipinski_violations = 0 (COMPUTED)\n- n_structural_alerts = 2 (COMPUTED)\n- pdb_resolution = 1.07 (RETRIEVED)\n- esol_logS = -4.173 (PREDICTED)\n- cns_mpo_like = 5.188 (PREDICTED)\n- n_developability_panels_passed = 4 (COMPUTED)\n- structure_sequence_identity = 0.991 (COMPUTED)\n- cocrystal_ligand = KY9 (COMPUTED)\n- chembl_release = ChEMBL_37 (RETRIEVED)\n- top_pocket_volume = 445 (COMPUTED)\n- n_pockets_detected = 3 (COMPUTED)\n- pocket_to_cocrystal_distance = 0.44 (COMPUTED)\n- chembl_target_id = CHEMBL203 (RETRIEVED)\n- n_unique_actives = 271 (RETRIEVED)\n- pchembl_median = 6.72 (COMPUTED)\n- pchembl_max = 10.6 (COMPUTED)\n- most_potent_active = CHEMBL29197 (RETRIEVED)\n\nUser request: Which PDB entry holds the EGFR kinase domain with erlotinib bound, and what is the chemical component id of that ligand?\n\nWrite the interpretation paragraph."
+   }
+  ],
+  "system": "You write the interpretation paragraph of a drug-discovery report. ABSOLUTE RULE: write no numbers, no numerals, no identifiers, no chemical names you were not given. Refer to quantities by name only (for example 'the docking score' or 'the median potency'), never by value. Two to four sentences. State what the result supports and what it does not. Do not claim efficacy, safety or clinical relevance.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 400,
+  "model": null,
+  "purpose": "narrative"
+ },
+ "response": {
+  "text": "I can't answer this request as asked: it calls for a specific PDB entry identifier and a ligand component code, but no particular PDB accession was provided among the findings, and I'm not permitted to introduce identifiers that weren't supplied. More broadly, my role here is limited to writing the interpretation paragraph of the report in qualitative terms, without citing any values or identifiers, so I can't supply lookup-style facts either.\n\nWhat the available findings do support, in qualitative terms: the target has an established, well-resolved crystallographic structure with a co-bound small molecule occupying the primary pocket at high confidence, consistent with a druggable, well-characterized binding site. The docked or profiled compound shows favorable calculated physicochemical and developability properties, with no rule violations and a reasonable synthetic accessibility estimate, and it passes the majority of the developability panels assessed. The potency data drawn from the bioactivity database show a wide spread between the median and the most potent recorded activity, indicating that while some characterized actives are highly potent, typical potency across the set is considerably more modest. None of this establishes efficacy, safety, or clinical relevance, and it does not identify which specific structural entry or ligand code corresponds to any named reference compound",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 1472,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 400,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

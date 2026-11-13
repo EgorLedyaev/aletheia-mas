@@ -1,0 +1,38 @@
+{
+ "key": "3995f3acf06c80fdac8d4eb80d01f5bc5601e024cd0452e90770dbb61a9efc2c",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is the molecular weight of imatinib?"
+   }
+  ],
+  "system": "You are a computational chemistry assistant. Answer the request directly and concretely, with specific identifiers and numbers where relevant.",
+  "tools": null,
+  "tool_choice": null,
+  "max_tokens": 1200,
+  "model": null,
+  "purpose": "baseline_plain_llm"
+ },
+ "response": {
+  "text": "Imatinib has a molecular weight of approximately **493.6 g/mol** (its free base form).\n\n**Key details:**\n- **Molecular formula:** C\u2082\u2089H\u2083\u2081N\u2087O\n- **Molecular weight:** 493.60 g/mol (free base)\n- **CAS number:** 152459-95-5\n\nImatinib is most commonly used clinically as its **mesylate salt** (imatinib mesylate, brand name Gleevec/Glivec), which has a different molecular weight due to the added methanesulfonic acid:\n\n- **Molecular formula (mesylate salt):** C\u2082\u2089H\u2083\u2081N\u2087O\u00b7CH\u2084O\u2083S\n- **Molecular weight (mesylate salt):** 589.7 g/mol\n- **CAS number (mesylate salt):** 220127-57-1\n\nImatinib is a well-characterized, FDA-approved tyrosine kinase inhibitor (targeting BCR-ABL, c-KIT, and PDGFR) used primarily to treat chronic myeloid leukemia (CML) and gastrointestinal stromal tumors (GIST), so this is standard pharmacological reference data.",
+  "tool_use": null,
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 413,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4888,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 382,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}

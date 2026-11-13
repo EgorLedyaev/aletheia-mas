@@ -1,0 +1,17 @@
+{
+ "tool": "pdb.extract_ligand",
+ "version": "rcsb-rest-v1",
+ "params": {
+  "pdb_path": "cache/structures/8A27.pdb",
+  "resname": "KY9",
+  "out_path": "cache/docking/bench_8A27_KY9.pdb",
+  "chain": "A"
+ },
+ "params_hash": "bcb063bf98cc5f04",
+ "cached_at": "2026-11-12T10:49:28+00:00",
+ "data": {
+  "path": "cache/docking/bench_8A27_KY9.pdb",
+  "resname": "KY9",
+  "n_atoms": 48
+ }
+}

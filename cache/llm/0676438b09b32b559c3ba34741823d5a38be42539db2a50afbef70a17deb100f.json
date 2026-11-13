@@ -1,0 +1,130 @@
+{
+ "key": "0676438b09b32b559c3ba34741823d5a38be42539db2a50afbef70a17deb100f",
+ "request": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "User request:\n\"\"\"Dock erlotinib (C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1) into the EGFR structure 1M17 using the Vinardo scoring function and validate the docking by redocking the co-crystal ligand.\"\"\"\n\nClassify it."
+   }
+  ],
+  "system": "You are the routing component of a drug-discovery multi-agent system. Classify the request into intents and extract entities. Do not answer the chemistry question itself, do not invent targets or molecules that the user did not mention, and do not guess identifiers. If the user names a gene symbol, return it verbatim.",
+  "tools": [
+   {
+    "name": "route_request",
+    "description": "Classify a drug-discovery request into intents and entities.",
+    "input_schema": {
+     "type": "object",
+     "properties": {
+      "intents": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "target_brief",
+         "ligand_lookup",
+         "property_profile",
+         "generate_analogs",
+         "docking",
+         "qsar",
+         "rank_candidates",
+         "protein_analysis",
+         "full_campaign"
+        ]
+       },
+       "description": "Ordered list of what the user is asking for."
+      },
+      "modality": {
+       "type": "string",
+       "enum": [
+        "small_molecule",
+        "protein",
+        "nucleic_acid",
+        "mixed",
+        "unknown"
+       ]
+      },
+      "targets": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Protein targets exactly as named by the user: gene symbol, UniProt accession or PDB id. Empty if none."
+      },
+      "molecules": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Molecules as named by the user: SMILES or compound name."
+      },
+      "objectives": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Optimisation objectives mentioned, e.g. 'improve solubility'."
+      },
+      "reasoning": {
+       "type": "string",
+       "description": "One sentence on why these intents."
+      }
+     },
+     "required": [
+      "intents",
+      "modality",
+      "targets",
+      "molecules"
+     ]
+    }
+   }
+  ],
+  "tool_choice": {
+   "type": "tool",
+   "name": "route_request"
+  },
+  "max_tokens": 900,
+  "model": null,
+  "purpose": "routing"
+ },
+ "response": {
+  "text": "",
+  "tool_use": {
+   "name": "route_request",
+   "input": {
+    "intents": [
+     "docking"
+    ],
+    "modality": "mixed",
+    "targets": [
+     "EGFR",
+     "1M17"
+    ],
+    "molecules": [
+     "C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1"
+    ],
+    "objectives": [
+     "validate docking protocol via redocking co-crystal ligand",
+     "use Vinardo scoring function"
+    ],
+    "reasoning": "The user explicitly requests molecular docking of erlotinib into the EGFR 1M17 structure using a specified scoring function (Vinardo) plus a redocking validation step, which is a docking-protocol validation task rather than target characterization, ligand lookup, or analog generation."
+   }
+  },
+  "backend": "callable",
+  "model": "llm-agent-model",
+  "cached": false,
+  "usage": {
+   "input_tokens": 757,
+   "cache_creation_input_tokens": 5618,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 5618
+   },
+   "output_tokens": 330,
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "error": null
+ }
+}
